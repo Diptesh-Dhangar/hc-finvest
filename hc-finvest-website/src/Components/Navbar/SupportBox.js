@@ -1,0 +1,42 @@
+import { Box, Link, Typography } from "@mui/material"
+
+const SupportBox = () => {
+    return (
+      <Box
+        sx={{
+          width: { xs: "100%", sm: "80%", md: "250px" }, // fluid width for mobile/tablet/desktop
+          maxWidth: "250px", // max width for larger screens
+          p: 2,
+          backgroundColor: "#f9f9f9",
+          borderRadius: "20px",
+          textAlign: "left",
+          mx: "auto", // center on small screens
+        }}
+      >
+        {[
+          { label: "Blogs", href: "blogs" },
+          { label: "Contact Us", href: "contactUs" },
+          { label: "Help Center", href: "helpCenter" },
+        ].map((item, index) => (
+          <Typography
+            key={index}
+            sx={{
+              margin: "5px 0",
+              padding: "5px",
+              borderRadius: "5px",
+              transition: "color 0.3s ease",
+              "&:hover": { backgroundColor: "lightgray", borderRadius: "5px" },
+            }}
+          >
+            <Link
+              sx={{ textDecoration: "none", color: "black", cursor: "pointer" }}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </Typography>
+        ))}
+      </Box>
+    );
+}
+export default SupportBox;
