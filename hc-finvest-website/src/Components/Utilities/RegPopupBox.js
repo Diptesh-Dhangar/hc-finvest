@@ -29,7 +29,7 @@ const RegPopupBox = ({ onClose }) => {
   const handleSubmit = async () => {
     try {
       const res = await axios.post(
-        "https://hc-finvest-backend.onrender.com/api/register",
+        "https://hcfinvest.onrender.com/api/register",
         formData
       );
 

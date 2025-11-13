@@ -25,10 +25,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(
-        "https://hc-finvest-backend.onrender.com/api/contact",
-        formData
-      );
+      await axios.post("https://hcfinvest.onrender.com/api/contact", formData);
       alert("Your message has been sent successfully!");
       setFormData({
         firstName: "",

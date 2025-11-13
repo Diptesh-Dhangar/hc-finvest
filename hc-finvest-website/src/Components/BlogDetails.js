@@ -14,7 +14,7 @@ const BlogDetails = () => {
       try {
         // Fetch single blog by id from backend
         const response = await axios.get(
-          `https://hc-finvest-backend.onrender.com/api/blogs/${id}`
+          `https://hcfinvest.onrender.com/api/blogs/${id}`
         );
         setBlog(response.data);
       } catch (error) {

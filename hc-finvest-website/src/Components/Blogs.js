@@ -20,7 +20,7 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "https://hc-finvest-backend.onrender.com/api/blogs"
+          "https://hcfinvest.onrender.com/api/blogs"
         ); // Replace with your API endpoint
         setBlogs(response.data);
       } catch (error) {
