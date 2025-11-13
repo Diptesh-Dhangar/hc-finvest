@@ -1,6 +1,12 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
 
 const TradingBox = () => {
+  const navItems = [
+    { text: "Swap", path: "/swapMarket" },
+    { text: "Margin & Leverage", path: "/marginLeverage" },
+    { text: "Deposit & Withdrawal", path: "/depositWithdrawal" },
+  ];
+
   return (
     <Box
       sx={{
@@ -106,35 +112,33 @@ const TradingBox = () => {
           <Typography sx={{ fontWeight: "bold", color: "#102040", mb: 1 }}>
             TRADING
           </Typography>
-          {["Swap", "Margin & Leverage", "Deposit & Withdrawal"].map(
-            (text, index) => (
-              <Typography
-                key={index}
-                sx={{
-                  fontWeight: "400",
-                  color: "#000",
-                  padding: "5px",
+          {navItems.map((item, index) => (
+            <Typography
+              key={index}
+              sx={{
+                fontWeight: "400",
+                color: "#000",
+                padding: "5px",
+                borderRadius: "5px",
+                transition: "color 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "lightgray",
                   borderRadius: "5px",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    backgroundColor: "lightgray",
-                    borderRadius: "5px",
-                  },
+                },
+              }}
+            >
+              <Link
+                sx={{
+                  textDecoration: "none",
+                  color: "black",
+                  cursor: "pointer",
                 }}
+                href={item.path}
               >
-                <Link
-                  sx={{
-                    textDecoration: "none",
-                    color: "black",
-                    cursor: "pointer",
-                  }}
-                  href={text.toLowerCase().replace(/\s/g, "")}
-                >
-                  {text}
-                </Link>
-              </Typography>
-            )
-          )}
+                {item.text}
+              </Link>
+            </Typography>
+          ))}
         </Grid>
 
         {/* PROMOTIONS */}

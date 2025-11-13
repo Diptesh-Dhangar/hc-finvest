@@ -19,15 +19,6 @@ app.use("/uploads", express.static("uploads")); // serve image files
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Connect to MongoDB
-
-app.use(express.static(path.join(__dirname, "../hc-finvest-website/build")));
-
-app.get(/.*/, (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "../hc-finvest-website/build", "index.html")
-  );
-});
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -39,10 +30,20 @@ app.use("/api/blogs", blogRoutes);
 app.use("/api/register", registrationRoutes);
 app.use("/api/contact", contactRoutes);
 
-// ✅ Default route
-app.get("/", (req, res) => {
-  res.send("Welcome to the Blog API 🚀");
+// // ✅ Default route
+// app.get("/", (req, res) => {
+//   res.send("Welcome to the Blog API 🚀");
+// });
+
+
+app.use(express.static(path.join(__dirname, "../hc-finvest-website/build")));
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../hc-finvest-website/build", "index.html")
+  );
 });
+
 
 // ✅ Start server
 const PORT = process.env.PORT || 5000;

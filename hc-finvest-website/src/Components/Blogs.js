@@ -19,7 +19,9 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/blogs"); // Replace with your API endpoint
+        const response = await axios.get(
+          "https://hc-finvest-backend.onrender.com/api/blogs"
+        ); // Replace with your API endpoint
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);

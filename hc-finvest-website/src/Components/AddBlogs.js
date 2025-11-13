@@ -51,9 +51,13 @@ const AddBlogs = () => {
     blogData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5000/api/blogs", blogData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      await axios.post(
+        "https://hc-finvest-backend.onrender.com/api/blogs",
+        blogData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       // console.log(blogData);
       alert("✅ Blog added successfully!");
       setDescription("");
@@ -71,7 +75,9 @@ const AddBlogs = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/blogs");
+      const res = await axios.get(
+        "https://hc-finvest-backend.onrender.com/api/blogs"
+      );
       setBlogs(res.data);
       console.log(res.data);
     } catch (error) {
