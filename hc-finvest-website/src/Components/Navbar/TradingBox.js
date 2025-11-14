@@ -32,7 +32,7 @@ const TradingBox = () => {
             ACCOUNTS
           </Typography>
           {[
-            "Account Type",
+            "Accounts Types",
             "Starter",
             "Pro Trader",
             "Zero Spread",
@@ -58,7 +58,7 @@ const TradingBox = () => {
                   color: "black",
                   cursor: "pointer",
                 }}
-                href={text.toLowerCase().replace(/\s/g, "Market")}
+                href={text.toLowerCase().replace(/\s/g, "") + "Account"}
               >
                 {text}
               </Link>

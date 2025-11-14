@@ -80,7 +80,7 @@ function App() {
           element={<MetaTrader5forAndroid />}
         ></Route>
         <Route path="admin" element={<AddBlogs />}></Route>
-        <Route path="accountsTypes" element={<AccountsTypes />}></Route>
+        <Route path="accountsTypesAccount" element={<AccountsTypes />}></Route>
         <Route path="starterAccount" element={<Starter />}></Route>
         <Route path="proTraderAccount" element={<ProTrader />}></Route>
         <Route path="zeroSpreadAccount" element={<ZeroSpread />}></Route>
