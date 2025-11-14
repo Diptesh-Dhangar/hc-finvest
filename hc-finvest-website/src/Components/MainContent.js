@@ -25,7 +25,6 @@ import RegPopupBox from "./Utilities/RegPopupBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const MainContent = () => {
-
   const features = [
     { icon: <FaHome />, title: "Real", subtitle: "ECN / STP" },
     { icon: <FaGlobe />, title: "Globally", subtitle: "Licensed" },
@@ -35,7 +34,7 @@ const MainContent = () => {
   ];
   const [current, setCurrent] = useState(0);
 
-   const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   // 🟢 Automatically open popup on page load
   useEffect(() => {
@@ -49,7 +48,6 @@ const MainContent = () => {
   const handleClosePopup = () => {
     setShowPopup(false);
   };
-
 
   return (
     <>
@@ -204,7 +202,7 @@ const MainContent = () => {
               {/* <!-- Slide 5 --> */}
               <div class="carousel-item">
                 <img
-                  src="/Images/SliderImages/NewhedgecapitalsimageMetals.jpg"
+                  src="Images\SliderImages\NewhedgecapitalsimageMetals.jpg"
                   class="d-block w-100"
                   alt="Slide 5"
                   loading="lazy"
@@ -245,7 +243,7 @@ const MainContent = () => {
               {/* <!-- Slide 7 --> */}
               <div class="carousel-item">
                 <img
-                  src="/images/NewhedgecapitalsimageETF.jpg"
+                  src="Images/SliderImages/NewhedgecapitalsimageETF.jpg"
                   class="d-block w-100"
                   alt="Slide 7"
                   loading="lazy"

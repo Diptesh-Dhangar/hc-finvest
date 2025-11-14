@@ -54,7 +54,7 @@ const Footer = () => {
         </Grid>
 
         {/* MARKETS */}
-        <Grid item  xs={6} sm={4} md={2}>
+        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             MARKETS
           </Typography>
@@ -83,7 +83,7 @@ const Footer = () => {
         </Grid>
 
         {/* TRADING */}
-        <Grid item  xs={6} sm={4} md={2}>
+        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             TRADING
           </Typography>
@@ -109,7 +109,7 @@ const Footer = () => {
         </Grid>
 
         {/* PLATFORMS */}
-        <Grid item  xs={6} sm={4} md={2}>
+        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             PLATFORMS
           </Typography>
@@ -137,7 +137,7 @@ const Footer = () => {
         </Grid>
 
         {/* COMPANY & SOCIAL LINKS */}
-        <Grid item  xs={12} sm={6} md={4}>
+        <Grid item paddingRight={2} paddingLeft={2} xs={12} sm={6} md={4}>
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             COMPANY
           </Typography>
@@ -205,12 +205,13 @@ const Footer = () => {
 
           <Grid
             item
-            xs={12}
+            size={8}
             sm={6}
             display="flex"
-            justifyContent={{ xs: "flex-start", sm: "flex-end" }}
+            justifyContent={{ xs: "flex-start", sm: "flex-end" , md:'flex-end' }}
             flexWrap="wrap"
             gap={2}
+            border='0px solid red'
           >
             <img
               src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"

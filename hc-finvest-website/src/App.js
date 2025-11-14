@@ -42,6 +42,7 @@ import MarginLeverage from "./Components/MarginLeverage";
 import BlogDetails from "./Components/BlogDetails";
 import Admin from "./Components/Admin/AdminPage";
 import DynamicArticleFormMUI from "./Components/Admin/DynamicForm";
+import EnquiryData from "./Components/Admin/EnquiryData";
 
 function App() {
   return (
@@ -124,7 +125,7 @@ function App() {
 
         {/* Blelow are the optional pages  */}
         <Route path="superAdmin" element={<Admin />}></Route>
-        <Route path="df" element={<DynamicArticleFormMUI />}></Route>
+        <Route path="adminEnquiryData" element={<EnquiryData />}></Route>
       </Routes>
       <Footer />
     </div>

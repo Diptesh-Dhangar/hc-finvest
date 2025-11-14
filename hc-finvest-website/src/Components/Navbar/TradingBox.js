@@ -77,7 +77,7 @@ const TradingBox = () => {
             "Indices",
             "Stocks",
             "Commodities",
-            "Cryptocurrencies",
+            "Cryptocurrency",
           ].map((text, index) => (
             <Typography
               key={index}
