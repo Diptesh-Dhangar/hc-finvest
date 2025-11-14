@@ -1,22 +1,19 @@
 import { Button, Container, Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
+// import AdminSubNavbar from "./AdminSubNavbar";
 
 const Admin = () => {
-    const [active, setActive] = useState(1); // default: first button active
-  
-    const buttons = [
-      { id: 1, label: "Blogs" },
-      { id: 2, label: "Popup Regitration Data" },
-      { id: 3, label: "Get In Touch Data" },
-    ];
-  
-    return (
-      <Container
-        sx={{ backgroundColor: "#fff" }}
-        maxWidth={false}
-        disableGutters
-      >
-        <Grid
+  const [active, setActive] = useState(1); // default: first button active
+
+  const buttons = [
+    { id: 1, label: "Blogs" },
+    { id: 2, label: "Popup Regitration Data" },
+    { id: 3, label: "Get In Touch Data" },
+  ];
+
+  return (
+    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      {/* <Grid
           container
           size={12}
 
@@ -42,8 +39,10 @@ const Admin = () => {
               {btn.label}
             </Button>
           ))}
-        </Grid>
-      </Container>
-    );
-}
+        </Grid> */}
+{/* 
+      <AdminSubNavbar /> */}
+    </Container>
+  );
+};
 export default Admin;

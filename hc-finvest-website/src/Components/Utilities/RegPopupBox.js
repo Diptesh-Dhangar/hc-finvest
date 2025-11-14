@@ -33,7 +33,7 @@ const RegPopupBox = ({ onClose }) => {
         formData
       );
 
-      alert("✅ Registration successful!");
+      alert("✅ Submitted Successfully! We’ll get back to you soon.");
       console.log("Server response:", res.data);
 
       setFormData({ fullName: "", phoneNumber: "", email: "" });

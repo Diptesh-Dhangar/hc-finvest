@@ -58,7 +58,7 @@ const TradingBox = () => {
                   color: "black",
                   cursor: "pointer",
                 }}
-                href={text.toLowerCase().replace(/\s/g, "")}
+                href={text.toLowerCase().replace(/\s/g, "Market")}
               >
                 {text}
               </Link>
