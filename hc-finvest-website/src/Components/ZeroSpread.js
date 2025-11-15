@@ -234,42 +234,9 @@ const ZeroSpread = () => {
           <span style={{ color: "#0f5e9b" }}> POPULAR INSTRUMENTS </span> of the
           Market
         </Typography>
-        <Grid
-          container
-          size={12}
-          display="flex"
-          justifyContent="center"
-          alignContent="center"
-        >
-          <Grid item size={2.7} p={2}>
-            <MainContentCard2
-              img="Images/MainContentImages/forexx.png"
-              title="Forex"
-              subtext="50+ Currency Pairs"
-            />
-          </Grid>
-          <Grid item size={2.7} p={2}>
-            <MainContentCard2
-              img="Images/MainContentImages/indicesss.png"
-              title="Indices"
-              subtext="15+ Indices"
-            />
-          </Grid>
-          <Grid item size={2.7} p={2}>
-            <MainContentCard2
-              img="Images/MainContentImages/metalsoil.png"
-              title="Metals"
-              subtext="Statigic Metal Investment"
-            />
-          </Grid>
-          <Grid item size={2.7} p={2}>
-            <MainContentCard2
-              img="Images/MainContentImages/currency-exchange_5751196.png"
-              title="Cryptocurrency"
-              subtext="No Commissions, Tight Spread"
-            />
-          </Grid>
-        </Grid>
+
+          <MainContentCard2/>
+          
       </Grid>
       <TradingDetailsBox/>
     </Container>

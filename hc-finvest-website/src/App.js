@@ -46,6 +46,8 @@ import EnquiryData from "./Components/Admin/EnquiryData";
 import TermsConditions from "./Components/TermsConditions";
 import PrivacyPolicies from "./Components/PrivacyPolicies";
 import AMLPolicy from "./Components/AMLPolicies";
+import ContactUsData from "./Components/Admin/ContactUsData";
+import SwapManagement from "./Components/Admin/SwapManagement";
 
 function App() {
   return (
@@ -132,6 +134,8 @@ function App() {
         {/* Blelow are the optional pages  */}
         <Route path="superAdmin" element={<Admin />}></Route>
         <Route path="adminEnquiryData" element={<EnquiryData />}></Route>
+        <Route path="adminContactUsData" element={<ContactUsData />}></Route>
+        <Route path="adminSwapManagement" element={<SwapManagement />}></Route>
       </Routes>
       <Footer />
     </div>

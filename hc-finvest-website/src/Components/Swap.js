@@ -350,14 +350,12 @@ const Swap = () => {
                     <TableRow>
                       <StyledTableCell>SYMBOLS</StyledTableCell>
                       <StyledTableCell align="center">
-                        AVERAGE SPREAD
+                        Swap Long
                       </StyledTableCell>
                       <StyledTableCell align="center">
-                        SPREAD AS LOW AS (PIPS)
+                        Swap Short
                       </StyledTableCell>
-                      {/* <StyledTableCell align="center">
-                        MAX LEVERAGE
-                      </StyledTableCell> */}
+
                     </TableRow>
                   </TableHead>
                   <TableBody>

@@ -51,10 +51,10 @@ const EnquiryData = () => {
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
-                <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-                <StyledTableCell >Calories</StyledTableCell>
-                <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-                <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
+                <StyledTableCell>Full Name</StyledTableCell>
+                <StyledTableCell >Contact No</StyledTableCell>
+                <StyledTableCell >Email&nbsp;</StyledTableCell>
+                <StyledTableCell align="right">Date & Time&nbsp;</StyledTableCell>
                 {/* <StyledTableCell align="right">
                   Protein&nbsp;(g)
                 </StyledTableCell> */}
@@ -67,10 +67,10 @@ const EnquiryData = () => {
                     {row.name}
                   </StyledTableCell>
                   <StyledTableCell >
-                    {row.calories}
+                    {row.contact}
                   </StyledTableCell>
-                  <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                  <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                  <StyledTableCell >{row.email}</StyledTableCell>
+                  <StyledTableCell align="right">{row.dateAndTime}</StyledTableCell>
                   {/* <StyledTableCell align="right">{row.protein}</StyledTableCell> */}
                 </StyledTableRow>
               ))}
