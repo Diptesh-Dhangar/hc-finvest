@@ -13,8 +13,6 @@ import MainContentCard2 from "./Utilities/MainContentCard2";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const Starter = () => {
-
-  
   const details = [
     { label: "Minimum Deposit:", value: "$50" },
     { label: "Spreads Starts From:", value: "0.18 pips" },
@@ -30,7 +28,7 @@ const Starter = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",
@@ -234,14 +232,14 @@ const Starter = () => {
           <span style={{ color: "#0f5e9b" }}> POPULAR INSTRUMENTS </span> of the
           Market
         </Typography>
-        <Grid
+        {/* <Grid
           container
           size={12}
           display="flex"
           justifyContent="center"
           alignContent="center"
         >
-          <Grid item size={2.7} p={2}>
+          <Grid item size={5} border='1px solid red' p={2}>
             <MainContentCard2
               img="Images/MainContentImages/forexx.png"
               title="Forex"
@@ -269,7 +267,8 @@ const Starter = () => {
               subtext="No Commissions, Tight Spread"
             />
           </Grid>
-        </Grid>
+        </Grid> */}
+        <MainContentCard2/>
       </Grid>
     </Container>
   );

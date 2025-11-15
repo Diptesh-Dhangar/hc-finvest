@@ -112,7 +112,7 @@ const MainContentCard1 = ({ title , md,abc,ssf, ml}) => {
                 paddingLeft: "5px",
               }}
             >
-              Available Base Currencies:
+               Currencies:
             </Grid>
             <Grid
               item
@@ -174,7 +174,7 @@ const MainContentCard1 = ({ title , md,abc,ssf, ml}) => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 fontWeight: "bold",
-                color: "gray",
+                // color: "gray",
                 paddingLeft: "5px",
               }}
             >

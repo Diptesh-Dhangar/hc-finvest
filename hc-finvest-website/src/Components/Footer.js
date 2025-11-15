@@ -192,13 +192,21 @@ const Footer = () => {
           <Grid item xs={12} sm={6}>
             <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
               <li>
-                <b>Privacy Policy</b>
+                <Link underline="none" href="/privacyPolicies">
+                  <b>Privacy Policy</b>
+                </Link>
               </li>
+
               <li>
-                <b>Terms & Conditions</b>
+                <Link underline="none" href="/termsConditions">
+                  <b>Terms & Conditions</b>
+                </Link>
               </li>
+
               <li>
-                <b>AML Policies</b>
+                <Link underline="none" href="/amlPolicies">
+                  <b>AML Policies</b>
+                </Link>
               </li>
             </Box>
           </Grid>
@@ -208,10 +216,14 @@ const Footer = () => {
             size={8}
             sm={6}
             display="flex"
-            justifyContent={{ xs: "flex-start", sm: "flex-end" , md:'flex-end' }}
+            justifyContent={{
+              xs: "flex-start",
+              sm: "flex-end",
+              md: "flex-end",
+            }}
             flexWrap="wrap"
             gap={2}
-            border='0px solid red'
+            border="0px solid red"
           >
             <img
               src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"

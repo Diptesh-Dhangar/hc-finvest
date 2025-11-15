@@ -11,6 +11,7 @@ import {
   Drawer,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   Collapse,
 } from "@mui/material";
@@ -20,6 +21,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Link } from "react-router-dom";
 
+// Dropdown Components
 import AboutUsBox from "./Navbar/AboutUsBox";
 import SupportBox from "./Navbar/SupportBox";
 import ResearchAndToolBox from "./Navbar/ResearchAndToolBox";
@@ -29,71 +31,66 @@ import TradingBox from "./Navbar/TradingBox";
 const Navbar = () => {
   const [hovered, setHovered] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [expandedMenu, setExpandedMenu] = useState(null); // ✅ for mobile dropdowns
+  const [expandedMenu, setExpandedMenu] = useState(null);
 
   const handleMouseEnter = (name) => setHovered(name);
   const handleMouseLeave = () => setHovered(null);
   const toggleDrawer = (open) => () => setMobileOpen(open);
-
-  const toggleExpand = (name) => {
+  const toggleExpand = (name) =>
     setExpandedMenu(expandedMenu === name ? null : name);
-  };
 
   const linkStyle = {
-    color: "black",
+    color: "#000",
     textDecoration: "none",
-    fontSize: "16px",
-    padding: "8px 16px",
-    width: "100%",
+    fontSize: "15px",
+    fontWeight: 500,
+    padding: "8px 14px",
+    cursor: "pointer",
+    whiteSpace: "nowrap",
   };
 
   const menuItems = [
-    { name: "ABOUT US", to: "/", component: <AboutUsBox />, offset: 0 },
-    { name: "TRADING", to: "/about", component: <TradingBox />, offset: -100 },
-    {
-      name: "PLATFORM",
-      to: "/services",
-      component: <PlatformBox />,
-      offset: 0,
-    },
+    { name: "ABOUT US", to: "/", component: <AboutUsBox /> },
+    { name: "TRADING", to: "/about", component: <TradingBox /> },
+    { name: "PLATFORM", to: "/services", component: <PlatformBox /> },
     {
       name: "RESEARCH & TOOLS",
       to: "/contact",
       component: <ResearchAndToolBox />,
-      offset: 0,
     },
-    { name: "SUPPORT", to: "/contact", component: <SupportBox />, offset: 0 },
+    { name: "SUPPORT", to: "/contact", component: <SupportBox /> },
   ];
 
   return (
     <AppBar
       position="sticky"
       sx={{
+        backgroundColor: "#fff",
         height: "70px",
-        backgroundColor: "white",
         display: "flex",
         justifyContent: "center",
-        boxShadow: "0px 2px 4px rgba(0,0,0,0.1)",
+        boxShadow: "0px 1px 4px rgba(0,0,0,0.16)",
+        zIndex: 900,
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* LOGO */}
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
             <img
               src="Images/MainContentImages/Hc Finvest Logo for website 3.svg"
               height="50px"
               alt="Logo"
+              style={{ maxWidth: "150px" }}
             />
           </Link>
 
-          {/* DESKTOP MENU */}
+          {/* DESKTOP NAV */}
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
               alignItems: "center",
               gap: 2,
-              ml: 3,
             }}
           >
             {menuItems.map((item) => (
@@ -103,22 +100,24 @@ const Navbar = () => {
                 onMouseEnter={() => handleMouseEnter(item.name)}
                 onMouseLeave={handleMouseLeave}
               >
-                <Link  style={linkStyle}>
+                <Link to={item.to} style={linkStyle}>
                   {item.name}
                 </Link>
+
+                {/* Dropdown */}
                 <Slide
                   direction="up"
                   in={hovered === item.name}
                   mountOnEnter
                   unmountOnExit
-                  timeout={400}
+                  timeout={250}
                 >
                   <Box
                     sx={{
                       position: "absolute",
                       top: "55px",
-                      left: item.offset,
-                      zIndex: 10,
+                      left: 0,
+                      zIndex: 20,
                     }}
                   >
                     {item.component}
@@ -155,8 +154,6 @@ const Navbar = () => {
 
           {/* MOBILE MENU ICON */}
           <IconButton
-            color="inherit"
-            edge="end"
             sx={{ display: { xs: "flex", md: "none" }, color: "black" }}
             onClick={toggleDrawer(true)}
           >
@@ -170,15 +167,14 @@ const Navbar = () => {
           open={mobileOpen}
           onClose={toggleDrawer(false)}
           PaperProps={{
-            sx: { width: "80%", maxWidth: 320, backgroundColor: "#fff" },
+            sx: { width: "80%", maxWidth: 330, backgroundColor: "#fff" },
           }}
         >
-          {/* HEADER */}
+          {/* Drawer Header */}
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              alignItems: "center",
               p: 2,
               borderBottom: "1px solid #ddd",
             }}
@@ -191,42 +187,33 @@ const Navbar = () => {
             </IconButton>
           </Box>
 
-          {/* MENU ITEMS */}
           <List>
             {menuItems.map((item) => (
               <Box key={item.name}>
-                <ListItem
-                  button
-                  onClick={() => toggleExpand(item.name)}
-                  sx={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <ListItemText
-                    primary={item.name}
-                    primaryTypographyProps={{
-                      fontSize: "16px",
-                      color: "black",
-                      fontWeight: 500,
-                    }}
-                  />
-                  {expandedMenu === item.name ? (
-                    <ExpandLessIcon />
-                  ) : (
-                    <ExpandMoreIcon />
-                  )}
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => toggleExpand(item.name)}>
+                    <ListItemText
+                      primary={item.name}
+                      primaryTypographyProps={{
+                        fontSize: 16,
+                        fontWeight: 500,
+                      }}
+                    />
+                    {expandedMenu === item.name ? (
+                      <ExpandLessIcon />
+                    ) : (
+                      <ExpandMoreIcon />
+                    )}
+                  </ListItemButton>
                 </ListItem>
 
-                {/* Collapsible Dropdown */}
-                <Collapse
-                  in={expandedMenu === item.name}
-                  timeout="auto"
-                  unmountOnExit
-                >
+                {/* Mobile Dropdown */}
+                <Collapse in={expandedMenu === item.name} timeout="auto">
                   <Box
                     sx={{
-                      pl: 3,
-                      pr: 2,
-                      pb: 2,
-                      backgroundColor: "#f9f9f9",
+                      px: 3,
+                      py: 1,
+                      background: "#f5f5f5",
                       borderLeft: "3px solid #11155c",
                     }}
                   >
@@ -237,7 +224,7 @@ const Navbar = () => {
             ))}
 
             {/* Bottom Buttons */}
-            <Box sx={{ p: 2 }}>
+            <Box sx={{ p: 2, pt: 0 }}>
               <Button
                 variant="outlined"
                 fullWidth

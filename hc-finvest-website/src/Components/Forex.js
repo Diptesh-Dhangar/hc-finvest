@@ -55,28 +55,10 @@ function createData(name, avg, low, leverage) {
 }
 
 const starterRows = [
-  createData(
-    "AUDCAD",
-    "Australian Dollar Vs Canadian Dollar",
-    0.21,
-    0.18,
-    "1:2000"
-  ),
-  createData("AUDCHF", "Australian Dollar Vs Swiss Franc", 0.2, 0.17, "1:2000"),
-  createData(
-    "AUDJPY",
-    "Australian Dollar Vs Japanese Yen",
-    0.26,
-    0.24,
-    "1:2000"
-  ),
-  createData(
-    "AUDNZD",
-    "Australian Dollar Vs New Zealand Dollar",
-    0.36,
-    0.33,
-    "1:2000"
-  ),
+  createData("AUDCAD", 0.21, 0.18, "1:2000"),
+  createData("AUDCHF", 0.2, 0.17, "1:2000"),
+  createData("AUDJPY", 0.26, 0.24, "1:2000"),
+  createData("AUDNZD", 0.36, 0.33, "1:2000"),
   createData("AUDUSD", 0.22, 0.2, "1:2000"),
   createData("CADCHF", 0.22, 0.2, "1:2000"),
   createData("CADJPY", 0.29, 0.26, "1:2000"),
@@ -100,48 +82,12 @@ const starterRows = [
   createData("GBPCHF", 0.35, 0.33, "1:2000"),
   createData("GBPJPY", 0.31, 0.27, "1:2000"),
   createData("GBPUSD", 0.18, 0.15, "1:2000"),
-  createData(
-    "GBPAUD",
-
-    0.38,
-    0.36,
-    "1:2000"
-  ),
-  createData(
-    "GBPNZD",
-
-    0.29,
-    0.26,
-    "1:2000"
-  ),
-  createData(
-    "NZDCAD",
-
-    0.3,
-    0.28,
-    "1:2000"
-  ),
-  createData(
-    "NZDCHF",
-
-    0.24,
-    0.2,
-    "1:2000"
-  ),
-  createData(
-    "NZDJPY",
-
-    0.29,
-    0.27,
-    "1:2000"
-  ),
-  createData(
-    "NZDUSD",
-
-    0.23,
-    0.2,
-    "1:2000"
-  ),
+  createData("GBPAUD", 0.38, 0.36, "1:2000"),
+  createData("GBPNZD", 0.29, 0.26, "1:2000"),
+  createData("NZDCAD", 0.3, 0.28, "1:2000"),
+  createData("NZDCHF", 0.24, 0.2, "1:2000"),
+  createData("NZDJPY", 0.29, 0.27, "1:2000"),
+  createData("NZDUSD", 0.23, 0.2, "1:2000"),
   createData("USDCAD", 0.22, 0.2, "1:2000"),
   createData("USDCHF", 0.27, 0.24, "1:2000"),
   createData("USDHKD", 0.3, 0.28, "1:2000"),
@@ -256,7 +202,7 @@ const Forex = () => {
   };
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",

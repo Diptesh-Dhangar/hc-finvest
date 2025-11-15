@@ -43,6 +43,9 @@ import BlogDetails from "./Components/BlogDetails";
 import Admin from "./Components/Admin/AdminPage";
 import DynamicArticleFormMUI from "./Components/Admin/DynamicForm";
 import EnquiryData from "./Components/Admin/EnquiryData";
+import TermsConditions from "./Components/TermsConditions";
+import PrivacyPolicies from "./Components/PrivacyPolicies";
+import AMLPolicy from "./Components/AMLPolicies";
 
 function App() {
   return (
@@ -122,6 +125,9 @@ function App() {
           element={<IntroducingBrokerfaq />}
         ></Route>
         <Route path="marginLeverage" element={<MarginLeverage />}></Route>
+        <Route path="termsConditions" element={<TermsConditions />}></Route>
+        <Route path="privacyPolicies" element={<PrivacyPolicies />}></Route>
+        <Route path="amlPolicies" element={<AMLPolicy />}></Route>
 
         {/* Blelow are the optional pages  */}
         <Route path="superAdmin" element={<Admin />}></Route>
