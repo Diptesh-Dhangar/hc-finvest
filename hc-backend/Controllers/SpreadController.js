@@ -5,6 +5,7 @@ import IndicesSpread from "../models/SpreadsModels/IndicesSpread.js";
 import StocksSpread from "../models/SpreadsModels/StocksSpread.js";
 import CommoditiesSpread from "../models/SpreadsModels/CommoditiesSpread.js";
 import CryptoSpread from "../models/SpreadsModels/CryptoSpread.js";
+import { marketModelMap } from "../models/SpreadsModels/MarketModelMap.js";
 
 const modelMap = {
   Forex: ForexSpread,
@@ -14,6 +15,54 @@ const modelMap = {
   Commodities: CommoditiesSpread,
   Cryptocurrencies: CryptoSpread,
 };
+
+export const getCurrencyPairs = async (req, res) => {
+  const { marketType, accountType } = req.query;
+
+  if (!marketType || !accountType) {
+    return res
+      .status(400)
+      .json({ message: "marketType and accountType are required" });
+  }
+
+  try {
+    const Model = marketModelMap[marketType];
+    if (!Model) return res.status(400).json({ message: "Invalid market type" });
+
+    const pairs = await Model.find({ accountType }).select("currencyPair");
+
+    res.json({ currencyPairs: pairs });
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching currency pairs" });
+  }
+};
+
+// UPDATE SPREAD RECORD
+export const updateSpread = async (req, res) => {
+  const { marketType, accountType, currencyPair, avgSpread, lowSpread } =
+    req.body;
+
+  try {
+    const Model = marketModelMap[marketType];
+    if (!Model) return res.status(400).json({ message: "Invalid market type" });
+
+    const updated = await Model.findOneAndUpdate(
+      { accountType, currencyPair },
+      { avgSpread, lowSpread },
+      { new: true }
+    );
+
+    if (!updated)
+      return res
+        .status(404)
+        .json({ message: "Spread not found for given data" });
+
+    res.json({ message: "Spread updated successfully", updated });
+  } catch (error) {
+    res.status(500).json({ message: "Update failed", error });
+  }
+};
+
 
 export const addSpread = async (req, res) => {
   try {
@@ -77,20 +126,20 @@ export const getSpreadById = async (req, res) => {
 };
 
 // ➡️ Update spread
-export const updateSpread = async (req, res) => {
-  try {
-    const spread = await Spread.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    });
-    if (!spread) return res.status(404).json({ message: "Spread not found" });
-    res.status(200).json({ message: "Spread updated successfully!", spread });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ message: "Failed to update spread", error: error.message });
-  }
-};
+// export const updateSpread = async (req, res) => {
+//   try {
+//     const spread = await Spread.findByIdAndUpdate(req.params.id, req.body, {
+//       new: true,
+//       runValidators: true,
+//     });
+//     if (!spread) return res.status(404).json({ message: "Spread not found" });
+//     res.status(200).json({ message: "Spread updated successfully!", spread });
+//   } catch (error) {
+//     res
+//       .status(500)
+//       .json({ message: "Failed to update spread", error: error.message });
+//   }
+// };
 
 // ➡️ Delete spread
 export const deleteSpread = async (req, res) => {

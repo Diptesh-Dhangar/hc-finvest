@@ -10,225 +10,139 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
-import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
-
-const filter = createFilterOptions();
+import Autocomplete from "@mui/material/Autocomplete";
+import axios from "axios";
 
 const SpreadManagement = () => {
-  const [value, setValue] = React.useState(null);
+  const [currency, setCurrency] = React.useState(null);
   const [marketType, setMarketType] = React.useState("");
   const [accountType, setAccountType] = React.useState("");
+  const [avgSpread, setAvgSpread] = React.useState("");
+  const [lowSpread, setLowSpread] = React.useState("");
+  const [currencyOptions, setCurrencyOptions] = React.useState([]);
 
-  const handleChange = (event) => {
-    setMarketType(event.target.value);
+  // Fetch currency pairs when both selected
+  React.useEffect(() => {
+    const fetchPairs = async () => {
+      if (!marketType || !accountType) return;
+
+      const response = await axios.get(
+        "https://hcfinvest.onrender.com/api/spreads/currency-pairs",
+        {
+          params: { marketType, accountType },
+        }
+      );
+
+      const formatted = response.data.currencyPairs.map((p) => ({
+        title: p.currencyPair,
+      }));
+
+      setCurrencyOptions(formatted);
+    };
+
+    fetchPairs();
+  }, [marketType, accountType]);
+
+  const handleUpdate = async () => {
+    if (!marketType || !accountType || !currency || !avgSpread || !lowSpread) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const payload = {
+      marketType,
+      accountType,
+      currencyPair: currency.title,
+      avgSpread,
+      lowSpread,
+    };
+
+    try {
+      const res = await axios.put(
+        "https://hcfinvest.onrender.com/api/spreads/update",
+        payload
+      );
+      alert(res.data.message);
+    } catch (error) {
+      alert("Update failed");
+    }
   };
-
-  const top100Films = [
-    { title: "The Shawshank Redemption" },
-    { title: "The Godfather" },
-    { title: "3 Idiots" },
-    { title: "Interstellar" },
-    { title: "Inception" },
-  ];
 
   return (
     <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
-      <Box
-        sx={{
-          width: "100%",
-          background: "#fff",
-          p: { xs: 2, sm: 3, md: 4 },
-          borderRadius: 2,
-          boxShadow: 3,
-          textAlign: "center", // ← LEFT ALIGN EVERYTHING
-        }}
-      >
-        {/* Header */}
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: "2rem",
-            fontWeight: "700",
-            marginBottom: "1.5rem",
-            width: "100%",
-            color: "#0f5e9b",
-          }}
-        >
-          {" "}
-          UPDATE SPREADS
+      <Box sx={{ p: 4, background: "#fff", borderRadius: 2, boxShadow: 3 }}>
+        <Typography variant="h4" fontWeight={700} mb={3} color="#0f5e9b">
+          Update Spread
         </Typography>
 
-        {/* FORM */}
         <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
           {/* Market Type */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Market Type
-            </Typography>
-
-            <FormControl fullWidth sx={{ textAlign: "left" }}>
-              <InputLabel sx={{ textAlign: "left" }}>Market Type</InputLabel>
-
-              <Select
-                value={marketType}
-                label="Market Type"
-                onChange={handleChange}
-                sx={{ textAlign: "left" }}
-                MenuProps={{
-                  PaperProps: {
-                    sx: { textAlign: "left" },
-                  },
-                }}
-              >
-                <MenuItem sx={{ textAlign: "left" }} value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Forex">
-                  Forex
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Metals">
-                  Metals
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Indices">
-                  Indices
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Stocks">
-                  Stocks
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Commodities">
-                  Commodities
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Cryptocurrencies">
-                  Cryptocurrencies
-                </MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
+          <FormControl fullWidth>
+            <InputLabel>Market Type</InputLabel>
+            <Select
+              value={marketType}
+              label="Market Type"
+              onChange={(e) => setMarketType(e.target.value)}
+            >
+              <MenuItem value="Forex">Forex</MenuItem>
+              <MenuItem value="Metals">Metals</MenuItem>
+              <MenuItem value="Indices">Indices</MenuItem>
+              <MenuItem value="Stocks">Stocks</MenuItem>
+              <MenuItem value="Commodities">Commodities</MenuItem>
+              <MenuItem value="Cryptocurrencies">Cryptocurrencies</MenuItem>
+            </Select>
+          </FormControl>
 
           {/* Account Type */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Account Type
-            </Typography>
-
-            <FormControl fullWidth sx={{ textAlign: "left" }}>
-              <InputLabel sx={{ textAlign: "left" }}>Account Type</InputLabel>
-
-              <Select
-                value={accountType}
-                label="Account Type"
-                onChange={handleChange}
-                sx={{ textAlign: "left" }}
-                MenuProps={{
-                  PaperProps: {
-                    sx: { textAlign: "left" },
-                  },
-                }}
-              >
-                <MenuItem sx={{ textAlign: "left" }} value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Starter">
-                  Starter Account
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="ProTrader">
-                  Pro Trader Account
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="ZeroSpread">
-                  Zero Spread Account
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Elite">
-                  Elite Account
-                </MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
+          <FormControl fullWidth>
+            <InputLabel>Account Type</InputLabel>
+            <Select
+              value={accountType}
+              label="Account Type"
+              onChange={(e) => setAccountType(e.target.value)}
+            >
+              <MenuItem value="Starter">Starter</MenuItem>
+              <MenuItem value="ProTrader">Pro Trader</MenuItem>
+              <MenuItem value="ZeroSpread">Zero Spread</MenuItem>
+              <MenuItem value="Elite">Elite</MenuItem>
+            </Select>
+          </FormControl>
 
           {/* Currency Pair */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Currency Pair
-            </Typography>
-
-            <Autocomplete
-              value={value}
-              onChange={(event, newValue) => {
-                if (typeof newValue === "string") setValue({ title: newValue });
-                else if (newValue?.inputValue)
-                  setValue({ title: newValue.inputValue });
-                else setValue(newValue);
-              }}
-              filterOptions={(options, params) => {
-                const filtered = filter(options, params);
-                const { inputValue } = params;
-
-                const isExisting = options.some(
-                  (option) => inputValue === option.title
-                );
-                if (inputValue !== "" && !isExisting) {
-                  filtered.push({
-                    inputValue,
-                    title: "Result Not Found",
-                  });
-                }
-
-                return filtered;
-              }}
-              selectOnFocus
-              clearOnBlur
-              handleHomeEndKeys
-              fullWidth
-              options={top100Films}
-              getOptionLabel={(option) =>
-                typeof option === "string" ? option : option.title
-              }
-              renderOption={(props, option) => {
-                const { key, ...others } = props;
-                return (
-                  <li key={key} {...others} style={{ textAlign: "left" }}>
-                    {option.title}
-                  </li>
-                );
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Select Currency Pair"
-                  sx={{ textAlign: "left" }}
-                />
-              )}
-            />
-          </Box>
+          <Autocomplete
+            fullWidth
+            value={currency}
+            onChange={(e, newValue) => setCurrency(newValue)}
+            options={currencyOptions}
+            getOptionLabel={(option) => option.title}
+            renderInput={(params) => (
+              <TextField {...params} label="Currency Pair" />
+            )}
+          />
 
           {/* Average Spread */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Enter Average Spread
-            </Typography>
-            <TextField
-              fullWidth
-              label="Average Spread"
-              sx={{ textAlign: "left" }}
-            />
-          </Box>
+          <TextField
+            fullWidth
+            label="Average Spread"
+            type="number"
+            value={avgSpread}
+            onChange={(e) => setAvgSpread(e.target.value)}
+          />
 
-          {/* Spread As Low As (Pips) */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Spread As Low As (Pips)
-            </Typography>
-            <TextField
-              fullWidth
-              label="Spread As Low As (Pips)"
-              sx={{ textAlign: "left" }}
-            />
-          </Box>
+          {/* Low Spread */}
+          <TextField
+            fullWidth
+            label="Spread As Low As (Pips)"
+            type="number"
+            value={lowSpread}
+            onChange={(e) => setLowSpread(e.target.value)}
+          />
 
-          {/* Button */}
           <Box textAlign="right">
             <Button
               variant="contained"
-              sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
+              sx={{ backgroundColor: "#0c1e49", px: 4 }}
+              onClick={handleUpdate}
             >
               Update
             </Button>
