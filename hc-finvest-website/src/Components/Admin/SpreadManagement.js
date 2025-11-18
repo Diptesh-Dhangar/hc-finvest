@@ -28,7 +28,7 @@ const SpreadManagement = () => {
       if (!marketType || !accountType) return;
 
       const res = await axios.get(
-        "http://localhost:5000/api/spreads/get-pairs",
+        "https://hcfinvest.onrender.com/api/spreads/get-pairs",
         {
           params: { marketType, accountType },
         }
@@ -58,7 +58,7 @@ const SpreadManagement = () => {
 
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/spreads/update",
+        "https://hcfinvest.onrender.com/api/spreads/update",
         payload
       );
       alert(res.data.message);
