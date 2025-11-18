@@ -6,7 +6,6 @@ import blogRoutes from "./Routes/BlogRoutes.js";
 import registrationRoutes from "./Routes/RegistrationRoutes.js";
 import contactRoutes from "./Routes/ContactRoutes.js";
 import swapRoutes from "./Routes/SwapRoutes.js";
-// import spreadRoutes from "./Routes/SpreadRoutes.js"
 import spreadRoutes from "./Routes/SpreadRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -31,7 +30,8 @@ app.use("/api/blogs", blogRoutes);
 app.use("/api/register", registrationRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/swaps", swapRoutes);
-app.use("/api/spreads", spreadRoutes); // must match frontend URL
+app.use("/api/spreads", spreadRoutes);
+app.use("/api/swaps", swapRoutes);
 
 // // ✅ Default route
 // app.get("/", (req, res) => {

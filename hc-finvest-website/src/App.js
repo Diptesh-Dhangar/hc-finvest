@@ -53,6 +53,7 @@ import AdminPanel from "./Components/Admin/AdminPanel";
 import BlogManagement from "./Components/Admin/BlogManagement";
 import ForexBrokerArticle from "./Components/ForexBrokerArticle";
 import AddSpread from "./Components/Admin/AddSpread";
+import AddSwap from "./Components/Admin/AddSwap";
 
 function App() {
   return (
@@ -140,6 +141,7 @@ function App() {
         ></Route>
 
         {/* Blelow are the optional pages  */}
+        <Route path="adminAddSwap" element={<AddSwap />} />
         <Route path="adminAddSpread" element={<AddSpread />} />
         <Route path="admin" element={<AdminPanel />}>
           <Route path="adminBlogManagement" element={<BlogManagement />} />
