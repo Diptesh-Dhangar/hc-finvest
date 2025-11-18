@@ -830,7 +830,11 @@ const MainContent = () => {
                     Know
                   </Typography>
 
-                  <Button variant="contained" sx={{ borderRadius: 2 }}>
+                  <Button
+                    variant="contained"
+                    href="forexBrokerArticle"
+                    sx={{ borderRadius: 2 }}
+                  >
                     Read More
                   </Button>
                 </CardContent>

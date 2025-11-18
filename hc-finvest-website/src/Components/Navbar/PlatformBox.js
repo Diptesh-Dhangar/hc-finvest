@@ -34,7 +34,12 @@ const PlatformBox = () => {
             }}
           >
             <Link
-              sx={{ textDecoration: "none", color: "black", cursor: "pointer" }}
+              underline="none"
+              style={{
+                textDecoration: "none", // remove underline
+                color: "black", // inherit black color
+                cursor: "pointer",
+              }}
               href={item.href}
             >
               {item.label}

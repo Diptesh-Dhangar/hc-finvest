@@ -1,0 +1,213 @@
+import * as React from "react";
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Typography,
+  TextField,
+} from "@mui/material";
+import axios from "axios";
+
+const AddSpread = () => {
+  const [marketType, setMarketType] = React.useState("");
+  const [accountType, setAccountType] = React.useState("");
+  const [currencyPair, setCurrencyPair] = React.useState("");
+  const [avgSpread, setAvgSpread] = React.useState("");
+  const [lowSpread, setLowSpread] = React.useState("");
+  const [leverageType, setLeverageType] = React.useState("");
+
+  const handleSubmit = async () => {
+    if (
+      !marketType ||
+      !accountType ||
+      !currencyPair ||
+      !avgSpread ||
+      !lowSpread ||
+      !leverageType
+    ) {
+      alert("❗ Please fill all fields");
+      return;
+    }
+
+    const data = {
+      marketType,
+      accountType,
+      currencyPair,
+      avgSpread,
+      lowSpread,
+      leverageType,
+    };
+    console.log(data);
+    try {
+      await axios.post("https://hcfinvest.onrender.com/api/spreads", data);
+
+
+      alert("✅ Spread added successfully!");
+
+      // Reset fields
+      setMarketType("");
+      setAccountType("");
+      setCurrencyPair("");
+      setAvgSpread("");
+      setLowSpread("");
+      setLeverageType("");
+    } catch (error) {
+      console.error("Error adding spread:", error);
+      alert("❌ Failed to add spread");
+    }
+  };
+
+  return (
+    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+      <Box
+        sx={{
+          width: "100%",
+          background: "#fff",
+          p: { xs: 2, sm: 3, md: 4 },
+          borderRadius: 2,
+          boxShadow: 3,
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: "2rem",
+            fontWeight: "700",
+            marginBottom: "1.5rem",
+            color: "#0f5e9b",
+          }}
+        >
+          ADD SPREADS
+        </Typography>
+
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          {/* Market Type */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Select Market Type
+            </Typography>
+
+            <FormControl fullWidth>
+              <InputLabel>Market Type</InputLabel>
+              <Select
+                value={marketType}
+                label="Market Type"
+                onChange={(e) => setMarketType(e.target.value)}
+              >
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="Forex">Forex</MenuItem>
+                <MenuItem value="Metals">Metals</MenuItem>
+                <MenuItem value="Indices">Indices</MenuItem>
+                <MenuItem value="Stocks">Stocks</MenuItem>
+                <MenuItem value="Commodities">Commodities</MenuItem>
+                <MenuItem value="Cryptocurrencies">Cryptocurrencies</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          {/* Account Type */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Select Account Type
+            </Typography>
+
+            <FormControl fullWidth>
+              <InputLabel>Account Type</InputLabel>
+              <Select
+                value={accountType}
+                label="Account Type"
+                onChange={(e) => setAccountType(e.target.value)}
+              >
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="Starter">Starter Account</MenuItem>
+                <MenuItem value="ProTrader">Pro Trader Account</MenuItem>
+                <MenuItem value="ZeroSpread">Zero Spread Account</MenuItem>
+                <MenuItem value="Elite">Elite Account</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          {/* Currency Pair */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Currency Pair
+            </Typography>
+
+            <TextField
+              fullWidth
+              label="Currency Pair"
+              value={currencyPair}
+              onChange={(e) => setCurrencyPair(e.target.value)}
+            />
+          </Box>
+
+          {/* Average Spread */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Average Spread
+            </Typography>
+            <TextField
+              fullWidth
+              label="Average Spread"
+              type="number"
+              value={avgSpread}
+              onChange={(e) => setAvgSpread(e.target.value)}
+            />
+          </Box>
+
+          {/* Low Spread */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Spread As Low As (Pips)
+            </Typography>
+            <TextField
+              fullWidth
+              label="Spread As Low As (Pips)"
+              type="number"
+              value={lowSpread}
+              onChange={(e) => setLowSpread(e.target.value)}
+            />
+          </Box>
+
+          {/* Leverage */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Leverage Type
+            </Typography>
+
+            <FormControl fullWidth>
+              <InputLabel>Leverage Type</InputLabel>
+              <Select
+                value={leverageType}
+                label="Leverage Type"
+                onChange={(e) => setLeverageType(e.target.value)}
+              >
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="1:100">1:100</MenuItem>
+                <MenuItem value="1:2000">1:2000</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          {/* Submit Button */}
+          <Box textAlign="right">
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
+              onClick={handleSubmit}
+            >
+              Add Spread
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Container>
+  );
+};
+
+export default AddSpread;

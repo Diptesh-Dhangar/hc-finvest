@@ -1,4 +1,5 @@
-import { Container } from "@mui/material"
+import React, { useEffect, useState } from "react";
+import { Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -7,7 +8,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import axios from "axios";
 
+// ----------------- Styled Components -----------------
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -22,63 +25,84 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  // hide last border
   "&:last-child td, &:last-child th": {
     border: 0,
   },
 }));
 
-function createData(name, contact,email , dateAndTime) {
-  return { name, contact, email, dateAndTime };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
+// ----------------- MAIN COMPONENT -----------------
 const EnquiryData = () => {
-    return (
-      <Container
-        sx={{ backgroundColor: "#fff" }}
-        // maxWidth={false}
-        // disableGutters
-      >
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 700 }} aria-label="customized table">
-            <TableHead>
+  const [rows, setRows] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // ⭐ Fetch all registrations
+  const fetchRegistrations = async () => {
+    try {
+      const res = await axios.get(
+        "https://hcfinvest.onrender.com/api/register"
+      );
+
+      console.log("API RESPONSE:", res.data);
+
+      // ⭐ SAFETY: Ensure response is an array
+      const data = Array.isArray(res.data) ? res.data : [];
+
+      setRows(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching registrations:", error);
+      setRows([]); // Avoid map error
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchRegistrations();
+  }, []);
+
+  return (
+    <Container sx={{ backgroundColor: "#fff", pt: 3 }}>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Full Name</StyledTableCell>
+              <StyledTableCell>Phone Number</StyledTableCell>
+              <StyledTableCell>Email</StyledTableCell>
+              <StyledTableCell align="right">Date & Time</StyledTableCell>
+            </TableRow>
+          </TableHead>
+
+          <TableBody>
+            {loading ? (
               <TableRow>
-                <StyledTableCell>Full Name</StyledTableCell>
-                <StyledTableCell >Contact No</StyledTableCell>
-                <StyledTableCell >Email&nbsp;</StyledTableCell>
-                <StyledTableCell align="right">Date & Time&nbsp;</StyledTableCell>
-                {/* <StyledTableCell align="right">
-                  Protein&nbsp;(g)
-                </StyledTableCell> */}
+                <StyledTableCell colSpan={4} align="center">
+                  Loading...
+                </StyledTableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <StyledTableRow key={row.name}>
-                  <StyledTableCell component="th" scope="row">
-                    {row.name}
+            ) : rows.length === 0 ? (
+              <TableRow>
+                <StyledTableCell colSpan={4} align="center">
+                  No registrations found.
+                </StyledTableCell>
+              </TableRow>
+            ) : (
+              rows.map((row) => (
+                <StyledTableRow key={row._id}>
+                  <StyledTableCell>{row.fullName}</StyledTableCell>
+                  <StyledTableCell>{row.phoneNumber}</StyledTableCell>
+                  <StyledTableCell>{row.email}</StyledTableCell>
+                  <StyledTableCell align="right">
+                    {new Date(row.createdAt).toLocaleString()}
                   </StyledTableCell>
-                  <StyledTableCell >
-                    {row.contact}
-                  </StyledTableCell>
-                  <StyledTableCell >{row.email}</StyledTableCell>
-                  <StyledTableCell align="right">{row.dateAndTime}</StyledTableCell>
-                  {/* <StyledTableCell align="right">{row.protein}</StyledTableCell> */}
                 </StyledTableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Container>
-    );
-}
+              ))
+            )}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Container>
+  );
+};
 
 export default EnquiryData;

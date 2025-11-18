@@ -3,8 +3,11 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import blogRoutes from "./Routes/BlogRoutes.js";
-import registrationRoutes from "./Routes/RegistrationRoutes.js"
+import registrationRoutes from "./Routes/RegistrationRoutes.js";
 import contactRoutes from "./Routes/ContactRoutes.js";
+import swapRoutes from "./Routes/SwapRoutes.js";
+// import spreadRoutes from "./Routes/SpreadRoutes.js"
+import spreadRoutes from "./Routes/SpreadRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -15,10 +18,8 @@ app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static("uploads")); // serve image files
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -29,12 +30,13 @@ mongoose
 app.use("/api/blogs", blogRoutes);
 app.use("/api/register", registrationRoutes);
 app.use("/api/contact", contactRoutes);
+app.use("/api/swaps", swapRoutes);
+app.use("/api/spreads", spreadRoutes); // must match frontend URL
 
 // // ✅ Default route
 // app.get("/", (req, res) => {
 //   res.send("Welcome to the Blog API 🚀");
 // });
-
 
 app.use(express.static(path.join(__dirname, "../hc-finvest-website/build")));
 
@@ -43,7 +45,6 @@ app.get(/.*/, (req, res) => {
     path.join(__dirname, "../hc-finvest-website/build", "index.html")
   );
 });
-
 
 // ✅ Start server
 const PORT = process.env.PORT || 5000;

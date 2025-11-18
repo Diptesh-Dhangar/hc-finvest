@@ -192,19 +192,31 @@ const Footer = () => {
           <Grid item xs={12} sm={6}>
             <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
               <li>
-                <Link underline="none" href="/privacyPolicies">
+                <Link
+                  sx={{ color: "#001489" }}
+                  underline="none"
+                  href="/privacyPolicies"
+                >
                   <b>Privacy Policy</b>
                 </Link>
               </li>
 
               <li>
-                <Link underline="none" href="/termsConditions">
+                <Link
+                  sx={{ color: "#001489" }}
+                  underline="none"
+                  href="/termsConditions"
+                >
                   <b>Terms & Conditions</b>
                 </Link>
               </li>
 
               <li>
-                <Link underline="none" href="/amlPolicies">
+                <Link
+                  sx={{ color: "#001489" }}
+                  underline="none"
+                  href="/amlPolicies"
+                >
                   <b>AML Policies</b>
                 </Link>
               </li>

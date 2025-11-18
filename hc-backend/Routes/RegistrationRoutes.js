@@ -7,13 +7,13 @@ import {
 
 const router = express.Router();
 
-// POST → Add registration
-router.post("/", createRegistration);
+// Create a new registration
+router.post("/create", createRegistration);
 
-// GET → Fetch all registrations
-router.get("/", getAllRegistrations);
+// Get all registrations
+router.get("/all", getAllRegistrations);
 
-// DELETE → Remove registration by ID
-router.delete("/:id", deleteRegistration);
+// Delete a registration by ID
+router.delete("/delete/:id", deleteRegistration);
 
 export default router;

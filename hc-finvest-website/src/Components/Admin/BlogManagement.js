@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardContent,
@@ -14,9 +15,11 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import ScrollToTopButton from "../Utilities/ScrollToTopButton";
+import ReactQuill from "react-quill-new";
+import "react-quill-new/dist/quill.snow.css";
 
-const AddBlogs = () => {
+const BlogManagement = () => {
   const [date, setDate] = useState("");
   const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState("");
@@ -25,6 +28,24 @@ const AddBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [open, setOpen] = useState(false);
 
+  // ----------------------
+  // Dynamic Sections
+  // ----------------------
+  const [sections, setSections] = useState([{ heading: "", content: "" }]);
+
+  const handleAddSection = () => {
+    setSections([...sections, { heading: "", content: "" }]);
+  };
+
+  const handleChange = (index, field, value) => {
+    const updated = [...sections];
+    updated[index][field] = value;
+    setSections(updated);
+  };
+
+  // ----------------------
+  // Image File Handler
+  // ----------------------
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -36,6 +57,9 @@ const AddBlogs = () => {
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  // ----------------------
+  // SUBMIT BLOG
+  // ----------------------
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -49,18 +73,23 @@ const AddBlogs = () => {
     blogData.append("description", description);
     blogData.append("date", date);
     blogData.append("image", image);
+    blogData.append("sections", JSON.stringify(sections));
 
     try {
       await axios.post("https://hcfinvest.onrender.com/api/blogs", blogData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      // console.log(blogData);
+
       alert("✅ Blog added successfully!");
+
+      // RESET FORM
       setDescription("");
       setTitle("");
       setDate("");
       setImage(null);
       setFileName("");
+      setSections([{ heading: "", content: "" }]);
+
       handleClose();
       fetchBlogs();
     } catch (error) {
@@ -69,11 +98,13 @@ const AddBlogs = () => {
     }
   };
 
+  // ----------------------
+  // FETCH BLOGS
+  // ----------------------
   const fetchBlogs = async () => {
     try {
       const res = await axios.get("https://hcfinvest.onrender.com/api/blogs");
       setBlogs(res.data);
-      console.log(res.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
     }
@@ -83,9 +114,13 @@ const AddBlogs = () => {
     fetchBlogs();
   }, []);
 
+  // ----------------------
+  // JSX RETURN
+  // ----------------------
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
+
       <Grid
         sx={{ display: "flex", justifyContent: "flex-end", margin: "20px" }}
       >
@@ -94,7 +129,7 @@ const AddBlogs = () => {
         </Button>
       </Grid>
 
-      {/* Dialog for adding a new blog */}
+      {/* Add Blog Dialog */}
       <Dialog open={open} onClose={handleClose} fullWidth>
         <DialogTitle
           sx={{
@@ -106,8 +141,10 @@ const AddBlogs = () => {
         >
           Add New Blog
         </DialogTitle>
+
         <DialogContent>
           <Grid>
+            {/* Image Upload */}
             <TextField
               fullWidth
               label="Selected File"
@@ -159,7 +196,7 @@ const AddBlogs = () => {
             />
 
             <TextField
-              label="Description"
+              label="Short Description"
               fullWidth
               multiline
               sx={{ margin: "10px" }}
@@ -168,6 +205,58 @@ const AddBlogs = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </Grid>
+
+          {/* Dynamic Sections */}
+          {sections.map((section, index) => (
+            <Card key={index} sx={{ mb: 4, p: 2, borderRadius: 2 }}>
+              <CardContent>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  Section {index + 1}
+                </Typography>
+
+                <TextField
+                  label="Section Heading"
+                  fullWidth
+                  variant="outlined"
+                  value={section.heading}
+                  onChange={(e) =>
+                    handleChange(index, "heading", e.target.value)
+                  }
+                  sx={{ mb: 3 }}
+                />
+
+                <Typography
+                  variant="subtitle1"
+                  fontWeight="medium"
+                  gutterBottom
+                >
+                  Section Content
+                </Typography>
+
+                <ReactQuill
+                  theme="snow"
+                  value={section.content}
+                  onChange={(value) => handleChange(index, "content", value)}
+                  placeholder="Write your detailed content here..."
+                  style={{
+                    height: "200px",
+                    marginBottom: "40px",
+                    backgroundColor: "white",
+                  }}
+                />
+              </CardContent>
+            </Card>
+          ))}
+
+          <Box display="flex" gap={2}>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={handleAddSection}
+            >
+              ➕ Add Section
+            </Button>
+          </Box>
         </DialogContent>
 
         <DialogActions>
@@ -184,7 +273,7 @@ const AddBlogs = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Display blogs */}
+      {/* Display Blogs */}
       <Grid
         container
         justifyContent="center"
@@ -194,7 +283,7 @@ const AddBlogs = () => {
         {blogs.map((blog) => {
           let imageSrc = "";
 
-          if (blog.image && blog.image.data) {
+          if (blog.image?.data) {
             const base64String = btoa(
               new Uint8Array(blog.image.data.data).reduce(
                 (data, byte) => data + String.fromCharCode(byte),
@@ -210,7 +299,6 @@ const AddBlogs = () => {
                 {imageSrc && (
                   <img
                     src={imageSrc}
-                    // alt={blog.title}
                     style={{
                       height: 300,
                       width: "100%",
@@ -218,6 +306,7 @@ const AddBlogs = () => {
                     }}
                   />
                 )}
+
                 <CardContent>
                   <Typography
                     variant="body1"
@@ -226,6 +315,7 @@ const AddBlogs = () => {
                   >
                     {new Date(blog.date).toLocaleDateString()}
                   </Typography>
+
                   <Typography
                     variant="h6"
                     align="left"
@@ -233,13 +323,6 @@ const AddBlogs = () => {
                   >
                     {blog.title}
                   </Typography>
-                  {/* <Typography
-                    variant="body2"
-                    align="left"
-                    sx={{ color: "text.secondary" }}
-                  >
-                    {blog.description}
-                  </Typography> */}
                 </CardContent>
               </Card>
             </Grid>
@@ -250,4 +333,4 @@ const AddBlogs = () => {
   );
 };
 
-export default AddBlogs;
+export default BlogManagement;

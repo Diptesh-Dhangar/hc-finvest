@@ -10,7 +10,7 @@ import SecurityOfFunds from "./Components/SecurityOfFunds";
 import Blogs from "./Components/Blogs";
 import ContactUs from "./Components/ContactUs";
 import MetaTrader5Pc from "./Components/MetaTrader5Pc";
-import AddBlogs from "./Components/AddBlogs";
+import AddBlogs from "./Components/Admin/BlogManagement";
 import AccountsTypes from "./Components/AccountsTypes";
 import Starter from "./Components/Starter";
 import ProTrader from "./Components/ProTrader";
@@ -40,7 +40,7 @@ import IntroducingBrokerfaq from "./Components/IntroducingBrokerfaq";
 import Swap from "./Components/Swap";
 import MarginLeverage from "./Components/MarginLeverage";
 import BlogDetails from "./Components/BlogDetails";
-import Admin from "./Components/Admin/AdminPage";
+// import Admin from "./Components/Admin/AdminPanel";
 import DynamicArticleFormMUI from "./Components/Admin/DynamicForm";
 import EnquiryData from "./Components/Admin/EnquiryData";
 import TermsConditions from "./Components/TermsConditions";
@@ -48,6 +48,11 @@ import PrivacyPolicies from "./Components/PrivacyPolicies";
 import AMLPolicy from "./Components/AMLPolicies";
 import ContactUsData from "./Components/Admin/ContactUsData";
 import SwapManagement from "./Components/Admin/SwapManagement";
+import SpreadManagement from "./Components/Admin/SpreadManagement";
+import AdminPanel from "./Components/Admin/AdminPanel";
+import BlogManagement from "./Components/Admin/BlogManagement";
+import ForexBrokerArticle from "./Components/ForexBrokerArticle";
+import AddSpread from "./Components/Admin/AddSpread";
 
 function App() {
   return (
@@ -85,7 +90,6 @@ function App() {
           path="metaTrade5Android"
           element={<MetaTrader5forAndroid />}
         ></Route>
-        <Route path="admin" element={<AddBlogs />}></Route>
         <Route path="accountsTypesAccount" element={<AccountsTypes />}></Route>
         <Route path="starterAccount" element={<Starter />}></Route>
         <Route path="proTraderAccount" element={<ProTrader />}></Route>
@@ -130,12 +134,20 @@ function App() {
         <Route path="termsConditions" element={<TermsConditions />}></Route>
         <Route path="privacyPolicies" element={<PrivacyPolicies />}></Route>
         <Route path="amlPolicies" element={<AMLPolicy />}></Route>
+        <Route
+          path="forexBrokerArticle"
+          element={<ForexBrokerArticle />}
+        ></Route>
 
         {/* Blelow are the optional pages  */}
-        <Route path="superAdmin" element={<Admin />}></Route>
-        <Route path="adminEnquiryData" element={<EnquiryData />}></Route>
-        <Route path="adminContactUsData" element={<ContactUsData />}></Route>
-        <Route path="adminSwapManagement" element={<SwapManagement />}></Route>
+        <Route path="adminAddSpread" element={<AddSpread />} />
+        <Route path="admin" element={<AdminPanel />}>
+          <Route path="adminBlogManagement" element={<BlogManagement />} />
+          <Route path="adminEnquiryData" element={<EnquiryData />} />
+          <Route path="adminContactUsData" element={<ContactUsData />} />
+          <Route path="adminSwapManagement" element={<SwapManagement />} />
+          <Route path="adminSpreadManagement" element={<SpreadManagement />} />
+        </Route>
       </Routes>
       <Footer />
     </div>

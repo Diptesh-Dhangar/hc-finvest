@@ -7,6 +7,7 @@ import Blog from "../models/Blogs.js";
 export const createBlog = async (req, res) => {
   try {
     const { title, description, date } = req.body;
+    const sections = JSON.parse(req.body.sections);
 
     if (!title || !description || !date || !req.file) {
       return res.status(400).json({ message: "All fields are required" });
@@ -16,6 +17,7 @@ export const createBlog = async (req, res) => {
       title,
       description,
       date,
+      sections,
       image: {
         data: req.file.buffer,
         contentType: req.file.mimetype,

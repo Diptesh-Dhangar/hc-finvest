@@ -110,7 +110,7 @@ const Navbar = () => {
                   in={hovered === item.name}
                   mountOnEnter
                   unmountOnExit
-                  timeout={250}
+                  timeout={500}
                 >
                   <Box
                     sx={{

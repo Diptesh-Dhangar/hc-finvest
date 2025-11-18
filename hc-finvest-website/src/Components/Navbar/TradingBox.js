@@ -53,9 +53,10 @@ const TradingBox = () => {
               }}
             >
               <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "black",
+                underline="none"
+                style={{
+                  textDecoration: "none", // remove underline
+                  color: "inherit", // inherit black color
                   cursor: "pointer",
                 }}
                 href={text.toLowerCase().replace(/\s/g, "") + "Account"}
@@ -94,9 +95,10 @@ const TradingBox = () => {
               }}
             >
               <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "black",
+                underline="none"
+                style={{
+                  textDecoration: "none", // remove underline
+                  color: "inherit", // inherit black color
                   cursor: "pointer",
                 }}
                 href={text.toLowerCase().replace(/\s/g, "") + "Market"}
@@ -128,9 +130,10 @@ const TradingBox = () => {
               }}
             >
               <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "black",
+                underline="none"
+                style={{
+                  textDecoration: "none", // remove underline
+                  color: "inherit", // inherit black color
                   cursor: "pointer",
                 }}
                 href={item.path}
@@ -157,7 +160,12 @@ const TradingBox = () => {
             }}
           >
             <Link
-              sx={{ textDecoration: "none", color: "black", cursor: "pointer" }}
+              underline="none"
+              style={{
+                textDecoration: "none", // remove underline
+                color: "inherit", // inherit black color
+                cursor: "pointer",
+              }}
               href="promotions"
             >
               Promotions
@@ -186,9 +194,10 @@ const TradingBox = () => {
               }}
             >
               <Link
-                sx={{
-                  textDecoration: "none",
-                  color: "black",
+                underline="none"
+                style={{
+                  textDecoration: "none", // remove underline
+                  color: "inherit", // inherit black color
                   cursor: "pointer",
                 }}
                 href={text.toLowerCase().replace(/\s/g, "")}
