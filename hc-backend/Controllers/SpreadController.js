@@ -39,27 +39,31 @@ export const getCurrencyPairs = async (req, res) => {
 
 // UPDATE SPREAD RECORD
 export const updateSpread = async (req, res) => {
-  const { marketType, accountType, currencyPair, avgSpread, lowSpread } =
-    req.body;
-
   try {
-    const Model = marketModelMap[marketType];
+    const {
+      marketType,
+      accountType,
+      currencyPair,
+      avgSpread,
+      lowSpread,
+      leverageType,
+    } = req.body;
+
+    const Model = modelMap[marketType];
     if (!Model) return res.status(400).json({ message: "Invalid market type" });
 
     const updated = await Model.findOneAndUpdate(
       { accountType, currencyPair },
-      { avgSpread, lowSpread },
+      { avgSpread, lowSpread, leverageType },
       { new: true }
     );
 
     if (!updated)
-      return res
-        .status(404)
-        .json({ message: "Spread not found for given data" });
+      return res.status(404).json({ message: "Spread not found for update" });
 
     res.json({ message: "Spread updated successfully", updated });
   } catch (error) {
-    res.status(500).json({ message: "Update failed", error });
+    res.status(500).json({ message: "Error updating spread" });
   }
 };
 

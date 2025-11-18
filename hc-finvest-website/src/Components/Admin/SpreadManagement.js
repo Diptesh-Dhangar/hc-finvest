@@ -14,30 +14,28 @@ import Autocomplete from "@mui/material/Autocomplete";
 import axios from "axios";
 
 const SpreadManagement = () => {
-  const [currency, setCurrency] = React.useState(null);
   const [marketType, setMarketType] = React.useState("");
   const [accountType, setAccountType] = React.useState("");
+  const [currencyList, setCurrencyList] = React.useState([]);
+  const [currency, setCurrency] = React.useState(null);
   const [avgSpread, setAvgSpread] = React.useState("");
   const [lowSpread, setLowSpread] = React.useState("");
-  const [currencyOptions, setCurrencyOptions] = React.useState([]);
+  const [leverageType, setLeverageType] = React.useState("");
 
-  // Fetch currency pairs when both selected
+  // Auto fetch currency pairs when BOTH market + account type are selected
   React.useEffect(() => {
     const fetchPairs = async () => {
       if (!marketType || !accountType) return;
 
-      const response = await axios.get(
-        "https://hcfinvest.onrender.com/api/spreads/currency-pairs",
+      const res = await axios.get(
+        "http://localhost:5000/api/spreads/get-pairs",
         {
           params: { marketType, accountType },
         }
       );
 
-      const formatted = response.data.currencyPairs.map((p) => ({
-        title: p.currencyPair,
-      }));
-
-      setCurrencyOptions(formatted);
+      const formatted = res.data.pairs.map((p) => ({ title: p }));
+      setCurrencyList(formatted);
     };
 
     fetchPairs();
@@ -55,11 +53,12 @@ const SpreadManagement = () => {
       currencyPair: currency.title,
       avgSpread,
       lowSpread,
+      leverageType,
     };
 
     try {
       const res = await axios.put(
-        "https://hcfinvest.onrender.com/api/spreads/update",
+        "http://localhost:5000/api/spreads/update",
         payload
       );
       alert(res.data.message);
@@ -101,10 +100,10 @@ const SpreadManagement = () => {
               label="Account Type"
               onChange={(e) => setAccountType(e.target.value)}
             >
-              <MenuItem value="Starter">Starter</MenuItem>
-              <MenuItem value="ProTrader">Pro Trader</MenuItem>
-              <MenuItem value="ZeroSpread">Zero Spread</MenuItem>
-              <MenuItem value="Elite">Elite</MenuItem>
+              <MenuItem value="Starter">Starter Account</MenuItem>
+              <MenuItem value="ProTrader">Pro Trader Account</MenuItem>
+              <MenuItem value="ZeroSpread">Zero Spread Account</MenuItem>
+              <MenuItem value="Elite">Elite Account</MenuItem>
             </Select>
           </FormControl>
 
@@ -113,10 +112,10 @@ const SpreadManagement = () => {
             fullWidth
             value={currency}
             onChange={(e, newValue) => setCurrency(newValue)}
-            options={currencyOptions}
-            getOptionLabel={(option) => option.title}
+            options={currencyList}
+            getOptionLabel={(opt) => opt.title}
             renderInput={(params) => (
-              <TextField {...params} label="Currency Pair" />
+              <TextField {...params} label="Select Currency Pair" />
             )}
           />
 
@@ -137,6 +136,19 @@ const SpreadManagement = () => {
             value={lowSpread}
             onChange={(e) => setLowSpread(e.target.value)}
           />
+
+          {/* Leverage Type */}
+          <FormControl fullWidth>
+            <InputLabel>Leverage Type</InputLabel>
+            <Select
+              value={leverageType}
+              onChange={(e) => setLeverageType(e.target.value)}
+            >
+              <MenuItem value="">None</MenuItem>
+              <MenuItem value="1:100">1:100</MenuItem>
+              <MenuItem value="1:2000">1:2000</MenuItem>
+            </Select>
+          </FormControl>
 
           <Box textAlign="right">
             <Button
