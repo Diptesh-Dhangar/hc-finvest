@@ -6,7 +6,7 @@ import {
   getSwapById,
   updateSwap,
   deleteSwap,
-} from "../controllers/swapController.js";
+} from "../controllers/SwapController.js";
 
 const router = express.Router();
 
