@@ -41,14 +41,11 @@ const AddSpread = () => {
       lowSpread,
       leverageType,
     };
-    console.log(data);
+
     try {
-      await axios.post("https://hcfinvest.onrender.com/api/spreads", data);
-
-
+      await axios.post("http://localhost:5000/api/spreads/add", data);
       alert("✅ Spread added successfully!");
 
-      // Reset fields
       setMarketType("");
       setAccountType("");
       setCurrencyPair("");
@@ -86,17 +83,15 @@ const AddSpread = () => {
         </Typography>
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-          {/* Market Type */}
+          {/* MARKET TYPE */}
           <Box>
             <Typography mb={1} fontWeight="500" textAlign="left">
               Select Market Type
             </Typography>
-
             <FormControl fullWidth>
               <InputLabel>Market Type</InputLabel>
               <Select
                 value={marketType}
-                label="Market Type"
                 onChange={(e) => setMarketType(e.target.value)}
               >
                 <MenuItem value="">None</MenuItem>
@@ -110,17 +105,15 @@ const AddSpread = () => {
             </FormControl>
           </Box>
 
-          {/* Account Type */}
+          {/* ACCOUNT TYPE */}
           <Box>
             <Typography mb={1} fontWeight="500" textAlign="left">
               Select Account Type
             </Typography>
-
             <FormControl fullWidth>
               <InputLabel>Account Type</InputLabel>
               <Select
                 value={accountType}
-                label="Account Type"
                 onChange={(e) => setAccountType(e.target.value)}
               >
                 <MenuItem value="">None</MenuItem>
@@ -132,73 +125,49 @@ const AddSpread = () => {
             </FormControl>
           </Box>
 
-          {/* Currency Pair */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Currency Pair
-            </Typography>
+          {/* CURRENCY PAIR */}
+          <TextField
+            label="Currency Pair"
+            value={currencyPair}
+            onChange={(e) => setCurrencyPair(e.target.value)}
+            fullWidth
+          />
 
-            <TextField
-              fullWidth
-              label="Currency Pair"
-              value={currencyPair}
-              onChange={(e) => setCurrencyPair(e.target.value)}
-            />
-          </Box>
+          {/* AVG SPREAD */}
+          <TextField
+            label="Average Spread"
+            type="number"
+            value={avgSpread}
+            onChange={(e) => setAvgSpread(e.target.value)}
+            fullWidth
+          />
 
-          {/* Average Spread */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Average Spread
-            </Typography>
-            <TextField
-              fullWidth
-              label="Average Spread"
-              type="number"
-              value={avgSpread}
-              onChange={(e) => setAvgSpread(e.target.value)}
-            />
-          </Box>
+          {/* LOW SPREAD */}
+          <TextField
+            label="Spread As Low As (Pips)"
+            type="number"
+            value={lowSpread}
+            onChange={(e) => setLowSpread(e.target.value)}
+            fullWidth
+          />
 
-          {/* Low Spread */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Spread As Low As (Pips)
-            </Typography>
-            <TextField
-              fullWidth
-              label="Spread As Low As (Pips)"
-              type="number"
-              value={lowSpread}
-              onChange={(e) => setLowSpread(e.target.value)}
-            />
-          </Box>
+          {/* LEVERAGE */}
+          <FormControl fullWidth>
+            <InputLabel>Leverage Type</InputLabel>
+            <Select
+              value={leverageType}
+              onChange={(e) => setLeverageType(e.target.value)}
+            >
+              <MenuItem value="">None</MenuItem>
+              <MenuItem value="1:100">1:100</MenuItem>
+              <MenuItem value="1:2000">1:2000</MenuItem>
+            </Select>
+          </FormControl>
 
-          {/* Leverage */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Leverage Type
-            </Typography>
-
-            <FormControl fullWidth>
-              <InputLabel>Leverage Type</InputLabel>
-              <Select
-                value={leverageType}
-                label="Leverage Type"
-                onChange={(e) => setLeverageType(e.target.value)}
-              >
-                <MenuItem value="">None</MenuItem>
-                <MenuItem value="1:100">1:100</MenuItem>
-                <MenuItem value="1:2000">1:2000</MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
-
-          {/* Submit Button */}
           <Box textAlign="right">
             <Button
               variant="contained"
-              sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
+              sx={{ backgroundColor: "#0c1e49", px: 4 }}
               onClick={handleSubmit}
             >
               Add Spread

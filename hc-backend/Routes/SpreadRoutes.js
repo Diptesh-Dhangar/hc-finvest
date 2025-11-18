@@ -9,7 +9,7 @@ import {
 
 const router = express.Router();
 
-router.post("/", addSpread); // matches POST /api/spreads
+router.post("/add", addSpread);
 router.get("/", getSpreads); // ➡️ GET /api/spreads
 router.get("/:id", getSpreadById); // ➡️ GET /api/spreads/:id
 router.put("/:id", updateSpread); // ➡️ PUT /api/spreads/:id
