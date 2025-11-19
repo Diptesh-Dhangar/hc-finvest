@@ -28,14 +28,13 @@ const SpreadManagement = () => {
       if (!marketType || !accountType) return;
 
       const res = await axios.get(
-        "https://hcfinvest.onrender.com/api/spreads/get-pairs",
+        "http://localhost:5000/api/spreads/get-pairs",
         {
           params: { marketType, accountType },
         }
       );
 
-      const list = res.data?.pairs || []; // ← prevents undefined errors
-      const formatted = list.map((p) => ({ title: p }));
+      const formatted = res.data.pairs.map((p) => ({ title: p }));
       setCurrencyList(formatted);
     };
 
@@ -59,7 +58,7 @@ const SpreadManagement = () => {
 
     try {
       const res = await axios.put(
-        "https://hcfinvest.onrender.com/api/spreads/update",
+        "http://localhost:5000/api/spreads/update",
         payload
       );
       alert(res.data.message);
