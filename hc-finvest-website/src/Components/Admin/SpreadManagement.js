@@ -28,7 +28,7 @@ const SpreadManagement = () => {
       if (!marketType || !accountType) return;
 
       const res = await axios.get(
-        "https://hcfinvest.onrender.com/api/spreads/get-pairs",
+        "https://hcfinvest.onrender.com/api/spreads/currency-pairs",
         {
           params: { marketType, accountType },
         }
