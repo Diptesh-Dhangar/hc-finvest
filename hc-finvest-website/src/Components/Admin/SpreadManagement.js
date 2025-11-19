@@ -34,7 +34,8 @@ const SpreadManagement = () => {
         }
       );
 
-      const formatted = res.data.pairs.map((p) => ({ title: p }));
+      const list = res.data?.pairs || []; // ← prevents undefined errors
+      const formatted = list.map((p) => ({ title: p }));
       setCurrencyList(formatted);
     };
 
