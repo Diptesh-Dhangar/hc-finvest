@@ -11,7 +11,7 @@ import {
 const router = express.Router();
 
 router.post("/add", addSpread);
-router.get("/currency-pairs", getCurrencyPairs);
+router.get("/get-pairs", getCurrencyPairs);
 router.put("/update", updateSpread);
 router.get("/", getSpreads); // ➡️ GET /api/spreads
 router.get("/:id", getSpreadById); // ➡️ GET /api/spreads/:id

@@ -22,24 +22,20 @@ const SpreadManagement = () => {
   const [lowSpread, setLowSpread] = React.useState("");
   const [leverageType, setLeverageType] = React.useState("");
 
-  // Fetch currency pairs when both Market + Account type are selected
+  // Auto fetch currency pairs when BOTH market + account type are selected
   React.useEffect(() => {
     const fetchPairs = async () => {
       if (!marketType || !accountType) return;
 
-      try {
-        const res = await axios.get(
-          "https://hcfinvest.onrender.com/api/spreads/currency-pairs",
-          { params: { marketType, accountType } }
-        );
+      const res = await axios.get(
+        "https://hcfinvest.onrender.com/api/spreads/get-pairs",
+        {
+          params: { marketType, accountType },
+        }
+      );
 
-        const pairs = res.data?.pairs || [];
-        const formatted = pairs.map((p) => ({ title: p }));
-        setCurrencyList(formatted);
-      } catch (err) {
-        console.error("Error fetching currency pairs:", err);
-        setCurrencyList([]); // prevent undefined map errors
-      }
+      const formatted = res.data.pairs.map((p) => ({ title: p }));
+      setCurrencyList(formatted);
     };
 
     fetchPairs();
@@ -67,7 +63,6 @@ const SpreadManagement = () => {
       );
       alert(res.data.message);
     } catch (error) {
-      console.error("Update failed:", error);
       alert("Update failed");
     }
   };
@@ -112,7 +107,7 @@ const SpreadManagement = () => {
             </Select>
           </FormControl>
 
-          {/* Currency Pair Dropdown */}
+          {/* Currency Pair */}
           <Autocomplete
             fullWidth
             value={currency}
@@ -124,7 +119,7 @@ const SpreadManagement = () => {
             )}
           />
 
-          {/* Avg Spread */}
+          {/* Average Spread */}
           <TextField
             fullWidth
             label="Average Spread"
@@ -147,7 +142,6 @@ const SpreadManagement = () => {
             <InputLabel>Leverage Type</InputLabel>
             <Select
               value={leverageType}
-              label="Leverage Type"
               onChange={(e) => setLeverageType(e.target.value)}
             >
               <MenuItem value="">None</MenuItem>
