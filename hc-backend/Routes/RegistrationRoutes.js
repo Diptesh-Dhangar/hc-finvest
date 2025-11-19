@@ -8,12 +8,12 @@ import {
 const router = express.Router();
 
 // Create a new registration
-router.post("/create", createRegistration);
+router.post("/", createRegistration);
 
 // Get all registrations
-router.get("/all", getAllRegistrations);
+router.get("/", getAllRegistrations);
 
 // Delete a registration by ID
-router.delete("/delete/:id", deleteRegistration);
+router.delete("/:id", deleteRegistration);
 
 export default router;
