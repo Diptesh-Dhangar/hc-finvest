@@ -17,6 +17,7 @@
     "axios": "^1.13.1",
     "bootstrap": "^5.3.8",
     "file-saver": "^2.0.5",
+    "hc-backend": "file:..",
     "react": "^19.1.1",
     "react-apexcharts": "^1.8.0",
     "react-dom": "^19.1.1",

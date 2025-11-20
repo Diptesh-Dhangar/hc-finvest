@@ -45,3 +45,23 @@ export const addSwap = async (req, res) => {
     });
   }
 };
+
+//get currency Pairs 
+export const getCurrencyPairsByMarket = async (req, res) => {
+  try {
+    const { marketType } = req.params;
+
+    if (!marketType) {
+      return res.status(400).json({ message: "marketType param is required" });
+    }
+
+    const swaps = await Swap.find({ marketType }).select("currencyPair -_id");
+
+    const currencyPairs = swaps.map((item) => item.currencyPair);
+
+    res.json(currencyPairs);
+  } catch (error) {
+    console.error("Error fetching currency pairs:", error);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};

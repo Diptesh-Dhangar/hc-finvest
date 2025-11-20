@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import {
   Box,
   Button,
@@ -11,140 +11,153 @@ import {
   TextField,
 } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
-
-const marketTypes = [
-  "Forex",
-  "Metals",
-  "Indices",
-  "Stocks",
-  "Commodities",
-  "Cryptocurrencies",
-];
+import axios from "axios";
 
 const SwapManagement = () => {
-  const [selectedMarket, setSelectedMarket] = useState("");
-  const [currencyPairs, setCurrencyPairs] = useState([]);
-  const [selectedPair, setSelectedPair] = useState(null);
+  const [value, setValue] = React.useState(null);
+  const [marketType, setMarketType] = React.useState("");
+  const [currencyOptions, setCurrencyOptions] = React.useState([]);
+  const [loadingPairs, setLoadingPairs] = React.useState(false);
 
-  const [swapLong, setSwapLong] = useState("");
-  const [swapShort, setSwapShort] = useState("");
+  // Fetch currency pairs from backend when market type changes
+  const handleChange = async (event) => {
+    const selectedMarket = event.target.value;
+    setMarketType(selectedMarket);
+    setValue(null); // reset selected currency pair
 
-  // Load currency pairs when market changes
-  useEffect(() => {
-    if (selectedMarket) {
-      fetch(
-        `https://hcfinvest.onrender.com/swap/currency-pairs/${selectedMarket}`
-      )
-        .then((res) => res.json())
-        .then((data) => setCurrencyPairs(data.map((p) => p.currencyPair)));
-    }
-  }, [selectedMarket]);
-
-  // Load swap values when currency pair is selected
-  useEffect(() => {
-    if (selectedMarket && selectedPair) {
-      fetch(
-        `https://hcfinvest.onrender.com/api/swap/${selectedMarket}/${selectedPair}`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          if (data) {
-            setSwapLong(data.swapLong);
-            setSwapShort(data.swapShort);
-          } else {
-            setSwapLong("");
-            setSwapShort("");
-          }
-        });
-    }
-  }, [selectedPair]);
-
-  const handleUpdate = async () => {
-    if (!selectedMarket || !selectedPair || !swapLong || !swapShort) {
-      alert("All fields required!");
+    if (!selectedMarket) {
+      setCurrencyOptions([]);
       return;
     }
 
-    const payload = {
-      marketType: selectedMarket,
-      currencyPair: selectedPair,
-      swapLong,
-      swapShort,
-    };
+    try {
+      setLoadingPairs(true);
 
-    const res = await fetch("https://hcfinvest.onrender.com/api/swap/save", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+      const res = await axios.get(
+        `https://hcfinvest.onrender.com/api/swaps/currencyPairs/${selectedMarket}`
+      );
 
-    const data = await res.json();
-    alert(data.message);
+      const formattedPairs = res.data.map((item) => ({
+        title: item.currencyPair,
+        ...item,
+      }));
+
+      setCurrencyOptions(formattedPairs);
+    } catch (error) {
+      console.error("Error fetching currency pairs:", error);
+      setCurrencyOptions([]);
+    } finally {
+      setLoadingPairs(false);
+    }
   };
 
   return (
-    <Container maxWidth="md" sx={{ py: 4 }}>
-      <Typography variant="h4" fontWeight="700" mb={3}>
-        UPDATE SWAPS
-      </Typography>
-
-      {/* Market Type */}
-      <FormControl fullWidth>
-        <InputLabel>Market Type</InputLabel>
-        <Select
-          value={selectedMarket}
-          label="Market Type"
-          onChange={(e) => {
-            setSelectedMarket(e.target.value);
-            setSelectedPair(null);
+    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+      <Box
+        sx={{
+          width: "100%",
+          background: "#fff",
+          p: { xs: 2, sm: 3, md: 4 },
+          borderRadius: 2,
+          boxShadow: 3,
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: "2rem",
+            fontWeight: "700",
+            marginBottom: "1.5rem",
+            width: "100%",
+            color: "#0f5e9b",
           }}
         >
-          {marketTypes.map((type) => (
-            <MenuItem key={type} value={type}>
-              {type}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+          UPDATE SWAPS
+        </Typography>
 
-      {/* Currency Pair */}
-      <Box mt={3}>
-        <Autocomplete
-          disabled={!selectedMarket}
-          value={selectedPair}
-          onChange={(e, newValue) => setSelectedPair(newValue)}
-          options={currencyPairs}
-          renderInput={(params) => (
-            <TextField {...params} label="Select Currency Pair" />
-          )}
-        />
-      </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          {/* Market Type */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Select Market Type
+            </Typography>
 
-      {/* Swap Long */}
-      <Box mt={3}>
-        <TextField
-          fullWidth
-          label="Swap Long"
-          value={swapLong}
-          onChange={(e) => setSwapLong(e.target.value)}
-        />
-      </Box>
+            <FormControl fullWidth sx={{ textAlign: "left" }}>
+              <InputLabel>Market Type</InputLabel>
+              <Select
+                value={marketType}
+                label="Market Type"
+                onChange={handleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value="Forex">Forex</MenuItem>
+                <MenuItem value="Metals">Metals</MenuItem>
+                <MenuItem value="Indices">Indices</MenuItem>
+                <MenuItem value="Stocks">Stocks</MenuItem>
+                <MenuItem value="Commodities">Commodities</MenuItem>
+                <MenuItem value="Cryptocurrencies">Cryptocurrencies</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
 
-      {/* Swap Short */}
-      <Box mt={3}>
-        <TextField
-          fullWidth
-          label="Swap Short"
-          value={swapShort}
-          onChange={(e) => setSwapShort(e.target.value)}
-        />
-      </Box>
+          {/* Currency Pair - Dynamic from Backend */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Select Currency Pair
+            </Typography>
 
-      {/* Update Button */}
-      <Box mt={3} textAlign="right">
-        <Button variant="contained" onClick={handleUpdate}>
-          Update
-        </Button>
+            <Autocomplete
+              value={value}
+              loading={loadingPairs}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }}
+              fullWidth
+              options={currencyOptions}
+              getOptionLabel={(option) =>
+                typeof option === "string" ? option : option.title
+              }
+              renderOption={(props, option) => (
+                <li {...props}>{option.title}</li>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Select Currency Pair"
+                  placeholder="Choose pair"
+                />
+              )}
+            />
+          </Box>
+
+          {/* Swap Long */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Enter Swap Long
+            </Typography>
+            <TextField fullWidth label="Swap Long" />
+          </Box>
+
+          {/* Swap Short */}
+          <Box>
+            <Typography mb={1} fontWeight="500" textAlign="left">
+              Enter Swap Short
+            </Typography>
+            <TextField fullWidth label="Swap Short" />
+          </Box>
+
+          <Box textAlign="right">
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
+            >
+              Update
+            </Button>
+          </Box>
+        </Box>
       </Box>
     </Container>
   );

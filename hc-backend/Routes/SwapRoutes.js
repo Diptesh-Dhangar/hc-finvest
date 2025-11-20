@@ -6,7 +6,7 @@ import {
 const router = express.Router();
 
 router.post("/", addSwap); // POST /api/swaps
-
+router.get("/currencyPairs/:marketType", getCurrencyPairsByMarket);
 
 // router.post("/add", addSwap);
 // router.put("/update", updateSwap);
