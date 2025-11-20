@@ -1,6 +1,7 @@
 import express from "express";
 import {
-  addSwap
+  addSwap,
+  getCurrencyPairsByMarket
 } from "../Controllers/SwapController.js";
 
 const router = express.Router();
