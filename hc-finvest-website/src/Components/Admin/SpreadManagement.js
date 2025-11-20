@@ -23,27 +23,28 @@ const SpreadManagement = () => {
   const [leverageType, setLeverageType] = React.useState("");
 
   // 🔥 Fetch pairs whenever both fields are chosen
-  const fetchPairs = async (market, account) => {
-    if (!market || !account) return;
+const fetchPairs = async (market, account) => {
+  if (!market || !account) return;
 
-    try {
-      const res = await axios.get(
-        "https://hcfinvest.onrender.com/api/spreads/get-pairs",
-        { params: { marketType: market, accountType: account } }
-      );
+  try {
+    const res = await axios.get(
+      "https://hcfinvest.onrender.com/api/spreads/get-pairs",
+      { params: { marketType: market, accountType: account } }
+    );
 
-      console.log("Fetched pairs:", res);
+    console.log("Fetched pairs:", res.data);
 
-      const formatted = res.data.pairs.map((p) => ({
-        title: p,
-      }));
+    // FIX: backend returns { currencyPairs: [ {currencyPair:"AUDCAD"} ] }
+    const formatted = res.data.currencyPairs.map((item) => ({
+      title: item.currencyPair,
+    }));
 
-      setCurrencyList(formatted);
-    } catch (err) {
-      console.error("Error fetching pairs:", err);
-      setCurrencyList([]);
-    }
-  };
+    setCurrencyList(formatted);
+  } catch (err) {
+    console.error("Error fetching pairs:", err);
+    setCurrencyList([]);
+  }
+};
 
   // When Market changes
   const handleMarketChange = (e) => {
