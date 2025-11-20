@@ -37,6 +37,7 @@ const SwapManagement = () => {
         `https://hcfinvest.onrender.com/api/swaps/currencyPairs/${selectedMarket}`
       );
 
+      console.log(res);
       const formattedPairs = res.data.map((item) => ({
         title: item.currencyPair,
         ...item,

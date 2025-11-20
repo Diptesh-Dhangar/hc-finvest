@@ -56,10 +56,11 @@ export const getCurrencyPairsByMarket = async (req, res) => {
     }
 
     const swaps = await Swap.find({ marketType }).select("currencyPair -_id");
-
+    console.log("Swaps from Controller"+swaps);
     const currencyPairs = swaps.map((item) => item.currencyPair);
-
+    console.log("Currency Pairs from Controller"+currencyPairs)
     res.json(currencyPairs);
+    console.log(currencyPairs);
   } catch (error) {
     console.error("Error fetching currency pairs:", error);
     res.status(500).json({ message: "Server error", error: error.message });
