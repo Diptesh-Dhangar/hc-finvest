@@ -51,14 +51,14 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "ABOUT US", to: "/", component: <AboutUsBox /> },
-    { name: "TRADING", to: "/about", component: <TradingBox /> },
-    { name: "PLATFORM", to: "/services", component: <PlatformBox /> },
+    { name: "TRADING", to: "/", component: <TradingBox /> },
+    { name: "PLATFORM", to: "/", component: <PlatformBox /> },
     {
       name: "RESEARCH & TOOLS",
-      to: "/contact",
+      to: "/",
       component: <ResearchAndToolBox />,
     },
-    { name: "SUPPORT", to: "/contact", component: <SupportBox /> },
+    { name: "SUPPORT", to: "/", component: <SupportBox /> },
   ];
 
   return (

@@ -32,7 +32,7 @@ const SpreadManagement = () => {
         { params: { marketType: market, accountType: account } }
       );
 
-      console.log("Fetched pairs:", res.data.pairs);
+      console.log("Fetched pairs:", res);
 
       const formatted = res.data.pairs.map((p) => ({
         title: p,

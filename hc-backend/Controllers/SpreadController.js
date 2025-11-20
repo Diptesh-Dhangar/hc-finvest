@@ -30,7 +30,7 @@ export const getCurrencyPairs = async (req, res) => {
     if (!Model) return res.status(400).json({ message: "Invalid market type" });
 
     const pairs = await Model.find({ accountType }).select("currencyPair");
-
+    console.log("Currency Pairs from Controller" + pairs);
     res.json({ currencyPairs: pairs });
   } catch (err) {
     res.status(500).json({ message: "Error fetching currency pairs" });
@@ -66,7 +66,6 @@ export const updateSpread = async (req, res) => {
     res.status(500).json({ message: "Error updating spread" });
   }
 };
-
 
 export const addSpread = async (req, res) => {
   try {
