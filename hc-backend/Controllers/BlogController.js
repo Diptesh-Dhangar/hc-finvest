@@ -24,6 +24,8 @@ export const createBlog = async (req, res) => {
       },
     });
 
+    console.log("Blod Data from Controller" + newBlog);
+
     await newBlog.save();
     res.status(201).json({ message: "Blog created successfully!" });
   } catch (error) {
@@ -49,7 +51,6 @@ export const getAllBlogs = async (req, res) => {
       .json({ message: "Internal Server Error", error: error.message });
   }
 };
-
 
 // Get single blog by id
 export const getBlogById = async (req, res) => {

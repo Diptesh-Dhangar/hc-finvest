@@ -81,6 +81,7 @@ const BlogManagement = () => {
       });
 
       alert("✅ Blog added successfully!");
+      console.log("Blog Data from Blog Management" + blogData);
 
       // RESET FORM
       setDescription("");
@@ -105,6 +106,7 @@ const BlogManagement = () => {
     try {
       const res = await axios.get("https://hcfinvest.onrender.com/api/blogs");
       setBlogs(res.data);
+      console.log("Blog data of Fetching in BlogManagement" + res);
     } catch (error) {
       console.error("Error fetching blogs:", error);
     }
