@@ -1,19 +1,15 @@
-// routes/swapRoutes.js
 import express from "express";
 import {
-  addSwap,
-  getSwaps,
-  getSwapById,
-  updateSwap,
-  deleteSwap,
+  addSwap
 } from "../Controllers/SwapController.js";
 
 const router = express.Router();
 
 router.post("/", addSwap); // POST /api/swaps
-router.get("/", getSwaps); // GET /api/swaps
-router.get("/:id", getSwapById); // GET /api/swaps/:id
-router.put("/:id", updateSwap); // PUT /api/swaps/:id
-router.delete("/:id", deleteSwap); // DELETE /api/swaps/:id
+
+
+// router.post("/add", addSwap);
+// router.put("/update", updateSwap);
+// router.post("/save", saveSwap); // Upsert
 
 export default router;

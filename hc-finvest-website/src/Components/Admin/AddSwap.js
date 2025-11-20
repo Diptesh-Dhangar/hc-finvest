@@ -26,9 +26,9 @@ const AddSwap = () => {
 
     const data = {
       marketType,
-      currencyPairs: currencyPair,
-      swapLong,
-      swapShort,
+      currencyPair, // ✅ Correct key
+      swapLong: Number(swapLong),
+      swapShort: Number(swapShort),
     };
 
     try {
@@ -42,7 +42,11 @@ const AddSwap = () => {
       setSwapShort("");
     } catch (error) {
       console.error("Error adding swap:", error);
-      alert("❌ Failed to add swap");
+
+      const msg =
+        error?.response?.data?.message || "❌ Failed to add swap. Try again.";
+
+      alert(msg);
     }
   };
 
@@ -78,8 +82,9 @@ const AddSwap = () => {
           <TextField
             fullWidth
             label="Currency Pair"
+            placeholder="Example: EURUSD, XAUUSD"
             value={currencyPair}
-            onChange={(e) => setCurrencyPair(e.target.value)}
+            onChange={(e) => setCurrencyPair(e.target.value.toUpperCase())}
           />
 
           {/* Swap Long */}

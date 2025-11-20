@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Button,
@@ -10,184 +10,141 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
-import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
+import Autocomplete from "@mui/material/Autocomplete";
 
-const filter = createFilterOptions();
+const marketTypes = [
+  "Forex",
+  "Metals",
+  "Indices",
+  "Stocks",
+  "Commodities",
+  "Cryptocurrencies",
+];
 
 const SwapManagement = () => {
-  const [value, setValue] = React.useState(null);
-  const [marketType, setMarketType] = React.useState("");
+  const [selectedMarket, setSelectedMarket] = useState("");
+  const [currencyPairs, setCurrencyPairs] = useState([]);
+  const [selectedPair, setSelectedPair] = useState(null);
 
-  const handleChange = (event) => {
-    setMarketType(event.target.value);
+  const [swapLong, setSwapLong] = useState("");
+  const [swapShort, setSwapShort] = useState("");
+
+  // Load currency pairs when market changes
+  useEffect(() => {
+    if (selectedMarket) {
+      fetch(
+        `https://hcfinvest.onrender.com/swap/currency-pairs/${selectedMarket}`
+      )
+        .then((res) => res.json())
+        .then((data) => setCurrencyPairs(data.map((p) => p.currencyPair)));
+    }
+  }, [selectedMarket]);
+
+  // Load swap values when currency pair is selected
+  useEffect(() => {
+    if (selectedMarket && selectedPair) {
+      fetch(
+        `https://hcfinvest.onrender.com/api/swap/${selectedMarket}/${selectedPair}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data) {
+            setSwapLong(data.swapLong);
+            setSwapShort(data.swapShort);
+          } else {
+            setSwapLong("");
+            setSwapShort("");
+          }
+        });
+    }
+  }, [selectedPair]);
+
+  const handleUpdate = async () => {
+    if (!selectedMarket || !selectedPair || !swapLong || !swapShort) {
+      alert("All fields required!");
+      return;
+    }
+
+    const payload = {
+      marketType: selectedMarket,
+      currencyPair: selectedPair,
+      swapLong,
+      swapShort,
+    };
+
+    const res = await fetch("https://hcfinvest.onrender.com/api/swap/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+    alert(data.message);
   };
 
-  const top100Films = [
-    { title: "The Shawshank Redemption" },
-    { title: "The Godfather" },
-    { title: "3 Idiots" },
-    { title: "Interstellar" },
-    { title: "Inception" },
-  ];
-
   return (
-    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
-      <Box
-        sx={{
-          width: "100%",
-          background: "#fff",
-          p: { xs: 2, sm: 3, md: 4 },
-          borderRadius: 2,
-          boxShadow: 3,
-          textAlign: "center", // ← LEFT ALIGN EVERYTHING
-        }}
-      >
-        {/* Header */}
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: "2rem",
-            fontWeight: "700",
-            marginBottom: "1.5rem",
-            width: "100%",
-            color: "#0f5e9b",
+    <Container maxWidth="md" sx={{ py: 4 }}>
+      <Typography variant="h4" fontWeight="700" mb={3}>
+        UPDATE SWAPS
+      </Typography>
+
+      {/* Market Type */}
+      <FormControl fullWidth>
+        <InputLabel>Market Type</InputLabel>
+        <Select
+          value={selectedMarket}
+          label="Market Type"
+          onChange={(e) => {
+            setSelectedMarket(e.target.value);
+            setSelectedPair(null);
           }}
-        > UPDATE SWAPS
-        </Typography>
+        >
+          {marketTypes.map((type) => (
+            <MenuItem key={type} value={type}>
+              {type}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
 
-        {/* FORM */}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-          {/* Market Type */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Market Type
-            </Typography>
+      {/* Currency Pair */}
+      <Box mt={3}>
+        <Autocomplete
+          disabled={!selectedMarket}
+          value={selectedPair}
+          onChange={(e, newValue) => setSelectedPair(newValue)}
+          options={currencyPairs}
+          renderInput={(params) => (
+            <TextField {...params} label="Select Currency Pair" />
+          )}
+        />
+      </Box>
 
-            <FormControl fullWidth sx={{ textAlign: "left" }}>
-              <InputLabel sx={{ textAlign: "left" }}>Market Type</InputLabel>
+      {/* Swap Long */}
+      <Box mt={3}>
+        <TextField
+          fullWidth
+          label="Swap Long"
+          value={swapLong}
+          onChange={(e) => setSwapLong(e.target.value)}
+        />
+      </Box>
 
-              <Select
-                value={marketType}
-                label="Market Type"
-                onChange={handleChange}
-                sx={{ textAlign: "left" }}
-                MenuProps={{
-                  PaperProps: {
-                    sx: { textAlign: "left" },
-                  },
-                }}
-              >
-                <MenuItem sx={{ textAlign: "left" }} value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Forex">
-                  Forex
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Metals">
-                  Metals
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Indices">
-                  Indices
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Stocks">
-                  Stocks
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Commodities">
-                  Commodities
-                </MenuItem>
-                <MenuItem sx={{ textAlign: "left" }} value="Cryptocurrencies">
-                  Cryptocurrencies
-                </MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
+      {/* Swap Short */}
+      <Box mt={3}>
+        <TextField
+          fullWidth
+          label="Swap Short"
+          value={swapShort}
+          onChange={(e) => setSwapShort(e.target.value)}
+        />
+      </Box>
 
-          {/* Currency Pair */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Currency Pair
-            </Typography>
-
-            <Autocomplete
-              value={value}
-              onChange={(event, newValue) => {
-                if (typeof newValue === "string") setValue({ title: newValue });
-                else if (newValue?.inputValue)
-                  setValue({ title: newValue.inputValue });
-                else setValue(newValue);
-              }}
-              filterOptions={(options, params) => {
-                const filtered = filter(options, params);
-                const { inputValue } = params;
-
-                const isExisting = options.some(
-                  (option) => inputValue === option.title
-                );
-                if (inputValue !== "" && !isExisting) {
-                  filtered.push({
-                    inputValue,
-                    title: "Result Not Found",
-                  });
-                }
-
-                return filtered;
-              }}
-              selectOnFocus
-              clearOnBlur
-              handleHomeEndKeys
-              fullWidth
-              options={top100Films}
-              getOptionLabel={(option) =>
-                typeof option === "string" ? option : option.title
-              }
-              renderOption={(props, option) => {
-                const { key, ...others } = props;
-                return (
-                  <li key={key} {...others} style={{ textAlign: "left" }}>
-                    {option.title}
-                  </li>
-                );
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Select Currency Pair"
-                  sx={{ textAlign: "left" }}
-                />
-              )}
-            />
-          </Box>
-
-          {/* Swap Long */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Enter Swap Long
-            </Typography>
-            <TextField fullWidth label="Swap Long" sx={{ textAlign: "left" }} />
-          </Box>
-
-          {/* Swap Short */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Enter Swap Short
-            </Typography>
-            <TextField
-              fullWidth
-              label="Swap Short"
-              sx={{ textAlign: "left" }}
-            />
-          </Box>
-
-          {/* Button */}
-          <Box textAlign="right">
-            <Button
-              variant="contained"
-              sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
-            >
-              Update
-            </Button>
-          </Box>
-        </Box>
+      {/* Update Button */}
+      <Box mt={3} textAlign="right">
+        <Button variant="contained" onClick={handleUpdate}>
+          Update
+        </Button>
       </Box>
     </Container>
   );

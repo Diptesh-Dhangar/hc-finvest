@@ -7,10 +7,11 @@ const swapSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    currencyPairs: {
+    currencyPair: {
       type: String,
       required: true,
       trim: true,
+      unique: true,
     },
     swapLong: {
       type: Number,
@@ -25,8 +26,3 @@ const swapSchema = new mongoose.Schema(
 );
 
 export default mongoose.model("Swap", swapSchema);
-
-
-
-
-
