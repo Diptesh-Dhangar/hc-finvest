@@ -16,8 +16,8 @@ const BlogDetails = () => {
         const response = await axios.get(
           `https://hcfinvest.onrender.com/api/blogs/${id}`
         );
-        setBlog("Blog Data from Blog js File" + response.data);
-        console.log(response.data);
+        setBlog(response.data);
+        console.log("BLog Data "+response.data);
       } catch (error) {
         console.error("Error fetching blog details:", error);
       }
