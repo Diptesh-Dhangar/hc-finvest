@@ -24,13 +24,10 @@ const BlogManagement = () => {
   const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState("");
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [blogs, setBlogs] = useState([]);
   const [open, setOpen] = useState(false);
 
-  // ----------------------
   // Dynamic Sections
-  // ----------------------
   const [sections, setSections] = useState([{ heading: "", content: "" }]);
 
   const handleAddSection = () => {
@@ -43,9 +40,7 @@ const BlogManagement = () => {
     setSections(updated);
   };
 
-  // ----------------------
-  // Image File Handler
-  // ----------------------
+  // File upload
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -57,20 +52,17 @@ const BlogManagement = () => {
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // ----------------------
-  // SUBMIT BLOG
-  // ----------------------
+  // Submit blog (description removed)
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!description || !date || !image || !title) {
+    if (!date || !image || !title) {
       alert("Please fill all fields and upload an image!");
       return;
     }
 
     const blogData = new FormData();
     blogData.append("title", title);
-    blogData.append("description", description);
     blogData.append("date", date);
     blogData.append("image", image);
     blogData.append("sections", JSON.stringify(sections));
@@ -81,10 +73,8 @@ const BlogManagement = () => {
       });
 
       alert("✅ Blog added successfully!");
-      console.log("Blog Data from Blog Management" + blogData);
 
-      // RESET FORM
-      setDescription("");
+      // reset form
       setTitle("");
       setDate("");
       setImage(null);
@@ -99,14 +89,11 @@ const BlogManagement = () => {
     }
   };
 
-  // ----------------------
-  // FETCH BLOGS
-  // ----------------------
+  // Fetch all blogs
   const fetchBlogs = async () => {
     try {
       const res = await axios.get("https://hcfinvest.onrender.com/api/blogs");
       setBlogs(res.data);
-      console.log("Blog data of Fetching in BlogManagement" + res);
     } catch (error) {
       console.error("Error fetching blogs:", error);
     }
@@ -116,9 +103,6 @@ const BlogManagement = () => {
     fetchBlogs();
   }, []);
 
-  // ----------------------
-  // JSX RETURN
-  // ----------------------
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
@@ -131,8 +115,14 @@ const BlogManagement = () => {
         </Button>
       </Grid>
 
-      {/* Add Blog Dialog */}
-      <Dialog open={open} onClose={handleClose} fullWidth>
+      {/* Dialog */}
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        fullWidth
+        disableEnforceFocus
+        disableRestoreFocus
+      >
         <DialogTitle
           sx={{
             fontSize: "2rem",
@@ -195,16 +185,6 @@ const BlogManagement = () => {
               sx={{ margin: "10px" }}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-            />
-
-            <TextField
-              label="Short Description"
-              fullWidth
-              multiline
-              sx={{ margin: "10px" }}
-              rows={4}
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
             />
           </Grid>
 
@@ -301,11 +281,7 @@ const BlogManagement = () => {
                 {imageSrc && (
                   <img
                     src={imageSrc}
-                    style={{
-                      height: 300,
-                      width: "100%",
-                      objectFit: "cover",
-                    }}
+                    style={{ height: 300, width: "100%", objectFit: "cover" }}
                   />
                 )}
 

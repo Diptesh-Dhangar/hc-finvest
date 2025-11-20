@@ -6,16 +6,16 @@ import Blog from "../models/Blogs.js";
  */
 export const createBlog = async (req, res) => {
   try {
-    const { title, description, date } = req.body;
+    const { title, date } = req.body;
     const sections = JSON.parse(req.body.sections);
 
-    if (!title || !description || !date || !req.file) {
+    if (!title || !date || !req.file) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
     const newBlog = new Blog({
       title,
-      description,
+      // description,
       date,
       sections,
       image: {
