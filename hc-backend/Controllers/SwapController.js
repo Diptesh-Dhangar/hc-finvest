@@ -66,3 +66,32 @@ export const getCurrencyPairsByMarket = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+//Update Swap
+export const updateSwap = async (req, res) => {
+  try {
+    const { marketType, currencyPair, swapLong, swapShort } = req.body;
+
+    if (!marketType || !currencyPair || swapLong === "" || swapShort === "") {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const updated = await Swap.findOneAndUpdate(
+      { marketType, currencyPair },
+      { swapLong, swapShort },
+      { new: true }
+    );
+
+    if (!updated) {
+      return res.status(404).json({ message: "Swap record not found" });
+    }
+
+    return res.json({
+      message: "Swap updated successfully",
+      data: updated,
+    });
+  } catch (error) {
+    console.error("Update error:", error);
+    return res.status(500).json({ message: "Server error", error });
+  }
+};

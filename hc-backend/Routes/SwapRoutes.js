@@ -1,13 +1,15 @@
 import express from "express";
 import {
   addSwap,
-  getCurrencyPairsByMarket
+  getCurrencyPairsByMarket,
+  updateSwap
 } from "../Controllers/SwapController.js";
 
 const router = express.Router();
 
 router.post("/", addSwap); // POST /api/swaps
 router.get("/currencyPairs/:marketType", getCurrencyPairsByMarket);
+router.put("/update", updateSwap);
 
 // router.post("/add", addSwap);
 // router.put("/update", updateSwap);

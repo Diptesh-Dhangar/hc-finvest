@@ -17,62 +17,68 @@ const SwapManagement = () => {
   const [value, setValue] = React.useState(null);
   const [marketType, setMarketType] = React.useState("");
   const [currencyOptions, setCurrencyOptions] = React.useState([]);
-  const [loadingPairs, setLoadingPairs] = React.useState(false);
+  const [swapLong, setSwapLong] = React.useState("");
+  const [swapShort, setSwapShort] = React.useState("");
 
-  // Fetch currency pairs from backend when market type changes
   const handleChange = async (event) => {
     const selectedMarket = event.target.value;
     setMarketType(selectedMarket);
-    setValue(null); // reset selected currency pair
+    setValue(null);
+    setSwapLong("");
+    setSwapShort("");
 
-    if (!selectedMarket) {
-      setCurrencyOptions([]);
-      return;
-    }
+    if (!selectedMarket) return;
 
     try {
-      setLoadingPairs(true);
-
       const res = await axios.get(
         `https://hcfinvest.onrender.com/api/swaps/currencyPairs/${selectedMarket}`
       );
 
-      console.log("API Response:", res.data);
-
-      // FIX: backend returns ["EURUSD", "GBPUSD"]
       const formattedPairs = res.data.map((pair) => ({
-        title: pair, // Correct mapping
+        title: pair,
       }));
 
       setCurrencyOptions(formattedPairs);
     } catch (error) {
-      console.error("Error fetching currency pairs:", error);
-      setCurrencyOptions([]);
-    } finally {
-      setLoadingPairs(false);
+      console.error("Error fetching pairs:", error);
+    }
+  };
+
+  // 🟩 UPDATE SWAP ON BUTTON CLICK
+  const handleUpdate = async () => {
+    if (!marketType || !value || !swapLong || !swapShort) {
+      return alert("Please fill all fields");
+    }
+
+    const payload = {
+      marketType,
+      currencyPair: value.title,
+      swapLong,
+      swapShort,
+    };
+
+    try {
+      const res = await axios.put(
+        "https://hcfinvest.onrender.com/api/swaps/update",
+        payload
+      );
+      alert(res.data.message);
+    } catch (err) {
+      alert("Update failed");
     }
   };
 
   return (
     <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
-      <Box
-        sx={{
-          width: "100%",
-          background: "#fff",
-          p: { xs: 2, sm: 3, md: 4 },
-          borderRadius: 2,
-          boxShadow: 3,
-          textAlign: "center",
-        }}
-      >
+      <Box sx={{ p: 4, background: "#fff", borderRadius: 2, boxShadow: 3 }}>
         <Typography
           variant="h2"
           sx={{
             fontSize: "2rem",
             fontWeight: "700",
-            marginBottom: "1.5rem",
-            width: "100%",
+            mb: 3,
             color: "#0f5e9b",
+            textAlign: "center",
           }}
         >
           UPDATE SWAPS
@@ -80,81 +86,61 @@ const SwapManagement = () => {
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
           {/* Market Type */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Market Type
-            </Typography>
+          <FormControl fullWidth>
+            <InputLabel>Market Type</InputLabel>
+            <Select
+              value={marketType}
+              label="Market Type"
+              onChange={handleChange}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value="Forex">Forex</MenuItem>
+              <MenuItem value="Metals">Metals</MenuItem>
+              <MenuItem value="Indices">Indices</MenuItem>
+              <MenuItem value="Stocks">Stocks</MenuItem>
+              <MenuItem value="Commodities">Commodities</MenuItem>
+              <MenuItem value="Cryptocurrencies">Cryptocurrencies</MenuItem>
+            </Select>
+          </FormControl>
 
-            <FormControl fullWidth sx={{ textAlign: "left" }}>
-              <InputLabel>Market Type</InputLabel>
-              <Select
-                value={marketType}
-                label="Market Type"
-                onChange={handleChange}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="Forex">Forex</MenuItem>
-                <MenuItem value="Metals">Metals</MenuItem>
-                <MenuItem value="Indices">Indices</MenuItem>
-                <MenuItem value="Stocks">Stocks</MenuItem>
-                <MenuItem value="Commodities">Commodities</MenuItem>
-                <MenuItem value="Cryptocurrencies">Cryptocurrencies</MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
-
-          {/* Currency Pair - Dynamic from Backend */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Select Currency Pair
-            </Typography>
-
-            <Autocomplete
-              value={value}
-              loading={loadingPairs}
-              onChange={(event, newValue) => {
-                setValue(newValue);
-              }}
-              fullWidth
-              options={currencyOptions}
-              getOptionLabel={(option) =>
-                typeof option === "string" ? option : option.title
-              }
-              renderOption={(props, option) => (
-                <li {...props}>{option.title}</li>
-              )}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Select Currency Pair"
-                  placeholder="Choose pair"
-                />
-              )}
-            />
-          </Box>
+          {/* Currency Pair */}
+          <Autocomplete
+            fullWidth
+            value={value}
+            onChange={(e, newValue) => setValue(newValue)}
+            options={currencyOptions}
+            getOptionLabel={(opt) => opt.title}
+            renderInput={(params) => (
+              <TextField {...params} label="Select Currency Pair" />
+            )}
+          />
 
           {/* Swap Long */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Enter Swap Long
-            </Typography>
-            <TextField fullWidth label="Swap Long" />
-          </Box>
+          <TextField
+            fullWidth
+            label="Swap Long"
+            type="number"
+            value={swapLong}
+            onChange={(e) => setSwapLong(e.target.value)}
+          />
 
           {/* Swap Short */}
-          <Box>
-            <Typography mb={1} fontWeight="500" textAlign="left">
-              Enter Swap Short
-            </Typography>
-            <TextField fullWidth label="Swap Short" />
-          </Box>
+          <TextField
+            fullWidth
+            label="Swap Short"
+            type="number"
+            value={swapShort}
+            onChange={(e) => setSwapShort(e.target.value)}
+          />
 
+          {/* UPDATE BUTTON */}
           <Box textAlign="right">
             <Button
               variant="contained"
               sx={{ backgroundColor: "#0c1e49", px: 4, py: 1 }}
+              onClick={handleUpdate}
             >
               Update
             </Button>
