@@ -22,24 +22,44 @@ const SpreadManagement = () => {
   const [lowSpread, setLowSpread] = React.useState("");
   const [leverageType, setLeverageType] = React.useState("");
 
-  // Auto fetch currency pairs when BOTH market + account type are selected
-  React.useEffect(() => {
-    const fetchPairs = async () => {
-      if (!marketType || !accountType) return;
+  // 🔥 Fetch pairs whenever both fields are chosen
+  const fetchPairs = async (market, account) => {
+    if (!market || !account) return;
 
+    try {
       const res = await axios.get(
         "https://hcfinvest.onrender.com/api/spreads/get-pairs",
-        {
-          params: { marketType, accountType },
-        }
+        { params: { marketType: market, accountType: account } }
       );
 
-      const formatted = res.data.pairs.map((p) => ({ title: p }));
-      setCurrencyList(formatted);
-    };
+      console.log("Fetched pairs:", res.data.pairs);
 
-    fetchPairs();
-  }, [marketType, accountType]);
+      const formatted = res.data.pairs.map((p) => ({
+        title: p,
+      }));
+
+      setCurrencyList(formatted);
+    } catch (err) {
+      console.error("Error fetching pairs:", err);
+      setCurrencyList([]);
+    }
+  };
+
+  // When Market changes
+  const handleMarketChange = (e) => {
+    const value = e.target.value;
+    setMarketType(value);
+    setCurrency(null);
+    fetchPairs(value, accountType);
+  };
+
+  // When Account changes
+  const handleAccountChange = (e) => {
+    const value = e.target.value;
+    setAccountType(value);
+    setCurrency(null);
+    fetchPairs(marketType, value);
+  };
 
   const handleUpdate = async () => {
     if (!marketType || !accountType || !currency || !avgSpread || !lowSpread) {
@@ -81,7 +101,7 @@ const SpreadManagement = () => {
             <Select
               value={marketType}
               label="Market Type"
-              onChange={(e) => setMarketType(e.target.value)}
+              onChange={handleMarketChange}
             >
               <MenuItem value="Forex">Forex</MenuItem>
               <MenuItem value="Metals">Metals</MenuItem>
@@ -98,7 +118,7 @@ const SpreadManagement = () => {
             <Select
               value={accountType}
               label="Account Type"
-              onChange={(e) => setAccountType(e.target.value)}
+              onChange={handleAccountChange}
             >
               <MenuItem value="Starter">Starter Account</MenuItem>
               <MenuItem value="ProTrader">Pro Trader Account</MenuItem>
