@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Box, Container, Typography } from "@mui/material";
-import { Button } from "bootstrap/dist/js/bootstrap.bundle.min";
 
 const BlogDetails = () => {
   const { id } = useParams(); // get the blog id from URL
@@ -10,14 +9,14 @@ const BlogDetails = () => {
 
   useEffect(() => {
     const fetchBlog = async () => {
-      console.log("ID from the Blog Detials" + id);
+      console.log("ID from the Blog Details: " + id);
       try {
         // Fetch single blog by id from backend
         const response = await axios.get(
           `https://hcfinvest.onrender.com/api/blogs/${id}`
         );
         setBlog(response.data);
-        console.log("BLog Data "+response.data);
+        console.log("Blog Data: ", response.data);
       } catch (error) {
         console.error("Error fetching blog details:", error);
       }
@@ -41,15 +40,16 @@ const BlogDetails = () => {
 
   return (
     <Container sx={{ padding: "30px" }}>
-      <Box sx={{ textAlign: "center", marginBottom: "20px" }}>
-        <Typography variant="h3" sx={{ fontWeight: 600, textAlign: "left" }}>
+      <Box sx={{ textAlign: "left", marginBottom: "20px" }}>
+        <Typography variant="h3" sx={{ fontWeight: 600 }}>
           {blog.title}
         </Typography>
-        <Typography variant="body2" sx={{ color: "gray", textAlign: "left" }}>
+        <Typography variant="body2" sx={{ color: "gray" }}>
           {new Date(blog.date).toLocaleDateString("en-GB")}
         </Typography>
       </Box>
 
+      {/* Blog Image */}
       <img
         src={getImageUrl(blog.image)}
         alt={blog.title}
@@ -62,12 +62,49 @@ const BlogDetails = () => {
         }}
       />
 
+      {/* Blog Description */}
       <Typography
         variant="body1"
-        sx={{ textAlign: "justify", fontSize: "1.1rem" }}
+        sx={{ textAlign: "justify", fontSize: "1.1rem", marginBottom: "30px" }}
       >
         {blog.description}
       </Typography>
+
+      {/* ---------------------------------------------- */}
+      {/*             DISPLAY BLOG SECTIONS              */}
+      {/* ---------------------------------------------- */}
+
+      {blog.sections && blog.sections.length > 0 && (
+        <Box sx={{ marginTop: "20px" }}>
+          {blog.sections.map((section, index) => (
+            <Box key={index} sx={{ marginBottom: "40px" }}>
+              {/* Section Heading */}
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  marginBottom: "10px",
+                  color: "#0f5e9b",
+                  textAlign: "left",
+                }}
+              >
+                {section.heading}
+              </Typography>
+
+              {/* Section Content (HTML from Quill) */}
+              <div
+                dangerouslySetInnerHTML={{ __html: section.content }}
+                style={{
+                  fontSize: "1.05rem",
+                  color: "#333",
+                  lineHeight: "1.7",
+                  textAlign: "justify",
+                }}
+              ></div>
+            </Box>
+          ))}
+        </Box>
+      )}
     </Container>
   );
 };
