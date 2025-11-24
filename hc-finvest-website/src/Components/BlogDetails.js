@@ -77,7 +77,7 @@ const BlogDetails = () => {
       {blog.sections && blog.sections.length > 0 && (
         <Box sx={{ marginTop: "20px" }}>
           {blog.sections.map((section, index) => (
-            <Box key={index} sx={{ marginBottom: "40px" }}>
+            <Box key={index} sx={{ marginBottom: "20px" }}>
               {/* Section Heading */}
               <Typography
                 variant="h4"

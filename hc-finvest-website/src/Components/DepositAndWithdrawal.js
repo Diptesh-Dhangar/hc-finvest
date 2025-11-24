@@ -190,7 +190,7 @@ const DepositAndWithdrawal = () => {
                     height: "14rem",
                   }}
                 >
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -202,7 +202,7 @@ const DepositAndWithdrawal = () => {
                       USD, EUR, GPB, INR
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -214,7 +214,7 @@ const DepositAndWithdrawal = () => {
                       None
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -226,7 +226,7 @@ const DepositAndWithdrawal = () => {
                       Within 1 working day
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -305,7 +305,7 @@ const DepositAndWithdrawal = () => {
                     height: "14rem",
                   }}
                 >
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -317,7 +317,7 @@ const DepositAndWithdrawal = () => {
                       BTC, ETH, USDT
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -329,7 +329,7 @@ const DepositAndWithdrawal = () => {
                       None
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -341,14 +341,14 @@ const DepositAndWithdrawal = () => {
                       Instant
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
                       }}
                     >
                       <span style={{ color: "#01013a", fontWeight: "700" }}>
-                        Processing Time (Withdraawal):
+                        Processing Time (Withdrawal):
                       </span>{" "}
                       30min to 1hr
                     </Typography>
@@ -420,7 +420,7 @@ const DepositAndWithdrawal = () => {
                     height: "14rem",
                   }}
                 >
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -432,7 +432,7 @@ const DepositAndWithdrawal = () => {
                       INR
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -444,7 +444,7 @@ const DepositAndWithdrawal = () => {
                       None
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -456,7 +456,7 @@ const DepositAndWithdrawal = () => {
                       Instant
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -519,13 +519,13 @@ const DepositAndWithdrawal = () => {
                   }}
                 >
                   {" "}
-                  Bank Transfer
+                  Sticpay
                 </Typography>
 
                 <Typography
                   sx={{ fontSize: "1rem", color: "#555", marginBottom: "15px" }}
                 >
-                  Bank Transfer allows deposits and withdrawals. Below are the
+                  Sticpay allows both deposits and withdrawals. Below are the
                   details:
                 </Typography>
 
@@ -542,7 +542,7 @@ const DepositAndWithdrawal = () => {
                     height: "14rem",
                   }}
                 >
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -554,7 +554,7 @@ const DepositAndWithdrawal = () => {
                       USD, EUR, GPB, INR
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -566,7 +566,7 @@ const DepositAndWithdrawal = () => {
                       None
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -575,17 +575,17 @@ const DepositAndWithdrawal = () => {
                       <span style={{ color: "#01013a", fontWeight: "700" }}>
                         Processing Time (Deposit):
                       </span>{" "}
-                      Within 1 working day
+                      Within 30 min
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
                       }}
                     >
                       <span style={{ color: "#01013a", fontWeight: "700" }}>
-                        Processing Time (Withdraawal):
+                        Processing Time (Withdrawal):
                       </span>{" "}
                       Within 1 working day
                     </Typography>
@@ -634,14 +634,14 @@ const DepositAndWithdrawal = () => {
                   }}
                 >
                   {" "}
-                  Crypto
+                  Credit & Debit
                 </Typography>
 
                 <Typography
                   sx={{ fontSize: "1rem", color: "#555", marginBottom: "15px" }}
                 >
-                  Use your credit card for seamless deposits and withdrawals
-                  with Crypto Pay!:
+                  Use your Credit & Debit Card for seamless deposits and
+                  withdrawals:
                 </Typography>
 
                 {/* Inner Box Start */}
@@ -657,7 +657,7 @@ const DepositAndWithdrawal = () => {
                     height: "14rem",
                   }}
                 >
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -669,7 +669,7 @@ const DepositAndWithdrawal = () => {
                       BTC, ETH, USDT
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -681,7 +681,7 @@ const DepositAndWithdrawal = () => {
                       None
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
@@ -693,16 +693,16 @@ const DepositAndWithdrawal = () => {
                       Instant
                     </Typography>
                   </Grid>
-                  <Grid item size={6} sx={{ border: "1px solid green" }}>
+                  <Grid item size={6} sx={{ border: "0px solid green" }}>
                     <Typography
                       sx={{
                         fontSize: "0.9rem",
                       }}
                     >
                       <span style={{ color: "#01013a", fontWeight: "700" }}>
-                        Processing Time (Withdraawal):
+                        Processing Time (Withdrawal):
                       </span>{" "}
-                      30min to 1hr
+                      Within 1 Working Day
                     </Typography>
                   </Grid>
                 </Grid>

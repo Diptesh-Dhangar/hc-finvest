@@ -196,13 +196,19 @@ const Starter = () => {
               marginTop: "20px",
             }}
           >
-            <Button variant="outlined">Create Live Account</Button>
+            <Button
+              variant="outlined"
+              href="https://trade.hcfinvest.com/register"
+            >
+              Create Live Account
+            </Button>
             <Button
               sx={{
                 backgroundColor: "#0b1660",
                 color: "#fff",
                 marginLeft: "20px",
               }}
+              href="https://trade.hcfinvest.com/register"
             >
               Create Demo Account
             </Button>

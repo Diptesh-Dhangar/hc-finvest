@@ -170,6 +170,7 @@ const MetaTrader5forAndroid = () => {
                     backgroundColor: "#0d1048",
                   },
                 }}
+                href="https://apps.apple.com/in/app/metatrader-5/id413251709"
                 startIcon={<DownloadIcon />} // 👈 Add the download icon here
               >
                 IOS
@@ -185,6 +186,7 @@ const MetaTrader5forAndroid = () => {
                     backgroundColor: "#0d1048",
                   },
                 }}
+                href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5"
                 startIcon={<DownloadIcon />} // 👈 Add the download icon here
               >
                 Play Sore
@@ -200,6 +202,7 @@ const MetaTrader5forAndroid = () => {
                     backgroundColor: "#0d1048",
                   },
                 }}
+                href="https://galaxystore.samsung.com/detail/net.metaquotes.metatrader5"
                 startIcon={<DownloadIcon />} // 👈 Add the download icon here
               >
                 Samsung Store

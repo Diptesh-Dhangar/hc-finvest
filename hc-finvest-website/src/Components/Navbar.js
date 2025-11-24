@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   AppBar,
   Box,
@@ -7,7 +7,6 @@ import {
   Typography,
   Button,
   Container,
-  Slide,
   Drawer,
   List,
   ListItem,
@@ -21,21 +20,30 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Link } from "react-router-dom";
 
-// Dropdown Components
 import AboutUsBox from "./Navbar/AboutUsBox";
 import SupportBox from "./Navbar/SupportBox";
 import ResearchAndToolBox from "./Navbar/ResearchAndToolBox";
 import PlatformBox from "./Navbar/PlatformBox";
 import TradingBox from "./Navbar/TradingBox";
+import "../Components/Styles/Navbar.css";
 
 const Navbar = () => {
   const [hovered, setHovered] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
+  const timer = useRef(null);
 
-  const handleMouseEnter = (name) => setHovered(name);
-  const handleMouseLeave = () => setHovered(null);
+  const handleMouseEnter = (name) => {
+    clearTimeout(timer.current);
+    setHovered(name);
+  };
+
+  const handleMouseLeave = () => {
+    timer.current = setTimeout(() => setHovered(null), 120);
+  };
+
   const toggleDrawer = (open) => () => setMobileOpen(open);
+
   const toggleExpand = (name) =>
     setExpandedMenu(expandedMenu === name ? null : name);
 
@@ -50,15 +58,11 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { name: "ABOUT US", to: "/", component: <AboutUsBox /> },
-    { name: "TRADING", to: "/", component: <TradingBox /> },
-    { name: "PLATFORM", to: "/", component: <PlatformBox /> },
-    {
-      name: "RESEARCH & TOOLS",
-      to: "/",
-      component: <ResearchAndToolBox />,
-    },
-    { name: "SUPPORT", to: "/", component: <SupportBox /> },
+    { name: "ABOUT US", component: <AboutUsBox /> },
+    { name: "TRADING",  component: <TradingBox /> },
+    { name: "PLATFORM",  component: <PlatformBox /> },
+    { name: "RESEARCH & TOOLS",  component: <ResearchAndToolBox /> },
+    { name: "SUPPORT",  component: <SupportBox /> },
   ];
 
   return (
@@ -104,30 +108,21 @@ const Navbar = () => {
                   {item.name}
                 </Link>
 
-                {/* Dropdown */}
-                <Slide
-                  direction="up"
-                  in={hovered === item.name}
-                  mountOnEnter
-                  unmountOnExit
-                  timeout={500}
+                {/* ANIMATED CUSTOM DROPDOWN */}
+                <Box
+                  className={
+                    hovered === item.name ? "dropdown-box show" : "dropdown-box"
+                  }
+                  onMouseEnter={() => handleMouseEnter(item.name)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: "55px",
-                      left: 0,
-                      zIndex: 20,
-                    }}
-                  >
-                    {item.component}
-                  </Box>
-                </Slide>
+                  {item.component}
+                </Box>
               </Box>
             ))}
           </Box>
 
-          {/* RIGHT BUTTONS (DESKTOP) */}
+          {/* RIGHT BUTTONS */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
             <Button
               variant="outlined"
@@ -170,7 +165,6 @@ const Navbar = () => {
             sx: { width: "80%", maxWidth: 330, backgroundColor: "#fff" },
           }}
         >
-          {/* Drawer Header */}
           <Box
             sx={{
               display: "flex",

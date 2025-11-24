@@ -169,8 +169,10 @@ const MetaTrader5Pc = () => {
                   backgroundColor: "#11155c",
                   "&:hover": {
                     backgroundColor: "#0d1048",
+                    color:'white'
                   },
                 }}
+                href="https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/mt5setup.exe?utm_source=www.metatrader5.com&utm_campaign=download"
                 startIcon={<DownloadIcon />} // 👈 Add the download icon here
               >
                 Download for windows

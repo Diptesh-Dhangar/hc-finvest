@@ -69,7 +69,7 @@ const AccountsTypes = () => {
 
       <Typography
         variant="h2"
-        sx={{ color: "#101828", fontWeight: "700", fontSize: "2.1rem" }}
+        sx={{ color: "#101828", fontWeight: "700", fontSize: "2.1rem" , marginBottom:'20px' }}
       >
         {" "}
         Trading Account Type{" "}
@@ -86,11 +86,11 @@ const AccountsTypes = () => {
         <Grid
           item
           size={2.8}
-          sx={{ border: "0px solid green", padding: "15px" }}
+          sx={{ border: "0px solid green", padding: "10px" }}
         >
           <Card
             sx={{
-              padding: "20px",
+              padding: "15px",
               borderRadius: "20px",
               background: "#ffffffb3",
               boxShadow: "0 12px 24px #0000001a",
@@ -338,11 +338,11 @@ const AccountsTypes = () => {
         <Grid
           item
           size={2.8}
-          sx={{ border: "0px solid green", padding: "15px" }}
+          sx={{ border: "0px solid green", padding: "10px" }}
         >
           <Card
             sx={{
-              padding: "20px",
+              padding: "10px",
               borderRadius: "20px",
               background: "#ffffffb3",
               boxShadow: "0 12px 24px #0000001a",
@@ -590,11 +590,11 @@ const AccountsTypes = () => {
         <Grid
           item
           size={2.8}
-          sx={{ border: "0px solid green", padding: "15px" }}
+          sx={{ border: "0px solid green", padding: "10px" }}
         >
           <Card
             sx={{
-              padding: "20px",
+              padding: "15px",
               borderRadius: "20px",
               background: "#ffffffb3",
               boxShadow: "0 12px 24px #0000001a",
@@ -841,11 +841,11 @@ const AccountsTypes = () => {
         <Grid
           item
           size={2.8}
-          sx={{ border: "0px solid green", padding: "15px" }}
+          sx={{ border: "0px solid green", padding: "10px" }}
         >
           <Card
             sx={{
-              padding: "20px",
+              padding: "15px",
               borderRadius: "20px",
               background: "#ffffffb3",
               boxShadow: "0 12px 24px #0000001a",
