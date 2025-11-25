@@ -54,6 +54,8 @@ import BlogManagement from "./Components/Admin/BlogManagement";
 import ForexBrokerArticle from "./Components/ForexBrokerArticle";
 import AddSpread from "./Components/Admin/AddSpread";
 import AddSwap from "./Components/Admin/AddSwap";
+import AdminLogin from "./Components/Admin/AdminLogin";
+import ProtectedAdminRoute from "./Components/Admin/ProtectedAdminRoute";
 
 function App() {
   return (
@@ -143,7 +145,23 @@ function App() {
         {/* Blelow are the optional pages  */}
         <Route path="adminAddSwap" element={<AddSwap />} />
         <Route path="adminAddSpread" element={<AddSpread />} />
-        <Route path="admin" element={<AdminPanel />}>
+        {/* <Route path="adminLogin" element={<AdminLogin />} /> */}
+        {/* <Route path="admin" element={<AdminPanel />}>
+          <Route path="adminBlogManagement" element={<BlogManagement />} />
+          <Route path="adminEnquiryData" element={<EnquiryData />} />
+          <Route path="adminContactUsData" element={<ContactUsData />} />
+          <Route path="adminSwapManagement" element={<SwapManagement />} />
+          <Route path="adminSpreadManagement" element={<SpreadManagement />} />
+        </Route> */}
+        <Route path="/admin" element={<AdminLogin/>} />
+        <Route
+          path="admin"
+          element={
+            <ProtectedAdminRoute>
+              <AdminPanel />
+            </ProtectedAdminRoute>
+          }
+        >
           <Route path="adminBlogManagement" element={<BlogManagement />} />
           <Route path="adminEnquiryData" element={<EnquiryData />} />
           <Route path="adminContactUsData" element={<ContactUsData />} />
