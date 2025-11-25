@@ -16,7 +16,7 @@ const cardData = [
   },
   {
     title: "Metals",
-    text: "Strategic Metals Investments",
+    text: "Stategic Metals Investments",
     img: "Images/MainContentImages/metalsoil.png",
     link: "/metalsMarket",
   },

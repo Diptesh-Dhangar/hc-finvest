@@ -18,15 +18,48 @@ const RegPopupBox = ({ onClose }) => {
     email: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); // clear error while typing
+  };
+
+  const validateForm = () => {
+    let newErrors = {};
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full Name is required";
+    }
+
+    if (!formData.phoneNumber.trim()) {
+      newErrors.phoneNumber = "Phone Number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = "Phone Number must be exactly 10 digits";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = "Invalid email format";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async () => {
+    if (!validateForm()) {
+      alert("❗Please correct the errors before submitting.");
+      return;
+    }
+
     try {
       console.log(formData);
       const res = await axios.post(
@@ -38,7 +71,8 @@ const RegPopupBox = ({ onClose }) => {
       console.log("Server response:", res.data);
 
       setFormData({ fullName: "", phoneNumber: "", email: "" });
-      onClose(); // close popup after success
+      setErrors({});
+      onClose();
     } catch (err) {
       console.error("❌ Error submitting form:", err);
       alert("Failed to submit registration!");
@@ -58,7 +92,7 @@ const RegPopupBox = ({ onClose }) => {
         justifyContent: "center",
         alignItems: "center",
         zIndex: 1300,
-        px: 2, // small padding on mobile
+        px: 2,
       }}
     >
       <Box
@@ -117,7 +151,10 @@ const RegPopupBox = ({ onClose }) => {
             onChange={handleChange}
             size="small"
             sx={{ mb: 2 }}
+            error={Boolean(errors.fullName)}
+            helperText={errors.fullName}
           />
+
           <TextField
             fullWidth
             placeholder="Enter Your Valid Phone Number"
@@ -126,7 +163,10 @@ const RegPopupBox = ({ onClose }) => {
             onChange={handleChange}
             size="small"
             sx={{ mb: 2 }}
+            error={Boolean(errors.phoneNumber)}
+            helperText={errors.phoneNumber}
           />
+
           <TextField
             fullWidth
             placeholder="Enter Your Valid Email ID"
@@ -135,6 +175,8 @@ const RegPopupBox = ({ onClose }) => {
             onChange={handleChange}
             size="small"
             sx={{ mb: 3 }}
+            error={Boolean(errors.email)}
+            helperText={errors.email}
           />
 
           <Button

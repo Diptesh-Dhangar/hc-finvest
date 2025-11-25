@@ -243,7 +243,7 @@ const WelcomeAccount = () => {
           >
             The Welcome Account is not available in:
           </Typography>
-          <Typography>Iran, Ukraine, Syria, Afghanistan,Pakistan</Typography>
+          <Typography>Iran, Ukraine, Syria, Afghanistan, Pakistan</Typography>
         </Box>
       </Grid>
 
@@ -424,8 +424,8 @@ const WelcomeAccount = () => {
           }}
         >
           Trade using real funds, experience our industry-leading execution
-          speeds, and keep the profits you earn. Get instant access to
-          <b>cutting-edge trading platforms,tools, and insights,</b> all backed
+          speeds, and keep the profits you earn. Get instant access to 
+          <b>cutting-edge trading platforms, tools and insights,</b> all backed
           by a globally trusted brand.
         </Typography>
       </Box>
