@@ -162,7 +162,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",
@@ -178,7 +178,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",
@@ -194,7 +194,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",

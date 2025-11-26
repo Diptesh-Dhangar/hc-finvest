@@ -83,7 +83,7 @@ const Promotion = () => {
                 sx={{ display: "flex", justifyContent: "flex-start" }}
               >
                 <img
-                  src="Images/PromotionImages/Bonus (Pramotion).jpg"
+                  src="Images/PromotionImages/Bonus (pramotion).jpg"
                   style={{ borderRadius: "20px" }}
                 />
               </Grid>
@@ -118,11 +118,11 @@ const Promotion = () => {
                 >
                   Get 50% Cash Deposit Bonus
                 </Typography>
-                <p style={{ color: "var(--bs-secondary-color)" }}>
+                <Typography style={{ color: "var(--bs-secondary-color)" }}>
                   {" "}
                   Maximize your trading power with a 50% deposit bonus up to
                   $2000. Boost your account instantly.
-                </p>
+                </Typography>
                 <Typography sx={{ color: "var(--bs-secondary-color)" }}>
                   T&Cs Apply
                 </Typography>
@@ -174,11 +174,11 @@ const Promotion = () => {
                 >
                   Earn Rewards by Referring
                 </Typography>
-                <p style={{ color: "var(--bs-secondary-color)" }}>
+                <Typography style={{ color: "var(--bs-secondary-color)" }}>
                   {" "}
                   Invite your friends to join and trade. Get rewarded with cash,
                   bonuses, or rebates every time they deposit.
-                </p>
+                </Typography>
                 <Typography sx={{ color: "var(--bs-secondary-color)" }}>
                   T&Cs Apply
                 </Typography>
@@ -190,7 +190,7 @@ const Promotion = () => {
                 sx={{ display: "flex", justifyContent: "flex-end" }}
               >
                 <img
-                  src="Images/PromotionImages/Refer a friend (Pramotion).jpg"
+                  src="Images/PromotionImages/Refer a friend (pramotion).jpg"
                   style={{ borderRadius: "20px" }}
                 />
               </Grid>

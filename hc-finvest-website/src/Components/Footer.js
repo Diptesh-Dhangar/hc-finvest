@@ -54,7 +54,15 @@ const Footer = () => {
         </Grid>
 
         {/* MARKETS */}
-        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
+        <Grid
+          item
+          paddingRight={2}
+          paddingLeft={2}
+          xs={6}
+          sm={4}
+          md={2}
+          sx={{ textAlign: "left" }}
+        >
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             MARKETS
           </Typography>
@@ -73,7 +81,7 @@ const Footer = () => {
                 sx={{
                   color: "#001489",
                   fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
+                  // "&:hover": { textDecoration: "underline" },
                 }}
               >
                 {name}
@@ -83,7 +91,15 @@ const Footer = () => {
         </Grid>
 
         {/* TRADING */}
-        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
+        <Grid
+          item
+          paddingRight={2}
+          paddingLeft={2}
+          xs={6}
+          sm={4}
+          md={2}
+          sx={{ textAlign: "left" }}
+        >
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             TRADING
           </Typography>
@@ -99,7 +115,8 @@ const Footer = () => {
                 sx={{
                   color: "#001489",
                   fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
+                  // "&:hover": { textDecoration: "underline" },
+                  textAlign: "left",
                 }}
               >
                 {name}
@@ -109,7 +126,15 @@ const Footer = () => {
         </Grid>
 
         {/* PLATFORMS */}
-        <Grid item paddingRight={2} paddingLeft={2} xs={6} sm={4} md={2}>
+        <Grid
+          item
+          paddingRight={2}
+          paddingLeft={2}
+          xs={6}
+          sm={4}
+          md={2}
+          sx={{ textAlign: "left" }}
+        >
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             PLATFORMS
           </Typography>
@@ -127,7 +152,8 @@ const Footer = () => {
                 sx={{
                   color: "#001489",
                   fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
+                  // "&:hover": { textDecoration: "underline" },
+                  textAlign: "left",
                 }}
               >
                 {name}
@@ -137,7 +163,15 @@ const Footer = () => {
         </Grid>
 
         {/* COMPANY & SOCIAL LINKS */}
-        <Grid item paddingRight={2} paddingLeft={2} xs={12} sm={6} md={4}>
+        <Grid
+          item
+          paddingRight={2}
+          paddingLeft={2}
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{ textAlign: "left" }}
+        >
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
             COMPANY
           </Typography>
@@ -153,7 +187,8 @@ const Footer = () => {
                 sx={{
                   color: "#001489",
                   fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
+                  // "&:hover": { textDecoration: "underline" },
+                  textAlign: "left",
                 }}
               >
                 {name}
@@ -165,13 +200,13 @@ const Footer = () => {
             Connect
           </Typography>
           <Box sx={{ display: "flex", mt: 1 }}>
-            <IconButton href="#" sx={{ color: "#1877F2", p: 1 }}>
+            <IconButton sx={{ color: "#1877F2", p: 1 }}>
               <Facebook />
             </IconButton>
-            <IconButton href="#" sx={{ color: "#000", p: 1 }}>
+            <IconButton sx={{ color: "#000", p: 1 }}>
               <XIcon />
             </IconButton>
-            <IconButton href="#" sx={{ color: "#E4405F", p: 1 }}>
+            <IconButton sx={{ color: "#E4405F", p: 1 }}>
               <Instagram />
             </IconButton>
           </Box>
@@ -190,11 +225,24 @@ const Footer = () => {
       >
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} sm={6}>
-            <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
+            <Box
+              component="ul"
+              sx={{
+                listStyle: "none",
+                p: 0,
+                m: 0,
+                border: "0px solid red",
+                textAlign: "left",
+              }}
+            >
               <li>
                 <Link
-                  sx={{ color: "#001489" }}
                   underline="none"
+                  sx={{
+                    color: "#001489",
+                    fontSize: "15px",
+                    // "&:hover": { textDecoration: "underline" },
+                  }}
                   href="/privacyPolicies"
                 >
                   <b>Privacy Policy</b>
@@ -203,8 +251,12 @@ const Footer = () => {
 
               <li>
                 <Link
-                  sx={{ color: "#001489" }}
                   underline="none"
+                  sx={{
+                    color: "#001489",
+                    fontSize: "15px",
+                    // "&:hover": { textDecoration: "underline" },
+                  }}
                   href="/termsConditions"
                 >
                   <b>Terms & Conditions</b>
@@ -213,8 +265,12 @@ const Footer = () => {
 
               <li>
                 <Link
-                  sx={{ color: "#001489" }}
                   underline="none"
+                  sx={{
+                    color: "#001489",
+                    fontSize: "15px",
+                    // "&:hover": { textDecoration: "underline" },
+                  }}
                   href="/amlPolicies"
                 >
                   <b>AML Policies</b>
@@ -237,16 +293,20 @@ const Footer = () => {
             gap={2}
             border="0px solid red"
           >
-            <img
-              src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
-              style={{ width: "150px", height: "40px" }}
-              alt="App Store"
-            />
-            <img
-              src="Images/FooterImages/png-clipart-app-store-google-playy-apple-apple-text-lo.png"
-              style={{ width: "150px", height: "40px" }}
-              alt="Google Play"
-            />
+            <a href="https://apps.apple.com/in/app/vertexfx-trader-pro/id6742178081">
+              <img
+                src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
+                style={{ width: "150px", height: "40px" }}
+                alt="App Store"
+              />
+            </a>
+            <a href="https://www.hybridsolutions.com/downloads/Mobile/VertexFXTraderPro.apk">
+              <img
+                src="Images/FooterImages/png-clipart-app-store-google-playy-apple-apple-text-lo.png"
+                style={{ width: "150px", height: "40px" }}
+                alt="Google Play"
+              />
+            </a>
           </Grid>
         </Grid>
 

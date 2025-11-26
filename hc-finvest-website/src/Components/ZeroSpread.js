@@ -145,8 +145,8 @@ const ZeroSpread = () => {
                   <Typography
                     sx={{
                       color: "#222",
-                      fontWeight:
-                        item.label === "Execution:" ? "bold" : "normal",
+                      // fontWeight:
+                        // item.label === "Execution:" ? "bold" : "normal",
                       fontSize: "0.95rem",
                       textAlign: "right",
                     }}

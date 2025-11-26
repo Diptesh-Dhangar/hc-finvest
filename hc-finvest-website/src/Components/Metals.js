@@ -103,7 +103,7 @@ const Metals = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",
@@ -379,7 +379,10 @@ const Metals = () => {
 
       <Grid>
         <div className="container" style={{ padding: "50px" }}>
-          <h1 className="benefits-title" style={{ color: "#0f5e9b" }}>
+          <h1
+            className="benefits-title"
+            style={{ color: "#0f5e9b", textAlign: "center" }}
+          >
             Benefits of Forex Trading
           </h1>
           <div

@@ -112,7 +112,7 @@ const Cryptocurrency = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",
@@ -164,12 +164,13 @@ const Cryptocurrency = () => {
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
+              marginBottom: "10px",
             }}
           >
             What is Cryptocurrencies?
           </Typography>
 
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -184,7 +185,7 @@ const Cryptocurrency = () => {
             with cryptocurrencies are recorded on a publicly accessible database
             that isn't controlled by any single entity, making them secure and
             transparent.
-          </p>
+          </Typography>
 
           <Typography
             variant="h2"
@@ -193,13 +194,14 @@ const Cryptocurrency = () => {
               color: "#0f5e9b",
               fontSize: "35px",
               fontWeight: "700",
-              paddingTop: "50px",
+              // paddingTop: "50px",
+              marginTop: "20px",
             }}
           >
             Popular Cryptocurrencies :-
           </Typography>
 
-          <Typography sx={{ marginTop: "30px", textAlign: "left" }}>
+          <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
               Bitcoin (BTC) :-
             </span>{" "}
@@ -361,20 +363,20 @@ const Cryptocurrency = () => {
           >
             What are Cryptocurrencies?
           </Typography>
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
               textAlign: "left",
-              marginTop: "30px",
+              marginTop: "10px",
             }}
           >
             Cryptocurrencies, or Cryptos, are unique and popular digital
             currencies that are changing the financial industry exponentially.
             Their lack of physical form and decentralized nature, achieved by
             the use of Blockchain technology, makes them perfect for trading.
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -388,7 +390,7 @@ const Cryptocurrency = () => {
             characteristics more closely resemble commodities rather than
             conventional currencies. It often records the highest trading volume
             in almost all the exchanges it's listed on.
-          </p>
+          </Typography>
           <Typography
             variant="h2"
             align="left"
@@ -401,12 +403,12 @@ const Cryptocurrency = () => {
           >
             Bitcoin Trading
           </Typography>
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
               textAlign: "left",
-              marginTop: "20px",
+              marginTop: "10px",
             }}
           >
             When you choose to trade derivatives on bitcoin, the price is
@@ -415,7 +417,7 @@ const Cryptocurrency = () => {
             need to buy BTCUSD in order to make a profit because bitcoin is now
             worth more USD than when you bought it. If you decide to sell the
             BTCUSD and the price rises, then there will be a loss.
-          </p>
+          </Typography>
           <Typography
             variant="h2"
             align="left"
@@ -428,7 +430,7 @@ const Cryptocurrency = () => {
           >
             Important Cryptocurrencies
           </Typography>
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -437,9 +439,9 @@ const Cryptocurrency = () => {
             }}
           >
             Other than Bitcoin, important cryptocurrencies include:
-          </p>
+          </Typography>
           <Typography
-            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+            sx={{ color: "#0f5e9b", marginTop: "10px", textAlign: "left" }}
           >
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
               Ethereum (ETH) –
@@ -448,7 +450,7 @@ const Cryptocurrency = () => {
             Bitcoin.
           </Typography>
           <Typography
-            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+            sx={{ color: "#0f5e9b", marginTop: "10px", textAlign: "left" }}
           >
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
               Ripple (XRP) –
@@ -457,7 +459,7 @@ const Cryptocurrency = () => {
             financial institutions, revolutionizing cross-border payments.
           </Typography>
           <Typography
-            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+            sx={{ color: "#0f5e9b", marginTop: "10px", textAlign: "left" }}
           >
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
               Litecoin (LTC) –
@@ -465,7 +467,7 @@ const Cryptocurrency = () => {
             Often referred to as "silver to Bitcoin's gold."
           </Typography>
 
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -476,21 +478,22 @@ const Cryptocurrency = () => {
             The price of a cryptocurrency can be affected by many factors,
             including supply and market demand, regulation, news, media, and
             price speculation.
-          </p>
+          </Typography>
 
-          <p
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
-              marginTop: "10px",
+              marginTop: "20px",
+              marginBottom: "20px",
             }}
           >
             At HC Finvest, we offer you the opportunity to trade popular
             Cryptocurrencies as derivatives without owning the digital asset,
             with 24-hour trading, low margin requirements, and the ability to
             trade on both rising and falling prices.
-          </p>
+          </Typography>
         </Grid>
 
         <Grid sx={{ backgroundColor: "#f8f9fa" }}>
@@ -518,12 +521,12 @@ const Cryptocurrency = () => {
                   color: "#0f5e9b",
                   fontSize: "35px",
                   fontWeight: "700",
-                  paddingTop: "50px",
+                  paddingTop: "30px",
                 }}
               >
                 Getting Started with Cryptocurrency Trading
               </Typography>
-              <p
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
@@ -538,8 +541,8 @@ const Cryptocurrency = () => {
                 . Because of their decentralized nature, they often remain
                 resilient in the face of economic and political shifts that can
                 destabilize fiat currencies.
-              </p>
-              <p
+              </Typography>
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
@@ -554,13 +557,14 @@ const Cryptocurrency = () => {
                 , traders can speculate on the price movements of crypto assets
                 without owning them directly. This provides opportunities during
                 both rising and falling markets.
-              </p>
-              <p
+              </Typography>
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
                   marginTop: "20px",
                   textAlign: "left",
+                  marginBottom: "20px",
                 }}
               >
                 As cryptocurrencies are highly volatile, it is critical to have
@@ -569,7 +573,7 @@ const Cryptocurrency = () => {
                   risk management strategy
                 </span>{" "}
                 to navigate this dynamic market.
-              </p>
+              </Typography>
             </Grid>
           </Grid>
         </Grid>

@@ -29,7 +29,6 @@ import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
-
 const StyledRow = styled(TableRow)(({ theme, index }) => ({
   backgroundColor: index % 2 === 0 ? "#ffffff" : "#f9f9f9",
 }));
@@ -52,7 +51,6 @@ const comparisonData = [
   { feature: "CHINA50", mt5: "04:00–11:29" },
   { feature: "WIG20", mt5: "10:45–18:50" },
 ];
-
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -161,7 +159,7 @@ const Indices = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",
@@ -387,7 +385,10 @@ const Indices = () => {
 
       <Grid>
         <div className="container" style={{ padding: "50px" }}>
-          <h1 className="benefits-title" style={{ color: "#0f5e9b" }}>
+          <h1
+            className="benefits-title"
+            style={{ color: "#0f5e9b", textAlign: "center" }}
+          >
             Benefits of Forex Trading
           </h1>
           <div
@@ -455,7 +456,6 @@ const Indices = () => {
               <StyledRow key={index} index={index}>
                 <TableCell>{row.feature}</TableCell>
                 <TableCell>{row.mt5}</TableCell>
-                {/* <TableCell>{row.others}</TableCell> */}
               </StyledRow>
             ))}
           </TableBody>
