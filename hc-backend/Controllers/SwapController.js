@@ -95,3 +95,26 @@ export const updateSwap = async (req, res) => {
     return res.status(500).json({ message: "Server error", error });
   }
 };
+
+
+//fetch swap byn market type
+export const getSwapsByMarketType = async (req, res) => {
+  try {
+    const { marketType } = req.params;
+
+    // lowercase to avoid mismatch
+    const swaps = await Swap.find({ marketType });
+
+    // transform to frontend format
+    const formatted = swaps.map((item) => ({
+      name: item.currencyPair,
+      avg: item.swapLong,
+      low: item.swapShort,
+    }));
+
+    res.json(formatted);
+  } catch (error) {
+    console.error("Error fetching swaps:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
