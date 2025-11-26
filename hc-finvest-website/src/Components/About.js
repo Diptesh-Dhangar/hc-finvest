@@ -120,7 +120,7 @@ const About = () => {
             >
               <Box
                 component="img"
-                src="Images/AboutUsImages/SubAboutImage.jpg"
+                src="Images/AboutUsImages/SubAboutimage.jpg"
                 alt="About HC Finvest"
                 sx={{
                   width: "100%",
