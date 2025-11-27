@@ -76,7 +76,7 @@ const IntroducingBroker = () => {
         </Box>
 
         <Box>
-          <p
+          <Typography
             style={{
               fontSize: "17px",
               lineHeight: "32px",
@@ -93,7 +93,7 @@ const IntroducingBroker = () => {
             together. As an introducing broker, you can leverage our expertise,
             resources, and industry-leading trading platforms to enhance your
             clients' trading experience while earning attractive commissions."
-          </p>
+          </Typography>
 
           <Grid container size={12} spacing={5}>
             <Grid item size={5} display="flex" justifyContent="flex-end" p={0}>
@@ -146,7 +146,7 @@ const IntroducingBroker = () => {
                   marginTop: "50px",
                 }}
               >
-                What is a Multi-Tier Network?
+                What is a multi-tier Network?
               </Typography>
               <Typography
                 sx={{

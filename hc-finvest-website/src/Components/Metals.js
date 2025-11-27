@@ -162,16 +162,18 @@ const Metals = () => {
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
+              marginBottom:'10px'
             }}
           >
             What is Metals?
           </Typography>
 
-          <p
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'10px'
             }}
           >
             At HC Finvest, our Forex Metal Trading division is dedicated to
@@ -180,19 +182,20 @@ const Metals = () => {
             cutting-edge technology to offer precise and strategic trading
             opportunities. Investing in metals can serve as a HC Finvest against
             economic instability, providing a reliable store of value.
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'20px'
             }}
           >
             With HC Finvest, you gain access to comprehensive market insights,
             robust risk management practices, and a commitment to transparency
             and excellence. Explore the advantages of Forex Metal Trading with
             HC Finvest, and let us help you secure and grow your wealth
-          </p>
+          </Typography>
         </Grid>
 
         <Grid sx={{ backgroundColor: "#f8f9fa", padding: "50px" }}>
@@ -378,10 +381,10 @@ const Metals = () => {
       </Grid>
 
       <Grid>
-        <div className="container" style={{ padding: "50px" }}>
-          <h1 className="benefits-title" style={{ color: "#0f5e9b" }}>
+        <div className="container" style={{ padding: "50px" , textAlign:'center' }}>
+          <Typography variant="h4" className="benefits-title" style={{ color: "#0f5e9b", fontWeight:'600' }}>
             Benefits of Forex Trading
-          </h1>
+          </Typography>
           <div
             className="row justify-content-center g-5"
             style={{ marginTop: "20px" }}

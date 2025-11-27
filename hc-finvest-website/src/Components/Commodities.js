@@ -106,7 +106,7 @@ const Commodities = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Box
         sx={{
           position: "relative",
@@ -169,24 +169,25 @@ const Commodities = () => {
               color: "#0f5e9b",
               fontSize: "35px",
               fontWeight: "700",
-              paddingTop: "50px",
+              paddingTop: "20px",
             }}
           >
             What is Commodities?
           </Typography>
 
-          <p
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom: "10px",
             }}
           >
             Commodities are raw materials or primary agricultural products that
             can be bought and sold, such as metals, oil, grain, and livestock.
             They are often traded on exchanges and can be an essential part of
             forex trading. Here’s a bit more about them:
-          </p>
+          </Typography>
 
           <Typography
             variant="h2"
@@ -195,13 +196,14 @@ const Commodities = () => {
               color: "#0f5e9b",
               fontSize: "35px",
               //   fontWeight: "700",
-              paddingTop: "50px",
+              paddingTop: "20px",
+              fontWeight: "700",
             }}
           >
-            What is Commodities?
+            Why Trade Commodities?
           </Typography>
 
-          <Typography sx={{ marginTop: "50px", textAlign: "left" }}>
+          <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
               Diversification :-
             </span>{" "}
@@ -356,7 +358,7 @@ const Commodities = () => {
             Commodities Market Characteristics
           </Typography>
 
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -368,8 +370,8 @@ const Commodities = () => {
             can be bought and sold, such as metals, oil, grain, and livestock.
             They are often traded on exchanges and can be an essential part of
             forex trading. Here’s a bit more about them:
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -378,7 +380,7 @@ const Commodities = () => {
           >
             Commodity prices are influenced by economic, political, and
             environmental factors such as:
-          </p>
+          </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
@@ -405,7 +407,7 @@ const Commodities = () => {
             Severe weather and disasters can disrupt supply chains.
           </Typography>
 
-          <p
+          <Typography
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -419,7 +421,7 @@ const Commodities = () => {
             derivatives on a range of metals, energies, and soft commodities
             with low margin requirements and hedging strategies allowed to
             manage their price exposure.
-          </p>
+          </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
             <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
@@ -472,7 +474,7 @@ const Commodities = () => {
               >
                 Getting Started with Commodity Trading
               </Typography>
-              <p
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
@@ -483,8 +485,8 @@ const Commodities = () => {
                 Commodity trading lets you speculate on price movements without
                 owning the physical asset. You can take advantage of price rises
                 or drops using CFDs (Contracts for Difference).
-              </p>
-              <p
+              </Typography>
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
@@ -495,8 +497,8 @@ const Commodities = () => {
                 Prices are influenced by global supply and demand. For example,
                 if the supply of oil increases due to better production, prices
                 may fall. If supply is disrupted, prices might spike.
-              </p>
-              <p
+              </Typography>
+              <Typography
                 style={{
                   fontSize: "16px",
                   lineHeight: "32px",
@@ -507,7 +509,7 @@ const Commodities = () => {
                 Other factors such as natural disasters, political events, and
                 market news also impact commodity prices. Traders use this
                 volatility to seek profit opportunities.
-              </p>
+              </Typography>
             </Grid>
             <Grid
               item

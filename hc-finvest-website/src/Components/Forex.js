@@ -274,30 +274,31 @@ const Forex = () => {
             fontSize: "35px",
             fontWeight: "700",
             paddingTop: "50px",
+            marginBottom: "10px",
           }}
         >
           What is Forex Trading?
         </Typography>
-        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
+        <Typography style={{ textAlign: "left", marginBottom: "10px" }}>
           Foreign exchange, commonly known as Forex, is a global marketplace
           where currencies are traded, when one currency is sold, another is
           bought in exchange. The key factor in Forex trading is the exchange
           rate between two currencies, which constantly fluctuates. These
           fluctuations create opportunities for traders to profit from market
           movements.
-        </p>
-        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
+        </Typography>
+        <Typography style={{ textAlign: "left", marginBottom: "10px" }}>
           With a staggering daily trading volume of $6.5 trillion, the Forex
           market surpasses even the New York Stock Exchange (NYSE), which sees a
           comparatively smaller daily volume of $22.4 billion.
-        </p>
-        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
+        </Typography>
+        <Typography style={{ textAlign: "left", marginBottom: "20px" }}>
           The vast scale of the Forex market attracts a diverse group of
           participants, including central banks, investment managers, HC Finvest
           funds, corporations, brokers, and retail traders. Notably, around 90%
           of market participants engage in Forex trading primarily for
           speculation.
-        </p>
+        </Typography>
       </Grid>
       <Grid sx={{ width: "80%", margin: "0 auto" }}>
         <Typography
@@ -307,7 +308,7 @@ const Forex = () => {
             color: "#0f5e9b",
             fontSize: "35px",
             fontWeight: "700",
-            marginBottom: "20px",
+            marginBottom: "10px",
             marginTop: "10px",
           }}
         >
@@ -329,11 +330,18 @@ const Forex = () => {
           With many currency pairs available, there are numerous opportunities
           to trade based on global economic events.
         </Typography>
-        <p style={{ fontSize: "20px", textAlign: "left" }}>
+        <Typography
+          style={{
+            fontSize: "20px",
+            textAlign: "left",
+            marginTop: "20px",
+            marginBottom: "20px",
+          }}
+        >
           Forex trading requires a good understanding of market dynamics and a
           well-thought-out strategy. It's important to manage risks and stay
           informed about global events that can impact currency values.
-        </p>
+        </Typography>
       </Grid>
 
       <Grid sx={{ backgroundColor: "#f8f9fa", padding: "50px" }}>
@@ -355,7 +363,7 @@ const Forex = () => {
             {" "}
             Pick Your Pairs
           </Typography>
-          <p
+          <Typography
             style={{
               color: "var(--bs-secondary-color) !important",
               opacity: "1",
@@ -363,7 +371,7 @@ const Forex = () => {
             }}
           >
             The Forex market operates Monday – Friday 00:05 – 23:50 GMT+1
-          </p>
+          </Typography>
 
           <Box sx={{ display: "flex", justifyContent: "left", gap: 2, mb: 2 }}>
             {buttons.map((btn) => (
@@ -535,11 +543,17 @@ const Forex = () => {
             style={{ marginTop: 0, marginBottom: "16px", paddingLeft: "20px" }}
           >
             <li>
-              <strong>EUR</strong> is the <strong>Base Currency</strong>
+              <Typography>
+                {" "}
+                <strong>EUR</strong> is the <strong>Base Currency</strong>
+              </Typography>
             </li>
             <li>
-              <strong>USD</strong> is the{" "}
-              <strong>Quote (Counter) Currency</strong>
+              <Typography>
+                {" "}
+                <strong>USD</strong> is the{" "}
+                <strong>Quote (Counter) Currency</strong>
+              </Typography>
             </li>
           </ul>
 
@@ -563,10 +577,14 @@ const Forex = () => {
             style={{ marginTop: 0, marginBottom: "16px", paddingLeft: "20px" }}
           >
             <li>
-              <strong>1.2005 → Bid Price</strong> (Sell EUR, Buy USD)
+              <Typography>
+                <strong>1.2005 → Bid Price</strong> (Sell EUR, Buy USD)
+              </Typography>
             </li>
             <li>
-              <strong>1.2008 → Ask Price</strong> (Buy EUR, Sell USD)
+              <Typography>
+                <strong>1.2008 → Ask Price</strong> (Buy EUR, Sell USD)
+              </Typography>
             </li>
           </ul>
 
@@ -594,9 +612,13 @@ const Forex = () => {
 
       <Grid>
         <div className="container" style={{ padding: "50px" }}>
-          <h1 className="benefits-title" style={{ color: "#0f5e9b", textAlign:'center' }}>
+          <Typography
+          variant="h4"
+            className="benefits-title"
+            style={{ color: "#0f5e9b", textAlign: "center" , fontWeight:'600' }}
+          >
             Benefits of Forex Trading
-          </h1>
+          </Typography>
           <div
             className="row justify-content-center g-5"
             style={{ marginTop: "20px" }}

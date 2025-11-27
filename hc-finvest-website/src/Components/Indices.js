@@ -234,16 +234,18 @@ const Indices = () => {
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
+              marginBottom:'10px'
             }}
           >
             What is Indices?
           </Typography>
 
-          <p
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'10px'
             }}
           >
             A stock index is a group of stocks that can be bought or sold as a
@@ -255,12 +257,13 @@ const Indices = () => {
             the DAX 30 for example, is a group of the 30 top-performing
             companies in Germany. Classified as a 'national stock index it gives
             an indication of the health of the German stock market.
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'20px'
             }}
           >
             However, stock indices aren't only comprised of stocks that are
@@ -270,7 +273,7 @@ const Indices = () => {
             performance of all the companies listed on the Nasdaq exchange.
             Generally being technology-related firms, the Nasdaq gives an
             indication of the health of the technology sector in the US!
-          </p>
+          </Typography>
         </Grid>
 
         <Grid sx={{ backgroundColor: "#f8f9fa", padding: "50px" }}>
@@ -386,10 +389,10 @@ const Indices = () => {
       </Grid>
 
       <Grid>
-        <div className="container" style={{ padding: "50px" }}>
-          <h1 className="benefits-title" style={{ color: "#0f5e9b" }}>
+        <div className="container" style={{ padding: "50px" , textAlign:'center' }}>
+          <Typography  variant="h4" className="benefits-title" style={{ color: "#0f5e9b" , fontWeight:'600' }}>
             Benefits of Forex Trading
-          </h1>
+          </Typography>
           <div
             className="row justify-content-center g-5"
             style={{ marginTop: "20px" }}

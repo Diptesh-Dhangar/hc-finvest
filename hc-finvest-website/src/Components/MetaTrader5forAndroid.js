@@ -162,7 +162,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",
@@ -178,7 +178,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",
@@ -194,7 +194,7 @@ const MetaTrader5forAndroid = () => {
               <Button
                 variant="contained"
                 sx={{
-                  width: "32%",
+                  width: "30%",
                   marginRight: "10px",
                   color: "white",
                   backgroundColor: "#11155c",
@@ -432,7 +432,7 @@ const MetaTrader5forAndroid = () => {
         >
           <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
             Start Trading today with{" "}
-            <span style={{ color: "#0f5e9b" }}>Hc Finvest</span>
+            <span style={{ color: "#0f5e9b" }}>HC Finvest</span>
           </Typography>
           <Typography variant="body1">
             Ready to assist you in every step of your trading experience, 24/5

@@ -281,7 +281,7 @@ const MetaTrader5Pc = () => {
           >
             <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
               Start Trading today with{" "}
-              <span style={{ color: "#0f5e9b" }}>Hc Finvest</span>
+              <span style={{ color: "#0f5e9b" }}>HC Finvest</span>
             </Typography>
             <Typography variant="body1">
               Ready to assist you in every step of your trading experience, 24/5

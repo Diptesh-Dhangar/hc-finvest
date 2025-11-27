@@ -297,8 +297,8 @@ const MainContent = () => {
               <div className="feature-item" key={index}>
                 <div className="icon">{f.icon}</div>
                 <div className="text">
-                  <h4>{f.title}</h4>
-                  <p>{f.subtitle}</p>
+                  <Typography>{f.title}</Typography>
+                  <Typography>{f.subtitle}</Typography>
                 </div>
               </div>
             ))}
@@ -519,7 +519,7 @@ const MainContent = () => {
             fontSize="39px"
             sx={{ paddingTop: 3 }}
           >
-            <span style={{ color: "#0f5e9b" }}>HC Finvest</span>Trading
+            <span style={{ color: "#0f5e9b" }}>HC Finvest</span> Trading
             Platforms,
           </Typography>
           <Typography sx={{ marginTop: 3 }}>
@@ -540,8 +540,8 @@ const MainContent = () => {
         <Grid container size={12}>
           <Grid marginTop={2} size={12}>
             <Typography variant="h2" fontWeight="bold" fontSize="39px">
-              Your Forex journey,
-              <span style={{ color: "#0f5e9b" }}>Redefined</span>
+              Your Forex Journey,
+              <span style={{ color: "#0f5e9b" }}> Redefined</span>
             </Typography>
             <Typography sx={{ marginTop: 3 }}>
               HC Finvest, a trusted broker that offers competitive trading
@@ -920,7 +920,7 @@ const MainContent = () => {
             >
               {/* Contact */}
               <Grid item>
-                <a href="/contact-us" style={{ textDecoration: "none" }}>
+                <a  style={{ textDecoration: "none" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -938,7 +938,7 @@ const MainContent = () => {
               {/* WhatsApp */}
               <Grid item>
                 <a
-                  href="https://wa.me/447441395542"
+                  
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
@@ -960,7 +960,7 @@ const MainContent = () => {
               {/* Email */}
               <Grid item>
                 <a
-                  href="mailto:support@heddgecapitals.com"
+                  
                   style={{ textDecoration: "none" }}
                 >
                   <svg
