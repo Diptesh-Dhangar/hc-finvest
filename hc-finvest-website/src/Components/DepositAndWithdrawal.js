@@ -62,66 +62,50 @@ const DepositAndWithdrawal = () => {
             textAlign: "left",
             fontWeight: "bold",
             marginLeft: "80px",
-            border:'0px solid red'
           }}
         >
           Deposit & Withdrawals
         </Typography>
 
         <section className="deposit-withdrawal-section">
-          <Typography className="main-text" sx={{border:'0px solid red'}}>
+          <p className="main-text">
             Deposits and withdrawals are the processes of adding money to or
             taking money out of your trading or bank account.
-          </Typography>
+          </p>
 
-          <Typography
-            sx={{ fontSize: "22px", fontWeight: "600" , marginTop:'20px' , marginBottom:'10px' }}
-            className="heading"
-          >
-            Transaction Time :-
-          </Typography>
-          <Typography className="main-text">
+          <h3 className="heading">Transaction Time :-</h3>
+          <p className="main-text">
             1) Withdrawal forms received before 18:00 (GMT+1) will be processed
             the same business day. If these are received after 18:00 (GMT+1) or
             the weekend, they will be processed the next business day.
-          </Typography>
-          <Typography className="main-text">
+          </p>
+          <p className="main-text">
             2) In unforeseen circumstances, withdrawal times may be longer.
-          </Typography>
+          </p>
 
-          <Typography
-            sx={{ fontSize: "22px", fontWeight: "600" , marginTop:'20px' , marginBottom:'10px' }}
-            className="heading"
-          >
-            Rules :-
-          </Typography>
-          <Typography className="main-text">
+          <h3 className="heading">Rules :-</h3>
+          <p className="main-text">
             1) HC Finvest does not accept payments from third parties. Please
             ensure that all deposits into your trading account come from an
             account in your name. Withdrawals can also be done through methods
             like bank transfers or e-wallets, but they may take some time to
             process.
-          </Typography>
-          <Typography className="main-text">
+          </p>
+          <p className="main-text">
             2) Allow up to 1 hour for the transfer of funds. HC Finvest shall
             not be held liable for any delay of processing if that delay is out
             of our control.
-          </Typography>
+          </p>
 
-          <Typography
-            sx={{ fontSize: "22px", fontWeight: "600", marginTop:'20px' , marginBottom:'10px' }}
-            className="note"
-          >
-            Note :-
-          </Typography>
-          <Typography className="main-text">
+          <h4 className="note">note :-</h4>
+          <p className="main-text">
             For detailed instructions on deposits and withdrawals, please refer
             to our{" "}
             <a href="#" className="faq-link">
               FAQ page
             </a>
             .
-          </Typography>
+          </p>
         </section>
       </Grid>
 

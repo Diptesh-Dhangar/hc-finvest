@@ -274,31 +274,30 @@ const Forex = () => {
             fontSize: "35px",
             fontWeight: "700",
             paddingTop: "50px",
-            marginBottom:'20px'
           }}
         >
           What is Forex Trading?
         </Typography>
-        <Typography style={{ textAlign: "left", marginBottom: "10px" }}>
+        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
           Foreign exchange, commonly known as Forex, is a global marketplace
           where currencies are traded, when one currency is sold, another is
           bought in exchange. The key factor in Forex trading is the exchange
           rate between two currencies, which constantly fluctuates. These
           fluctuations create opportunities for traders to profit from market
           movements.
-        </Typography>
-        <Typography style={{ textAlign: "left", marginBottom: "10px" }}>
+        </p>
+        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
           With a staggering daily trading volume of $6.5 trillion, the Forex
           market surpasses even the New York Stock Exchange (NYSE), which sees a
           comparatively smaller daily volume of $22.4 billion.
-        </Typography>
-        <Typography style={{ textAlign: "left", marginBottom: "20px" }}>
+        </p>
+        <p style={{ fontSize: "16px", lineHeight: "32px", textAlign: "left" }}>
           The vast scale of the Forex market attracts a diverse group of
           participants, including central banks, investment managers, HC Finvest
           funds, corporations, brokers, and retail traders. Notably, around 90%
           of market participants engage in Forex trading primarily for
           speculation.
-        </Typography>
+        </p>
       </Grid>
       <Grid sx={{ width: "80%", margin: "0 auto" }}>
         <Typography
@@ -330,11 +329,11 @@ const Forex = () => {
           With many currency pairs available, there are numerous opportunities
           to trade based on global economic events.
         </Typography>
-        <Typography style={{ fontSize: "20px", textAlign: "left",marginTop:'20px', marginBottom:'20px' }}>
+        <p style={{ fontSize: "20px", textAlign: "left" }}>
           Forex trading requires a good understanding of market dynamics and a
           well-thought-out strategy. It's important to manage risks and stay
           informed about global events that can impact currency values.
-        </Typography>
+        </p>
       </Grid>
 
       <Grid sx={{ backgroundColor: "#f8f9fa", padding: "50px" }}>
@@ -595,10 +594,7 @@ const Forex = () => {
 
       <Grid>
         <div className="container" style={{ padding: "50px" }}>
-          <h1
-            className="benefits-title"
-            style={{ color: "#0f5e9b", textAlign: "center" }}
-          >
+          <h1 className="benefits-title" style={{ color: "#0f5e9b", textAlign:'center' }}>
             Benefits of Forex Trading
           </h1>
           <div

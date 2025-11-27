@@ -168,7 +168,7 @@ const MainContentCard2 = ({ img, title, subtext }) => {
                 style={{ height: "80px", objectFit: "contain" }}
               />
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title text-dark" style={{fontWeight:'bold' }}>{card.title}</h5>
+                <h5 className="card-title text-dark" style={{fontWeight:'bold'}}>{card.title}</h5>
                 <p className="card-text mb-4">{card.text}</p>
                 <a
                   href={card.link}

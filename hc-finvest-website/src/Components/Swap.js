@@ -236,7 +236,7 @@ const Swap = () => {
             What is Swap?
           </Typography>
 
-          <Typography
+          <p
             style={{
               fontSize: "16px",
               lineHeight: "32px",
@@ -246,22 +246,22 @@ const Swap = () => {
             Swaps are interest fees charged or credited for holding a trade
             overnight. They depend on the interest rate difference between the
             two currencies in a pair.
-          </Typography>
+          </p>
 
           <Typography
             variant="h2"
             align="left"
             sx={{
               color: "#0f5e9b",
-              fontSize: "22px",
-                fontWeight: "700",
-              paddingTop: "30px",
+              fontSize: "35px",
+              //   fontWeight: "700",
+              paddingTop: "50px",
             }}
           >
             Key Points About Forex Swap :-
           </Typography>
 
-          <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+          <Typography sx={{ marginTop: "50px", textAlign: "left" }}>
             A fee is deducted if the interest rate on the base currency is lower
             than the quote currency.
           </Typography>

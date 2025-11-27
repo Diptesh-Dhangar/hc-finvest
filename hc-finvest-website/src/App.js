@@ -56,7 +56,6 @@ import AddSpread from "./Components/Admin/AddSpread";
 import AddSwap from "./Components/Admin/AddSwap";
 import AdminLogin from "./Components/Admin/AdminLogin";
 import ProtectedAdminRoute from "./Components/Admin/ProtectedAdminRoute";
-import Bonus from "./Components/Bonus";
 
 function App() {
   return (
@@ -80,7 +79,7 @@ function App() {
         {/* <Navbar /> */}
         <Route path="/" element={<MainContent />}></Route>
         <Route path="about" element={<About />}></Route>
-        {/* <Route path="advantages" element={<Advantages />}></Route> */}
+        <Route path="advantages" element={<Advantages />}></Route>
         <Route
           path="regulationAndLicence"
           element={<RegulationAndLicence />}
@@ -146,7 +145,6 @@ function App() {
         {/* Blelow are the optional pages  */}
         <Route path="adminAddSwap" element={<AddSwap />} />
         <Route path="adminAddSpread" element={<AddSpread />} />
-        <Route path="bonus" element={<Bonus />} />
         {/* <Route path="adminLogin" element={<AdminLogin />} /> */}
         {/* <Route path="admin" element={<AdminPanel />}>
           <Route path="adminBlogManagement" element={<BlogManagement />} />
@@ -155,7 +153,7 @@ function App() {
           <Route path="adminSwapManagement" element={<SwapManagement />} />
           <Route path="adminSpreadManagement" element={<SpreadManagement />} />
         </Route> */}
-        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin/>} />
         <Route
           path="admin"
           element={

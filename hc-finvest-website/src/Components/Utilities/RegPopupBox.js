@@ -1,14 +1,9 @@
-import * as React from "react";
 import axios from "axios";
 import { useState } from "react";
 import {
   Box,
   Button,
-  FormControl,
   IconButton,
-  InputLabel,
-  MenuItem,
-  Select,
   TextField,
   Typography,
   useMediaQuery,
@@ -17,15 +12,6 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 
 const RegPopupBox = ({ onClose }) => {
-  const [age, setAge] = React.useState("");
-
-    const handlecountryChange = (event) => {
-      setAge(event.target.value);
-    };
-
-  // const handleChange = (event) => {
-  //   setAge(event.target.value);
-  // };
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -159,7 +145,7 @@ const RegPopupBox = ({ onClose }) => {
 
           <TextField
             fullWidth
-            placeholder="Enter Your Name"
+            placeholder="Enter Your Full Name"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -168,42 +154,6 @@ const RegPopupBox = ({ onClose }) => {
             error={Boolean(errors.fullName)}
             helperText={errors.fullName}
           />
-          <FormControl fullWidth >
-            <InputLabel sx={{ mb: 2 }} id="demo-simple-select-label">
-              Country Code
-            </InputLabel>
-            <Select
-              sx={{ mb: 2 , textAlign:'left' }}
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={age}
-              label="Country Code"
-              size="small"
-              onChange={handlecountryChange}
-
-            >
-              <MenuItem value="+1">🇺🇸 +1 (USA)</MenuItem>
-              <MenuItem value="+44">🇬🇧 +44 (UK)</MenuItem>
-              <MenuItem value="+61">🇦🇺 +61 (Australia)</MenuItem>
-              <MenuItem value="+91">🇮🇳 +91 (India)</MenuItem>
-              <MenuItem value="+81">🇯🇵 +81 (Japan)</MenuItem>
-              <MenuItem value="+86">🇨🇳 +86 (China)</MenuItem>
-              <MenuItem value="+49">🇩🇪 +49 (Germany)</MenuItem>
-              <MenuItem value="+33">🇫🇷 +33 (France)</MenuItem>
-              <MenuItem value="+39">🇮🇹 +39 (Italy)</MenuItem>
-              <MenuItem value="+34">🇪🇸 +34 (Spain)</MenuItem>
-              <MenuItem value="+7">🇷🇺 +7 (Russia)</MenuItem>
-              <MenuItem value="+971">🇦🇪 +971 (UAE)</MenuItem>
-              <MenuItem value="+974">🇶🇦 +974 (Qatar)</MenuItem>
-              <MenuItem value="+966">🇸🇦 +966 (Saudi Arabia)</MenuItem>
-              <MenuItem value="+92">🇵🇰 +92 (Pakistan)</MenuItem>
-              <MenuItem value="+880">🇧🇩 +880 (Bangladesh)</MenuItem>
-              <MenuItem value="+94">🇱🇰 +94 (Sri Lanka)</MenuItem>
-              <MenuItem value="+60">🇲🇾 +60 (Malaysia)</MenuItem>
-              <MenuItem value="+65">🇸🇬 +65 (Singapore)</MenuItem>
-              <MenuItem value="+62">🇮🇩 +62 (Indonesia)</MenuItem>
-            </Select>
-          </FormControl>
 
           <TextField
             fullWidth

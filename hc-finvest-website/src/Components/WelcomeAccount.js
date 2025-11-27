@@ -4,17 +4,13 @@ import {
   Card,
   Checkbox,
   Container,
-  FormControl,
   FormControlLabel,
   Grid,
-  InputLabel,
   MenuItem,
-  Select,
   TextField,
   Typography,
 } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
-import { useState } from "react";
 
 const currencies = [
   {
@@ -36,11 +32,11 @@ const currencies = [
 ];
 
 const leverage = [
-  {
-    value: "1:100",
-    label: "1:100",
-  },
-];
+    {
+        value:"1:100",
+        label:"1:100",
+    },
+]
 
 const cltype = [
   {
@@ -54,13 +50,9 @@ const cltype = [
 ];
 
 const WelcomeAccount = () => {
-  const [clientType, setClientType] = useState("");
-  const [leverage, setLeverage] = useState("");
-  const [country, setCountry] = useState("");
-
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton />
+      <ScrollToTopButton/>
       <Box
         sx={{
           position: "relative",
@@ -153,7 +145,7 @@ const WelcomeAccount = () => {
             size="small"
             placeholder="Email"
           ></TextField>
-          {/* <TextField
+          <TextField
             id="outlined-select-currency"
             size="small"
             select
@@ -167,74 +159,28 @@ const WelcomeAccount = () => {
                 {option.label}
               </MenuItem>
             ))}
-          </TextField> */}
-
-          <FormControl sx={{width:'45%'}} size='small' required>
-            <InputLabel id="waCountry-label">Select your country</InputLabel>
-
-            <Select
-              labelId="waCountry-label"
-              id="waCountry"
-              value={country}
-              label="Select your country"
-              size="small"
-              sx={{textAlign:'left'}}
-              onChange={(e) => setCountry(e.target.value)}
-            >
-              <MenuItem value="" disabled>
-                Select your country
-              </MenuItem>
-
-              <MenuItem value="Australia">🇦🇺 Australia (+61)</MenuItem>
-              <MenuItem value="Egypt">🇪🇬 Egypt (+20)</MenuItem>
-              <MenuItem value="France">🇫🇷 France (+33)</MenuItem>
-              <MenuItem value="Germany">🇩🇪 Germany (+49)</MenuItem>
-              <MenuItem value="India">🇮🇳 India (+91)</MenuItem>
-              <MenuItem value="Indonesia">🇮🇩 Indonesia (+62)</MenuItem>
-              <MenuItem value="Japan">🇯🇵 Japan (+81)</MenuItem>
-              <MenuItem value="Malaysia">🇲🇾 Malaysia (+60)</MenuItem>
-              <MenuItem value="New Zealand">🇳🇿 New Zealand (+64)</MenuItem>
-              <MenuItem value="Philippines">🇵🇭 Philippines (+63)</MenuItem>
-              <MenuItem value="Saudi Arabia">🇸🇦 Saudi Arabia (+966)</MenuItem>
-              <MenuItem value="Singapore">🇸🇬 Singapore (+65)</MenuItem>
-              <MenuItem value="South Africa">🇿🇦 South Africa (+27)</MenuItem>
-              <MenuItem value="South Korea">🇰🇷 South Korea (+82)</MenuItem>
-              <MenuItem value="Spain">🇪🇸 Spain (+34)</MenuItem>
-              <MenuItem value="Switzerland">🇨🇭 Switzerland (+41)</MenuItem>
-              <MenuItem value="Thailand">🇹🇭 Thailand (+66)</MenuItem>
-              <MenuItem value="Turkey">🇹🇷 Turkey (+90)</MenuItem>
-              <MenuItem value="UAE">🇦🇪 UAE (+971)</MenuItem>
-              <MenuItem value="United Kingdom">
-                🇬🇧 United Kingdom (+44)
-              </MenuItem>
-              <MenuItem value="United States">🇺🇸 United States (+1)</MenuItem>
-            </Select>
-          </FormControl>
-
+          </TextField>
           <TextField
             size="small"
             placeholder="Phone"
             sx={{ width: "45%", margin: "5px" }}
           ></TextField>
-
-          <FormControl sx={{ width: "45%" }} required size="small">
-            <InputLabel id="waClientType-label">Select Client Type</InputLabel>
-
-            <Select
-              labelId="waClientType-label"
-              id="waClientType"
-              value={clientType}
-              label="Select Client Type"
-              size="small"
-              sx={{textAlign:'left'}}
-              onChange={(e) => setClientType(e.target.value)}
-            >
-              <MenuItem value="Individual">Individual</MenuItem>
-              <MenuItem value="Corporate">Corporate</MenuItem>
-            </Select>
-          </FormControl>
-
-          {/* <TextField
+          <TextField
+            id="outlined-select-currency"
+            size="small"
+            select
+            // label="Select"
+            // defaultValue="EUR"
+            // helperText="Please select your currency"
+            sx={{ width: "45%", margin: "5px" }}
+          >
+            {cltype.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
             id="outlined-select-currency"
             size="small"
             select
@@ -249,32 +195,7 @@ const WelcomeAccount = () => {
                 {option.label}
               </MenuItem>
             ))}
-          </TextField> */}
-          <FormControl sx={{ width: "45%" }} required size="small">
-            <InputLabel id="waLeverage-label">Select Leverage</InputLabel>
-
-            <Select
-              labelId="waLeverage-label"
-              id="waLeverage"
-              value={leverage}
-              size="small"
-              label="Select Leverage"
-              sx={{textAlign:'left'}}
-              onChange={(e) => setLeverage(e.target.value)}
-            >
-              {/* disabled default placeholder */}
-              <MenuItem disabled value="">
-                Select Leverage
-              </MenuItem>
-
-              <MenuItem value="1:100">1:100</MenuItem>
-              {/* If you want others uncomment */}
-              {/* <MenuItem value="1:30">1:30</MenuItem>
-          <MenuItem value="1:100">1:100</MenuItem>
-          <MenuItem value="1:200">1:200</MenuItem>
-          <MenuItem value="1:500">1:500</MenuItem> */}
-            </Select>
-          </FormControl>
+          </TextField>
 
           <Grid textAlign="left" paddingLeft="40px" marginTop="10px">
             <FormControlLabel
@@ -503,7 +424,7 @@ const WelcomeAccount = () => {
           }}
         >
           Trade using real funds, experience our industry-leading execution
-          speeds, and keep the profits you earn. Get instant access to
+          speeds, and keep the profits you earn. Get instant access to 
           <b>cutting-edge trading platforms, tools and insights,</b> all backed
           by a globally trusted brand.
         </Typography>

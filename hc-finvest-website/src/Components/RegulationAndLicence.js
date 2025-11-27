@@ -43,7 +43,7 @@ const RegulationAndLicence = () => {
         sx={{
           marginX: { xs: "5%", sm: "8%", md: "10%" },
           marginBottom: "30px",
-          border: "0px solid green",
+          border: "1px solid green",
           paddingBottom:'2%'
         }}
       >
@@ -61,7 +61,7 @@ const RegulationAndLicence = () => {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            border: "0px solid red",
+            border: "1px solid red",
           }}
         >
           <Typography
@@ -113,7 +113,6 @@ const RegulationAndLicence = () => {
           xl={6}
           sx={{
             paddingTop: { xs: "2%", sm: "5%" },
-            paddingRight:'3%',
             textAlign: "justify",
           }}
         >

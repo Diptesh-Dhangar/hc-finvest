@@ -39,7 +39,7 @@ const Elite = () => {
           alignItems: "center",
           justifyContent: "center",
           color: "white",
-          backgroundImage: `url('Images/ZeroSpreadImages/Zero spreads Account.webp')`, // 👈 replace with your image path
+          backgroundImage: `url('Images/ZeroSpreadImages/Zero Spreads Account.webp')`, // 👈 replace with your image path
           backgroundSize: "cover",
           backgroundPosition: "center",
           marginBottom: "30px",
@@ -144,8 +144,8 @@ const Elite = () => {
                   <Typography
                     sx={{
                       color: "#222",
-                      // fontWeight:
-                        // item.label === "Execution:" ? "bold" : "normal",
+                      fontWeight:
+                        item.label === "Execution:" ? "bold" : "normal",
                       fontSize: "0.95rem",
                       textAlign: "right",
                     }}

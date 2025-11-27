@@ -146,7 +146,7 @@ const IntroducingBroker = () => {
                   marginTop: "50px",
                 }}
               >
-                What is a multi-tier network?
+                What is a Multi-Tier Network?
               </Typography>
               <Typography
                 sx={{

@@ -18,7 +18,7 @@ const sections = [
     title: "HC FINVEST",
     items: [
       { text: "About HC Finvest", href: "about" },
-      { text: "Advantages OF HC Finvest", href: "" },
+      { text: "Advantages OF HC Finvest", href: "/advantages" },
     ],
   },
   {
@@ -112,101 +112,60 @@ const AboutUsBox = () => {
     //     </Box>
     //   ))}
     // </Paper>/
-    // <Box
-    //   sx={{
-    //     width: { xs: "100%", sm: "100%", md: "500px" },
-    //     p: 2,
-    //     backgroundColor: "#f9f9f9",
-    //     borderRadius: "20px",
-    //     textAlign: "left",
-    //     mx: "auto",
-    //   }}
-    // >
-    //   <Grid container spacing={2}>
-    //     {sections.map((section, i) => (
-    //       <Grid item xs={12} sm={6} md={2.2} key={i}>
-    //         <Typography
-    //           sx={{
-    //             fontWeight: "bold",
-    //             color: "#102040",
-    //             mb: 1,
-    //             padding: "5px",
-    //           }}
-    //         >
-    //           {section.title}
-    //         </Typography>
-
-    //         {section.items.map((item, index) => (
-    //           <Typography
-    //             key={index}
-    //             sx={{
-    //               fontWeight: "400",
-    //               color: "#000",
-    //               padding: "5px",
-    //               borderRadius: "5px",
-    //               transition: "color 0.3s ease",
-    //               "&:hover": {
-    //                 backgroundColor: "lightgray",
-    //                 borderRadius: "5px",
-    //               },
-    //             }}
-    //           >
-    //             <Link
-    //               href={item.href} // specific href for each link
-    //               style={{
-    //                 textDecoration: "none", // remove underline
-    //                 color: "inherit", // inherit black color
-    //                 cursor: "pointer",
-    //               }}
-    //             >
-    //               {item.text}
-    //             </Link>
-    //           </Typography>
-    //         ))}
-    //       </Grid>
-    //     ))}
-    //   </Grid>
-    // </Box>
-
     <Box
       sx={{
-        width: { xs: "100%", sm: "80%", md: "250px" }, // fluid width for mobile/tablet/desktop
-        maxWidth: "250px", // max width for larger screens
+        width: { xs: "100%", sm: "100%", md: "500px" },
         p: 2,
         backgroundColor: "#f9f9f9",
         borderRadius: "20px",
         textAlign: "left",
-        mx: "auto", // center on small screens
+        mx: "auto",
       }}
     >
-      {[
-        { label: "About HC Finvest", href: "/about" },
-        { label: "Regulation And Licence", href: "/regulationAndLicence" },
-        { label: "Security Of Funds", href: "/securityOfFunds" },
-      ].map((item, index) => (
-        <Typography
-          key={index}
-          sx={{
-            margin: "5px 0",
-            padding: "5px",
-            borderRadius: "5px",
-            transition: "color 0.3s ease",
-            "&:hover": { backgroundColor: "lightgray", borderRadius: "5px" },
-          }}
-        >
-          <Link
-            underline="none"
-            style={{
-              textDecoration: "none", // remove underline
-              color: "black", // inherit black color
-              cursor: "pointer",
-            }}
-            href={item.href}
-          >
-            {item.label}
-          </Link>
-        </Typography>
-      ))}
+      <Grid container spacing={2}>
+        {sections.map((section, i) => (
+          <Grid item xs={12} sm={6} md={2.2} key={i}>
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                color: "#102040",
+                mb: 1,
+                padding: "5px",
+              }}
+            >
+              {section.title}
+            </Typography>
+
+            {section.items.map((item, index) => (
+              <Typography
+                key={index}
+                sx={{
+                  fontWeight: "400",
+                  color: "#000",
+                  padding: "5px",
+                  borderRadius: "5px",
+                  transition: "color 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "lightgray",
+                    borderRadius: "5px",
+                  },
+                }}
+              >
+                <Link
+                  href={item.href} // specific href for each link
+                  style={{
+                    textDecoration: "none", // remove underline
+                    color: "inherit", // inherit black color
+                    cursor: "pointer",
+                  }}
+                >
+                  {item.text}
+                </Link>
+              </Typography>
+            ))}
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
