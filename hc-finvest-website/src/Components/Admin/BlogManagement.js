@@ -12,7 +12,9 @@ import {
   InputAdornment,
   TextField,
   Typography,
+  IconButton,
 } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ScrollToTopButton from "../Utilities/ScrollToTopButton";
@@ -26,8 +28,8 @@ const BlogManagement = () => {
   const [title, setTitle] = useState("");
   const [blogs, setBlogs] = useState([]);
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  // Dynamic Sections
   const [sections, setSections] = useState([{ heading: "", content: "" }]);
 
   const handleAddSection = () => {
@@ -40,7 +42,6 @@ const BlogManagement = () => {
     setSections(updated);
   };
 
-  // File upload
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -52,7 +53,6 @@ const BlogManagement = () => {
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // Submit blog (description removed)
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -72,9 +72,8 @@ const BlogManagement = () => {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      alert("✅ Blog added successfully!");
+      alert("Blog added successfully!");
 
-      // reset form
       setTitle("");
       setDate("");
       setImage(null);
@@ -85,17 +84,35 @@ const BlogManagement = () => {
       fetchBlogs();
     } catch (error) {
       console.error("Error adding blog:", error);
-      alert("Failed to add blog!");
     }
   };
 
-  // Fetch all blogs
+  // DELETE BLOG
+  const handleDelete = async (blogId) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this blog?"
+    );
+    if (!confirmDelete) return;
+
+    try {
+      await axios.delete(`https://hcfinvest.onrender.com/api/blogs/${blogId}`);
+      alert("Blog deleted successfully!");
+      fetchBlogs();
+    } catch (error) {
+      console.error("Error deleting blog:", error);
+      alert("Failed to delete blog!");
+    }
+  };
+
   const fetchBlogs = async () => {
     try {
+      setLoading(true);
       const res = await axios.get("https://hcfinvest.onrender.com/api/blogs");
       setBlogs(res.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -135,8 +152,8 @@ const BlogManagement = () => {
         </DialogTitle>
 
         <DialogContent>
+          {/* Upload + Fields */}
           <Grid>
-            {/* Image Upload */}
             <TextField
               fullWidth
               label="Selected File"
@@ -188,14 +205,9 @@ const BlogManagement = () => {
             />
           </Grid>
 
-          {/* Dynamic Sections */}
           {sections.map((section, index) => (
             <Card key={index} sx={{ mb: 4, p: 2, borderRadius: 2 }}>
               <CardContent>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Section {index + 1}
-                </Typography>
-
                 <TextField
                   label="Section Heading"
                   fullWidth
@@ -206,14 +218,6 @@ const BlogManagement = () => {
                   }
                   sx={{ mb: 3 }}
                 />
-
-                <Typography
-                  variant="subtitle1"
-                  fontWeight="medium"
-                  gutterBottom
-                >
-                  Section Content
-                </Typography>
 
                 <ReactQuill
                   theme="snow"
@@ -230,15 +234,22 @@ const BlogManagement = () => {
             </Card>
           ))}
 
-          <Box display="flex" gap={2}>
-            <Button
-              variant="outlined"
-              color="primary"
-              onClick={handleAddSection}
-            >
-              ➕ Add Section
-            </Button>
-          </Box>
+          <Button variant="outlined" sx={{marginRight:'5px'}} color="primary" onClick={handleAddSection}>
+            ➕ Add Section
+          </Button>
+          <Button
+            variant="outlined"
+            color="error"
+            onClick={() => {
+              if (sections.length > 1) {
+                setSections(sections.slice(0, -1));
+              } else {
+                alert("At least one section is required.");
+              }
+            }}
+          >
+            ❌ Remove Section
+          </Button>
         </DialogContent>
 
         <DialogActions>
@@ -262,51 +273,122 @@ const BlogManagement = () => {
         sx={{ padding: "30px" }}
         spacing={2}
       >
-        {blogs.map((blog) => {
-          let imageSrc = "";
-
-          if (blog.image?.data) {
-            const base64String = btoa(
-              new Uint8Array(blog.image.data.data).reduce(
-                (data, byte) => data + String.fromCharCode(byte),
-                ""
-              )
-            );
-            imageSrc = `data:${blog.image.contentType};base64,${base64String}`;
-          }
-
-          return (
-            <Grid item key={blog._id} xs={12} sm={6} md={3.5}>
-              <Card sx={{ margin: "15px", width: "400px", height: "450px" }}>
-                {imageSrc && (
-                  <img
-                    src={imageSrc}
-                    style={{ height: 300, width: "100%", objectFit: "cover" }}
+        {loading
+          ? [...Array(6)].map((_, i) => (
+              <Grid item xs={12} sm={6} md={3.5} key={i}>
+                <Card sx={{ margin: "15px", width: "400px", height: "450px" }}>
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: 300,
+                      bgcolor: "#e3e6e8",
+                      animation: "pulse 1.5s infinite",
+                    }}
                   />
-                )}
+                  <CardContent>
+                    <Box
+                      sx={{
+                        width: "40%",
+                        height: "14px",
+                        bgcolor: "#e3e6e8",
+                        mb: 2,
+                        animation: "pulse 1.5s infinite",
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        width: "70%",
+                        height: "18px",
+                        bgcolor: "#e3e6e8",
+                        animation: "pulse 1.5s infinite",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))
+          : blogs.map((blog) => {
+              let imageSrc = "";
 
-                <CardContent>
-                  <Typography
-                    variant="body1"
-                    align="left"
-                    sx={{ color: "text.secondary", marginBottom: "10px" }}
-                  >
-                    {new Date(blog.date).toLocaleDateString()}
-                  </Typography>
+              if (blog.image?.data) {
+                const base64String = btoa(
+                  new Uint8Array(blog.image.data.data).reduce(
+                    (data, byte) => data + String.fromCharCode(byte),
+                    ""
+                  )
+                );
+                imageSrc = `data:${blog.image.contentType};base64,${base64String}`;
+              }
 
-                  <Typography
-                    variant="h6"
-                    align="left"
-                    sx={{ color: "#11155c", marginBottom: "8px" }}
+              return (
+                <Grid item key={blog._id} xs={12} sm={6} md={3.5}>
+                  <Card
+                    sx={{
+                      margin: "15px",
+                      width: "400px",
+                      height: "450px",
+                      position: "relative",
+                    }}
                   >
-                    {blog.title}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
-        })}
+                    {/* DELETE BUTTON (top-right corner) */}
+                    <IconButton
+                      sx={{
+                        position: "absolute",
+                        top: 5,
+                        right: 5,
+                        color: "red",
+                        backgroundColor: "white",
+                        "&:hover": { backgroundColor: "#ffe6e6" },
+                      }}
+                      onClick={() => handleDelete(blog._id)}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
+
+                    {imageSrc && (
+                      <img
+                        src={imageSrc}
+                        style={{
+                          height: 300,
+                          width: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    )}
+
+                    <CardContent>
+                      <Typography
+                        variant="body1"
+                        align="left"
+                        sx={{ color: "text.secondary", marginBottom: "10px" }}
+                      >
+                        {new Date(blog.date).toLocaleDateString()}
+                      </Typography>
+
+                      <Typography
+                        variant="h6"
+                        align="left"
+                        sx={{ color: "#11155c", marginBottom: "8px" }}
+                      >
+                        {blog.title}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
       </Grid>
+
+      {/* Skeleton */}
+      <style>
+        {`
+          @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+          }
+        `}
+      </style>
     </Container>
   );
 };

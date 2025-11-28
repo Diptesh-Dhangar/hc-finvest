@@ -150,7 +150,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Deposit:</Typography>
+              <Typography>Min. Deposit:</Typography>
               <Typography>$50</Typography>
             </Box>
 
@@ -230,7 +230,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Step Out:</Typography>
+              <Typography>Stop Out:</Typography>
               <Typography>30%</Typography>
             </Box>
 
@@ -290,7 +290,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Trade Volume:</Typography>
+              <Typography>Min. Trade Volume:</Typography>
               <Typography>0.01</Typography>
             </Box>
 
@@ -330,7 +330,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Swap</Typography>
+              <Typography>Swap:</Typography>
               <Typography>Yes</Typography>
             </Box>
           </Card>
@@ -402,7 +402,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Deposit:</Typography>
+              <Typography>Min. Deposit:</Typography>
               <Typography>$100</Typography>
             </Box>
 
@@ -482,7 +482,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Step Out:</Typography>
+              <Typography>Stop Out:</Typography>
               <Typography>30%</Typography>
             </Box>
 
@@ -542,7 +542,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Trade Volume:</Typography>
+              <Typography>Min. Trade Volume:</Typography>
               <Typography>0.01</Typography>
             </Box>
 
@@ -582,7 +582,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Swap</Typography>
+              <Typography>Swap:</Typography>
               <Typography>Yes</Typography>
             </Box>
           </Card>
@@ -653,7 +653,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Deposit:</Typography>
+              <Typography>Min. Deposit:</Typography>
               <Typography>$500</Typography>
             </Box>
 
@@ -733,7 +733,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Step Out:</Typography>
+              <Typography>Stop Out:</Typography>
               <Typography>30%</Typography>
             </Box>
 
@@ -793,7 +793,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Trade Volume:</Typography>
+              <Typography>Min. Trade Volume:</Typography>
               <Typography>0.01</Typography>
             </Box>
 
@@ -833,7 +833,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Swap</Typography>
+              <Typography>Swap:</Typography>
               <Typography>Yes</Typography>
             </Box>
           </Card>
@@ -904,7 +904,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Deposit:</Typography>
+              <Typography>Min. Deposit:</Typography>
               <Typography>$5000</Typography>
             </Box>
 
@@ -984,7 +984,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Step Out:</Typography>
+              <Typography>Stop Out:</Typography>
               <Typography>30%</Typography>
             </Box>
 
@@ -1044,7 +1044,7 @@ const AccountsTypes = () => {
                 height: "60px",
               }}
             >
-              <Typography>Min Trade Volume:</Typography>
+              <Typography>Min. Trade Volume:</Typography>
               <Typography>0.01</Typography>
             </Box>
 
@@ -1085,7 +1085,7 @@ const AccountsTypes = () => {
               }}
             >
               <Typography>Swap</Typography>
-              <Typography>No Swpa</Typography>
+              <Typography>No Swap</Typography>
             </Box>
           </Card>
         </Grid>

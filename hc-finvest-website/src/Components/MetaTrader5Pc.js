@@ -305,7 +305,7 @@ const MetaTrader5Pc = () => {
               <Grid item size={2} sx={{ border: "0px solid red" }}>
                 <a
                   _ngcontent-ng-c673006511=""
-                  href="/contact-us"
+                  // href="/contact-us"
                   class="text-white text-decoration-none"
                 >
                   <svg
@@ -325,7 +325,7 @@ const MetaTrader5Pc = () => {
               <Grid item size={2} sx={{ border: "0px solid red" }}>
                 <a
                   _ngcontent-ng-c673006511=""
-                  href="https://wa.me/447441395542"
+                  // href="https://wa.me/447441395542"
                   target="_blank"
                   class="text-white text-decoration-none"
                 >
@@ -346,7 +346,7 @@ const MetaTrader5Pc = () => {
               <Grid item size={2} sx={{ border: "0px solid red" }}>
                 <a
                   _ngcontent-ng-c673006511=""
-                  href="mailto:support@heddgecapitals.com"
+                  // href="mailto:support@heddgecapitals.com"
                   class="text-white text-decoration-none"
                 >
                   <svg

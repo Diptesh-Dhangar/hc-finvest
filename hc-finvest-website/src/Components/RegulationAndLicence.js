@@ -43,7 +43,7 @@ const RegulationAndLicence = () => {
         sx={{
           marginX: { xs: "5%", sm: "8%", md: "10%" },
           marginBottom: "30px",
-          border: "1px solid green",
+          border: "0px solid green",
           paddingBottom:'2%'
         }}
       >
@@ -61,7 +61,7 @@ const RegulationAndLicence = () => {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            border: "1px solid red",
+            border: "0px solid red",
           }}
         >
           <Typography
@@ -112,13 +112,13 @@ const RegulationAndLicence = () => {
           lg={6}
           xl={6}
           sx={{
-            paddingTop: { xs: "2%", sm: "5%" },
+            paddingTop: { xs: "2%", sm: "3%" },
             textAlign: "justify",
           }}
         >
-          <Typography>Financial Services Authority (SVG)</Typography>
+          <Typography sx={{fontWeight:'600' , fontSize:'22px' , marginBottom:'10px'}}>Financial Services Authority (SVG)</Typography>
 
-          <p>
+          <Typography>
             <strong>
               Heddge Capitals Wealth Management LLC, operating under the brand
               name HC Finvest{" "}
@@ -130,13 +130,13 @@ const RegulationAndLicence = () => {
             2001 registered entity, we are authorized to provide forex trading
             services globally, ensuring compliance with the applicable laws
             governing international finans services
-          </p>
+          </Typography>
 
           <Typography sx={{ fontWeight: 600 }}>
             Registration number: 3970
           </Typography>
 
-          <p>
+          <Typography>
             The objects of the Company are all subject matters not forbidden by
             international Business Companies (Amendment and Consolidation) Act,
             Chapter 149 of the Revised Laws of Saint Vincent and Grenadines,
@@ -145,7 +145,7 @@ const RegulationAndLicence = () => {
             participation in other enterprises as well as to provide brokerage.
             training and managed account services in currencies, commodities,
             indexes, CFDs and leveraged financial instruments.
-          </p>
+          </Typography>
         </Grid>
       </Grid>
 

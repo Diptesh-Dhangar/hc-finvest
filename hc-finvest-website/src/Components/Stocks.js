@@ -159,7 +159,7 @@ const Stocks = () => {
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       {/* <Box
         sx={{
           position: "relative",
@@ -425,16 +425,18 @@ const Stocks = () => {
             fontSize: "35px",
             fontWeight: "700",
             paddingTop: "50px",
+            marginBottom:'20px'
           }}
         >
           What Are Dividends?
         </Typography>
 
-        <p
+        <Typography
           style={{
-            fontSize: "16px",
-            lineHeight: "32px",
+            // fontSize: "16px",
+            // lineHeight: "32px",
             textAlign: "left",
+            marginBottom:'10px'
           }}
         >
           Dividends are a portion of a company’s earnings distributed to
@@ -447,7 +449,7 @@ const Stocks = () => {
           behavior. Dividend yield is typically expressed as a percentage of a
           stock’s price, helping traders evaluate potential returns relative to
           share value.
-        </p>
+        </Typography>
       </Grid>
 
       <Grid
@@ -471,43 +473,47 @@ const Stocks = () => {
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
+              marginBottom:'20px'
             }}
           >
-            What Are Dividends?
+            Ex-Dividend
           </Typography>
 
-          <p
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'10px'
             }}
           >
             The ex-dividend date marks the cutoff for eligibility to receive the
             next dividend payout. Investors holding shares before this date
             qualify, while new buyers after the date do not.
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'10px'
             }}
           >
             For CFD holders, adjustments are made to reflect the dividend's
             impact. Long positions may receive a positive balance adjustment,
             while short positions might see a deduction.
-          </p>
-          <p
+          </Typography>
+          <Typography
             style={{
-              fontSize: "16px",
-              lineHeight: "32px",
+              // fontSize: "16px",
+              // lineHeight: "32px",
               textAlign: "left",
+              marginBottom:'10px'
             }}
           >
             Note: During high volatility or corporate events, leverage and
             dividend handling may be affected to mitigate risk.
-          </p>
+          </Typography>
         </Grid>
       </Grid>
 

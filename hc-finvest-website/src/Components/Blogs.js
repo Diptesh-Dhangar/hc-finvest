@@ -7,7 +7,6 @@ import {
   Container,
   Grid,
   Typography,
-  CircularProgress,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
@@ -96,17 +95,60 @@ const Blogs = () => {
       >
         <Grid container spacing={3} justifyContent="center">
           {loading ? (
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "200px",
-                width: "100%",
-              }}
-            >
-              <CircularProgress size={50} />
-            </Box>
+            // 🔥 Skeleton shimmer loader
+            [...Array(6)].map((_, i) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                key={i}
+                sx={{ display: "flex", justifyContent: "center" }}
+              >
+                <Card
+                  sx={{
+                    borderRadius: "7px",
+                    width: { xs: "100%", sm: "100%", md: "350px", lg: "400px" },
+                    height: "430px",
+                    overflow: "hidden",
+                  }}
+                >
+                  {/* Skeleton Image */}
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "270px",
+                      bgcolor: "#e3e6e8",
+                      animation: "pulse 1.5s infinite",
+                    }}
+                  />
+
+                  <CardContent>
+                    {/* Skeleton Date */}
+                    <Box
+                      sx={{
+                        width: "30%",
+                        height: "12px",
+                        bgcolor: "#e3e6e8",
+                        mb: 2,
+                        animation: "pulse 1.5s infinite",
+                      }}
+                    />
+
+                    {/* Skeleton Title */}
+                    <Box
+                      sx={{
+                        width: "80%",
+                        height: "18px",
+                        bgcolor: "#e3e6e8",
+                        animation: "pulse 1.5s infinite",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))
           ) : blogs.length > 0 ? (
             blogs.map((blog, index) => (
               <Grid
@@ -125,10 +167,8 @@ const Blogs = () => {
                     cursor: "pointer",
                     transition: "transform 0.2s ease",
                     "&:hover": { transform: "scale(1.02)" },
-
-                    // ✨ responsive card width & height
                     width: { xs: "100%", sm: "100%", md: "350px", lg: "400px" },
-                    height: { xs: "auto", sm: "450px" },
+                    height: { xs: "auto", sm: "430px" },
                   }}
                   onClick={() => navigate(`/blogs/${blog._id}`)}
                 >
@@ -137,7 +177,7 @@ const Blogs = () => {
                     alt={blog.title}
                     style={{
                       width: "100%",
-                      height: "230px",
+                      height: "270px",
                       objectFit: "cover",
                       borderTopLeftRadius: "7px",
                       borderTopRightRadius: "7px",
@@ -189,6 +229,17 @@ const Blogs = () => {
           )}
         </Grid>
       </Box>
+
+      {/* Skeleton Keyframe Animation */}
+      <style>
+        {`
+          @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+          }
+        `}
+      </style>
     </Container>
   );
 };

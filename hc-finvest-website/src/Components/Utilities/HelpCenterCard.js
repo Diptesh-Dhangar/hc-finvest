@@ -23,7 +23,6 @@ const HelpCenterCard = ({ title, sen1, sen2, sen3 }) => {
         height: "21rem",
         display: "flex",
         flexDirection: "column",
-        
       }}
     >
       <Typography
@@ -79,8 +78,11 @@ const HelpCenterCard = ({ title, sen1, sen2, sen3 }) => {
           mt: "auto",
         }}
       >
-        <Button variant="contained" >
-          <Link to={route}  style={{ color: "#fff", fontWeight: "600", textDecoration:'none' }}>
+        <Button variant="contained" sx={{ backgroundColor: "#11155c" }}>
+          <Link
+            to={route}
+            style={{ color: "#fff", fontWeight: "600", textDecoration: "none" }}
+          >
             View
           </Link>
         </Button>
