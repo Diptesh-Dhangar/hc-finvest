@@ -5,20 +5,20 @@ const AdminLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-const handleLogin = () => {
-  if (username === "HC-Finvest" && password === "hcfinvest@2025") {
-    localStorage.setItem("adminAuth", "true");
-    alert("✔ Login Successful! Welcome Admin.");
-    window.location.href = "/admin/adminBlogManagement";
-  } else {
-    alert("❌ Invalid Credentials!");
-  }
-};
+  const handleLogin = () => {
+    if (username === "HC-Finvest" && password === "hcfinvest@2025") {
+      localStorage.setItem("adminAuth", "true");
+      alert("✔ Login Successful! Welcome Admin.");
+      window.location.href = "/admin/adminBlogManagement";
+    } else {
+      alert("❌ Invalid Credentials!");
+    }
+  };
 
   return (
     <Box
       sx={{
-        backgroundImage: `url("Images/AdminImages/albg.png")`,
+        backgroundImage: `url("Images/AdminImages/adminwpnew.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100%",

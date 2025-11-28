@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, MenuItem, Paper, TextField, Typography } 
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import { useState } from "react";
 import axios from "axios";
+import BusinessIcon from "@mui/icons-material/Business";
 
 const ContactUs = () => {
   // form state
@@ -100,9 +101,13 @@ const ContactUs = () => {
       >
         {/* Address Section */}
         <Grid item size={3}>
-          <Paper elevation={3} sx={{ p: 3, height: "300px", width: "80%" }}>
+          <Paper elevation={3} sx={{ p: 3, width: "80%" }}>
+            <img
+              src="Images/ContactUsImages/location.png"
+              style={{ width: "50px", height: "50px" }}
+            />
             <Typography variant="h6" gutterBottom>
-              📍 Address
+              Address
             </Typography>
             <Box>
               <Typography variant="body1">
@@ -121,8 +126,13 @@ const ContactUs = () => {
         {/* Office Time Section */}
         <Grid item size={3} sm={6}>
           <Paper elevation={3} sx={{ p: 3, height: "300px", width: "80%" }}>
+            <img
+              src="Images/ContactUsImages/time-management.png"
+              style={{ width: "50px", height: "50px" }}
+            />
+
             <Typography variant="h6" gutterBottom>
-              🕒 Office Time
+              Office Time
             </Typography>
             <Typography variant="body1">
               Mon 10:00 am – Sat 18:00 pm (GMT+1)
@@ -134,8 +144,12 @@ const ContactUs = () => {
         {/* Email Section */}
         <Grid item size={3} sm={6}>
           <Paper elevation={3} sx={{ p: 3, height: "300px", width: "80%" }}>
+            <img
+              src="Images/ContactUsImages/mail.png"
+              style={{ width: "50px", height: "50px" }}
+            />
             <Typography variant="h6" gutterBottom>
-              📧 E-Mail
+              E-Mail
             </Typography>
             <Typography variant="body1">support@hedgecapitals.com</Typography>
           </Paper>

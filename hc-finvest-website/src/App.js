@@ -56,6 +56,7 @@ import AddSpread from "./Components/Admin/AddSpread";
 import AddSwap from "./Components/Admin/AddSwap";
 import AdminLogin from "./Components/Admin/AdminLogin";
 import ProtectedAdminRoute from "./Components/Admin/ProtectedAdminRoute";
+import BonusPage from "./Components/Bonus";
 
 function App() {
   return (
@@ -142,6 +143,10 @@ function App() {
           element={<ForexBrokerArticle />}
         ></Route>
 
+        <Route
+          path="bonus"
+          element={<BonusPage />}
+        ></Route>
         {/* Blelow are the optional pages  */}
         <Route path="adminAddSwap" element={<AddSwap />} />
         <Route path="adminAddSpread" element={<AddSpread />} />
@@ -153,7 +158,7 @@ function App() {
           <Route path="adminSwapManagement" element={<SwapManagement />} />
           <Route path="adminSpreadManagement" element={<SpreadManagement />} />
         </Route> */}
-        <Route path="/admin" element={<AdminLogin/>} />
+        <Route path="/admin" element={<AdminLogin />} />
         <Route
           path="admin"
           element={

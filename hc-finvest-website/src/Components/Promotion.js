@@ -126,7 +126,7 @@ const Promotion = () => {
                 <Typography sx={{ color: "var(--bs-secondary-color)" }}>
                   T&Cs Apply
                 </Typography>
-                <Button variant="contained">Learn More</Button>
+                <Button href="/bonus" variant="contained">Learn More</Button>
               </Grid>
             </Grid>
           </Box>

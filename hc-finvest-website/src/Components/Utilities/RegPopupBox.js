@@ -3,7 +3,11 @@ import { useState } from "react";
 import {
   Box,
   Button,
+  FormControl,
   IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
   TextField,
   Typography,
   useMediaQuery,
@@ -145,7 +149,7 @@ const RegPopupBox = ({ onClose }) => {
 
           <TextField
             fullWidth
-            placeholder="Enter Your Full Name"
+            placeholder="Enter Your Name"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -154,6 +158,23 @@ const RegPopupBox = ({ onClose }) => {
             error={Boolean(errors.fullName)}
             helperText={errors.fullName}
           />
+
+            <FormControl sx={{mb:2}} fullWidth size="small" >
+              <InputLabel>Country Code</InputLabel>
+              <Select
+                name="countryCode"
+                value={formData.countryCode}
+                onChange={handleChange}
+                label="Code"
+                
+              >
+                <MenuItem value="+1">🇺🇸 +1 USA</MenuItem>
+                <MenuItem value="+44">🇬🇧 +44 UK</MenuItem>
+                <MenuItem value="+91">🇮🇳 +91 India</MenuItem>
+                <MenuItem value="+971">🇦🇪 +971 UAE</MenuItem>
+                <MenuItem value="+61">🇦🇺 +61 Australia</MenuItem>
+              </Select>
+            </FormControl>
 
           <TextField
             fullWidth
