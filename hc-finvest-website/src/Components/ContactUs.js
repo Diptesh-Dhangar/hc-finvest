@@ -94,102 +94,146 @@ const ContactUs = () => {
         </Typography>
       </Box>
       {/* Banner Box End */}
-      <Grid
-        container
-        spacing={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+
+ <section className="py-5 sectiontext">
+      <div className="container">
+
+        {/* Contact Info Row */}
+        <div className="row">
+          {/* Address */}
+          <div className="col-md-4 mb-4">
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/location.png"
+        alt="Location"
+        style={{ width: "50px", height: "50px" }}
+      />
+    </div>
+
+    {/* Text below image */}
+    <div className="contact-info-text">
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "600", mb: 1 }}
       >
-        {/* Address Section */}
-        <Grid item size={3}>
-          <Paper elevation={3} sx={{ p: 3, width: "80%" }}>
-            <img
-              src="Images/ContactUsImages/location.png"
-              style={{ width: "50px", height: "50px" }}
-            />
-            <Typography variant="h6" gutterBottom>
-              Address
-            </Typography>
-            <Box>
-              <Typography variant="body1">
-                <strong>Office:</strong> 2027™ 182–184 High Street North Area
-                (1), East Ham London, United Kingdom E6 2JA
-              </Typography>
-              <Typography variant="body1" sx={{ mt: 1 }}>
-                <strong>Registered Address:</strong> Suite 305, Griffith
-                Corporate Centre, Beachmont, Kingstown, St. Vincent And The
-                Grenadines P.O. Box 1510
-              </Typography>
-            </Box>
-          </Paper>
-        </Grid>
+        Address
+      </Typography>
+      <Typography sx={{ mb: 1 }}>
+        Office 2027NP 182-184 High Street North, Area 1/1, East Ham London United Kingdom E6 2JA
+      </Typography>
 
-        {/* Office Time Section */}
-        <Grid item size={3} sm={6}>
-          <Paper elevation={3} sx={{ p: 3, height: "300px", width: "80%" }}>
-            <img
-              src="Images/ContactUsImages/time-management.png"
-              style={{ width: "50px", height: "50px" }}
-            />
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "600", mt: 2, mb: 1 }}
+      >
+        (Registered Address)
+      </Typography>
+      <Typography>
+        Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, St. Vincent And The Grenadines P.O. Box 1510
+      </Typography>
+    </div>
+  </div>
+          </div>
 
-            <Typography variant="h6" gutterBottom>
-              Office Time
-            </Typography>
-            <Typography variant="body1">
-              Mon 10:00 am – Sat 18:00 pm (GMT+1)
-            </Typography>
-            <Typography variant="body1">Sunday: Closed</Typography>
-          </Paper>
-        </Grid>
+          {/* Office Time */}
+          <div className="col-md-4 mb-4">
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/time-management.png"
+        alt="Office Time"
+        style={{ width: "50px", height: "50px" }}
+      />
+    </div>
 
-        {/* Email Section */}
-        <Grid item size={3} sm={6}>
-          <Paper elevation={3} sx={{ p: 3, height: "300px", width: "80%" }}>
-            <img
-              src="Images/ContactUsImages/mail.png"
-              style={{ width: "50px", height: "50px" }}
-            />
-            <Typography variant="h6" gutterBottom>
-              E-Mail
-            </Typography>
-            <Typography variant="body1">support@hedgecapitals.com</Typography>
-          </Paper>
-        </Grid>
-      </Grid>
+    {/* Text below image */}
+    <div className="contact-info-text">
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "600", mb: 1 }}
+      >
+        Office Time
+      </Typography>
+      <Typography sx={{ mb: 1 }}>Mon 10:00 am – Sat 18:00 pm (GMT+1)</Typography>
+      <Typography sx={{ mb: 1 }}>Sunday Close</Typography>
 
-      {/* Map Location Grid Start */}
-      <Grid container size={12} sx={{ margin: "20px", padding: "50px" }}>
-        <Grid
-          item
-          size={6}
-          display="flex"
-          justifyContent="flex-end"
-          paddingRIght="10px"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609833396!2d72.74109882276852!3d19.082197839212335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63f3f1e0d5f%3A0xdea4d0a5c5cf3c25!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1691400000000!5m2!1sen!2sin"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            style={{ width: "75%", height: "350px" }}
-          ></iframe>
-        </Grid>
-        <Grid
-          item
-          size={6}
-          display="flex"
-          justifyContent="flex-start"
-          paddingLeft="10px"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609833396!2d72.74109882276852!3d19.082197839212335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63f3f1e0d5f%3A0xdea4d0a5c5cf3c25!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1691400000000!5m2!1sen!2sin"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            style={{ width: "75%", height: "350px" }}
-          ></iframe>
-        </Grid>
-      </Grid>
-      {/* Map Location Grid End */}
+    </div>
+  </div>
+          </div>
+
+          {/* Email */}
+  <div className="col-md-4 mb-4">
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/mail.png"
+        alt="Location"
+        style={{ width: "50px", height: "50px" }}
+      />
+    </div>
+
+    {/* Text below image */}
+    <div className="contact-info-text">
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "600", mb: 1 }}
+      >
+        Email
+      </Typography>
+      <Typography sx={{ mb: 1 }}>
+         <span>support&#64;heddgecapitals.com</span>
+      </Typography>
+    </div>
+  </div>
+</div>
+        </div>
+
+        {/* Maps Row */}
+        <div className="row mt-4">
+          <div className="col-md-6 mb-4">
+            <div className="contact-page-map rounded shadow-sm overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.6117609046473!2d0.04906157662194591!3d51.53868037182046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7c3d5aa86e1%3A0x5b21f9acf4794109!2sIcon%20Offices%20-%20East%20Ham%20-%20London!5e0!3m2!1sen!2sin!4v1739274218708!5m2!1sen!2sin"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Office Map"
+              ></iframe>
+            </div>
+          </div>
+
+          <div className="col-md-6 mb-4">
+            <div className="contact-page-map rounded shadow-sm overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.0887427092466!2d-61.22379772492033!3d13.156802087175832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c475150d7889919%3A0xec14007759a547d6!2sGriffith%20Corporate%20Centre!5e0!3m2!1sen!2sin!4v1739274137676!5m2!1sen!2sin"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Registered Address Map"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
 
       {/* contact Us form Start */}
 

@@ -21,6 +21,7 @@ const HelpCenterCard = ({ title, sen1, sen2, sen3 }) => {
         padding: "1.5em",
         boxShadow: "0 2px 10px #0000001a",
         height: "21rem",
+        width:'500px',
         display: "flex",
         flexDirection: "column",
       }}

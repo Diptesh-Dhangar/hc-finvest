@@ -4,6 +4,7 @@ import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const IntroducingBroker = () => {
     return (
@@ -75,394 +76,263 @@ const IntroducingBroker = () => {
           </Typography>
         </Box>
 
-        <Box>
-          <Typography
-            style={{
-              fontSize: "17px",
-              lineHeight: "32px",
-              color: "var(--bs-secondary-color) !important",
-              paddingRight: "100px",
-              paddingLeft: "100px",
-              marginTop: "70px",
-              marginBottom: "50px",
-              textAlign:'left',
-              fontWeight:'600'
-            }}
-          >
-            "At HC Finvest, we value strong partnerships and believe in growing
-            together. As an introducing broker, you can leverage our expertise,
-            resources, and industry-leading trading platforms to enhance your
-            clients' trading experience while earning attractive commissions."
-          </Typography>
+<div>
 
-          <Grid container size={12} spacing={5}>
-            <Grid item size={5} display="flex" justifyContent="flex-end" p={0}>
-              <img
-                style={{
-                  borderRadius: "25px",
-                  height: "350px",
-                  width: "450px",
-                }}
-                src="Images\IntroducingBrokerImages\IB  (1) 1.jpg"
-              />
-            </Grid>
-            <Grid item size={6} textAlign="left" p={4}>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: "2rem",
-                  lineHeight: "1",
-                  fontWeight: "600",
-                  color: "#0f5e9b",
-                }}
-              >
-                Introducing Broker
-              </Typography>
-              <Typography sx={{ fontSize: "16px", lineHeight: "32px" }}>
-                Become an Introducing Broker (IB) and earn lifetime commissions
-                by referring traders to "HC Finvest". Whether you're a trader,
-                influencer, or affiliate, this is a great way to generate
-                passive income.
-              </Typography>
-            </Grid>
-          </Grid>
-
-          <Grid container size={12} sx={{ border: "0px solid red " }}>
-            <Grid
-              item
-              size={7}
-              textAlign="left"
-              p={4}
-              sx={{ border: "0px solid green" }}
-            >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: "2rem",
-                  lineHeight: "1",
-                  fontWeight: "600",
-                  color: "#0f5e9b",
-                  marginLeft: "70px",
-                  marginTop: "50px",
-                }}
-              >
-                What is a multi-tier Network?
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginLeft: "70px",
-                }}
-              >
-                In business or marketing, a multi-tier network refers to a
-                system where you can expand your reach by leveraging the network
-                of others. Essentially, you’re building a referral structure
-                where individuals not only benefit from their own activities but
-                can also earn from the activities of those they refer, and so
-                on.
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginLeft: "70px",
-                }}
-              >
-                This structure can be used in various business models,
-                including:
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginLeft: "70px",
-                }}
-              >
-                1) Referral or affiliate programs.
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginLeft: "70px",
-                }}
-              >
-                2) Franchises with multiple layers of sub-franchises.
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginLeft: "70px",
-                }}
-              >
-                3) Introducing Broker networks (IB networks).
-              </Typography>
-            </Grid>
-            <Grid item size={5} sx={{ border: "0px solid green" }}>
-              <img
-                src="Images/IntroducingBrokerImages/IB 33.png"
-                style={{ width: "100%", border: "0px solid green" }}
-              />
-            </Grid>
-
-            <Grid size={12} textAlign="left" paddingLeft="100px">
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: "2rem",
-                  lineHeight: "1",
-                  fontWeight: "600",
-                  color: "#0f5e9b",
-                }}
-              >
-                How to Become an Introducing Broker (IB)?
-              </Typography>
-
-              <ul
-                style={{
-                  listStyleType: "circle",
-                  color: "gray",
-                  fontSize: "18px",
-                }}
-              >
-                <li>
-                  Sign up as an Introducing Broker through the Member login
-                  Area.
-                </li>
-                <li>
-                  After approval, you’ll receive a personal referral link .
-                </li>
-                <li>
-                  Share your IB link on social media, websites, blogs, Telegram,
-                  YouTube, and trading forums.
-                </li>
-                <li>
-                  Every time your referred traders open and close positions, you
-                  earn a percentage of the spread or commission.
-                </li>
-                <li>
-                  The more active traders you refer, the higher your earnings.
-                </li>
-              </ul>
-            </Grid>
-          </Grid>
-        </Box>
-
-        <Box
-          sx={{
-            backgroundColor: "#f8f9fa",
-            padding: "60px 20px",
-            marginTop: "20px",
+      {/* FIRST SECTION – Image Left, Text Right */}
+      <div className="container">
+        <Typography
+          className="text-muted mt-5"
+          style={{
+            lineHeight: "32px",
+            fontWeight:'600',
+            color:'gray',
+            fontSize: "clamp(14px, 2vw, 16px)",
           }}
         >
-          <Typography
-            variant="h2"
-            sx={{
-              fontSize: "2rem",
-              lineHeight: "1",
-              fontWeight: "600",
-              color: "#0f5e9b",
-              marginBottom: "30px",
-            }}
-          >
-            Partner With Us – Earn By Referring Traders
-          </Typography>
+          "At HC Finvest, we value strong partnerships and believe in
+          growing together. As an introducing broker, you can leverage our expertise,
+          resources, and industry-leading trading platforms to enhance your clients'
+          trading experience while earning attractive commissions."
+        </Typography>
 
-          <Grid container size={12}>
-            <Grid item size={7}>
-              <Grid display="flex" justifyContent="space-evenly" mb={5}>
-                <Card
-                  sx={{
-                    // color: "",
-                    backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    boxShadow: "0 4px 12px #0000000d",
-                    minHeight: "173px",
-                    width: "300px",
-                    padding: "20px",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.03)",
-                      boxShadow: "0 6px 18px rgba(0, 0, 0, 0.15)",
-                    },
-                  }}
-                >
-                  <Grid>
-                    <CampaignIcon
-                      sx={{
-                        fontSize: "2.5rem",
-                        color: "#007bff",
-                        marginBottom: "15px",
-                      }}
-                    />
-                  </Grid>
-                  <Grid>
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: "600",
-                        marginBottom: "12px",
-                        color: "#222",
-                      }}
-                    >
-                      Promote
-                    </Typography>
-                  </Grid>
-                  <Grid>
-                    <Typography sx={{ fontSize: "16px", color: "#555" }}>
-                      Leverage our professionally crafted marketing tools to
-                      reach and attract new traders.
-                    </Typography>
-                  </Grid>
-                </Card>
-                <Card
-                  sx={{
-                    color: "",
-                    backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    boxShadow: "0 4px 12px #0000000d",
-                    minHeight: "173px",
-                    width: "300px",
-                    padding: "20px",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.03)",
-                      boxShadow: "0 6px 18px rgba(0, 0, 0, 0.15)",
-                    },
-                  }}
-                >
-                  <Grid>
-                    <GroupAddIcon
-                      sx={{
-                        fontSize: "2.5rem",
-                        color: "#007bff",
-                        marginBottom: "15px",
-                      }}
-                    />
-                  </Grid>
-                  <Grid>
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: "600",
-                        marginBottom: "12px",
-                        color: "#222",
-                      }}
-                    >
-                      Refer
-                    </Typography>
-                  </Grid>
-                  <Grid>
-                    <Typography sx={{ fontSize: "16px", color: "#555" }}>
-                      Share your unique referral link to direct traders to HC
-                      Finvest and get recognized for every signup.
-                    </Typography>
-                  </Grid>
-                </Card>
-              </Grid>
+        <div className="row mt-5 align-items-center">
 
-              <Grid display="flex" justifyContent="space-evenly">
-                <Card
-                  sx={{
-                    color: "",
-                    backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    boxShadow: "0 4px 12px #0000000d",
-                    minHeight: "173px",
-                    width: "300px",
-                    padding: "20px",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.03)",
-                      boxShadow: "0 6px 18px rgba(0, 0, 0, 0.15)",
-                    },
-                  }}
-                >
-                  <Grid>
-                    <AttachMoneyIcon
-                      sx={{
-                        fontSize: "2.5rem",
-                        color: "#007bff",
-                        marginBottom: "15px",
-                      }}
-                    />
-                  </Grid>
-                  <Grid>
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: "600",
-                        marginBottom: "12px",
-                        color: "#222",
-                      }}
-                    >
-                      Earn
-                    </Typography>
-                  </Grid>
-                  <Grid>
-                    <Typography sx={{ fontSize: "16px", color: "#555" }}>
-                      Get rewarded in real-time — earn commissions on every
-                      trade your referrals make.
-                    </Typography>
-                  </Grid>
-                </Card>
-                <Card
-                  sx={{
-                    color: "",
-                    backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    boxShadow: "0 4px 12px #0000000d",
-                    minHeight: "173px",
-                    width: "300px",
-                    padding: "20px",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.03)",
-                      boxShadow: "0 6px 18px rgba(0, 0, 0, 0.15)",
-                    },
-                  }}
-                >
-                  <Grid>
-                    <BarChartIcon
-                      sx={{
-                        fontSize: "2.5rem",
-                        color: "#007bff",
-                        marginBottom: "15px",
-                      }}
-                    />
-                  </Grid>
-                  <Grid>
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: "600",
-                        marginBottom: "12px",
-                        color: "#222",
-                      }}
-                    >
-                      Monitor
-                    </Typography>
-                  </Grid>
-                  <Grid>
-                    <Typography sx={{ fontSize: "16px", color: "#555" }}>
-                      Easily manage and monitor your referrals and earnings
-                      through your secure IB Dashboard.
-                    </Typography>
-                  </Grid>
-                </Card>
-              </Grid>
-            </Grid>
+          {/* Image Left */}
+          <div className="col-12 col-md-5 p-3">
+            <div
+              style={{
+                width: "100%",
+                height: "280px",
+                borderRadius: "12px",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundImage: "url('/Images/IntroducingBrokerImages/IB  (1) 1.jpg')",
+              }}
+            ></div>
+          </div>
 
-            <Grid item size={5} display="flex" alignItems="center">
-              <img
-                style={{ borderRadius: "20px" }}
-                src="Images/IntroducingBrokerImages/Untitled designn.jpg"
-              />
-            </Grid>
-          </Grid>
-        </Box>
+          {/* Text Right */}
+          <div className="col-12 col-md-7 py-5 ps-lg-5">
+            <Typography
+            variant="h3"
+              style={{
+                fontSize: "clamp(1.6rem, 3vw, 2rem)",
+                lineHeight: 1,
+                fontWeight: 600,
+                color: "#0f5e9b",
+              }}
+            >
+              Introducing Broker
+            </Typography>
+
+            <Typography
+              className="text-muted"
+              style={{
+                lineHeight: "32px",
+                fontSize: "clamp(14px, 2vw, 16px)",
+              }}
+            >
+              Become an Introducing Broker (IB) and earn lifetime commissions by
+              referring traders to "HC Finvest". Whether you're a trader, influencer,
+              or affiliate, this is a great way to generate passive income.
+            </Typography>
+          </div>
+        </div>
+      </div>
+
+      {/* SECOND SECTION – Image Right, Text Left */}
+      <div className="container mt-4">
+        <div className="row align-items-center">
+
+          {/* Image Right */}
+          <div className="col-12 col-md-5 p-3 order-md-2">
+            <div
+              style={{
+                width: "100%",
+                height: "280px",
+                borderRadius: "12px",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundImage: "url('/Images/IntroducingBrokerImages/IB 33.png')",
+              }}
+            ></div>
+          </div>
+
+          {/* Text Left */}
+          <div className="col-12 col-md-7 py-5 pe-lg-5 order-md-1">
+            <Typography
+            variant="h3"
+              style={{
+                fontSize: "clamp(1.6rem, 3vw, 2rem)",
+                lineHeight: 1,
+                fontWeight: 600,
+                color: "#0f5e9b",
+              }}
+            >
+              What is a Multi-Tier Network?
+            </Typography>
+
+            <Typography
+              className="text-muted"
+              style={{
+                lineHeight: "32px",
+                fontSize: "clamp(14px, 2vw, 16px)",
+              }}
+            >
+              In business or marketing, a multi-tier network refers to a system
+              where you can expand your reach by leveraging the network of others.
+              Essentially, you’re building a referral structure where individuals
+              not only benefit from their own activities but also earn from the
+              activities of those they refer.
+              <br />
+              <br />
+              This structure is used in various business models:
+              <br />
+              1) Referral or affiliate programs. <br />
+              2) Franchises with multiple layers of sub-franchises. <br />
+              3) Introducing Broker networks (IB networks).
+            </Typography>
+          </div>
+        </div>
+      </div>
+
+      {/* THIRD SECTION – How to Become IB */}
+      <div className="container mt-4">
+        <Typography
+        variant="h3"
+          style={{
+            fontSize: "clamp(1.6rem, 3vw, 2rem)",
+            lineHeight: 1,
+            fontWeight: 600,
+            color: "#0f5e9b",
+          }}
+        >
+          How to Become an Introducing Broker (IB)?
+        </Typography>
+
+        <ul style={{ paddingLeft: "20px", marginTop: "20px" }}>
+          {[
+            "Sign up as an Introducing Broker through the Member Login Area.",
+            "After approval, you’ll receive a personal referral link.",
+            "Share your IB link on social media, websites, blogs, Telegram, YouTube, and trading forums.",
+            "Every time your referred traders open and close positions, you earn a percentage of the spread or commission.",
+            "The more active traders you refer, the higher your earnings.",
+          ].map((text, i) => (
+            <Typography
+              key={i}
+              className="text-muted"
+              style={{
+                lineHeight: "32px",
+                fontSize: "clamp(14px, 2vw, 16px)",
+              }}
+            >
+              {text}
+            </Typography>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+<div className="bg-light py-5">
+      <section className="container">
+
+        {/* Section Title */}
+        <Typography
+        variant="h3"
+          className="text-center mb-5"
+          style={{
+            fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+            fontWeight: 600,
+            color: "#0f5e9b",
+          }}
+        >
+          Partner With Us – Earn By Referring Traders
+        </Typography>
+
+        <div className="row align-items-center">
+
+          {/* Left Column – Cards */}
+          <div className="col-lg-8 mb-4 mb-lg-0">
+            <div className="row g-4 align-items-stretch">
+
+              {[
+                {
+                  icon: "bi-megaphone-fill",
+                  title: "Promote",
+                  text: "Leverage our professionally crafted marketing tools to reach and attract new traders.",
+                },
+                {
+                  icon: "bi-people-fill",
+                  title: "Refer",
+                  text: "Share your unique referral link to direct traders to HC Finvest and get recognized for every signup.",
+                },
+                {
+                  icon: "bi-cash-coin",
+                  title: "Earn",
+                  text: "Get rewarded in real-time — earn commissions on every trade your referrals make.",
+                },
+                {
+                  icon: "bi-bar-chart-fill",
+                  title: "Monitor",
+                  text: "Easily manage and monitor your referrals and earnings through your secure IB Dashboard.",
+                },
+              ].map((card, idx) => (
+                <div className="col-md-6" key={idx}>
+                  <div
+                    className="card text-center p-4 h-100"
+                    style={{
+                      borderRadius: "15px",
+                      border: "none",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.10)",
+                    }}
+                  >
+                    <i
+                      className={`bi ${card.icon}`}
+                      style={{ fontSize: "2.5rem", color: "#0f5e9b" }}
+                    ></i>
+
+                    <Typography
+                    variant="h5"
+                      style={{
+                        marginTop: "15px",
+                        fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {card.title}
+                    </Typography>
+
+                    <Typography
+                      style={{
+                        fontSize: "clamp(14px, 2vw, 16px)",
+                        lineHeight: "26px",
+                        color: "#6c757d",
+                      }}
+                    >
+                      {card.text}
+                    </Typography>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column – Image */}
+          <div className="col-lg-4 text-center">
+            <img
+              src="/Images/IntroducingBrokerImages/Untitled designn.jpg"
+              alt="Partner Program"
+              className="img-fluid rounded shadow-sm"
+              style={{
+                maxHeight: "360px",
+                objectFit: "cover",
+                borderRadius: "12px",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+    </div>
       </Container>
     );
 }

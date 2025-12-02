@@ -14,6 +14,7 @@ import {
   useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import countries from "./Countries";
 
 const RegPopupBox = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -159,22 +160,26 @@ const RegPopupBox = ({ onClose }) => {
             helperText={errors.fullName}
           />
 
-            <FormControl sx={{mb:2}} fullWidth size="small" >
-              <InputLabel>Country Code</InputLabel>
-              <Select
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-                label="Code"
-                
-              >
-                <MenuItem value="+1">🇺🇸 +1 USA</MenuItem>
-                <MenuItem value="+44">🇬🇧 +44 UK</MenuItem>
-                <MenuItem value="+91">🇮🇳 +91 India</MenuItem>
-                <MenuItem value="+971">🇦🇪 +971 UAE</MenuItem>
-                <MenuItem value="+61">🇦🇺 +61 Australia</MenuItem>
-              </Select>
-            </FormControl>
+<FormControl sx={{ mb: 2, textAlign:'left' }} fullWidth size="small" >
+  <InputLabel>Country Code</InputLabel>
+  <Select
+    name="countryCode"
+    value={formData.countryCode}
+    onChange={handleChange}
+    label="Country Code"
+  >
+    {countries.map((c) => (
+      <MenuItem key={c.code} value={c.dial}>
+        <img
+          src={`https://flagcdn.com/24x18/${c.code}.png`}
+          alt={c.name}
+          style={{ width: 24, marginRight: 10 }}
+        />
+        {c.dial} — {c.name}
+      </MenuItem>
+    ))}
+  </Select>
+</FormControl>
 
           <TextField
             fullWidth

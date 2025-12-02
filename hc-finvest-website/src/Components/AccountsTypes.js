@@ -1,5 +1,7 @@
 import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import TradingBoxDetails from "./Utilities/TradingDetailsBox.js";
+
 
 
 const cardData = [
@@ -221,6 +223,9 @@ const AccountsTypes = () => {
         </div>
       ))}
     </div>
+
+      <TradingBoxDetails/>
+
     </Container>
   );
 };

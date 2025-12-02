@@ -112,116 +112,151 @@ const MetaTrader5forAndroid = () => {
         trade smarter and faster."
       </Typography>
 
-      <Grid container size={12} sx={{ marginTop: "50px" }}>
-        <Grid item size={5} display="flex" justifyContent="flex-end" mr="30px">
-          <img
-            src="Images/MetaTrader5Android/metaTrader5Android.png"
-            width="55%"
-            style={{ border: "0px solid red", marginRight: "50px" }}
-          />
-        </Grid>
-        <Grid item size={6} sx={{ display: "flex", alignItems: "center" }}>
-          <Grid textAlign="left" sx={{ border: "0px solid red" }}>
-            <Typography sx={{ marginBottom: "10px" }}>
-              <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                Real-Time Market Data :-
-              </span>{" "}
-              Stay updated with live market data and never miss a trading
-              opportunity.
-            </Typography>
-            <Typography sx={{ marginBottom: "10px" }}>
-              <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                Advanced Charting Tools :-
-              </span>{" "}
-              Analyze market trends with comprehensive charting tools and
-              technical indicators.
-            </Typography>
-            <Typography sx={{ marginBottom: "10px" }}>
-              <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                Seamless Execution :-
-              </span>{" "}
-              Execute trades quickly and efficiently with our user-friendly
-              mobile interface.
-            </Typography>
-            <Typography sx={{ marginBottom: "10px" }}>
-              <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                Custom Alerts :-
-              </span>{" "}
-              Set personalized alerts for price movements and trading signals to
-              stay ahead of the market.
-            </Typography>
-            <Typography sx={{ marginBottom: "10px" }}>
-              <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                Secure Transactions :-
-              </span>{" "}
-              Trade with confidence knowing that your data and transactions are
-              protected with industry-leading security measures.
-            </Typography>
+ <section className="what-is">
 
-            <Grid sx={{ marginTop: "20px" }}>
-              <Button
-                variant="contained"
-                sx={{
-                  width: "30%",
-                  marginRight: "10px",
-                  color: "white",
-                  backgroundColor: "#11155c",
-                  "&:hover": {
-                    backgroundColor: "#0d1048",
-                  },
-                }}
-                href="https://apps.apple.com/in/app/metatrader-5/id413251709"
-                startIcon={<DownloadIcon />} // 👈 Add the download icon here
+
+      <div className="container mt-4">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-12 col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="/Images/MetaTrader5Android/metaTrader5Android.png"
+              alt="MT5 Mobile View"
+              className="img-fluid"
+            />
+          </div>
+
+          {/* Right Text */}
+          <div className="col-12 col-lg-8 col-xl-7 offset-xl-1">
+            <div
+              className="lead text-dark"
+              style={{ color: "#101828", fontFamily: "Poppins" }}
+            >
+              <p
+                className="text-muted"
+                style={{ lineHeight: "32px", fontSize: "16px" }}
               >
-                IOS
-              </Button>
-              <Button
-                variant="contained"
-                sx={{
-                  width: "30%",
-                  marginRight: "10px",
-                  color: "white",
-                  backgroundColor: "#11155c",
-                  "&:hover": {
-                    backgroundColor: "#0d1048",
-                  },
-                }}
-                href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5"
-                startIcon={<DownloadIcon />} // 👈 Add the download icon here
-              >
-                Play Sore
-              </Button>
-              <Button
-                variant="contained"
-                sx={{
-                  width: "30%",
-                  marginRight: "10px",
-                  color: "white",
-                  backgroundColor: "#11155c",
-                  "&:hover": {
-                    backgroundColor: "#0d1048",
-                  },
-                }}
-                href="https://galaxystore.samsung.com/detail/net.metaquotes.metatrader5"
-                startIcon={<DownloadIcon />} // 👈 Add the download icon here
-              >
-                Samsung Store
-              </Button>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+                <span
+                  className="text-bold"
+                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                >
+                  Real-Time Market Access :-
+                </span>{" "}
+                Stay updated with live market data and never miss a trading
+                opportunity.
+                <br />
+                <span
+                  className="text-bold"
+                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                >
+                  Advanced Charting Tools :-
+                </span>{" "}
+                Analyze market trends with comprehensive charting tools and
+                technical indicators.
+                <br />
+                <span
+                  className="text-bold"
+                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                >
+                  Seamless Execution :-
+                </span>{" "}
+                Execute trades quickly and efficiently with our user-friendly
+                mobile interface.
+                <br />
+                <span
+                  className="text-bold"
+                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                >
+                  Custom Alerts :-
+                </span>{" "}
+                Set personalized alerts for price movements and trading signals
+                to stay ahead of the market.
+                <br />
+                <span
+                  className="text-bold"
+                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                >
+                  Secure Transactions :-
+                </span>{" "}
+                Trade with confidence knowing that your data and transactions
+                are protected with industry-leading security measures.
+              </p>
+
+              {/* Download Buttons */}
+              <div className="container mt-4">
+                <div className="row g-2">
+                  <div className="col-12 col-md-4">
+                    <a
+                      href="https://apps.apple.com/in/app/metatrader-5/id413251709"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none"
+                    >
+                      <button
+                        className="btn w-100 text-white"
+                        style={{ backgroundColor: "#0b1660" }}
+                      >
+                        <i className="bi bi-download me-2"></i> iOS
+                      </button>
+                    </a>
+                  </div>
+                  <div className="col-12 col-md-4">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none"
+                    >
+                      <button
+                        className="btn w-100 text-white"
+                        style={{ backgroundColor: "#0b1660" }}
+                      >
+                        <i className="bi bi-download me-2"></i> Play Store
+                      </button>
+                    </a>
+                  </div>
+                  <div className="col-12 col-md-4">
+                    <a
+                      href="https://galaxystore.samsung.com/detail/net.metaquotes.metatrader5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none"
+                    >
+                      <button
+                        className="btn w-100 text-white"
+                        style={{ backgroundColor: "#0b1660" }}
+                      >
+                        <i className="bi bi-download me-2"></i> Samsung Store
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* End Download Buttons */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <Grid>
-        <Typography
-          variant="h3"
-          fontWeight="bold"
-          fontSize="35px"
-          marginTop="70px"
-        >
-          Experience the Future of Trading –{" "}
-          <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span> Reinvented.
-        </Typography>
+<Typography
+  variant="h3"
+  fontWeight="bold"
+  sx={{
+    mt: { xs: 4, md: 8 },                   // margin-top responsive
+    fontSize: {
+      xs: "24px",  // mobile
+      sm: "28px",  // small tablets
+      md: "35px",  // laptops
+      lg: "42px",  // large screens
+    },
+    textAlign: "center",
+  }}
+>
+  Experience the Future of Trading –{" "}
+  <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span> Reinvented.
+</Typography>
         <Typography sx={{ marginTop: 3 }}>
           Give Your Trades Speed, Intelligence, and Control
         </Typography>
@@ -291,106 +326,71 @@ const MetaTrader5forAndroid = () => {
         >
           Download the <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span>
         </Typography>
-        <Grid
-          container
-          spacing={3}
-          size={12}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignContent: "center",
-          }}
-        >
-          <Grid item size={3}>
-            <Box
-              sx={{
-                border: "0px solid red",
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                boxShadow: "0 .125rem .25rem rgba(0, 0, 0, .075) !important",
-                padding: "1.5rem",
-              }}
-            >
-              <Grid>
-                {/* <img
-                  src="Images\MetaTrader5Android\adobe-express-qr-code 1.png"
-                  style={{ height: "200px" }}
-                  
-                /> */}
+<div className="w-100 py-5 bg-light">
+      <div className="container text-black text-center">
+
+        <div className="row justify-content-center g-4">
+          
+          {/* iOS */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="bg-white rounded-4 p-4 shadow-sm h-100 text-center">
+              <img
+                src="/Images/MetaTrader5Android/adobe-express-qr-code 1.png"
+                alt="iOS QR Code"
+                className="img-fluid rounded qr-img"
+              />
+              <div className="mt-3">
                 <img
-                  _ngcontent-ng-c673006511=""
-                  src="Images\MetaTrader5Android\adobe-express-qr-code 1.png"
-                  alt="iOS QR Code"
-                  class="img-fluid rounded"
-                  style={{ height: "200px", objectFit: "contain" }}
-                  loading="lazy"
-                ></img>
-              </Grid>
-              <Grid sx={{ marginBottom: "1rem", marginTop: "1rem" }}>
-                <img
-                  src="Images\MetaTrader5Android\appstore.png"
-                  style={{ width: "40px", height: "40px" }}
+                  src="/Images/MetaTrader5Android/appstore.png"
+                  alt="App Store"
+                  height="40"
+                  width="40"
                 />
-              </Grid>
-            </Box>
-          </Grid>
-          <Grid item size={3}>
-            <Box
-              sx={{
-                border: "0px solid red",
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                boxShadow: "0 .125rem .25rem rgba(0, 0, 0, .075) !important",
-                padding: "1.5rem",
-              }}
-            >
-              <Grid>
+              </div>
+            </div>
+          </div>
+
+          {/* Android - Samsung Store */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="bg-white rounded-4 p-4 shadow-sm h-100 text-center">
+              <img
+                src="/Images/MetaTrader5Android/adobe-express-qr-code (3).png"
+                alt="Samsung Store QR"
+                className="img-fluid rounded qr-img"
+              />
+              <div className="mt-3">
                 <img
-                  _ngcontent-ng-c673006511=""
-                  src="Images\MetaTrader5Android\adobe-express-qr-code (3).png"
-                  alt="iOS QR Code"
-                  class="img-fluid rounded"
-                  style={{ height: "200px", objectFit: "contain" }}
-                  loading="lazy"
-                ></img>
-              </Grid>
-              <Grid sx={{ marginBottom: "1rem", marginTop: "1rem" }}>
-                <img
-                  src="Images\MetaTrader5Android\samsung-galaxy-store-logo-png_seeklogo-43825.png"
-                  style={{ width: "40px", height: "40px" }}
+                  src="/Images/MetaTrader5Android/samsung-galaxy-store-logo-png_seeklogo-43825.png"
+                  alt="Samsung Store"
+                  height="50"
+                  width="55"
                 />
-              </Grid>
-            </Box>
-          </Grid>
-          <Grid item size={3}>
-            <Box
-              sx={{
-                border: "0px solid red",
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                boxShadow: "0 .125rem .25rem rgba(0, 0, 0, .075) !important",
-                padding: "1.5rem",
-              }}
-            >
-              <Grid>
+              </div>
+            </div>
+          </div>
+
+          {/* Android APK - Play Store */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="bg-white rounded-4 p-4 shadow-sm h-100 text-center">
+              <img
+                src="/Images/MetaTrader5Android/adobe-express-qr-code (2).png"
+                alt="Play Store QR"
+                className="img-fluid rounded qr-img"
+              />
+              <div className="mt-3">
                 <img
-                  _ngcontent-ng-c673006511=""
-                  src="Images\MetaTrader5Android\adobe-express-qr-code (2).png"
-                  alt="iOS QR Code"
-                  class="img-fluid rounded"
-                  style={{ height: "200px", objectFit: "contain" }}
-                  loading="lazy"
-                ></img>
-              </Grid>
-              <Grid sx={{ marginBottom: "1rem", marginTop: "1rem" }}>
-                <img
-                  src="Images\MetaTrader5Android\playstore.png"
-                  style={{ width: "40px", height: "40px" }}
+                  src="/Images/MetaTrader5Android/playstore.png"
+                  alt="Play Store"
+                  height="45"
+                  width="45"
                 />
-              </Grid>
-            </Box>
-          </Grid>
-        </Grid>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
       </Grid>
 
       <Grid

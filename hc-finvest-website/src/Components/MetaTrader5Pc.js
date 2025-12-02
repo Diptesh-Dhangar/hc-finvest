@@ -110,82 +110,87 @@ const MetaTrader5Pc = () => {
           trade smarter and faster."
         </Typography>
 
-        <Grid
-          container
-          size={12}
-          sx={{ paddingLeft: "7%", paddingRight: "7%" }}
-        >
-          <Grid
-            item
-            size={6}
-            display="flex"
-            alignItems="center"
-            sx={{ border: "0px solid green" }}
-          >
-            <Grid textAlign="left">
-              <Typography sx={{ marginBottom: "10px" }}>
-                <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
+  <section className="expandd py-5">
+      <div className="container">
+        <div className="row align-items-center">
+
+          {/* LEFT SIDE — TEXT */}
+          <div className="col-12 col-lg-6 mb-4 mb-lg-0">
+            <div className="text-dark" style={{ fontFamily: "Poppins" }}>
+
+              <p
+                className="text-muted"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "32px",
+                  fontSize: "clamp(14px, 2vw, 17px)",
+                }}
+              >
+                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
                   Real-Time Market Data :-
                 </span>{" "}
-                Stay updated with live market data and never miss a trading
-                opportunity.
-              </Typography>
-              <Typography sx={{ marginBottom: "10px" }}>
-                <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
+                Access live market data and updates to stay ahead of the trading
+                curve.
+                <br />
+                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
                   Advanced Charting Tools :-
                 </span>{" "}
-                Analyze market trends with comprehensive charting tools and
-                technical indicators.
-              </Typography>
-              <Typography sx={{ marginBottom: "10px" }}>
-                <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
+                Utilize comprehensive charting tools and indicators to analyze
+                market trends and make informed trading decisions.
+                <br />
+                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
+                  Customizable Interface :-
+                </span>{" "}
+                Personalize your trading workspace with customizable layouts and
+                settings to suit your trading style.
+                <br />
+                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
                   Seamless Execution :-
                 </span>{" "}
-                Execute trades quickly and efficiently with our user-friendly
-                mobile interface.
-              </Typography>
-              <Typography sx={{ marginBottom: "10px" }}>
-                <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                  Custom Alerts :-
-                </span>{" "}
-                Set personalized alerts for price movements and trading signals
-                to stay ahead of the market.
-              </Typography>
-              <Typography sx={{ marginBottom: "10px" }}>
-                <span style={{ fontWeight: "bold", color: "#0f5e9b" }}>
-                  Secure Transactions :-
-                </span>{" "}
-                Trade with confidence knowing that your data and transactions
-                are protected with industry-leading security measures.
-              </Typography>
-              <Button
-                variant="contained"
-                sx={{
-                  width: "45%",
-                  height: "40px",
-                  marginRight: "10px",
-                  marginTop: "20px",
-                  color: "white",
-                  backgroundColor: "#11155c",
-                  "&:hover": {
-                    backgroundColor: "#0d1048",
-                    color:'white'
-                  },
-                }}
-                href="https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/mt5setup.exe?utm_source=www.metatrader5.com&utm_campaign=download"
-                startIcon={<DownloadIcon />} // 👈 Add the download icon here
-              >
-                Download for windows
-              </Button>
-            </Grid>
-          </Grid>
-          <Grid item size={6} sx={{ border: "0px solid red " }}>
+                Enjoy lightning-fast order execution to ensure you never miss an
+                opportunity.
+              </p>
+
+              {/* DOWNLOAD BUTTON */}
+              <div className="mt-4">
+                <a
+                  className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded text-white text-decoration-none"
+                  style={{ backgroundColor: "#0b1660" }}
+                  href="https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/mt5setup.exe?utm_source=www.metatrader5.com&utm_campaign=download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    loading="lazy"
+                    width="24"
+                    height="24"
+                    src="/Images/Metatrade5Pc/description-perspective-button-windows-icon-png-22.png"
+                    alt="Windows Icon"
+                  />
+                  <i className="bi bi-download"></i>
+                  Download for Windows
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE — IMAGE */}
+          <div className="col-12 col-lg-6 text-center">
             <img
-              src="Images/Metatrade5Pc/Desktop-website-transformed.jpeg"
-              style={{ width: "100%", height: "100%" }}
+              src="/Images/Metatrade5Pc/Desktop-website-transformed.jpeg"
+              alt="Professional trading platform"
+              className="img-fluid rounded"
+              style={{
+                maxHeight: "420px",
+                objectFit: "contain",
+                width: "100%",
+              }}
             />
-          </Grid>
-        </Grid>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
         <Typography variant="h3" fontWeight="bold" fontSize="35px">
           Experience the Future of Trading –{" "}
