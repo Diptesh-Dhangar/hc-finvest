@@ -77,146 +77,80 @@ const ZeroSpread = () => {
         </Typography>
       </Box>
 
-      <Grid container size={12} spacing={2} sx={{ marginTop: "70px" }}>
-        <Grid
-          item
-          size={5.5}
-          sx={{
-            border: "0px solid red",
-            display: "flex",
-            justifyContent: "flex-end",
-            padding: "10px",
-          }}
-        >
-          <Box
-            sx={{
-              border: "0px solid green",
-              width: 500,
-              borderRadius: 2,
-              boxShadow: 3,
-              border: "1px solid #e0e0e0",
-              overflow: "hidden",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: "#0c1e49",
-                color: "#fff",
-                textAlign: "center",
-                py: 2.5,
-                padding: "20px",
-                fontWeight: "500",
+ <div className="container py-5">
+      <div className="row align-items-start">
+
+        {/* Left Side */}
+        <div className="col-12 col-lg-5 mb-4">
+          <div className="account-details">
+            <div
+              className="account-box p-3 mb-3"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#0b1660",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+                color:'white'
               }}
             >
-              <Typography variant="h5" fontWeight="bold">
-                Zero Spread
+              <Typography variant="h4" className="mb-1" style={{ fontWeight: 600, textAlign:'center' }}>Zero Spread</Typography>
+              <Typography className="mb-0" style={{ fontSize: "0.95rem", textAlign:'center' }}>
+                Ideal for scalpers and fast movers — experience raw spreads from 0.0 pips.
               </Typography>
-              <Typography
-                variant="body2"
-                sx={{ mt: 0.5, px: 2, fontSize: "17px" }}
-              >
-                Ideal for scalpers and fast movers — experience raw spreads from
-                0.0 pips.
-              </Typography>
-            </Box>
-            {/* copy Code  */}
-            {details.map((item, index) => (
-              <React.Fragment key={index}>
-                <Box
-                  sx={{
-                    px: 2.5,
-                    py: 1.5,
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                      color: "#333",
-                      flex: 1,
-                      textAlign: "left",
-                      fontWeight: "500",
-                    }}
-                  >
-                    {item.label}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#222",
-                      // fontWeight:
-                        // item.label === "Execution:" ? "bold" : "normal",
-                      fontSize: "0.95rem",
-                      textAlign: "right",
-                    }}
-                  >
-                    {item.value}
-                  </Typography>
-                </Box>
-                {index < details.length - 1 && <Divider />}
-              </React.Fragment>
-            ))}
-          </Box>
-        </Grid>
-        <Grid
-          item
-          size={6.5}
-          sx={{
-            border: "0px solid green",
-            paddingRight: "40px",
-            paddingTop: "10px",
-          }}
-        >
-          <Typography align="left" variant="h4" mb={4}>
-            Why choose our{" "}
-            <span style={{ color: "#0f5e9b" }}>Zero Spread Account </span>
+            </div>
+
+            <div className="table-responsive">
+              <table className="table mb-0">
+                <tbody>
+                  <tr><td>Minimum Deposit:</td><td>$500</td></tr>
+                  <tr><td>Spreads Starts From:</td><td>0.0 pips</td></tr>
+                  <tr><td>Commission:</td><td>$3 per side</td></tr>
+                  <tr><td>Leverage:</td><td>Up to 1:2000</td></tr>
+                  <tr><td>Stop Out:</td><td>30%</td></tr>
+                  <tr><td>Margin Call:</td><td>40%</td></tr>
+                  <tr><td>Execution:</td><td>Market Execution</td></tr>
+                  <tr><td>Minimum Trade Volume:</td><td>0.01</td></tr>
+                  <tr><td>Currency:</td><td>USD</td></tr>
+                  <tr><td>Swap:</td><td>Yes</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side */}
+        <div className="col-12 col-lg-7">
+          <Typography variant="h4" sx={{fontWeight:'600'}} className="mb-4">
+            Why choose our <span style={{ color: "#0f5e9b" }}>Zero Spread Account</span>
           </Typography>
-          <Typography align="left" sx={{ marginBottom: "1rem" }}>
-            The Zero Spread Account is tailored for scalpers, high-frequency
-            traders, and those who prioritize fast execution and raw market
-            conditions. With a minimum deposit of $500, it delivers zero spreads
-            starting from 0.0 pips, giving traders direct market pricing and
-            maximum precision.
+
+          <Typography style={{ lineHeight: 1.6 }}>
+            The Zero Spread Account is tailored for scalpers, high-frequency traders, and those who prioritize fast execution and raw market conditions. With a minimum deposit of $100, it delivers zero spreads starting from 0.0 pips, giving traders direct market pricing and maximum precision.
           </Typography>
-          <Typography align="left" sx={{ marginBottom: "1rem" }}>
-            A $3 per side commission applies, supporting ultra-low spread
-            trading strategies. Leverage up to 1:2000, a 30% stop-out level, and
-            a 40% margin call create an ideal balance between flexibility and
-            risk control.
+          <Typography style={{ lineHeight: 1.6 }}>
+            A $3 per side commission applies, supporting ultra-low spread trading strategies. Leverage up to 1:2000, a 30% stop-out level, and a 40% margin call create an ideal balance between flexibility and risk control.
           </Typography>
-          <Typography align="left" sx={{ marginBottom: "1rem" }}>
-            Market execution and a low minimum trade volume of 0.01 lots make
-            this account an excellent fit for experts and professional traders
-            aiming to capture small price movements efficiently.
+          <Typography style={{ lineHeight: 1.6 }}>
+            Market execution and a low minimum trade volume of 0.01 lots make this account an excellent fit for experts and professional traders aiming to capture small price movements efficiently.
           </Typography>
-          <Grid
-            sx={{
-              border: "0px solid red",
-              display: "flex",
-              justifyContent: "flex-end",
-              marginTop: "20px",
-            }}
-          >
-            <Button
-              variant="outlined"
+
+          <div className="d-flex flex-column flex-sm-row justify-content-lg-end gap-2 mt-3">
+            <a
               href="https://trade.hcfinvest.com/register"
+              className="btn btn-outline-primary mb-2 mb-sm-0"
             >
               Create Live Account
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "#0b1660",
-                color: "#fff",
-                marginLeft: "20px",
-              }}
+            </a>
+            <a
               href="https://trade.hcfinvest.com/register"
+              className="btn"
+              style={{ backgroundColor: "#0b1660", color: "white" }}
             >
               Create Demo Account
-            </Button>
-          </Grid>
-        </Grid>
-      </Grid>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <Grid
         container
