@@ -93,276 +93,113 @@ const About = () => {
       </div>
 
       {/*First Box   */}
+<section className="py-3 py-md-5" style={{ fontFamily: "Poppins" }}>
+        <div className="container">
+          <div className="row gy-4 align-items-lg-center">
 
-      <Box sx={{ p: 6, backgroundColor: "#f8f9fa" }}>
-        <Box
-          sx={{
-            p: { xs: 2, sm: 4, md: 6 },
-            backgroundColor: "#f8f9fa",
-          }}
-        >
-          <Grid
-            container
-            spacing={4}
-            alignItems="center"
-            justifyContent="center"
-          >
-            {/* 🖼️ Left Side - Image */}
-            <Grid
-              item
-              size={5}
-              xs={12} // full width on mobile
-              md={6} // half width on desktop
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Box
-                component="img"
-                src="Images/AboutUsImages/SubAboutimage.jpg"
-                alt="About HC Finvest"
-                sx={{
-                  width: "100%",
-                  maxWidth: "100%",
-                  borderRadius: 2,
-                  boxShadow: 3,
-                  objectFit: "cover",
-                }}
+            {/* Image */}
+            <div className="col-12 col-lg-6 col-xl-5">
+              <img
+                src="/Images/AboutUsImages/SubAboutimage.jpg"
+                alt="Confident forex trader analyzing financial growth charts"
+                loading="lazy"
+                className="img-fluid rounded w-100"
               />
-            </Grid>
+            </div>
 
-            {/* 📝 Right Side - Text Content */}
-            <Grid
-              item
-              size={7}
-              xs={12}
-              md={12}
-              sx={{
-                textAlign: { xs: "center", md: "left" },
-              }}
-            >
+            {/* Text Content */}
+            <div className="col-12 col-lg-6 col-xl-7">
               <Typography
-                variant="h4"
-                fontWeight="bold"
-                color="#0d47a1"
-                gutterBottom
-                sx={{
-                  fontSize: { xs: "1.6rem", sm: "1.8rem", md: "2rem" },
-                }}
+              variant="h3"
+                className="mb-1 fw-bold"
+                style={{ fontSize: "2rem", color: "#0f5e9b" }}
               >
                 About HC Finvest :-
               </Typography>
 
-              <Typography
-                variant="h5"
-                color="#1565c0"
-                fontWeight="500"
-                gutterBottom
-                sx={{
-                  fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
-                }}
-              >
+              <Typography className="fs-4" style={{ color: "#0f5e9b" }}>
                 Your Partner in Strategic Investment and Financial Growth
               </Typography>
 
               <Typography
-                variant="body1"
-                // color="text.secondary"
-                sx={{
-                  mt: 2,
-                  fontSize: { xs: "0.9rem", sm: "1rem" },
-                  textAlign: { xs: "justify", md: "left" },
-                }}
+                className="text-muted"
+                style={{ fontSize: "16px", lineHeight: "32px" }}
               >
-                <strong>At HC Finvest</strong>, we are committed to helping
-                individuals and organizations achieve their financial goals
-                through{" "}
-                <strong>
-                  strategic investments, comprehensive asset management
-                </strong>
-                , and personalized financial solutions. Our team of seasoned
-                professionals brings deep expertise in{" "}
-                <strong>
-                  forex trading, asset management, financial planning, and
-                  market analysis
-                </strong>
-                , empowering you to navigate the complexities of today’s global
-                financial markets with confidence.
+                At <b className="text-black">HC Finvest</b>, we are committed to helping individuals and organizations 
+                achieve their <b className="text-black">financial goals</b> through 
+                <b className="text-black"> strategic investments, asset management,</b> and 
+                <b className="text-black"> personalized financial solutions</b>. Our experts bring deep knowledge in 
+                <b className="text-black"> forex trading, planning,</b> and 
+                <b className="text-black"> market analysis</b>, helping you navigate global markets confidently.
+                <br /><br />
+                Founded on <b className="text-black">integrity, innovation,</b> and 
+                <b className="text-black"> excellence</b>, HC Finvest has become a 
+                <b className="text-black"> leading forex broker</b> recognized for exceptional results and 
+                <b className="text-black"> client service</b>. Our approach is 
+                <b className="text-black"> client-centric</b> — strategies designed around your finances.
+                <br /><br />
+                We believe in <b className="text-black">transparency, accountability,</b> and 
+                <b className="text-black"> long-term partnerships</b>, building relationships based on 
+                <b className="text-black"> trust and success</b>. Whether you want to 
+                <b className="text-black"> grow wealth, protect assets,</b> or 
+                <b className="text-black"> plan ahead</b>, HC Finvest is here for every step.
+              </Typography>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2*/}
+      <section className="py-4" style={{ fontFamily: "Poppins" }}>
+        <div className="container">
+          <div className="row gy-4 align-items-center">
+
+            {/* Text */}
+            <div className="col-lg-8 text-muted" style={{ fontSize: "16px", lineHeight: "32px" }}>
+              <Typography variant="h3" className="fw-semibold mb-4" style={{ color: "#0f5e9b" , fontSize:'2rem' }}>
+                Trustworthy, Transparent, and Fair Trading with{" "}
+                <span className="fw-bold">HC Finvest</span>.
               </Typography>
 
-              <Typography
-                variant="body1"
-                // color="text.secondary"
-                sx={{
-                  mt: 2,
-                  fontSize: { xs: "0.9rem", sm: "1rem" },
-                  textAlign: { xs: "justify", md: "left" },
-                }}
-              >
-                Founded on the principles of{" "}
-                <strong>integrity, innovation, and excellence</strong>, HC
-                Finvest has established itself as a{" "}
-                <strong>leading forex broker</strong> and trusted financial
-                partner, delivering <strong>exceptional results</strong> and{" "}
-                <strong>unparalleled client service</strong>. We prioritize a{" "}
-                <strong>client-centric approach</strong>, understanding your
-                unique financial needs and tailoring our strategies to help you
-                achieve your specific objectives.
+              <Typography>
+                At <b className="text-black">HC Finvest</b>, we offer a 
+                <b className="text-black"> True ECN/STP trading model</b> that gives professionals and investors 
+                access to <b className="text-black">real-time prices</b> from top-tier liquidity providers.
               </Typography>
 
-              <Typography
-                variant="body1"
-                // color="text.secondary"
-                sx={{
-                  mt: 2,
-                  fontSize: { xs: "0.9rem", sm: "1rem" },
-                  textAlign: { xs: "justify", md: "left" },
-                }}
-              >
-                With a steadfast commitment to{" "}
-                <strong>transparency, accountability</strong>, and{" "}
-                <strong>long-term partnerships</strong>, we aim to build lasting
-                relationships based on trust and shared success. Whether you’re
-                seeking to <strong>grow your wealth</strong>,{" "}
-                <strong>protect your assets</strong>, or{" "}
-                <strong>plan for the future</strong>, HC Finvest is here to
-                guide you every step of the way.
+              <Typography>
+                Our <b className="text-black">ECN/STP model</b> ensures <b className="text-black">transparent pricing, 
+                ultra-fast execution,</b> and <b className="text-black">no manipulation</b>. With 
+                <b className="text-black"> STP routing</b>, all trades go directly to financial institutions, with 
+                <b className="text-black"> no markups</b>.
               </Typography>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-      {/* FIrst Box End */}
 
-      {/* Second Box Start */}
-      <Box sx={{ backgroundColor: "#fff", p: { xs: 3, sm: 5, md: 8 } }}>
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          {/* 🖼️ Left Section - Image */}
+              <Typography>
+                The <b className="text-black">No Dealing Desk (NDD)</b> structure ensures 
+                <b className="text-black"> no intervention</b> or re-quotes. Our 
+                <b className="text-black">Price Aggregator</b> scans liquidity providers to ensure 
+                <b className="text-black"> the best Bid/Ask prices</b> every time.
+              </Typography>
 
-          {/* 📝 Right Section - Text */}
-          <Grid
-            item
-            size={7}
-            xs={12}
-            md={6}
-            sx={{
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              color="#0d47a1"
-              gutterBottom
-              sx={{ fontSize: { xs: "1.6rem", sm: "1.8rem", md: "2rem" } }}
-            >
-              About HC Finvest :-
-            </Typography>
+              <Typography>
+                Experience <b className="text-black">fast, fair, and effective trading</b> with HC Finvest.
+              </Typography>
+            </div>
 
-            <Typography
-              variant="h5"
-              sx={{
-                color: "#1565c0",
-                fontWeight: 500,
-                mb: 3,
-                fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
-              }}
-            >
-              Your Partner in Strategic Investment and Financial Growth
-            </Typography>
+            {/* Image */}
+            <div className="col-lg-4 text-center">
+              <img
+                src="/Images/AboutUsImages/Subsheild electronsiamge.jpg"
+                loading="lazy"
+                alt="Safe encrypted trading technology"
+                className="img-fluid rounded"
+                style={{ maxHeight: "330px", objectFit: "cover" }}
+              />
+            </div>
 
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{
-                mb: 2,
-                fontSize: { xs: "0.9rem", sm: "1rem" },
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              <strong>At HC Finvest</strong>, we are committed to helping
-              individuals and organizations achieve their financial goals
-              through{" "}
-              <strong>
-                strategic investments, comprehensive asset management
-              </strong>
-              , and personalized financial solutions. Our team of seasoned
-              professionals brings deep expertise in{" "}
-              <strong>
-                forex trading, asset management, financial planning, and market
-                analysis
-              </strong>
-              , empowering you to navigate the complexities of today’s global
-              financial markets with confidence.
-            </Typography>
-
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{
-                mb: 2,
-                fontSize: { xs: "0.9rem", sm: "1rem" },
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              Founded on the principles of{" "}
-              <strong>integrity, innovation, and excellence</strong>, HC Finvest
-              has established itself as a <strong>leading forex broker</strong>{" "}
-              and trusted financial partner, delivering{" "}
-              <strong>exceptional results</strong> and{" "}
-              <strong>unparalleled client service</strong>. We prioritize a{" "}
-              <strong>client-centric approach</strong>, understanding your
-              unique financial needs and tailoring our strategies to help you
-              achieve your specific objectives.
-            </Typography>
-
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{
-                fontSize: { xs: "0.9rem", sm: "1rem" },
-                textAlign: { xs: "justify", md: "left" },
-              }}
-            >
-              With a steadfast commitment to{" "}
-              <strong>transparency, accountability</strong>, and{" "}
-              <strong>long-term partnerships</strong>, we aim to build lasting
-              relationships based on trust and shared success. Whether you’re
-              seeking to <strong>grow your wealth</strong>,{" "}
-              <strong>protect your assets</strong>, or{" "}
-              <strong>plan for the future</strong>, HC Finvest is here to guide
-              you every step of the way.
-            </Typography>
-          </Grid>
-
-          <Grid
-            item
-            size={5}
-            xs={12} // full width on mobile
-            md={6} // half width on desktop
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Box
-              component="img"
-              src="Images/AboutUsImages/Subsheild electronsiamge.jpg"
-              alt="HC Finvest"
-              sx={{
-                width: "100%",
-                maxWidth: 550,
-                height: "auto",
-                borderRadius: 3,
-                boxShadow: 3,
-                objectFit: "cover",
-              }}
-            />
-          </Grid>
-        </Grid>
-      </Box>
-      {/* Second Box End */}
+          </div>
+        </div>
+      </section>
 
       {/*  */}
       {/* <Box

@@ -344,7 +344,7 @@ const Forex = () => {
         </Typography>
       </Grid>
 
-      <Grid sx={{ backgroundColor: "#f8f9fa", padding: "50px" }}>
+      <Grid sx={{ backgroundColor: "#f8f9fa", padding: "20px" }}>
         <Box
           sx={{
             width: "80%",
@@ -373,27 +373,36 @@ const Forex = () => {
             The Forex market operates Monday – Friday 00:05 – 23:50 GMT+1
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "left", gap: 2, mb: 2 }}>
-            {buttons.map((btn) => (
-              <Button
-                key={btn.id}
-                variant="contained"
-                onClick={() => setActive(btn.id)}
-                sx={{
-                  backgroundColor: active === btn.id ? "black" : "white",
-                  color: active === btn.id ? "white" : "black",
-                  border: "1px solid black",
-                  textTransform: "none",
-                  fontWeight: "bold",
-                  "&:hover": {
-                    backgroundColor: active === btn.id ? "black" : "#f0f0f0",
-                  },
-                }}
-              >
-                {btn.label}
-              </Button>
-            ))}
-          </Box>
+<Box
+  sx={{
+    display: "flex",
+    justifyContent: { xs: "center", sm: "left" }, // center on xs, left on sm+
+    flexWrap: "wrap", // wrap buttons on small screens
+    gap: { xs: 1, sm: 2 }, // smaller gap on xs, bigger on sm+
+    mb: 2,
+  }}
+>
+  {buttons.map((btn) => (
+    <Button
+      key={btn.id}
+      variant="contained"
+      onClick={() => setActive(btn.id)}
+      sx={{
+        backgroundColor: active === btn.id ? "black" : "white",
+        color: active === btn.id ? "white" : "black",
+        border: "1px solid black",
+        textTransform: "none",
+        fontWeight: "bold",
+        minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
+        "&:hover": {
+          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
+        },
+      }}
+    >
+      {btn.label}
+    </Button>
+  ))}
+</Box>
 
           {/* Table */}
           <Paper sx={{ width: "100%", overflow: "hidden" }}>

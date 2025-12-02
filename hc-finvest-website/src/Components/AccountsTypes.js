@@ -1,6 +1,138 @@
 import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
+
+const cardData = [
+  {
+    title: "Starter",
+    description:
+      "Perfect for beginners — start trading with just $50 and zero commission.",
+    details: [
+      { label: "Min. Deposit:", value: "$50" },
+      { label: "Spread Info:", value: "0.18 pips" },
+      { label: "Commission:", value: "$0" },
+      { label: "Leverage:", value: "Upto 1:2000" },
+      { label: "Stop Out:", value: "30%" },
+      { label: "Margin Call:", value: "40%" },
+      { label: "Execution:", value: "Market" },
+      { label: "Min. Trade Volume:", value: "0.01" },
+      { label: "Currency:", value: "USD" },
+      { label: "Swap:", value: "Yes" },
+    ],
+  },
+  {
+    title: "Pro Trader",
+    description:
+      "Tight spreads and smart tools designed for serious individual traders.",
+    details: [
+      { label: "Min. Deposit:", value: "$100" },
+      { label: "Spread Info:", value: "0.10 pips" },
+      { label: "Commission:", value: "$2/side" },
+      { label: "Leverage:", value: "Upto 1:2000" },
+      { label: "Stop Out:", value: "30%" },
+      { label: "Margin Call:", value: "40%" },
+      { label: "Execution:", value: "Market" },
+      { label: "Min. Trade Volume:", value: "0.01" },
+      { label: "Currency:", value: "USD" },
+      { label: "Swap:", value: "Yes" },
+    ],
+  },
+  {
+    title: "Zero Spread",
+    description:
+      "Ideal for scalpers and fast movers — raw spreads from 0.0 pips.",
+    details: [
+      { label: "Min. Deposit:", value: "$500" },
+      { label: "Spread Info:", value: "0.0 pips" },
+      { label: "Commission:", value: "$3/side" },
+      { label: "Leverage:", value: "Upto 1:2000" },
+      { label: "Stop Out:", value: "30%" },
+      { label: "Margin Call:", value: "40%" },
+      { label: "Execution:", value: "Market" },
+      { label: "Min. Trade Volume:", value: "0.01" },
+      { label: "Currency:", value: "USD" },
+      { label: "Swap:", value: "Yes" },
+    ],
+  },
+  {
+    title: "Elite",
+    description: "Lower commissions, no swaps for high-volume traders.",
+    details: [
+      { label: "Min. Deposit:", value: "$5000" },
+      { label: "Spread Info:", value: "0.0 pips" },
+      { label: "Commission:", value: "$1.5/side" },
+      { label: "Leverage:", value: "Upto 1:2000" },
+      { label: "Stop Out:", value: "30%" },
+      { label: "Margin Call:", value: "40%" },
+      { label: "Execution:", value: "Market" },
+      { label: "Min. Trade Volume:", value: "0.01" },
+      { label: "Currency:", value: "USD" },
+      { label: "Swap", value: "No Swap" },
+    ],
+  },
+];
+
+
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "20px",
+    gap: "40px",
+    flexWrap: "wrap",
+    background: "#f8f9fa",
+  },
+
+  card: {
+    backgroundColor: "white",
+    borderRadius: "10px",
+    boxShadow:
+      "0px 4px 10px rgba(0, 0, 0, 0.1)",
+    width: "350px",
+    display: "flex",
+    flexDirection: "column",
+  },
+  header: {
+    backgroundColor: "#1a38c8", // dark blue from image
+    color: "white",
+    fontWeight: "600",
+    textAlign: "center",
+    padding: "12px 0",
+    borderTopLeftRadius: "10px",
+    borderTopRightRadius: "10px",
+    fontSize: "22px",
+    height:'70px',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  description: {
+    padding: "10px 15px",
+    fontWeight: "600",
+    fontSize: "15px",
+    lineHeight: "1.3",
+    color: "#1a1a1a",
+  },
+  detailRow: {
+    border: "1.1px solid #bbb",
+    borderRadius: "5px",
+    margin: "6px 15px",
+    padding: "8px 12px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems:'center',
+    fontSize: "13px",
+    color: "#333",
+    height:'50px'
+  },
+  label: {
+    fontWeight: "500",
+  },
+  value: {
+    fontWeight: "400",
+  },
+};
+
 const AccountsTypes = () => {
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
@@ -75,1021 +207,20 @@ const AccountsTypes = () => {
         Trading Account Type{" "}
       </Typography>
 
-      <Grid
-        container
-        size={12}
-        spacing={1}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid
-          item
-          size={2.8}
-          sx={{ border: "0px solid green", padding: "10px" }}
-        >
-          <Card
-            sx={{
-              padding: "15px",
-              borderRadius: "20px",
-              background: "#ffffffb3",
-              boxShadow: "0 12px 24px #0000001a",
-              transition: "all .4s ease",
-              "&:hover": {
-                transform: "scale(1.02)", // Zoom In
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.3)",
-              },
-            }}
-          >
-            {/* Heading Box Start */}
-            <Box
-              sx={{
-                background: "linear-gradient(to right, #0b0d75, #323cba)", // blue gradient
-                color: "white",
-                // width:'100%',
-                fontWeight: "bold",
-                borderRadius: "4px",
-                padding: "12px 12px ",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // width: "fit-content",
-                boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                Starter
-              </Typography>
-            </Box>
-            {/* Heading Box End */}
-            <Typography
-              sx={{
-                marginTop: "30px",
-                marginBottom: "20px",
-                fontWeight: "bold",
-                paddingRight: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Perfect for beginners — start trading with just $50 and zero
-              commission.
-            </Typography>
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Deposit:</Typography>
-              <Typography>$50</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Spread Info:</Typography>
-              <Typography>0.18 pips</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Commission:</Typography>
-              <Typography>$0</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Leverage:</Typography>
-              <Typography>Upto 1:2000</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Stop Out:</Typography>
-              <Typography>30%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Margin Call:</Typography>
-              <Typography>40%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Execution:</Typography>
-              <Typography>Market</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Trade Volume:</Typography>
-              <Typography>0.01</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Currency:</Typography>
-              <Typography>USD</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Swap:</Typography>
-              <Typography>Yes</Typography>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid
-          item
-          size={2.8}
-          sx={{ border: "0px solid green", padding: "10px" }}
-        >
-          <Card
-            sx={{
-              padding: "10px",
-              borderRadius: "20px",
-              background: "#ffffffb3",
-              boxShadow: "0 12px 24px #0000001a",
-              transition: "all .4s ease",
-              "&:hover": {
-                transform: "scale(1.02)", // Zoom In
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.3)",
-              },
-            }}
-          >
-            {/* Heading Box Start */}
-            <Box
-              sx={{
-                background: "linear-gradient(to right, #0b0d75, #323cba)", // blue gradient
-                color: "white",
-                // width:'100%',
-                fontWeight: "bold",
-                borderRadius: "4px",
-                padding: "12px 12px ",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // width: "fit-content",
-                boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                Pro Trader
-              </Typography>
-            </Box>
-            {/* Heading Box End */}
-            <Typography
-              sx={{
-                marginTop: "30px",
-                marginBottom: "20px",
-                fontWeight: "bold",
-                paddingRight: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Tight spreads and smart tools designed for serious individual
-              traders.
-            </Typography>
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Deposit:</Typography>
-              <Typography>$100</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Spread Info:</Typography>
-              <Typography>0.10 pips</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Commission:</Typography>
-              <Typography>$2/side</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Leverage:</Typography>
-              <Typography>Upto 1:2000</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Stop Out:</Typography>
-              <Typography>30%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Margin Call:</Typography>
-              <Typography>40%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Execution:</Typography>
-              <Typography>Market</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Trade Volume:</Typography>
-              <Typography>0.01</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Currency:</Typography>
-              <Typography>USD</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Swap:</Typography>
-              <Typography>Yes</Typography>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid
-          item
-          size={2.8}
-          sx={{ border: "0px solid green", padding: "10px" }}
-        >
-          <Card
-            sx={{
-              padding: "15px",
-              borderRadius: "20px",
-              background: "#ffffffb3",
-              boxShadow: "0 12px 24px #0000001a",
-              transition: "all .4s ease",
-              "&:hover": {
-                transform: "scale(1.02)", // Zoom In
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.3)",
-              },
-            }}
-          >
-            {/* Heading Box Start */}
-            <Box
-              sx={{
-                background: "linear-gradient(to right, #0b0d75, #323cba)", // blue gradient
-                color: "white",
-                // width:'100%',
-                fontWeight: "bold",
-                borderRadius: "4px",
-                padding: "12px 12px ",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // width: "fit-content",
-                boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                Zero Spread
-              </Typography>
-            </Box>
-            {/* Heading Box End */}
-            <Typography
-              sx={{
-                marginTop: "30px",
-                marginBottom: "20px",
-                fontWeight: "bold",
-                paddingRight: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Ideal for scalpers and fast movers — raw spreads from 0.0 pips.
-            </Typography>
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Deposit:</Typography>
-              <Typography>$500</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Spread Info:</Typography>
-              <Typography>0.0 pips</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Commission:</Typography>
-              <Typography>$3/side</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Leverage:</Typography>
-              <Typography>Upto 1:2000</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Stop Out:</Typography>
-              <Typography>30%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Margin Call:</Typography>
-              <Typography>40%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Execution:</Typography>
-              <Typography>Market</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Trade Volume:</Typography>
-              <Typography>0.01</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Currency:</Typography>
-              <Typography>USD</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Swap:</Typography>
-              <Typography>Yes</Typography>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid
-          item
-          size={2.8}
-          sx={{ border: "0px solid green", padding: "10px" }}
-        >
-          <Card
-            sx={{
-              padding: "15px",
-              borderRadius: "20px",
-              background: "#ffffffb3",
-              boxShadow: "0 12px 24px #0000001a",
-              transition: "all .4s ease",
-              "&:hover": {
-                transform: "scale(1.02)", // Zoom In
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.3)",
-              },
-            }}
-          >
-            {/* Heading Box Start */}
-            <Box
-              sx={{
-                background: "linear-gradient(to right, #0b0d75, #323cba)", // blue gradient
-                color: "white",
-                // width:'100%',
-                fontWeight: "bold",
-                borderRadius: "4px",
-                padding: "12px 12px ",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // width: "fit-content",
-                boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                Elite
-              </Typography>
-            </Box>
-            {/* Heading Box End */}
-            <Typography
-              sx={{
-                marginTop: "30px",
-                marginBottom: "20px",
-                fontWeight: "bold",
-                paddingRight: "20px",
-                paddingLeft: "20px",
-              }}
-            >
-              Lower commissions, no swaps for high-volume traders.{" "}
-            </Typography>
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Deposit:</Typography>
-              <Typography>$5000</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Spread Info:</Typography>
-              <Typography>0.0 pips</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Commission:</Typography>
-              <Typography>$1.5/side</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Leverage:</Typography>
-              <Typography>Upto 1:2000</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Stop Out:</Typography>
-              <Typography>30%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Margin Call:</Typography>
-              <Typography>40%</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Execution:</Typography>
-              <Typography>Market</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Min. Trade Volume:</Typography>
-              <Typography>0.01</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Currency:</Typography>
-              <Typography>USD</Typography>
-            </Box>
-
-            <Box
-              sx={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                padding: "4px 12px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                color: "#333",
-                fontWeight: "500",
-                fontSize: "12px",
-                height: "60px",
-              }}
-            >
-              <Typography>Swap</Typography>
-              <Typography>No Swap</Typography>
-            </Box>
-          </Card>
-        </Grid>
-      </Grid>
+    <div style={styles.container} >
+      {cardData.map(({ title, description, details }) => (
+        <div key={title} style={styles.card}>
+          <div style={styles.header}>{title}</div>
+          <div style={styles.description}>{description}</div>
+          {details.map(({ label, value }) => (
+            <div key={label} style={styles.detailRow}>
+              <span style={styles.label}>{label}</span>
+              <span style={styles.value}>{value}</span>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
     </Container>
   );
 };
