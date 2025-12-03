@@ -466,74 +466,67 @@ const Commodities = () => {
           </Typography>
         </Grid>
 
-        <Grid sx={{ backgroundColor: "#f8f9fa" }}>
-          <Grid container size={12} sx={{ width: "80%", margin: "0 auto" }}>
-            <Grid item size={7}>
-              <Typography
-                variant="h2"
-                align="left"
-                sx={{
-                  color: "#0f5e9b",
-                  fontSize: "35px",
-                  fontWeight: "700",
-                  paddingTop: "50px",
-                }}
-              >
-                Getting Started with Commodity Trading
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "30px",
-                  textAlign: "left",
-                }}
-              >
-                Commodity trading lets you speculate on price movements without
-                owning the physical asset. You can take advantage of price rises
-                or drops using CFDs (Contracts for Difference).
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "20px",
-                  textAlign: "left",
-                }}
-              >
-                Prices are influenced by global supply and demand. For example,
-                if the supply of oil increases due to better production, prices
-                may fall. If supply is disrupted, prices might spike.
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "20px",
-                  textAlign: "left",
-                }}
-              >
-                Other factors such as natural disasters, political events, and
-                market news also impact commodity prices. Traders use this
-                volatility to seek profit opportunities.
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              size={5}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src="Images/CommoditiesImages/Commodity 2.jpg"
-                style={{ borderRadius: "20px", marginTop: "50px" }}
-              />
-            </Grid>
-          </Grid>
-        </Grid>
+<div className="container py-5">
+      <div className="row align-items-center">
+        
+        {/* Text Section */}
+        <div className="col-lg-6 mb-4 mb-lg-0">
+          <Typography variant="h4" className="fw-bold" style={{ fontWeight:'600' }}>
+            Getting Started with Commodity Trading
+          </Typography>
+
+          <Typography
+            style={{
+              fontSize: "16px",
+              lineHeight: "1.6",
+              marginBottom: "20px",
+              color: "#555"
+            }}
+          >
+            Commodity trading lets you speculate on price movements without owning the
+            physical asset. You can take advantage of price rises or drops using CFDs
+            (Contracts for Difference).
+          </Typography>
+
+          <Typography
+            style={{
+              fontSize: "16px",
+              lineHeight: "1.6",
+              marginBottom: "20px",
+              color: "#555",
+            }}
+          >
+            Prices are influenced by global supply and demand. For example, if the
+            supply of oil increases due to better production, prices may fall. If
+            supply is disrupted, prices might spike.
+          </Typography>
+
+          <Typography
+            style={{
+              fontSize: "16px",
+              lineHeight: "1.6",
+              marginBottom: "20px",
+              color: "#555",
+            }}
+          >
+            Other factors such as natural disasters, political events, and market news
+            also impact commodity prices. Traders use this volatility to seek profit
+            opportunities.
+          </Typography>
+        </div>
+
+        {/* Image Section */}
+        <div className="col-lg-6 text-center">
+          <img
+            src="/Images/CommoditiesImages/Commodity 2.jpg"
+            alt="Commodity Trading Graph"
+            className="img-fluid rounded"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
       </Grid>
       <TradingDetailsBox />
     </Container>

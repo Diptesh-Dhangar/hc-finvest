@@ -500,86 +500,56 @@ const Cryptocurrency = () => {
           </Typography>
         </Grid>
 
-        <Grid sx={{ backgroundColor: "#f8f9fa" }}>
-          <Grid container size={12} sx={{ width: "80%", margin: "0 auto" }}>
-            <Grid
-              item
-              size={5}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src="Images/CryptocurrencyImages/cryptos.jpg"
-                style={{ borderRadius: "20px", marginTop: "50px" }}
-              />
-            </Grid>
+ <div className="container py-5 crypto-section">
+      <div className="row align-items-center">
 
-            <Grid item size={7}>
-              <Typography
-                variant="h2"
-                align="left"
-                sx={{
-                  color: "#0f5e9b",
-                  fontSize: "35px",
-                  fontWeight: "700",
-                  paddingTop: "50px",
-                }}
-              >
-                Getting Started with Cryptocurrency Trading
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "30px",
-                  textAlign: "left",
-                }}
-              >
-                The value of cryptocurrencies is largely influenced by their
-                <span style={{ color: "#0f5e9b", fontWeight: "700" }}>
-                  adoption and utility
-                </span>
-                . Because of their decentralized nature, they often remain
-                resilient in the face of economic and political shifts that can
-                destabilize fiat currencies.
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "20px",
-                  textAlign: "left",
-                }}
-              >
-                Through{" "}
-                <span style={{ color: "#0f5e9b", fontWeight: "700" }}>
-                  CFD trading
-                </span>
-                , traders can speculate on the price movements of crypto assets
-                without owning them directly. This provides opportunities during
-                both rising and falling markets.
-              </Typography>
-              <Typography
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "32px",
-                  marginTop: "20px",
-                  textAlign: "left",
-                }}
-              >
-                As cryptocurrencies are highly volatile, it is critical to have
-                a solid{" "}
-                <span style={{ color: "#0f5e9b", fontWeight: "700" }}>
-                  risk management strategy
-                </span>{" "}
-                to navigate this dynamic market.
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
+        {/* Image Section */}
+        <div className="col-md-6 text-center mb-4 mb-md-0">
+          <img
+            src="/Images/CryptocurrencyImages/cryptos.jpg"
+            alt="Crypto Icon"
+            className="img-fluid rounded"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="col-md-6">
+          <Typography variant="h4" className="highlight" style={{ fontWeight:'600' }}>
+            Getting Started with Cryptocurrency Trading
+          </Typography>
+
+          <Typography className="text-muted" style={{ lineHeight: 1.6 }}>
+            The value of cryptocurrencies is largely influenced by their{" "}
+            <strong className="highlight" style={{ fontSize: "14px" }}>
+              adoption and utility
+            </strong>.
+            Because of their decentralized nature, they often remain resilient in the face
+            of economic and political shifts that can destabilize fiat currencies.
+          </Typography>
+
+          <Typography className="text-muted" style={{ lineHeight: 1.6 }}>
+            Through{" "}
+            <strong className="highlight" style={{ fontSize: "14px" }}>
+              CFD trading
+            </strong>, traders can speculate on the price movements of crypto assets
+            without owning them directly. This provides opportunities during both rising
+            and falling markets.
+          </Typography>
+
+          <Typography className="text-muted" style={{ lineHeight: 1.6 }}>
+            As cryptocurrencies are highly volatile, it is critical to have a solid{" "}
+            <strong className="highlight" style={{ fontSize: "14px" }}>
+              risk management strategy
+            </strong>{" "}
+            to navigate this dynamic market.
+          </Typography>
+        </div>
+
+      </div>
+    </div>
+
+
       </Grid>
       <TradingDetailsBox />
     </Container>
