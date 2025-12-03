@@ -92,6 +92,7 @@ const SwapManagement = () => {
               value={marketType}
               label="Market Type"
               onChange={handleChange}
+              sx={{textAlign:'left'}}
             >
               <MenuItem value="">
                 <em>None</em>

@@ -103,6 +103,7 @@ const fetchPairs = async (market, account) => {
               value={marketType}
               label="Market Type"
               onChange={handleMarketChange}
+              sx={{textAlign:'left'}}
             >
               <MenuItem value="Forex">Forex</MenuItem>
               <MenuItem value="Metals">Metals</MenuItem>
@@ -120,6 +121,7 @@ const fetchPairs = async (market, account) => {
               value={accountType}
               label="Account Type"
               onChange={handleAccountChange}
+              sx={{textAlign:'left'}}
             >
               <MenuItem value="Starter">Starter Account</MenuItem>
               <MenuItem value="ProTrader">Pro Trader Account</MenuItem>
@@ -163,6 +165,7 @@ const fetchPairs = async (market, account) => {
             <InputLabel>Leverage Type</InputLabel>
             <Select
               value={leverageType}
+              label="Leverage Type"
               onChange={(e) => setLeverageType(e.target.value)}
             >
               <MenuItem value="">None</MenuItem>

@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import countries from "./Countries";
+import "../Styles/RegPopupBox.css"  // 👈 ADD THIS IMPORT
 
 const RegPopupBox = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -31,15 +32,14 @@ const RegPopupBox = ({ onClose }) => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error while typing
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const validateForm = () => {
     let newErrors = {};
 
-    if (!formData.fullName.trim()) {
+    if (!formData.fullName.trim())
       newErrors.fullName = "Full Name is required";
-    }
 
     if (!formData.phoneNumber.trim()) {
       newErrors.phoneNumber = "Phone Number is required";
@@ -49,9 +49,7 @@ const RegPopupBox = ({ onClose }) => {
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
-    ) {
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
 
@@ -86,6 +84,7 @@ const RegPopupBox = ({ onClose }) => {
 
   return (
     <Box
+      className="popup-bg-animate"
       sx={{
         position: "fixed",
         top: 0,
@@ -101,6 +100,7 @@ const RegPopupBox = ({ onClose }) => {
       }}
     >
       <Box
+        className="popup-animate"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
@@ -160,26 +160,26 @@ const RegPopupBox = ({ onClose }) => {
             helperText={errors.fullName}
           />
 
-<FormControl sx={{ mb: 2, textAlign:'left' }} fullWidth size="small" >
-  <InputLabel>Country Code</InputLabel>
-  <Select
-    name="countryCode"
-    value={formData.countryCode}
-    onChange={handleChange}
-    label="Country Code"
-  >
-    {countries.map((c) => (
-      <MenuItem key={c.code} value={c.dial}>
-        <img
-          src={`https://flagcdn.com/24x18/${c.code}.png`}
-          alt={c.name}
-          style={{ width: 24, marginRight: 10 }}
-        />
-        {c.dial} — {c.name}
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
+          <FormControl sx={{ mb: 2, textAlign:'left' }} fullWidth size="small" >
+            <InputLabel>Country Code</InputLabel>
+            <Select
+              name="countryCode"
+              value={formData.countryCode}
+              onChange={handleChange}
+              label="Country Code"
+            >
+              {countries.map((c) => (
+                <MenuItem key={c.code} value={c.dial}>
+                  <img
+                    src={`https://flagcdn.com/24x18/${c.code}.png`}
+                    alt={c.name}
+                    style={{ width: 24, marginRight: 10 }}
+                  />
+                  {c.dial} — {c.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
           <TextField
             fullWidth
@@ -230,7 +230,7 @@ const RegPopupBox = ({ onClose }) => {
             backgroundImage: `url('Images/MainContentImages/For welcome  2.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            display: { xs: "none", md: "block" }, // hide on mobile
+            display: { xs: "none", md: "block" },
           }}
         ></Box>
       </Box>

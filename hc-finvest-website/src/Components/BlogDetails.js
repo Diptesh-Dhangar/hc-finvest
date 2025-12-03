@@ -1,32 +1,70 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Skeleton } from "@mui/material";
 
 const BlogDetails = () => {
-  const { id } = useParams(); // get the blog id from URL
+  const { id } = useParams();
   const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true); // NEW
 
   useEffect(() => {
     const fetchBlog = async () => {
-      console.log("ID from the Blog Details: " + id);
       try {
-        // Fetch single blog by id from backend
         const response = await axios.get(
           `https://hcfinvest.onrender.com/api/blogs/${id}`
         );
         setBlog(response.data);
-        console.log("Blog Data: ", response.data);
       } catch (error) {
         console.error("Error fetching blog details:", error);
+      } finally {
+        setLoading(false); // END LOADING
       }
     };
     fetchBlog();
   }, [id]);
 
-  if (!blog) return <Typography>Loading...</Typography>;
+  // -----------------------------------------------------------
+  //                SKELETON LOADER (WHEN LOADING)
+  // -----------------------------------------------------------
 
-  // Convert image buffer to base64
+  if (loading) {
+    return (
+      <Container sx={{ padding: "30px" }}>
+        {/* Title Skeleton */}
+        <Skeleton variant="text" width="50%" height={50} />
+
+        {/* Date Skeleton */}
+        <Skeleton variant="text" width="20%" height={25} sx={{ mb: 3 }} />
+
+        {/* Image Skeleton */}
+        <Skeleton
+          variant="rectangular"
+          width="100%"
+          height={400}
+          sx={{ borderRadius: "10px", mb: 3 }}
+        />
+
+        {/* Description Skeleton */}
+        <Skeleton variant="text" height={30} width="100%" />
+        <Skeleton variant="text" height={30} width="95%" />
+        <Skeleton variant="text" height={30} width="90%" sx={{ mb: 4 }} />
+
+        {/* Section skeletons */}
+        <Skeleton variant="text" height={40} width="40%" />
+        <Skeleton variant="text" height={25} width="100%" />
+        <Skeleton variant="text" height={25} width="95%" />
+        <Skeleton variant="text" height={25} width="90%" />
+      </Container>
+    );
+  }
+
+  // -----------------------------------------------------------
+  //                NORMAL BLOG UI (WHEN LOADED)
+  // -----------------------------------------------------------
+
+  if (!blog) return <Typography>No blog found.</Typography>;
+
   const getImageUrl = (image) => {
     if (!image || !image.data) return "Images/default_blog.png";
     const base64String = btoa(
@@ -70,15 +108,11 @@ const BlogDetails = () => {
         {blog.description}
       </Typography>
 
-      {/* ---------------------------------------------- */}
-      {/*             DISPLAY BLOG SECTIONS              */}
-      {/* ---------------------------------------------- */}
-
+      {/* Blog Sections */}
       {blog.sections && blog.sections.length > 0 && (
         <Box sx={{ marginTop: "20px" }}>
           {blog.sections.map((section, index) => (
             <Box key={index} sx={{ marginBottom: "20px" }}>
-              {/* Section Heading */}
               <Typography
                 variant="h4"
                 sx={{
@@ -91,7 +125,6 @@ const BlogDetails = () => {
                 {section.heading}
               </Typography>
 
-              {/* Section Content (HTML from Quill) */}
               <div
                 dangerouslySetInnerHTML={{ __html: section.content }}
                 style={{
