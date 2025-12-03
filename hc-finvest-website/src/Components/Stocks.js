@@ -296,7 +296,7 @@ const Stocks = () => {
               textAlign: "left",
             }}
           >
-            stocks, also known as shares or equities, represent ownership in a
+            Stocks, also known as shares or equities, represent ownership in a
             company. When you buy a stock, you purchase a piece of that company
             and become a shareholder. This ownership entitles you to a portion
             of the company's assets and earnings, as well as voting rights on

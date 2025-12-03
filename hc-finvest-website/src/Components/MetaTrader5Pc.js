@@ -104,7 +104,7 @@ const MetaTrader5Pc = () => {
             fontWeight: "600",
           }}
         >
-          "Transform your trading experience with HC Finvest MetaTrader 5 .
+          "Transform your trading experience with HC Finvest MetaTrader 5.
           Designed for both novice and experienced traders, our app combines
           advanced features with a user-friendly interface, empowering you to
           trade smarter and faster."

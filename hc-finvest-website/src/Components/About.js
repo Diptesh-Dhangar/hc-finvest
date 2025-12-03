@@ -325,7 +325,7 @@ const About = () => {
                   </div>
                   <div className="divider my-3"></div>
                   <p style={{ fontSize: "19px" }}>
-                    At we’ve supported traders since 2010, combining deep
+                    At HC Finvest, we’ve supported traders since 2010, combining deep
                     expertise, 24/5 support, and a low-cost trading environment.
                     Trust us to help you achieve your investment goals with
                     confidence.

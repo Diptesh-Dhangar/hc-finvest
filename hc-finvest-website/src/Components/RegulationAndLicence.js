@@ -65,7 +65,7 @@ const RegulationAndLicence = () => {
             </Typography>
 
             <Typography className="mb-2">
-              <strong>Heddge Capitals Wealth Management LLC, operating under the brand name HC Finvest</strong> 
+              <strong>Heddge Capitals Wealth Management LLC, operating under the brand name HC Finvest </strong> 
               is a legally registered company under the Financial Services Authority (FSA) in St. Vincent 
               and the Grenadines with registration number 3970, in accordance with the Companies Act, 
               Chapter 151 of the Revised Laws of St. Vincent and the Grenadines, 2001. As a registered entity, 

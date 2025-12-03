@@ -305,7 +305,7 @@ const DepositAndWithdrawal = () => {
                   sx={{ fontSize: "1rem", color: "#555", marginBottom: "15px" }}
                 >
                   Use your credit card for seamless deposits and withdrawals
-                  with Crypto Pay!:
+                  with Crypto Pay:
                 </Typography>
 
                 {/* Inner Box Start */}

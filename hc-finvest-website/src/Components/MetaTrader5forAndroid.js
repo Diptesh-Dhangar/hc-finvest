@@ -136,50 +136,60 @@ const MetaTrader5forAndroid = () => {
                 className="text-muted"
                 style={{ lineHeight: "32px", fontSize: "16px" }}
               >
-                <span
+                <Typography sx={{mb:1}}>               
+                  <span
                   className="text-bold"
-                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                  style={{ color: "#0f5e9b" , fontWeight:'600' }}
                 >
                   Real-Time Market Access :-
                 </span>{" "}
                 Stay updated with live market data and never miss a trading
                 opportunity.
-                <br />
-                <span
+                </Typography>
+
+                <Typography sx={{mb:1}}>
+                  <span
                   className="text-bold"
-                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                  style={{ color: "#0f5e9b" , fontWeight:'600'}}
                 >
                   Advanced Charting Tools :-
                 </span>{" "}
                 Analyze market trends with comprehensive charting tools and
                 technical indicators.
-                <br />
-                <span
+                </Typography>
+
+                <Typography sx={{mb:1}}>
+                  <span
                   className="text-bold"
-                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                  style={{ color: "#0f5e9b",  fontWeight:'600' }}
                 >
                   Seamless Execution :-
                 </span>{" "}
                 Execute trades quickly and efficiently with our user-friendly
                 mobile interface.
-                <br />
-                <span
+                </Typography>
+
+                <Typography sx={{mb:1}}>
+                  <span
                   className="text-bold"
-                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                  style={{ color: "#0f5e9b",  fontWeight:'600' }}
                 >
                   Custom Alerts :-
                 </span>{" "}
                 Set personalized alerts for price movements and trading signals
                 to stay ahead of the market.
-                <br />
-                <span
+                </Typography>
+
+                <Typography sx={{mb:1}}>
+                  <span
                   className="text-bold"
-                  style={{ color: "#0f5e9b", fontFamily: "Poppins" }}
+                  style={{ color: "#0f5e9b" , fontWeight:'600'}}
                 >
                   Secure Transactions :-
                 </span>{" "}
                 Trade with confidence knowing that your data and transactions
                 are protected with industry-leading security measures.
+                </Typography>
               </p>
 
               {/* Download Buttons */}
