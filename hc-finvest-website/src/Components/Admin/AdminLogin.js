@@ -15,6 +15,12 @@ const AdminLogin = () => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleLogin();
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -88,7 +94,7 @@ const AdminLogin = () => {
           }}
         />
 
-        {/* Password */}
+        {/* Password — only ENTER handler here */}
         <TextField
           fullWidth
           label="Password"
@@ -97,6 +103,7 @@ const AdminLogin = () => {
           size="small"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          onKeyDown={handleKeyPress}
           sx={{
             mb: 3,
             input: { color: "white" },
