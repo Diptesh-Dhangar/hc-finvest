@@ -50,7 +50,11 @@ import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 
 const SecurityOfFunds = () => {
     return (
-      <Container
+        <>
+
+            <link rel="canonical" href="https://www.hcfinvest.com/securityOfFunds" />
+
+                <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters
@@ -132,6 +136,7 @@ const SecurityOfFunds = () => {
         
         <TradingDetailsBox/>
       </Container>
+        </>
     );
 
 }

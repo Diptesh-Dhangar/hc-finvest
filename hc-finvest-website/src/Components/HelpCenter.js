@@ -4,7 +4,10 @@ import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const HelpCenter = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+
+    <link rel="canonical" href="https://www.hcfinvest.com/helpCenter" />
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -127,6 +130,7 @@ const HelpCenter = () => {
   ))}
 </Grid>
     </Container>
+    </>
   );
 };
 

@@ -158,7 +158,11 @@ const Indices = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+
+        <link rel="canonical" href="https://www.hcfinvest.com/indicesMarket" />
+
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -472,6 +476,7 @@ const Indices = () => {
 
       <TradingDetailsBox />
     </Container>
+    </>
   );
 };
 export default Indices;

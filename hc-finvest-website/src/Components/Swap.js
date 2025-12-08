@@ -18,6 +18,8 @@ import Paper from "@mui/material/Paper";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -168,7 +170,11 @@ const Swap = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+
+              <link rel="canonical" href="https://www.hcfinvest.com/swapMarket" />
+      
+                <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
         <ScrollToTopButton/>
       <Box
         sx={{
@@ -398,6 +404,7 @@ const Swap = () => {
 
       <TradingDetailsBox />
     </Container>
+      </>
   );
 };
 export default Swap;

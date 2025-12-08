@@ -24,7 +24,10 @@ const ProTrader = () => {
   // ];
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+        <link rel="canonical" href="https://www.hcfinvest.com/proTraderAccount" />
+
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -174,6 +177,7 @@ const ProTrader = () => {
 
       <TradingDetailsBox/>
     </Container>
+    </>
   );
 };
 

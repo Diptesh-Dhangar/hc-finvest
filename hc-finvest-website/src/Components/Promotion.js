@@ -35,7 +35,11 @@ const Promotion = () => {
 //   },
 // ];
     return (
-      <Container
+      <>
+
+          <link rel="canonical" href="https://www.hcfinvest.com/promotions" />
+
+                <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters
@@ -281,6 +285,8 @@ const Promotion = () => {
       </div>
     </section>
       </Container>
+      
+      </>
     );
 }
 

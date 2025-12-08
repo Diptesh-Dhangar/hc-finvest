@@ -1,10 +1,14 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const RegulationAndLicence = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+
+      <link rel="canonical" href="https://www.hcfinvest.com/regulationAndLicence" />
+
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 
       {/* Banner */}
@@ -93,6 +97,7 @@ const RegulationAndLicence = () => {
 
       <TradingDetailsBox />
     </Container>
+      </>
   );
 };
 

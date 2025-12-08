@@ -77,7 +77,10 @@ const BlogDetails = () => {
   };
 
   return (
-    <Container sx={{ padding: "30px" }}>
+    <>
+       <link rel="canonical" href="https://www.hcfinvest.com/blogs/:id" />
+
+        <Container sx={{ padding: "30px" }}>
       <Box sx={{ textAlign: "left", marginBottom: "20px" }}>
         <Typography variant="h3" sx={{ fontWeight: 600 }}>
           {blog.title}
@@ -139,6 +142,7 @@ const BlogDetails = () => {
         </Box>
       )}
     </Container>
+    </>
   );
 };
 

@@ -201,7 +201,9 @@ const Forex = () => {
     setPage(0);
   };
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+     <link rel="canonical" href="https://www.hcfinvest.com/forexMarket" />
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
         sx={{
@@ -662,6 +664,7 @@ const Forex = () => {
 
       <TradingDetailsBox />
     </Container>
+    </>
   );
 };
 export default Forex;

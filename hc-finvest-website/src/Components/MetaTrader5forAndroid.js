@@ -1,5 +1,4 @@
-import { Box, Button, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
+import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
@@ -50,7 +49,10 @@ const MetaTrader5forAndroid = () => {
   ];
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+      <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5Android" />
+
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
         sx={{
@@ -528,6 +530,7 @@ const MetaTrader5forAndroid = () => {
         </Box>
       </Grid>
     </Container>
+    </>
   );
 };
 export default MetaTrader5forAndroid;

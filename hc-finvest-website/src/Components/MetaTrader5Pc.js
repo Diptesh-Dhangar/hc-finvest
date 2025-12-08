@@ -43,7 +43,10 @@ const comparisonData = [
 
 const MetaTrader5Pc = () => {
     return (
-      <Container
+      <>
+          <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5forPc" />
+
+              <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters
@@ -371,6 +374,7 @@ const MetaTrader5Pc = () => {
           </Box>
         </Grid>
       </Container>
+      </>
     );
 }
 export default MetaTrader5Pc;

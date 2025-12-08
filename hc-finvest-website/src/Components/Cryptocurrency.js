@@ -101,7 +101,9 @@ const Cryptocurrency = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+    <link rel="canonical" href="https://www.hcfinvest.com/cryptocurrencyMarket" />
+      <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -542,6 +544,7 @@ const Cryptocurrency = () => {
       </Grid>
       <TradingDetailsBox />
     </Container>
+    </>
   );
 };
 export default Cryptocurrency;

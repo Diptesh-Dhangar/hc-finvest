@@ -45,7 +45,9 @@ const Blogs = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+             <link rel="canonical" href="https://www.hcfinvest.com/blogs" />
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 
       {/* Banner Section */}
@@ -241,6 +243,7 @@ const Blogs = () => {
         `}
       </style>
     </Container>
+    </>
   );
 };
 

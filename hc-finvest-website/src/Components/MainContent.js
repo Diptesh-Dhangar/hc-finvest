@@ -52,6 +52,7 @@ const MainContent = () => {
   return (
     <>
     <meta name="description"  content="Begin trading with HC Finvest, a genuine ECN technology broker. Access forex, shares, indices, commodities, and equities with us." />
+    <link rel="canonical" href="https://www.hcfinvest.com/" />
       {showPopup && <RegPopupBox onClose={handleClosePopup} />}
 
       <Container

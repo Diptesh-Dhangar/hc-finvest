@@ -1,4 +1,4 @@
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import TradingBoxDetails from "./Utilities/TradingDetailsBox.js";
 
@@ -137,7 +137,9 @@ const styles = {
 
 const AccountsTypes = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+     <link rel="canonical" href="https://www.hcfinvest.com/accountsTypesAccount" />
+        <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -227,6 +229,7 @@ const AccountsTypes = () => {
       <TradingBoxDetails/>
 
     </Container>
+    </>
   );
 };
 

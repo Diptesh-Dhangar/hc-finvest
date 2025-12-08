@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Card,
   Checkbox,
   Container,
   FormControlLabel,
@@ -47,7 +46,11 @@ const leverage = [{ value: "1:100", label: "1:100" }];
 
 const WelcomeAccount = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+
+          <link rel="canonical" href="https://www.hcfinvest.com/welcomeAccount" />
+
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 
       {/* Banner */}
@@ -213,6 +216,8 @@ const WelcomeAccount = () => {
 
       {/* REST OF PAGE REMAINS SAME */}
     </Container>
+
+      </>
   );
 };
 

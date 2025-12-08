@@ -24,7 +24,11 @@ const ZeroSpread = () => {
   // ];
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+
+            <link rel="canonical" href="https://www.hcfinvest.com/zeroSpreadAccount" />
+
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
         sx={{
@@ -175,6 +179,7 @@ const ZeroSpread = () => {
       </Grid>
       <TradingDetailsBox />
     </Container>
+      </>
   );
 };
 

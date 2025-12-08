@@ -42,7 +42,9 @@ const features = [
 
 const About = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+      <link rel="canonical" href="https://www.hcfinvest.com/about" />
+       <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
         sx={{
@@ -372,6 +374,8 @@ const About = () => {
 
       <TradingDetailsBox />
     </Container>
+    </>
+ 
   );
 };
 

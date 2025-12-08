@@ -12,7 +12,9 @@ import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const Advantages = () => {
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+      <link rel="canonical" href="https://www.hcfinvest.com/advantages" />
+      <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 
       {/* Banner Box */}
@@ -204,6 +206,7 @@ const Advantages = () => {
 
       <TradingDetailsBox />
     </Container>
+    </>
   );
 };
 

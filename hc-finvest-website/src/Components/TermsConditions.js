@@ -3,7 +3,11 @@ import "../Components/Styles/TermsConditions.css";
 
 const TermsConditions = () => {
   return (
-    <div className="container mt-5">
+      <>
+
+          <link rel="canonical" href="https://www.hcfinvest.com/termsConditions" />
+
+              <div className="container mt-5">
       <h1 className="heading">Terms & Conditions</h1>
       <br />
 
@@ -202,6 +206,7 @@ const TermsConditions = () => {
         you and us for the Service until we accept your order.
       </p>
     </div>
+      </>
   );
 };
 

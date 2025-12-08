@@ -3,7 +3,10 @@ import "./Styles/ForexBrokerArticleStyle.css";
 
 const ForexBrokerArticle = () => {
   return (
-    <div
+    <>
+
+    <link rel="canonical" href="https://www.hcfinvest.com/forexBrokerArticle" />
+          <div
       className="container mt-5"
       style={{ maxWidth: "900px", padding: "20px" }}
     >
@@ -140,6 +143,7 @@ const ForexBrokerArticle = () => {
         Start Trading Now!
       </a>
     </div>
+    </>
   );
 }
 

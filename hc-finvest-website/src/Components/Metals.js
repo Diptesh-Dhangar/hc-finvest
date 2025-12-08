@@ -100,7 +100,11 @@ const Metals = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+
+    <link rel="canonical" href="https://www.hcfinvest.com/metalsMarket" />
+
+          <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -424,6 +428,7 @@ const Metals = () => {
 
       <TradingDetailsBox />
     </Container>
+    </>
   );
 };
 export default Metals;

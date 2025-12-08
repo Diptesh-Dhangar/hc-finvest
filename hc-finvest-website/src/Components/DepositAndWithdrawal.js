@@ -1,4 +1,4 @@
-import { Box, Card, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import "../Components/Styles/DepositWithdrawal.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
@@ -6,7 +6,9 @@ import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 const DepositAndWithdrawal = () => {
   
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+       <link rel="canonical" href="https://www.hcfinvest.com/depositWithdrawal" />
+      <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
         sx={{
@@ -731,6 +733,7 @@ const DepositAndWithdrawal = () => {
 
       <TradingDetailsBox />
     </Container>
+      </>
   );
 };
 

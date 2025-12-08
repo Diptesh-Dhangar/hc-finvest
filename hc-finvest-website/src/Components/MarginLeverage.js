@@ -150,7 +150,11 @@ const MarginLeverage = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+
+          <link rel="canonical" href="https://www.hcfinvest.com/marginLeverage" />
+
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
         <ScrollToTopButton/>
       <Box
         sx={{
@@ -411,6 +415,7 @@ const MarginLeverage = () => {
 
       <TradingDetailsBox />
     </Container>
+      </>
   );
 };
 

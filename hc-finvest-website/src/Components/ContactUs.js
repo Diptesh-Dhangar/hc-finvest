@@ -43,7 +43,9 @@ const ContactUs = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <>
+       <link rel="canonical" href="https://www.hcfinvest.com/contactUs" />
+      <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       {/* Banner Box Start */}
       <Box
@@ -338,6 +340,7 @@ const ContactUs = () => {
 
       {/* contact Us form End */}
     </Container>
+    </>
   );
 };
 export default ContactUs;

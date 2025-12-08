@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Typography,
   Grid,
   Table,
@@ -19,7 +18,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 const BonusPage = () => {
   return (
     <>
-      {/* Banner */}
+       <link rel="canonical" href="https://www.hcfinvest.com/bonus" />
       <Box
         sx={{
           width: "100%",

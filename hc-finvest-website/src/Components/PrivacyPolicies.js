@@ -2,7 +2,11 @@ import React from "react";
 
 const PrivacyPolicies = () => {
   return (
-    <div className="container mt-5 font-poppins leading-loose">
+    <>
+
+      <link rel="canonical" href="https://www.hcfinvest.com/privacyPolicies" />
+
+          <div className="container mt-5 font-poppins leading-loose">
       <h1 className="text-5xl font-bold">Privacy Policy</h1>
 
       <p>
@@ -94,6 +98,7 @@ const PrivacyPolicies = () => {
         exact structure from the HTML you provided.)
       </p>
     </div>
+    </>
   );
 }
 

@@ -1,14 +1,13 @@
-import { Box, Card, Container, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
-import CampaignIcon from "@mui/icons-material/Campaign";
-import GroupAddIcon from "@mui/icons-material/GroupAdd";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import BarChartIcon from "@mui/icons-material/BarChart";
+import { Box, Container, Typography } from "@mui/material"
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const IntroducingBroker = () => {
     return (
-      <Container
+      <>
+
+              <link rel="canonical" href="https://www.hcfinvest.com/introducingBroker" />
+              <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters
@@ -76,7 +75,7 @@ const IntroducingBroker = () => {
           </Typography>
         </Box>
 
-<div>
+    <div>
 
       {/* FIRST SECTION – Image Left, Text Right */}
       <div className="container">
@@ -334,6 +333,7 @@ const IntroducingBroker = () => {
       </section>
     </div>
       </Container>
+      </>
     );
 }
 
