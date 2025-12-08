@@ -1,6 +1,5 @@
-import { Box, Button, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
+import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles";
-import DownloadIcon from "@mui/icons-material/Download";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

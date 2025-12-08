@@ -1,30 +1,26 @@
 import React from "react";
 import {
   Box,
-  Button,
-  Card,
-  CardContent,
   Container,
   Grid,
   Typography,
-  Divider,
 } from "@mui/material";
 import MainContentCard2 from "./Utilities/MainContentCard2";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
 const Starter = () => {
-  const details = [
-    { label: "Minimum Deposit:", value: "$50" },
-    { label: "Spreads Starts From:", value: "0.18 pips" },
-    { label: "Commission:", value: "$0" },
-    { label: "Leverage:", value: "Up to 1:2000" },
-    { label: "Stop Out:", value: "30%" },
-    { label: "Margin Call:", value: "40%" },
-    { label: "Execution:", value: "Market Execution" },
-    { label: "Minimum Trade Volume:", value: "0.01" },
-    { label: "Currency:", value: "USD" },
-    { label: "Swap:", value: "Yes" },
-  ];
+  // const details = [
+  //   { label: "Minimum Deposit:", value: "$50" },
+  //   { label: "Spreads Starts From:", value: "0.18 pips" },
+  //   { label: "Commission:", value: "$0" },
+  //   { label: "Leverage:", value: "Up to 1:2000" },
+  //   { label: "Stop Out:", value: "30%" },
+  //   { label: "Margin Call:", value: "40%" },
+  //   { label: "Execution:", value: "Market Execution" },
+  //   { label: "Minimum Trade Volume:", value: "0.01" },
+  //   { label: "Currency:", value: "USD" },
+  //   { label: "Swap:", value: "Yes" },
+  // ];
 
   return (
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>

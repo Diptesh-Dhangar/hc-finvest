@@ -1,8 +1,7 @@
-import { Box, Button, Container, Grid, MenuItem, Paper, TextField, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, TextField, Typography } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import { useState } from "react";
 import axios from "axios";
-import BusinessIcon from "@mui/icons-material/Business";
 
 const ContactUs = () => {
   // form state

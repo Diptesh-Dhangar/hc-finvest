@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Container,
-  Divider,
   Grid,
   TablePagination,
   Typography,
@@ -16,19 +15,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import {
-  faCoins,
-  faTint,
-  faPercent,
-  faClock,
-  faBalanceScale,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
-import { Toys } from "@mui/icons-material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -98,7 +87,7 @@ const Cryptocurrency = () => {
     else if (active === 3) setRows(Eliterows);
   }, [active]);
 
-  const [selectedRows, setSelectedRows] = useState(rows);
+  // const [selectedRows, setSelectedRows] = useState(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 

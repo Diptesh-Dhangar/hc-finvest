@@ -32,7 +32,7 @@ const MainContent = () => {
     { icon: <FaShieldAlt />, title: "Protection", subtitle: "of Funds" },
     { icon: <FaClock />, title: "24/5", subtitle: "Support" },
   ];
-  const [current, setCurrent] = useState(0);
+  // const [current, setCurrent] = useState(0);
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -51,6 +51,7 @@ const MainContent = () => {
 
   return (
     <>
+    <meta name="description"  content="Begin trading with HC Finvest, a genuine ECN technology broker. Access forex, shares, indices, commodities, and equities with us." />
       {showPopup && <RegPopupBox onClose={handleClosePopup} />}
 
       <Container

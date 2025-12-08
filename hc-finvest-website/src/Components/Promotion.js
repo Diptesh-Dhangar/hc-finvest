@@ -1,42 +1,39 @@
-import { Box, Button, Container, Grid, Typography, Chip } from "@mui/material"
-import GroupIcon from "@mui/icons-material/Group";
+import { Box, Container, Typography } from "@mui/material"
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
-import GiftIcon from "@mui/icons-material/CardGiftcard";
-
 
 const Promotion = () => { 
 
-  const promotions = [
-  {
-    id: 1,
-    imgSrc: "/Images/PromotionImages/Bonus (pramotion).jpg",
-    alt: "50% Bonus",
-    badgeText: "50% Bonus",
-    badgeIcon: <GiftIcon fontSize="small" sx={{ mr: 0.5 }} />,
-    title: "Get 50% Cash Deposit Bonus",
-    description:
-      "Maximize your trading power with a 50% deposit bonus up to $2000. Boost your account instantly.",
-    smallText: "*T&Cs apply.",
-    buttonText: "Learn More",
-    buttonHref: "/bonus",
-    bgColor: "background.paper",
-  },
-  {
-    id: 2,
-    imgSrc: "/Images/PromotionImages/Refer a friend (pramotion).jpg",
-    alt: "Refer a Friend",
-    badgeText: "Refer a Friend",
-    badgeIcon: <GroupIcon fontSize="small" sx={{ mr: 0.5 }} />,
-    title: "Earn Rewards by Referring",
-    description:
-      "Invite your friends to join and trade. Get rewarded with cash, bonuses, or rebates every time they deposit.",
-    smallText: "*T&Cs apply.",
-    buttonText: "Learn More",
-    buttonHref: "/refer-a-friend",
-    bgColor: "primary.light",
-    reverse: true,
-  },
-];
+//   const promotions = [
+//   {
+//     id: 1,
+//     imgSrc: "/Images/PromotionImages/Bonus (pramotion).jpg",
+//     alt: "50% Bonus",
+//     badgeText: "50% Bonus",
+//     badgeIcon: <GiftIcon fontSize="small" sx={{ mr: 0.5 }} />,
+//     title: "Get 50% Cash Deposit Bonus",
+//     description:
+//       "Maximize your trading power with a 50% deposit bonus up to $2000. Boost your account instantly.",
+//     smallText: "*T&Cs apply.",
+//     buttonText: "Learn More",
+//     buttonHref: "/bonus",
+//     bgColor: "background.paper",
+//   },
+//   {
+//     id: 2,
+//     imgSrc: "/Images/PromotionImages/Refer a friend (pramotion).jpg",
+//     alt: "Refer a Friend",
+//     badgeText: "Refer a Friend",
+//     badgeIcon: <GroupIcon fontSize="small" sx={{ mr: 0.5 }} />,
+//     title: "Earn Rewards by Referring",
+//     description:
+//       "Invite your friends to join and trade. Get rewarded with cash, bonuses, or rebates every time they deposit.",
+//     smallText: "*T&Cs apply.",
+//     buttonText: "Learn More",
+//     buttonHref: "/refer-a-friend",
+//     bgColor: "primary.light",
+//     reverse: true,
+//   },
+// ];
     return (
       <Container
         sx={{ backgroundColor: "#fff" }}

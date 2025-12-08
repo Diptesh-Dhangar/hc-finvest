@@ -20,6 +20,7 @@ import axios from "axios";
 import ScrollToTopButton from "../Utilities/ScrollToTopButton";
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
+import SEO from "../SEO";
 
 const BlogManagement = () => {
   const [date, setDate] = useState("");
@@ -121,6 +122,8 @@ const BlogManagement = () => {
   }, []);
 
   return (
+<>
+
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 
@@ -390,6 +393,7 @@ const BlogManagement = () => {
         `}
       </style>
     </Container>
+</>
   );
 };
 

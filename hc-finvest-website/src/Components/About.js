@@ -1,9 +1,6 @@
 import {
   Box,
-  Card,
-  CardContent,
   Container,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
@@ -25,23 +22,23 @@ const features = [
   { icon: <FaClock />, title: "24/5", subtitle: "Support" },
 ];
 
-const panels = [
-  {
-    title: "Experienced & Trusted Since 2010",
-    content:
-      "At HC Finvest, we've supported traders since 2010, combining deep expertise, 24/5 support, and a low-cost trading environment. Trust us to help you achieve your investment goals with confidence.",
-  },
-  {
-    title: "True STP Execution for Transparent Trading",
-    content:
-      "At HC Finvest, we guarantee real-time STP (Straight Through Processing) execution within a secure ECN environment. Trade forex instantly with live streaming prices, best execution, and immediate confirmations. No re-quoting, no dealing desk intervention, no re-quotes, and a transparent trading experience.",
-  },
-  {
-    title: "Customer-Centric, Zero-Cost Trading at HC Finvest",
-    content:
-      "Focused on maximizing your trading potential and minimizing costs, HC Finvest ECN PRIME (ZERO Account) offers spreads from 0.0 pips, zero commissions, zero swaps, zero markups, and zero deposit fees. Enjoy competitive pricing, a transparent trading process, and the lowest-cost environment in the retail forex market.",
-  },
-];
+// const panels = [
+//   {
+//     title: "Experienced & Trusted Since 2010",
+//     content:
+//       "At HC Finvest, we've supported traders since 2010, combining deep expertise, 24/5 support, and a low-cost trading environment. Trust us to help you achieve your investment goals with confidence.",
+//   },
+//   {
+//     title: "True STP Execution for Transparent Trading",
+//     content:
+//       "At HC Finvest, we guarantee real-time STP (Straight Through Processing) execution within a secure ECN environment. Trade forex instantly with live streaming prices, best execution, and immediate confirmations. No re-quoting, no dealing desk intervention, no re-quotes, and a transparent trading experience.",
+//   },
+//   {
+//     title: "Customer-Centric, Zero-Cost Trading at HC Finvest",
+//     content:
+//       "Focused on maximizing your trading potential and minimizing costs, HC Finvest ECN PRIME (ZERO Account) offers spreads from 0.0 pips, zero commissions, zero swaps, zero markups, and zero deposit fees. Enjoy competitive pricing, a transparent trading process, and the lowest-cost environment in the retail forex market.",
+//   },
+// ];
 
 const About = () => {
   return (

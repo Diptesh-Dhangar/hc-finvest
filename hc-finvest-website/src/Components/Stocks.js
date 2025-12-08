@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Container,
-  Divider,
   Grid,
   TablePagination,
   Typography,
@@ -16,41 +15,32 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import {
-  faCoins,
-  faTint,
-  faPercent,
-  faClock,
-  faBalanceScale,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 
-const StyledRow = styled(TableRow)(({ theme, index }) => ({
-  backgroundColor: index % 2 === 0 ? "#ffffff" : "#f9f9f9",
-}));
+// const StyledRow = styled(TableRow)(({ theme, index }) => ({
+//   backgroundColor: index % 2 === 0 ? "#ffffff" : "#f9f9f9",
+// }));
 
-const comparisonData = [
-  { feature: "AUS200", mt5: "03:50–10:30, 11:10–24:00" },
-  { feature: "DE40", mt5: "02:05–04:00, 04:15–24:00" },
-  { feature: "US30", mt5: "02:00–24:00" },
-  { feature: "STOXX50", mt5: "02:05–04:00, 04:15–24:00" },
-  { feature: "FRANCE40", mt5: "10:00–00:00" },
-  { feature: "AFRICA40", mt5: "10:30–19:30" },
-  { feature: "ITALY40", mt5: "10:00–00:00" },
-  { feature: "UK100", mt5: "02:05–24:00" },
-  { feature: "HK50", mt5: "02:45–08:00, 09:00–12:30, 13:15–22:58" },
-  { feature: "SPAIN35", mt5: "10:00–22:00" },
-  { feature: "USTEC", mt5: "02:00–24:00" },
-  { feature: "JP225", mt5: "02:00–24:00" },
-  { feature: "US500", mt5: "02:00–24:00" },
-  { feature: "SWISS20", mt5: "10:00–00:00" },
-  { feature: "CHINA50", mt5: "04:00–11:29" },
-  { feature: "WIG20", mt5: "10:45–18:50" },
-];
+// const comparisonData = [
+//   { feature: "AUS200", mt5: "03:50–10:30, 11:10–24:00" },
+//   { feature: "DE40", mt5: "02:05–04:00, 04:15–24:00" },
+//   { feature: "US30", mt5: "02:00–24:00" },
+//   { feature: "STOXX50", mt5: "02:05–04:00, 04:15–24:00" },
+//   { feature: "FRANCE40", mt5: "10:00–00:00" },
+//   { feature: "AFRICA40", mt5: "10:30–19:30" },
+//   { feature: "ITALY40", mt5: "10:00–00:00" },
+//   { feature: "UK100", mt5: "02:05–24:00" },
+//   { feature: "HK50", mt5: "02:45–08:00, 09:00–12:30, 13:15–22:58" },
+//   { feature: "SPAIN35", mt5: "10:00–22:00" },
+//   { feature: "USTEC", mt5: "02:00–24:00" },
+//   { feature: "JP225", mt5: "02:00–24:00" },
+//   { feature: "US500", mt5: "02:00–24:00" },
+//   { feature: "SWISS20", mt5: "10:00–00:00" },
+//   { feature: "CHINA50", mt5: "04:00–11:29" },
+//   { feature: "WIG20", mt5: "10:45–18:50" },
+// ];
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -144,7 +134,7 @@ const Stocks = () => {
     else if (active === 3) setRows(Eliterows);
   }, [active]);
 
-  const [selectedRows, setSelectedRows] = useState(rows);
+  // const [selectedRows, setSelectedRows] = useState(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -469,6 +459,7 @@ const Stocks = () => {
           <img
             src="Images/StocksImages/Stocks 3.jpg"
             style={{ width: "100%" }}
+            alt="Stock market performance chart"
           />
         </Grid>
         <Grid item size={7}>
