@@ -39,14 +39,18 @@ const AdminNavbar = ({ active, onSelect, ...props }) => {
 
 const AdminPanel = () => {
   const [active, setActive] = useState(1);
-  const navigate = useNavigate();
+   const navigate = useNavigate();
 
   useEffect(() => {
-    if (active === 1) navigate("/admin/adminBlogManagement");
-    else if (active === 2) navigate("/admin/adminEnquiryData");
-    else if (active === 3) navigate("/admin/adminContactUsData");
-    else if (active === 4) navigate("/admin/adminSwapManagement");
-    else if (active === 5) navigate("/admin/adminSpreadManagement");
+    const paths = {
+      1: "adminBlogManagement",
+      2: "adminEnquiryData",
+      3: "adminContactUsData",
+      4: "adminSwapManagement",
+      5: "adminSpreadManagement",
+    };
+
+    navigate(paths[active]);
   }, [active, navigate]);
 
   return (

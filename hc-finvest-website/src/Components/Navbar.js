@@ -81,12 +81,12 @@ const Navbar = () => {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* LOGO */}
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-            <img
-              src="Images/MainContentImages/Hc Finvest Logo for website 3.svg"
-              height="50px"
-              alt="Logo"
-              style={{ maxWidth: "150px" }}
-            />
+              <img
+                src="/Images/MainContentImages/Hc Finvest Logo for website 3.svg"
+                height="50px"
+                alt="Logo"
+                style={{ maxWidth: "150px" }}
+              />
           </Link>
 
           {/* DESKTOP NAV */}
