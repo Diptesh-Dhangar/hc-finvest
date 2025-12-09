@@ -31,7 +31,7 @@ const Footer = () => {
             ACCOUNTS
           </Typography>
           {[
-            { name: "Account Types", path: "/accountsTypes" },
+            { name: "Account Types", path: "/accountsTypesAccount" },
             { name: "Starter", path: "/starterAccount" },
             { name: "Pro Trader", path: "/proTraderAccount" },
             { name: "Zero Spread", path: "/zeroSpreadAccount" },
