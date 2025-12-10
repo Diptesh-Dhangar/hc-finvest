@@ -23,6 +23,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import RegPopupBox from "./Utilities/RegPopupBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import Snowfall from "react-snowfall";
 
 const MainContent = () => {
   const features = [
@@ -51,6 +52,7 @@ const MainContent = () => {
 
   return (
     <>
+    
     <meta name="description"  content="Begin trading with HC Finvest, a genuine ECN technology broker. Access forex, shares, indices, commodities, and equities with us." />
     <link rel="canonical" href="https://www.hcfinvest.com/" />
       {showPopup && <RegPopupBox onClose={handleClosePopup} />}

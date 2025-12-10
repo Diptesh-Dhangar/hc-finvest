@@ -100,29 +100,36 @@ const DepositWithdrawalfaq = () => {
           textAlign: "center",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Deposits And Withdrawals
-        </Typography>
+        </h1>
 
-        <Typography
-          variant="h5"
+        <h3
+          // variant="h5"
           sx={{
             zIndex: 2,
-            fontWeight: 500,
+            fontWeight: 600,
+            textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Manage Your Funds with Ease and Confidence
-        </Typography>
+        </h3>
       </Box>
 
       <Typography

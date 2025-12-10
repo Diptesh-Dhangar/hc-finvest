@@ -57,6 +57,7 @@ import AddSwap from "./Components/Admin/AddSwap";
 import AdminLogin from "./Components/Admin/AdminLogin";
 import ProtectedAdminRoute from "./Components/Admin/ProtectedAdminRoute";
 import BonusPage from "./Components/Bonus";
+import Snowfall from "react-snowfall";
 
 function App() {
   return (
@@ -75,6 +76,11 @@ function App() {
           Learn React
         </a>
       </header> */}
+        
+      {/* <Snowfall 
+        snowflakeCount={100} 
+        style={{ position: "fixed", width: "100vw", height: "100vh", pointerEvents: "none", zIndex: 9999 }}
+      /> */}
       <Navbar />
       <Routes>
         {/* <Navbar /> */}

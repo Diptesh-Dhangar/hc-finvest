@@ -121,9 +121,9 @@ const Metals = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -135,10 +135,10 @@ const Metals = () => {
           }}
         >
           Trade Precious Metals With Expertise
-        </Typography>
+        </h1>
 
-        <Typography
-          variant="h5"
+        <h3
+          // variant="h5"
           // component="h1"
           sx={{
             zIndex: 2,
@@ -151,7 +151,7 @@ const Metals = () => {
           }}
         >
           Strategic Forex Trading for Global Growth{" "}
-        </Typography>
+        </h3>
       </Box>
 
       <Grid>

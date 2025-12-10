@@ -156,9 +156,9 @@ const AccountsTypes = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -170,10 +170,10 @@ const AccountsTypes = () => {
           }}
         >
           Discover Your Ideal Forex
-        </Typography>
-        <Typography
-          variant="h3"
-          component="h1"
+        </h1>
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -185,9 +185,9 @@ const AccountsTypes = () => {
           }}
         >
           Trading Account
-        </Typography>
-        <Typography
-          variant="h5"
+        </h1>
+        <h3
+          // variant="h5"
           // component="h1"
           sx={{
             zIndex: 2,
@@ -200,7 +200,7 @@ const AccountsTypes = () => {
           }}
         >
           Tailored Solutions For Every Trader's Journey
-        </Typography>
+        </h3>
       </Box>
 
       <Typography

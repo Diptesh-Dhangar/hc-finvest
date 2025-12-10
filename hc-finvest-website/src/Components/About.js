@@ -65,7 +65,7 @@ const About = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
+        {/* <Typography
           variant="h3"
           component="h1"
           sx={{
@@ -79,7 +79,20 @@ const About = () => {
           }}
         >
           About HC Finvest
-        </Typography>
+        </Typography> */}
+
+        <h1 style={{
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            }}>
+                About HC Finvest
+
+        </h1>
       </Box>
 
       <div className="features-section">

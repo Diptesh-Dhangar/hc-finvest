@@ -68,29 +68,36 @@ const MetaTrader5Pc = () => {
             textAlign: "center",
           }}
         >
-          <Typography
+          <h1
             variant="h3"
             component="h1"
             sx={{
-              zIndex: 2,
-              fontWeight: 600,
-              px: 2,
-              mb: 2, // 👈 space between the two lines
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Your Trusted Resource For All Trading Support
-          </Typography>
+          </h1>
 
-          <Typography
+          <h3
             variant="h5"
             sx={{
-              zIndex: 2,
-              fontWeight: 500,
-              px: 2,
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Welcome to the HC Finvest Help Centre
-          </Typography>
+          </h3>
         </Box>
 
         <Typography

@@ -78,29 +78,36 @@ const SecurityOfFunds = () => {
             textAlign: "center",
           }}
         >
-          <Typography
+          <h1
             variant="h3"
             component="h1"
             sx={{
-              zIndex: 2,
-              fontWeight: 600,
-              px: 2,
-              mb: 2, // 👈 space between the two lines
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Security Of Funds
-          </Typography>
+          </h1>
 
-          <Typography
+          <h3
             variant="h5"
             sx={{
-              zIndex: 2,
-              fontWeight: 500,
-              px: 2,
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Your Fund's Security is Our Top Priority
-          </Typography>
+          </h3>
         </Box>
 
         {/* Banner Box End */}

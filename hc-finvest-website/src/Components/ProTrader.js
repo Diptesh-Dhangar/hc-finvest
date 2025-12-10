@@ -44,7 +44,7 @@ const ProTrader = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
@@ -58,8 +58,8 @@ const ProTrader = () => {
           }}
         >
           Pro Trader Account
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           variant="h5"
           // component="h1"
           sx={{
@@ -73,7 +73,7 @@ const ProTrader = () => {
           }}
         >
           Enter The World of trading in the easiest and simplest way possible.
-        </Typography>
+        </h3>
       </Box>
 
  <div className="container py-5">

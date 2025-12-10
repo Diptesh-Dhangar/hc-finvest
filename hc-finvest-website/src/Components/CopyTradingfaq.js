@@ -100,42 +100,52 @@ const CopyTradingfaq = () => {
           textAlign: "center",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Trade Like a Pro, Even
-        </Typography>
+        </h1>
 
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           if You're Just Starting Out
-        </Typography>
+        </h1>
 
-        <Typography
+        <h3
           variant="h5"
           sx={{
             zIndex: 2,
-            fontWeight: 500,
+            fontWeight: 600,
+            textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Amplify Your Trading Success with HC Finvest Copy Trading
-        </Typography>
+        </h3>
       </Box>
 
       <Typography

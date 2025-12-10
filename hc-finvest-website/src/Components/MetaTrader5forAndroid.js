@@ -69,30 +69,36 @@ const MetaTrader5forAndroid = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
             textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           MetaTrader 5 For Mobile(Android/IOS)
-        </Typography>
-        <Typography
-          variant="h5"
-          component="h1"
+        </h1>
+        <h3
+          // variant="h5"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
             textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Trade the world with HC Finvest
-        </Typography>
+        </h3>
       </Box>
 
       <Typography

@@ -70,24 +70,33 @@ const WelcomeAccount = () => {
           mb: 4,
         }}
       >
-        <Typography
+        <h1
           sx={{
-            fontWeight: 700,
-            fontSize: { xs: "28px", md: "48px" },
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Welcome Account
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           sx={{
-            fontWeight: 500,
-            fontSize: { xs: "15px", md: "22px" },
-            maxWidth: "700px",
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Take your first step into the world of trading with our $25 Welcome
           Account.
-        </Typography>
+        </h3>
       </Box>
 
       {/* FORM CARD */}

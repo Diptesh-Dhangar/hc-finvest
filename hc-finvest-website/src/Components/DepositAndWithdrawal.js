@@ -25,7 +25,7 @@ const DepositAndWithdrawal = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
@@ -39,8 +39,8 @@ const DepositAndWithdrawal = () => {
           }}
         >
           Deposits And Withdrawals
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           variant="h5"
           component="h1"
           sx={{
@@ -54,7 +54,7 @@ const DepositAndWithdrawal = () => {
           }}
         >
           Your Funds, Your Control: Simplified Transaction
-        </Typography>
+        </h3>
       </Box>
 
       <Grid container mt="100px" pl="50px">

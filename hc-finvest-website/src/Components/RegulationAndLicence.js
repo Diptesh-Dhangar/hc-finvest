@@ -28,16 +28,20 @@ const RegulationAndLicence = () => {
           px: 2,
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           sx={{
             zIndex: 2,
             fontWeight: 600,
-            fontSize: { xs: "22px", sm: "30px", md: "38px" },
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           HC Finvest Lincence & Regulation
-        </Typography>
+        </h1>
       </Box>
 
       {/* MAIN SECTION */}

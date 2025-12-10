@@ -220,9 +220,9 @@ const Forex = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -234,10 +234,10 @@ const Forex = () => {
           }}
         >
           Empower Your Investment With
-        </Typography>
-        <Typography
-          variant="h3"
-          component="h1"
+        </h1>
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -249,9 +249,9 @@ const Forex = () => {
           }}
         >
           HC Finvest Forex
-        </Typography>
-        <Typography
-          variant="h5"
+        </h1>
+        <h3
+          // variant="h5"
           // component="h1"
           sx={{
             zIndex: 2,
@@ -264,7 +264,7 @@ const Forex = () => {
           }}
         >
           Strategic Forex Trading for Global Growth{" "}
-        </Typography>
+        </h3>
       </Box>
 
       <Grid sx={{ width: "80%", margin: "0 auto" }}>

@@ -28,9 +28,9 @@ const IntroducingBroker = () => {
             marginBottom: "30px",
           }}
         >
-          <Typography
-            variant="h3"
-            component="h1"
+          <h1
+            // variant="h3"
+            // component="h1"
             sx={{
               zIndex: 2,
               fontWeight: 600,
@@ -42,8 +42,8 @@ const IntroducingBroker = () => {
             }}
           >
             Partner With HC Finvest
-          </Typography>
-          <Typography
+          </h1>
+          <h1
             variant="h3"
             component="h1"
             sx={{
@@ -57,8 +57,8 @@ const IntroducingBroker = () => {
             }}
           >
             And Grow Together
-          </Typography>
-          <Typography
+          </h1>
+          <h3
             variant="h5"
             // component="h1"
             sx={{
@@ -72,7 +72,7 @@ const IntroducingBroker = () => {
             }}
           >
             Become an Introducing Broker With HC Finvest
-          </Typography>
+          </h3>
         </Box>
 
     <div>

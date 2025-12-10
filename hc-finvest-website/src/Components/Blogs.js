@@ -67,28 +67,34 @@ const Blogs = () => {
           px: 2,
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           sx={{
-            fontWeight: 600,
             zIndex: 2,
-            fontSize: { xs: "28px", sm: "34px", md: "48px" },
+            fontWeight: 600,
             textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           The HC Finvest Blog
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           variant="h5"
           sx={{
-            fontWeight: 500,
             zIndex: 2,
-            fontSize: { xs: "16px", sm: "20px", md: "24px" },
+            fontWeight: 600,
             textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           All updates in one place
-        </Typography>
+        </h3>
       </Box>
 
       {/* Blog Grid */}

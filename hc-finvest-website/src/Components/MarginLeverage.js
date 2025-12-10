@@ -172,42 +172,52 @@ const MarginLeverage = () => {
           textAlign: "center",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Maximize Your Profits With Competitive
-        </Typography>
+        </h1>
 
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Margin & Leverage
-        </Typography>
+        </h1>
 
-        <Typography
+        <h3
           variant="h5"
           sx={{
             zIndex: 2,
-            fontWeight: 500,
+            fontWeight: 600,
+            textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Unlock Your Trading Potential With HC Finvest
-        </Typography>
+        </h3>
       </Box>
 
       <Grid>

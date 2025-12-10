@@ -100,18 +100,21 @@ const Promotionfaq = () => {
           textAlign: "center",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Promotions
-        </Typography>
+        </h1>
 
         {/* <Typography
           variant="h5"

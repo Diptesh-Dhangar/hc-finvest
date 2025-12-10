@@ -35,17 +35,21 @@ const Advantages = () => {
           px: 2,
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
-            fontSize: { xs: "22px", sm: "30px", md: "38px" },
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Advantages of Trading with HC Finvest
-        </Typography>
+        </h1>
       </Box>
 
       {/* ########################## */}

@@ -179,7 +179,7 @@ const Indices = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
@@ -193,8 +193,8 @@ const Indices = () => {
           }}
         >
           Trade Indices With Precision
-        </Typography>
-        <Typography
+        </h1>
+        <h1
           variant="h3"
           component="h1"
           sx={{
@@ -208,8 +208,8 @@ const Indices = () => {
           }}
         >
           And Confidence
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           variant="h5"
           // component="h1"
           sx={{
@@ -223,7 +223,7 @@ const Indices = () => {
           }}
         >
           Diversify Your Portfolio With Expertly Managed Indices
-        </Typography>
+        </h3>
       </Box>
 
       <Grid>

@@ -100,29 +100,36 @@ const AccountCMfaq = () => {
           textAlign: "center",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
+            textAlign: "center",
             px: 2,
-            mb: 2, // 👈 space between the two lines
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Account Creation & Management
-        </Typography>
+        </h1>
 
-        <Typography
-          variant="h5"
+        <h3
+          // variant="h5"
           sx={{
             zIndex: 2,
-            fontWeight: 500,
+            fontWeight: 600,
+            textAlign: "center",
             px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Start Trading with Ease and Manage Your Investments Seamlessly
-        </Typography>
+        </h3>
       </Box>
 
       <Typography

@@ -35,30 +35,34 @@ const BonusPage = () => {
         }}
       >
         <Box>
-          <Typography
+          <h1
             sx={{
-              color: "white",
-              //   fontFamily: "Poppins",
-              fontWeight: 700,
-              fontSize: { xs: "28px", sm: "38px", md: "50px" },
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Get a 50% Bonus – Up to $2000
-          </Typography>
+          </h1>
 
-          <Typography
+          <h3
             sx={{
-              color: "white",
-              fontWeight: 500,
-              //   fontFamily: "Poppins",
-              fontSize: { xs: "16px", sm: "20px", md: "22px" },
-              lineHeight: "28px",
-              mt: 2,
+            zIndex: 2,
+            fontWeight: 600,
+            textAlign: "center",
+            px: 2,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           >
             Unlock a 50% boost up to $2,000. Amplify your trades — sign up
             today!
-          </Typography>
+          </h3>
         </Box>
       </Box>
 

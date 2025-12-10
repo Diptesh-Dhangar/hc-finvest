@@ -63,7 +63,7 @@ const ContactUs = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
+        <h1
           variant="h3"
           component="h1"
           sx={{
@@ -77,8 +77,8 @@ const ContactUs = () => {
           }}
         >
           Get In Touch With Us
-        </Typography>
-        <Typography
+        </h1>
+        <h3
           variant="h5"
           component="h1"
           sx={{
@@ -92,7 +92,7 @@ const ContactUs = () => {
           }}
         >
           Your Financial Partners, Always Within Reach
-        </Typography>
+        </h3>
       </Box>
       {/* Banner Box End */}
 

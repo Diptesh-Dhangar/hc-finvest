@@ -45,9 +45,9 @@ const Elite = () => {
           marginBottom: "30px",
         }}
       >
-        <Typography
-          variant="h3"
-          component="h1"
+        <h1
+          // variant="h3"
+          // component="h1"
           sx={{
             zIndex: 2,
             fontWeight: 600,
@@ -59,9 +59,9 @@ const Elite = () => {
           }}
         >
           Elite Account
-        </Typography>
-        <Typography
-          variant="h5"
+        </h1>
+        <h3
+          // variant="h5"
           // component="h1"
           sx={{
             zIndex: 2,
@@ -74,7 +74,7 @@ const Elite = () => {
           }}
         >
           Enter The World of trading in the easiest and simplest way possible.
-        </Typography>
+        </h3>
       </Box>
 
     <div className="container py-5">
