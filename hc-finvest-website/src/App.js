@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import MainContent from "./Components/MainContent";
@@ -10,7 +10,7 @@ import SecurityOfFunds from "./Components/SecurityOfFunds";
 import Blogs from "./Components/Blogs";
 import ContactUs from "./Components/ContactUs";
 import MetaTrader5Pc from "./Components/MetaTrader5Pc";
-import AddBlogs from "./Components/Admin/BlogManagement";
+// import AddBlogs from "./Components/Admin/BlogManagement";
 import AccountsTypes from "./Components/AccountsTypes";
 import Starter from "./Components/Starter";
 import ProTrader from "./Components/ProTrader";
@@ -41,7 +41,7 @@ import Swap from "./Components/Swap";
 import MarginLeverage from "./Components/MarginLeverage";
 import BlogDetails from "./Components/BlogDetails";
 // import Admin from "./Components/Admin/AdminPanel";
-import DynamicArticleFormMUI from "./Components/Admin/DynamicForm";
+// import DynamicArticleFormMUI from "./Components/Admin/DynamicForm";
 import EnquiryData from "./Components/Admin/EnquiryData";
 import TermsConditions from "./Components/TermsConditions";
 import PrivacyPolicies from "./Components/PrivacyPolicies";
@@ -60,27 +60,16 @@ import BonusPage from "./Components/Bonus";
 import Snowfall from "react-snowfall";
 
 function App() {
+
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-        
+    <div className="App">      
+        {/* Snow Fall Start */}
       {/* <Snowfall 
         snowflakeCount={100} 
         style={{ position: "fixed", width: "100vw", height: "100vh", pointerEvents: "none", zIndex: 9999 }}
       /> */}
+      {/* Snow Fall End */}
+
       <Navbar />
       <Routes>
         {/* <Navbar /> */}

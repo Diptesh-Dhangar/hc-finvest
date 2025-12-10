@@ -1,39 +1,5 @@
-import { Box, Button, Card, Grid, TextField, Typography } from "@mui/material";
-import ReactApexChart from "react-apexcharts";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/TradingDetailsBoxStyle.css";
-
-const series = [
-  {
-    data: [
-      { x: new Date(2024, 11, 1), y: [6600, 6700, 7000, 6700] },
-      { x: new Date(2024, 11, 2), y: [6600, 6605, 6600, 6641] },
-      { x: new Date(2024, 11, 3), y: [6604, 6608, 6601, 6625] },
-      { x: new Date(2024, 11, 4), y: [6606, 6610, 6605, 6651] },
-    ],
-  },
-];
-
-const options = {
-  chart: {
-    type: "candlestick",
-    height: 350,
-    background: "transparent",
-    toolbar: { show: false },
-  },
-  plotOptions: {
-    candlestick: { colors: { upward: "#00C853", downward: "#D50000" } },
-  },
-  xaxis: {
-    type: "datetime",
-    labels: { show: false },
-    axisBorder: { show: false },
-    axisTicks: { show: false },
-  },
-  yaxis: { show: false },
-  grid: { show: false },
-};
 
 const TradingDetailsBox = () => {
   return (

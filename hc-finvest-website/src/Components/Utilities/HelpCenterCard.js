@@ -1,6 +1,5 @@
 import { Button, Card, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import ScrollToTopButton from "./ScrollToTopButton";
 
 const HelpCenterCard = ({ title, sen1, sen2, sen3 }) => {
   const routeMap = {

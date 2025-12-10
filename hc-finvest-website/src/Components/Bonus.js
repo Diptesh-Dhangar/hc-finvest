@@ -32,6 +32,7 @@ const BonusPage = () => {
           alignItems: "center",
           textAlign: "center",
           px: 2,
+          color:'white'
         }}
       >
         <Box>

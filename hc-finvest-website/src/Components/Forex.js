@@ -188,7 +188,7 @@ const Forex = () => {
     else if (active === 3) setRows(Eliterows);
   }, [active]);
 
-  const [selectedRows, setSelectedRows] = useState(rows);
+  // const [selectedRows, setSelectedRows] = useState(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 

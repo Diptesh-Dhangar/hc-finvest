@@ -2,34 +2,27 @@ import React from "react";
 import {
   Box,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-  Paper,
-  Container,
-  Grid,
   Link,
 } from "@mui/material";
 
 
-const sections = [
-  {
-    title: "HC FINVEST",
-    items: [
-      { text: "About HC Finvest", href: "about" },
-      { text: "Advantages OF HC Finvest", href: "/advantages" },
-    ],
-  },
-  {
-    title: "REGULATION",
-    items: [
-      { text: "Regulation And Licence", href: "/regulationAndLicence" },
-      { text: "Security Of Funds", href: "/securityOfFunds" },
-    ],
-  },
+// const sections = [
+//   {
+//     title: "HC FINVEST",
+//     items: [
+//       { text: "About HC Finvest", href: "about" },
+//       { text: "Advantages OF HC Finvest", href: "/advantages" },
+//     ],
+//   },
+//   {
+//     title: "REGULATION",
+//     items: [
+//       { text: "Regulation And Licence", href: "/regulationAndLicence" },
+//       { text: "Security Of Funds", href: "/securityOfFunds" },
+//     ],
+//   },
   // Add more sections as needed
-];
+// ];
 
 const AboutUsBox = () => {
   return (
