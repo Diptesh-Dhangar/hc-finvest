@@ -38,7 +38,12 @@ app.use("/api/swaps", swapRoutes);
 //   res.send("Welcome to the Blog API 🚀");
 // });
 
-app.use(express.static(path.join(__dirname, "../hc-finvest-website/build")));
+app.use(
+  express.static(path.join(__dirname, "../hc-finvest-website/build"), {
+    maxAge: "1y", // cache for 1 year
+    immutable: true, // tells browser the file never changes (because of hashed filenames)
+  })
+);
 
 app.get(/.*/, (req, res) => {
   res.sendFile(

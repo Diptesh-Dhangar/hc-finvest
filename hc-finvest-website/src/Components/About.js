@@ -44,11 +44,7 @@ const About = () => {
   return (
     <>
       <link rel="canonical" href="https://www.hcfinvest.com/about" />
-              <title>About Us – HC Finvest</title>
-        <meta
-          name="description"
-          content="HC Finvest is a regulated Forex broker offering secure trading, MetaTrader 5 platform access, low spreads and expert support. Learn about our mission & values."
-        />
+
        <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box
