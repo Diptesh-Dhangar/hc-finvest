@@ -1,11 +1,14 @@
 import React from "react";
 import "./Styles/ForexBrokerArticleStyle.css";
+import { Helmet } from "react-helmet-async";
 
 const ForexBrokerArticle = () => {
   return (
     <>
 
-    <link rel="canonical" href="https://www.hcfinvest.com/forexBrokerArticle" />
+    <Helmet>
+      <link rel="canonical" href="https://www.hcfinvest.com/forexBrokerArticle" />
+    </Helmet>
           <div
       className="container mt-5"
       style={{ maxWidth: "900px", padding: "20px" }}

@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 // COUNTRY LIST ============================
 const countries = [
@@ -48,7 +49,9 @@ const WelcomeAccount = () => {
   return (
       <>
 
-          <link rel="canonical" href="https://www.hcfinvest.com/welcomeAccount" />
+          <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/welcomeAccount" />
+          </Helmet>
 
               <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -82,7 +83,11 @@ const IntroducingBrokerfaq = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+        <Helmet>
+             <link rel="canonical" href="https://www.hcfinvest.com/introducingBrokerfaq" />
+        </Helmet>
+              <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
         <ScrollToTopButton/>
       <Box
         sx={{
@@ -116,16 +121,6 @@ const IntroducingBrokerfaq = () => {
           Introducing Broker
         </h1>
 
-        {/* <Typography
-          variant="h5"
-          sx={{
-            zIndex: 2,
-            fontWeight: 500,
-            px: 2,
-          }}
-        >
-          Choose the Right Account to Match Your Trading Style
-        </Typography> */}
       </Box>
 
       <Typography
@@ -193,6 +188,7 @@ const IntroducingBrokerfaq = () => {
         ))}
       </Box>
     </Container>
+      </>
   );
 };
 

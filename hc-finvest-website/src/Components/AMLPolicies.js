@@ -1,8 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
  const AMLPolicy = () => {
   return (
-    <div className="container mt-5 font-poppins leading-loose">
+    <>
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/amlPolicies" />
+        </Helmet>
+
+            <div className="container mt-5 font-poppins leading-loose">
       <h3 className="text-4xl font-medium mb-2">
         ANTI-MONEY LAUNDERING (AML) POLICY
       </h3>
@@ -183,6 +189,7 @@ import React from "react";
         these rules for a safe and transparent trading experience.
       </p>
     </div>
+    </>
   );
 }
 

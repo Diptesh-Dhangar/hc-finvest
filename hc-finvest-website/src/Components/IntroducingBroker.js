@@ -1,13 +1,16 @@
 import { Box, Container, Typography } from "@mui/material"
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Helmet } from "react-helmet-async";
 
 const IntroducingBroker = () => {
     return (
       <>
 
-              <link rel="canonical" href="https://www.hcfinvest.com/introducingBroker" />
-              <Container
+              <Helmet>
+                <link rel="canonical" href="https://www.hcfinvest.com/introducingBroker" />
+              </Helmet>
+        <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters

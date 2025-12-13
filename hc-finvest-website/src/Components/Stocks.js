@@ -18,6 +18,7 @@ import Paper from "@mui/material/Paper";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 // const StyledRow = styled(TableRow)(({ theme, index }) => ({
 //   backgroundColor: index % 2 === 0 ? "#ffffff" : "#f9f9f9",
@@ -150,70 +151,12 @@ const Stocks = () => {
   return (
       <>
 
-            <link rel="canonical" href="https://www.hcfinvest.com/stocksMarket" />
+            <Helmet>
+              <link rel="canonical" href="https://www.hcfinvest.com/stocksMarket" />
+            </Helmet>
 
-            <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
-      {/* <Box
-        sx={{
-          position: "relative",
-          height: "475px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-          backgroundImage: `url('Images/IndicesImages/NewhedgecapitalsimageStocks 2.jpg')`, // 👈 replace with your image path
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          marginBottom: "30px",
-        }}
-      >
-        <Typography
-          variant="h3"
-          component="h1"
-          sx={{
-            zIndex: 2,
-            fontWeight: 600,
-            textAlign: "center",
-            px: 2,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Empower Your Investments With
-        </Typography>
-        <Typography
-          variant="h3"
-          component="h1"
-          sx={{
-            zIndex: 2,
-            fontWeight: 600,
-            textAlign: "center",
-            px: 2,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Stock Trading
-        </Typography>
-        <Typography
-          variant="h5"
-          // component="h1"
-          sx={{
-            zIndex: 2,
-            fontWeight: 600,
-            textAlign: "center",
-            px: 2,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Trade With Confidence, Invest With Precision
-        </Typography>
-      </Box> */}
 
       <Box
         sx={{

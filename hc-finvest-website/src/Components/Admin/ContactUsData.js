@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 // ----------------- Styled Components -----------------
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -50,7 +51,13 @@ const ContactUsData = () => {
   }, []);
 
   return (
-    <Container
+      <>
+
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/adminContactUsData" />
+        </Helmet>
+
+      <Container
       maxWidth={false}
       disableGutters
       sx={{ backgroundColor: "#fff", pt: 3 , maxWidth:'1200px' }}
@@ -93,6 +100,7 @@ const ContactUsData = () => {
         </Table>
       </TableContainer>
     </Container>
+      </>
   );
 };
 

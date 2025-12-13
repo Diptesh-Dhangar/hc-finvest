@@ -28,6 +28,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 // import React, { useState, useEffect } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -202,7 +203,9 @@ const Forex = () => {
   };
   return (
     <>
-     <link rel="canonical" href="https://www.hcfinvest.com/forexMarket" />
+     <Helmet>
+      <link rel="canonical" href="https://www.hcfinvest.com/forexMarket" />
+     </Helmet>
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box

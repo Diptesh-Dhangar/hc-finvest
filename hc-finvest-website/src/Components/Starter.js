@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import MainContentCard2 from "./Utilities/MainContentCard2";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const Starter = () => {
   // const details = [
@@ -25,7 +26,9 @@ const Starter = () => {
   return (
     <>
 
-        <link rel="canonical" href="https://www.hcfinvest.com/starterAccount" />
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/starterAccount" />
+        </Helmet>
 
             <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

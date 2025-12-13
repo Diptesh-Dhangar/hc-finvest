@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -82,6 +83,10 @@ const DepositWithdrawalfaq = () => {
   };
 
   return (
+        <>
+        <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/copyTradingfaq" />
+          </Helmet>
     <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
         <ScrollToTopButton/>
       <Box
@@ -197,7 +202,9 @@ const DepositWithdrawalfaq = () => {
         ))}
       </Box>
     </Container>
-  );
+
+        </>
+          );
 };
 
 export default DepositWithdrawalfaq;

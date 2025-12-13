@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, TextField, Typography } from "@mui/materi
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import { useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
   // form state
@@ -44,7 +45,9 @@ const ContactUs = () => {
 
   return (
     <>
-       <link rel="canonical" href="https://www.hcfinvest.com/contactUs" />
+       <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/contactUs" />
+       </Helmet>
       <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       {/* Banner Box Start */}

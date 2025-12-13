@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Box, Container, Typography, Skeleton } from "@mui/material";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -78,7 +79,9 @@ const BlogDetails = () => {
 
   return (
     <>
-       <link rel="canonical" href="https://www.hcfinvest.com/blogs/:id" />
+      <Helmet>
+         <link rel="canonical" href="https://www.hcfinvest.com/blogs/:id" />
+      </Helmet>
 
         <Container sx={{ padding: "30px" }}>
       <Box sx={{ textAlign: "left", marginBottom: "20px" }}>

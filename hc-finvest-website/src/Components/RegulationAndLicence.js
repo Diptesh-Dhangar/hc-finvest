@@ -1,12 +1,15 @@
 import { Box, Container, Typography } from "@mui/material";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const RegulationAndLicence = () => {
   return (
       <>
 
-      <link rel="canonical" href="https://www.hcfinvest.com/regulationAndLicence" />
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/regulationAndLicence" />
+      </Helmet>
 
               <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

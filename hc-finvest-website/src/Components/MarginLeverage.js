@@ -18,6 +18,7 @@ import Paper from "@mui/material/Paper";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -152,7 +153,9 @@ const MarginLeverage = () => {
   return (
       <>
 
-          <link rel="canonical" href="https://www.hcfinvest.com/marginLeverage" />
+          <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/marginLeverage" />
+          </Helmet>
 
               <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
         <ScrollToTopButton/>

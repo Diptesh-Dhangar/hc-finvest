@@ -18,6 +18,7 @@ import Paper from "@mui/material/Paper";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -96,7 +97,9 @@ const Commodities = () => {
 
   return (
     <>
-       <link rel="canonical" href="https://www.hcfinvest.com/commoditiesMarket" />
+       <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/commoditiesMarket" />
+       </Helmet>
      <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box

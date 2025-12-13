@@ -1,12 +1,15 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import HelpCenterCard from "./Utilities/HelpCenterCard";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const HelpCenter = () => {
   return (
     <>
 
-    <link rel="canonical" href="https://www.hcfinvest.com/helpCenter" />
+    <Helmet>
+      <link rel="canonical" href="https://www.hcfinvest.com/helpCenter" />
+    </Helmet>
               <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box

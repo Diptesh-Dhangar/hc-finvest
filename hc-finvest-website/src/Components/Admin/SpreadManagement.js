@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const SpreadManagement = () => {
   const [marketType, setMarketType] = React.useState("");
@@ -88,8 +89,15 @@ const fetchPairs = async (market, account) => {
     }
   };
 
+  // adminSpreadManagement
+
   return (
-    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+      <>
+          <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/adminSpreadManagement" />
+          </Helmet>
+
+      <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
       <Box sx={{ p: 4, background: "#fff", borderRadius: 2, boxShadow: 3 }}>
         <Typography variant="h4" fontWeight={700} mb={3} color="#0f5e9b">
           Update Spread
@@ -186,6 +194,7 @@ const fetchPairs = async (market, account) => {
         </Box>
       </Box>
     </Container>
+      </>
   );
 };
 

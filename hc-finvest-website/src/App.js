@@ -146,7 +146,7 @@ function App() {
         <Route path="adminAddSwap" element={<AddSwap />} />
         <Route path="adminAddSpread" element={<AddSpread />} />
 
-        <Route path="/adminLogin" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin />} />
 
         <Route
           path="/admin"

@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const AddSwap = () => {
   const [marketType, setMarketType] = React.useState("");
@@ -51,8 +52,13 @@ const AddSwap = () => {
   };
 
   return (
-    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
-      <Box sx={{ p: 4, borderRadius: 2, boxShadow: 3 }}>
+      <>
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/adminAddSwap" />
+        </Helmet>
+
+         <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+        <Box sx={{ p: 4, borderRadius: 2, boxShadow: 3 }}>
         <Typography
           variant="h2"
           sx={{ fontSize: "2rem", fontWeight: "700", mb: 3, color: "#0f5e9b" }}
@@ -118,6 +124,7 @@ const AddSwap = () => {
         </Box>
       </Box>
     </Container>
+      </>
   );
 };
 

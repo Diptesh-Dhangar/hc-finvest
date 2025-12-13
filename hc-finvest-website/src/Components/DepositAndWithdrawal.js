@@ -2,12 +2,15 @@ import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import "../Components/Styles/DepositWithdrawal.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const DepositAndWithdrawal = () => {
   
   return (
       <>
-       <link rel="canonical" href="https://www.hcfinvest.com/depositWithdrawal" />
+       <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/depositWithdrawal" />
+       </Helmet>
       <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
       <Box

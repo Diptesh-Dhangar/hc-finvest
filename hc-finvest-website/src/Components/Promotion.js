@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material"
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const Promotion = () => { 
 
@@ -37,9 +38,11 @@ const Promotion = () => {
     return (
       <>
 
-          <link rel="canonical" href="https://www.hcfinvest.com/promotions" />
+          <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/promotions" />
+          </Helmet>
 
-                <Container
+        <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters

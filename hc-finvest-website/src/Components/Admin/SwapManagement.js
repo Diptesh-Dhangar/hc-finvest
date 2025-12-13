@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const SwapManagement = () => {
   const [value, setValue] = React.useState(null);
@@ -68,8 +69,14 @@ const SwapManagement = () => {
     }
   };
 
+  // adminSwapManagement
   return (
-    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+        <>
+              <Helmet>
+                 <link rel="canonical" href="https://www.hcfinvest.comm/adminSwapManagement" />
+              </Helmet>
+
+      <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
       <Box sx={{ p: 4, background: "#fff", borderRadius: 2, boxShadow: 3 }}>
         <Typography
           variant="h2"
@@ -149,6 +156,7 @@ const SwapManagement = () => {
         </Box>
       </Box>
     </Container>
+        </>
   );
 };
 

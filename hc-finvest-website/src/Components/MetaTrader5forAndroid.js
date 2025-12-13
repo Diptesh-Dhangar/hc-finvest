@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 
 const MetaTrader5forAndroid = () => {
@@ -50,7 +51,9 @@ const MetaTrader5forAndroid = () => {
 
   return (
     <>
-      <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5Android" />
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5Android" />
+      </Helmet>
 
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

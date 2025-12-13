@@ -1,11 +1,14 @@
 import React from "react";
 import "../Components/Styles/TermsConditions.css";
+import { Helmet } from "react-helmet-async";
 
 const TermsConditions = () => {
   return (
       <>
 
-          <link rel="canonical" href="https://www.hcfinvest.com/termsConditions" />
+         <Helmet>
+           <link rel="canonical" href="https://www.hcfinvest.com/termsConditions" />
+         </Helmet>
 
               <div className="container mt-5">
       <h1 className="heading">Terms & Conditions</h1>

@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import TradingBoxDetails from "./Utilities/TradingDetailsBox.js";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -138,7 +139,9 @@ const styles = {
 const AccountsTypes = () => {
   return (
     <>
-     <link rel="canonical" href="https://www.hcfinvest.com/accountsTypesAccount" />
+     <Helmet>
+      <link rel="canonical" href="https://www.hcfinvest.com/accountsTypesAccount" />
+     </Helmet>
         <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box

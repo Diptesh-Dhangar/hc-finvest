@@ -14,11 +14,14 @@ import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import SpeedIcon from "@mui/icons-material/Speed";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import { Helmet } from "react-helmet-async";
 
 const BonusPage = () => {
   return (
     <>
-       <link rel="canonical" href="https://www.hcfinvest.com/bonus" />
+       <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/bonus" />
+       </Helmet>
       <Box
         sx={{
           width: "100%",

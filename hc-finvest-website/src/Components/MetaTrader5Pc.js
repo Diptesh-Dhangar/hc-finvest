@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   fontWeight: "bold",
@@ -44,7 +45,9 @@ const comparisonData = [
 const MetaTrader5Pc = () => {
     return (
       <>
-          <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5forPc" />
+          <Helmet>
+            <link rel="canonical" href="https://www.hcfinvest.com/metaTrade5forPc" />
+          </Helmet>
 
               <Container
         sx={{ backgroundColor: "#fff" }}

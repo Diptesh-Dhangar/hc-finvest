@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 const features = [
   { icon: <FaHome />, title: "Real", subtitle: "ECN / STP" },
   { icon: <FaGlobe />, title: "Globally", subtitle: "Licensed" },
@@ -43,7 +44,9 @@ const features = [
 const About = () => {
   return (
     <>
-      <link rel="canonical" href="https://www.hcfinvest.com/about" />
+     <Helmet>
+       <link rel="canonical" href="https://www.hcfinvest.com/about" />
+     </Helmet>
 
        <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

@@ -9,11 +9,14 @@ import {
 import CheckIcon from "@mui/icons-material/Check";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const Advantages = () => {
   return (
     <>
-      <link rel="canonical" href="https://www.hcfinvest.com/advantages" />
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/advantages" />
+      </Helmet>
       <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 

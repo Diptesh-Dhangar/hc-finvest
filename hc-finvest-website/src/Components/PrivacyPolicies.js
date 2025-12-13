@@ -1,10 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicies = () => {
   return (
     <>
 
-      <link rel="canonical" href="https://www.hcfinvest.com/privacyPolicies" />
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/privacyPolicies" />
+      </Helmet>
 
           <div className="container mt-5 font-poppins leading-loose">
       <h1 className="text-5xl font-bold">Privacy Policy</h1>

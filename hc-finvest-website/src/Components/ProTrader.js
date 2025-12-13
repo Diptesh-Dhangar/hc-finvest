@@ -8,6 +8,7 @@ import {
 import MainContentCard2 from "./Utilities/MainContentCard2";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
+import { Helmet } from "react-helmet-async";
 
 const ProTrader = () => {
   // const details = [
@@ -25,7 +26,9 @@ const ProTrader = () => {
 
   return (
     <>
-        <link rel="canonical" href="https://www.hcfinvest.com/proTraderAccount" />
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/proTraderAccount" />
+        </Helmet>
 
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>

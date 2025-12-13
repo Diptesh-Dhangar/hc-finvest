@@ -24,6 +24,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import RegPopupBox from "./Utilities/RegPopupBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import Snowfall from "react-snowfall";
+import { Helmet } from "react-helmet-async";
 
 const MainContent = () => {
   const features = [
@@ -52,9 +53,10 @@ const MainContent = () => {
 
   return (
     <>
-    
-    <meta name="description"  content="Begin trading with HC Finvest, a genuine ECN technology broker. Access forex, shares, indices, commodities, and equities with us." />
-    <link rel="canonical" href="https://www.hcfinvest.com/" />
+    <Helmet>
+      <meta name="description"  content="Begin trading with HC Finvest, a genuine ECN technology broker. Access forex, shares, indices, commodities, and equities with us." />
+      <link rel="canonical" href="https://www.hcfinvest.com/" />
+    </Helmet>
       {showPopup && <RegPopupBox onClose={handleClosePopup} />}
 
       <Container
@@ -310,97 +312,7 @@ const MainContent = () => {
         </div>
         {/* Image Slider End */}
 
-        {/* Feature Cards Start */}
-        {/* <Grid
-          container
-          size={12}
-          spacing={3}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ border: "0px solid green", padding: "2%" }}
-        >
-          <Grid
-            item
-            size={2.5}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              border: "0px solid red",
-              paddingTop: "1%",
-              paddingBottom: "1%",
-            }}
-          >
-            <MainContentCard1
-              title="Starter"
-              md="$50"
-              abc="USD"
-              ssf="0.18 pips"
-              ml="1:2000"
-            />
-          </Grid>
-          <Grid
-            item
-            size={2.5}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              border: "0px solid red",
-              paddingTop: "1%",
-              paddingBottom: "1%",
-            }}
-          >
-            <MainContentCard1
-              title="Pro Trader"
-              md="$100"
-              abc="USD"
-              ssf="0.10 pips"
-              ml="1:2000"
-            />
-          </Grid>
-          <Grid
-            item
-            size={2.5}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              border: "0px solid red",
-              paddingTop: "1%",
-              paddingBottom: "1%",
-            }}
-          >
-            <MainContentCard1
-              title="Zero Spread"
-              md="$500"
-              abc="USD"
-              ssf="0.0 pips"
-              ml="1:2000"
-            />
-          </Grid>
-          <Grid
-            item
-            size={2.5}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              border: "0px solid red",
-              paddingTop: "1%",
-              paddingBottom: "1%",
-            }}
-          >
-            <MainContentCard1
-              title="Elite"
-              md="$5000"
-              abc="USD"
-              ssf="0.0 pips"
-              ml="1:2000"
-            />
-          </Grid>
-        </Grid> */}
+
         <Grid
           container
           spacing={3}

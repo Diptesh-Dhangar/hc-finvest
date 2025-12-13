@@ -15,6 +15,17 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+/* ✅ Cache headers for uploaded images */
+app.use("/uploads", (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=31536000");
+  res.setHeader(
+    "Expires",
+    new Date(Date.now() + 31536000000).toUTCString()
+  );
+  next();
+});
+
+/* ✅ Serve uploaded images */
 app.use("/uploads", express.static("uploads")); // serve image files
 
 const __filename = fileURLToPath(import.meta.url);

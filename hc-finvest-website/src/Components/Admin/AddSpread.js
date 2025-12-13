@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const AddSpread = () => {
   const [marketType, setMarketType] = React.useState("");
@@ -59,7 +60,12 @@ const AddSpread = () => {
   };
 
   return (
-    <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
+    <>
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/adminAddSpread" />
+      </Helmet>
+
+      <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
       <Box
         sx={{
           width: "100%",
@@ -176,6 +182,7 @@ const AddSpread = () => {
         </Box>
       </Box>
     </Container>
+    </>
   );
 };
 

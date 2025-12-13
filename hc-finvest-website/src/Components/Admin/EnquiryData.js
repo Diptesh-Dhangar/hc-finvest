@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 // ----------------- Styled Components -----------------
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -60,8 +61,16 @@ const EnquiryData = () => {
     fetchRegistrations();
   }, []);
 
+  // adminEnquiryData
+
   return (
-    <Container sx={{ backgroundColor: "#fff", pt: 3 }}>
+      <>
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/adminEnquiryData" />
+        </Helmet>
+
+
+      <Container sx={{ backgroundColor: "#fff", pt: 3 }}>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -102,6 +111,7 @@ const EnquiryData = () => {
         </Table>
       </TableContainer>
     </Container>
+      </>
   );
 };
 

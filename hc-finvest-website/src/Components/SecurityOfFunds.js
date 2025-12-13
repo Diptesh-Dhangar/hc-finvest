@@ -7,6 +7,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import UmbrellaIcon from "@mui/icons-material/Umbrella";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
+import { Helmet } from "react-helmet-async";
 
   const items = [
     {
@@ -52,7 +53,9 @@ const SecurityOfFunds = () => {
     return (
         <>
 
-            <link rel="canonical" href="https://www.hcfinvest.com/securityOfFunds" />
+            <Helmet>
+              <link rel="canonical" href="https://www.hcfinvest.com/securityOfFunds" />
+            </Helmet>
 
                 <Container
         sx={{ backgroundColor: "#fff" }}

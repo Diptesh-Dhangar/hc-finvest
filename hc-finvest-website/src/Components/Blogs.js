@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -46,7 +47,9 @@ const Blogs = () => {
 
   return (
     <>
-             <link rel="canonical" href="https://www.hcfinvest.com/blogs" />
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/blogs" />
+        </Helmet>
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />
 

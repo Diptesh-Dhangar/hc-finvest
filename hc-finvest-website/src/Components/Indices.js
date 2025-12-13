@@ -26,6 +26,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Styles/Forex.css";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 
 const StyledRow = styled(TableRow)(({ theme, index }) => ({
@@ -160,7 +161,9 @@ const Indices = () => {
   return (
     <>
 
-        <link rel="canonical" href="https://www.hcfinvest.com/indicesMarket" />
+        <Helmet>
+          <link rel="canonical" href="https://www.hcfinvest.com/indicesMarket" />
+        </Helmet>
 
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>

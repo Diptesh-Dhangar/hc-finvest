@@ -8,6 +8,7 @@ import {
 import MainContentCard2 from "./Utilities/MainContentCard2";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import TradingDetailsBox from "./Utilities/TradingDetailsBox";
+import { Helmet } from "react-helmet-async";
 
 const Elite = () => {
   // const details = [
@@ -26,7 +27,9 @@ const Elite = () => {
   return (
     <>
 
-           <link rel="canonical" href="https://www.hcfinvest.com/eliteAccount" />
+          <Helmet>
+             <link rel="canonical" href="https://www.hcfinvest.com/eliteAccount" />
+          </Helmet>
 
           <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton />

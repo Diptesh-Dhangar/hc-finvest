@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -82,7 +83,11 @@ const AccountCMfaq = () => {
   };
 
   return (
-    <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
+      <>
+      <Helmet>
+        <link rel="canonical" href="https://www.hcfinvest.com/accountcmfaq" />
+      </Helmet>
+            <Container sx={{ backgroundColor: "#fff" }} maxWidth={false} disableGutters>
       <ScrollToTopButton/>
       <Box
         sx={{
@@ -197,6 +202,7 @@ const AccountCMfaq = () => {
         ))}
       </Box>
     </Container>
+      </>
   );
 };
 

@@ -1,9 +1,15 @@
 import { Box, Container, Typography } from "@mui/material"
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
+import { Helmet } from "react-helmet-async";
 
 const EconomicCalander = () => {
     return (
-      <Container
+        <>
+            <Helmet>
+              <link rel="canonical" href="https://www.hcfinvest.com/economicCalander" />
+            </Helmet>
+
+        <Container
         sx={{ backgroundColor: "#fff" }}
         maxWidth={false}
         disableGutters
@@ -30,6 +36,7 @@ const EconomicCalander = () => {
           ></iframe>
         </Box>
       </Container>
+        </>
     );
 }
 
