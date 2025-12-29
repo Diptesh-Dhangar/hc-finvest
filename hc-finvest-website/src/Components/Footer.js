@@ -202,13 +202,28 @@ const Footer = () => {
             Connect
           </Typography>
           <Box sx={{ display: "flex", mt: 1 }}>
-            <IconButton sx={{ color: "#1877F2", p: 1 }}>
+            <IconButton   
+              component="a"
+              href="https://www.facebook.com/share/17UMXSoj6d/"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "#1877F2", p: 1 }}>
               <Facebook />
             </IconButton>
-            <IconButton sx={{ color: "#000", p: 1 }}>
+            <IconButton
+              component="a"
+              href="https://x.com/hcfinvest"
+              target="_blank"
+              rel="noopener noreferrer"
+               sx={{ color: "#000", p: 1 }}>
               <XIcon />
             </IconButton>
-            <IconButton sx={{ color: "#E4405F", p: 1 }}>
+            <IconButton
+               component="a"
+              href="https://www.instagram.com/hcfinvest/"
+              target="_blank"
+              rel="noopener noreferrer"
+               sx={{ color: "#E4405F", p: 1 }}>
               <Instagram />
             </IconButton>
           </Box>
@@ -277,16 +292,30 @@ const Footer = () => {
             gap={2}
             border="0px solid red"
           >
-            <img
-              src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
-              style={{ width: "150px", height: "40px" }}
-              alt="App Store"
-            />
-            <img
-              src="Images/FooterImages/png-clipart-app-store-google-playy-apple-apple-text-lo.png"
-              style={{ width: "150px", height: "40px" }}
-              alt="Google Play"
-            />
+              <a
+                href="https://apps.apple.com/in/app/vertexfx-trader-pro/id6742178081"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
+                  style={{ width: "150px", height: "40px" }}
+                  alt="App Store"
+                />
+              </a>
+
+                <a
+                  href="https://www.hybridsolutions.com/downloads/Mobile/VertexFXTraderPro.apk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="Images/FooterImages/png-clipart-app-store-google-playy-apple-apple-text-lo.png"
+                    style={{ width: "150px", height: "40px" }}
+                    alt="Google Play"
+                  />
+              </a>
+
           </Grid>
         </Grid>
 
