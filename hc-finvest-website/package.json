@@ -28,10 +28,6 @@
     "react-quill-new": "^3.6.0",
     "react-router-dom": "^7.9.3",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-=======
-    "react-snowfall": "^2.4.0",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     "rsuite": "^5.83.4",
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"

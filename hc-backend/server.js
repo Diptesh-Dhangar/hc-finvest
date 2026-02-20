@@ -7,10 +7,7 @@ import registrationRoutes from "./Routes/RegistrationRoutes.js";
 import contactRoutes from "./Routes/ContactRoutes.js";
 import swapRoutes from "./Routes/SwapRoutes.js";
 import spreadRoutes from "./Routes/SpreadRoutes.js";
-<<<<<<< HEAD
 import reviewRoutes from "./Routes/ReviewRoutes.js";
-=======
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -47,10 +44,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/swaps", swapRoutes);
 app.use("/api/spreads", spreadRoutes);
 app.use("/api/swaps", swapRoutes);
-<<<<<<< HEAD
 app.use("/api/reviews",reviewRoutes);
-=======
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
 // // ✅ Default route
 // app.get("/", (req, res) => {
