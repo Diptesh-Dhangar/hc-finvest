@@ -27,11 +27,12 @@ const ReviewSection = () => {
     email: "",
     description: "",
     rating: 0,
+    image: null,
   });
 
-  // ============================
+  // ==========================
   // FETCH REVIEWS
-  // ============================
+  // ==========================
   useEffect(() => {
     fetchReviews();
   }, []);
@@ -39,13 +40,10 @@ const ReviewSection = () => {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-
       const res = await axios.get("http://localhost:5000/api/reviews");
 
       if (Array.isArray(res.data)) {
         setReviews(res.data);
-      } else if (res.data && Array.isArray(res.data.data)) {
-        setReviews(res.data.data);
       } else {
         setReviews([]);
       }
@@ -57,68 +55,71 @@ const ReviewSection = () => {
     }
   };
 
-  // ============================
-  // SUBMIT REVIEW
-  // ============================
-  const handleSubmit = async () => {
-    try {
-      await axios.post("http://localhost:5000/api/reviews", formData);
+  // ==========================
+  // SUBMIT REVIEW WITH IMAGE
+  // ==========================
+const handleSubmit = async () => {
+  try {
 
-      fetchReviews();
-      setOpen(false);
-      setFormData({
-        name: "",
-        email: "",
-        description: "",
-        rating: 0,
-      });
-    } catch (error) {
-      console.log("Submit Error:", error);
+    if (!formData.name || !formData.email || !formData.description || !formData.rating) {
+      alert("Please fill all fields");
+      return;
     }
-  };
 
-  // ============================
-  // SMOOTH WHEEL SCROLL
-  // ============================
-  const handleWheel = (e) => {
-    if (scrollRef.current) {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        scrollRef.current.scrollBy({
-          left: e.deltaY,
-          behavior: "smooth",
-        });
-      }
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("description", formData.description);
+    formDataToSend.append("rating", formData.rating);
+
+    if (formData.image) {
+      formDataToSend.append("image", formData.image);
     }
-  };
 
+    // IMPORTANT: Do NOT manually set headers
+    await axios.post(
+      "http://localhost:5000/api/reviews",
+      formDataToSend
+    );
+
+    fetchReviews();
+    setOpen(false);
+
+  } catch (error) {
+    console.log("Submit Error:", error.response?.data);
+  }
+};
+
+  // ==========================
+  // SMOOTH HORIZONTAL SCROLL
+  // ==========================
+const handleWheel = (e) => {
+  if (scrollRef.current) {
+    scrollRef.current.scrollBy({
+      left: e.deltaY,
+      behavior: "smooth",
+    });
+  }
+};
   return (
     <Box sx={{ bgcolor: "#fff", py: 8 }}>
       <Box sx={{ maxWidth: "1300px", mx: "auto", px: 3 }}>
 
         {/* HEADER */}
-        <Box textAlign="center" mb={6}>
-            <Typography
+           <Typography
               variant="h2"
               sx={{ fontSize: "39px", fontWeight: "bold" }}
             >
               <span style={{ color: "#ff8c00" }}>Customer</span> Reviews
             </Typography>
-        </Box>
 
         {/* ADD BUTTON */}
         <Box display="flex" justifyContent="flex-end" mb={5}>
           <Button
             variant="contained"
             size="large"
+            sx={{backgroundColor:'#ff8c00 !important'}}
             onClick={() => setOpen(true)}
-            sx={{
-              borderRadius: 3,
-              px: 4,
-              textTransform: "none",
-              fontWeight: 600,
-              backgroundColor:'#ff8c00 !important'
-            }}
           >
             + Add Review
           </Button>
@@ -141,12 +142,10 @@ const ReviewSection = () => {
               flexWrap: "nowrap",
               scrollBehavior: "smooth",
               WebkitOverflowScrolling: "touch",
-
-              // Hide scrollbar
+              scrollSnapType: "x mandatory",
               "&::-webkit-scrollbar": { display: "none" },
               scrollbarWidth: "none",
               msOverflowStyle: "none",
-              border:'0px solid red',
               padding:2
             }}
           >
@@ -182,7 +181,11 @@ const ReviewSection = () => {
                       mb={2}
                     >
                       <Avatar
-                        src={review.image}
+                        src={
+                          review.image
+                            ? `http://localhost:5000${review.image}`
+                            : ""
+                        }
                         sx={{ width: 80, height: 80, mb: 2 }}
                       />
                       <Typography fontWeight={600}>
@@ -223,6 +226,7 @@ const ReviewSection = () => {
           <DialogTitle>Add Review</DialogTitle>
 
           <DialogContent>
+
             <TextField
               label="Name"
               fullWidth
@@ -264,6 +268,28 @@ const ReviewSection = () => {
                 }
               />
             </Box>
+
+            {/* Upload Button */}
+            <Button
+              variant="outlined"
+              component="label"
+              sx={{ mt: 3 }}
+              fullWidth
+            >
+              Upload Profile Picture
+              <input
+                type="file"
+                hidden
+                accept="image/*"
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    image: e.target.files[0],
+                  })
+                }
+              />
+            </Button>
+
           </DialogContent>
 
           <DialogActions>

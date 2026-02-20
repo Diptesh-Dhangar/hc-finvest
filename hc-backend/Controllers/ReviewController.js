@@ -1,48 +1,46 @@
 import Review from "../models/Review.js";
 
-// @desc    Create a review
-// @route   POST /api/reviews
-// @access  Public
+// ============================
+// CREATE REVIEW
+// ============================
 export const createReview = async (req, res) => {
   try {
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
+
     const { name, email, rating, description } = req.body;
+
+    // Validation
+    if (!name || !email || !description || !rating) {
+      return res.status(400).json({
+        message: "All fields are required",
+      });
+    }
 
     const review = await Review.create({
       name,
       email,
-      rating,
+      rating: Number(rating), // IMPORTANT: convert to number
       description,
-      image: `https://i.pravatar.cc/150?u=${email}`,
+      image: req.file ? `/uploads/${req.file.filename}` : "",
     });
 
-    res.status(201).json({
-      success: true,
-      data: review,
-    });
+    res.status(201).json(review);
+
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message,
-    });
+    console.log("ERROR:", error);
+    res.status(500).json({ message: error.message });
   }
 };
 
-// @desc    Get all reviews
-// @route   GET /api/reviews
-// @access  Public
+// ============================
+// GET ALL REVIEWS
+// ============================
 export const getReviews = async (req, res) => {
   try {
     const reviews = await Review.find().sort({ createdAt: -1 });
-
-    res.status(200).json({
-      success: true,
-      count: reviews.length,
-      data: reviews,
-    });
+    res.status(200).json(reviews);
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ message: error.message });
   }
 };

@@ -2,15 +2,13 @@ import mongoose from "mongoose";
 
 const reviewSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    email: { type: String, required: true },
-    rating: { type: Number, required: true },
-    description: { type: String, required: true },
-    image: { type: String },
+    name: String,
+    email: String,
+    rating: Number,
+    description: String,
+    image: String,
   },
   { timestamps: true }
 );
 
-const Review = mongoose.model("Review", reviewSchema);
-
-export default Review;
+export default mongoose.model("Review", reviewSchema);
