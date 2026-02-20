@@ -40,7 +40,7 @@ const ReviewSection = () => {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/reviews");
+      const res = await axios.get("https://hcfinvest.onrender.com/api/reviews");
 
       if (Array.isArray(res.data)) {
         setReviews(res.data);
@@ -78,7 +78,7 @@ const handleSubmit = async () => {
 
     // IMPORTANT: Do NOT manually set headers
     await axios.post(
-      "http://localhost:5000/api/reviews",
+      "https://hcfinvest.onrender.com/api/reviews",
       formDataToSend
     );
 
@@ -183,7 +183,7 @@ const handleWheel = (e) => {
                       <Avatar
                         src={
                           review.image
-                            ? `http://localhost:5000${review.image}`
+                            ? `https://hcfinvest.onrender.com${review.image}`
                             : ""
                         }
                         sx={{ width: 80, height: 80, mb: 2 }}
