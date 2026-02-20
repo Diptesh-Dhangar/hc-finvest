@@ -138,41 +138,25 @@ const MetaTrader5Pc = () => {
                   fontSize: "clamp(14px, 2vw, 17px)",
                 }}
               >
-<<<<<<< HEAD
                 <span className="fw-bold" style={{ color: "#ff8c00" }}>
-=======
-                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   Real-Time Market Data :-
                 </span>{" "}
                 Access live market data and updates to stay ahead of the trading
                 curve.
                 <br />
-<<<<<<< HEAD
                 <span className="fw-bold" style={{ color: "#ff8c00" }}>
-=======
-                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   Advanced Charting Tools :-
                 </span>{" "}
                 Utilize comprehensive charting tools and indicators to analyze
                 market trends and make informed trading decisions.
                 <br />
-<<<<<<< HEAD
                 <span className="fw-bold" style={{ color: "#ff8c00" }}>
-=======
-                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   Customizable Interface :-
                 </span>{" "}
                 Personalize your trading workspace with customizable layouts and
                 settings to suit your trading style.
                 <br />
-<<<<<<< HEAD
                 <span className="fw-bold" style={{ color: "#ff8c00" }}>
-=======
-                <span className="fw-bold" style={{ color: "#0f5e9b" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   Seamless Execution :-
                 </span>{" "}
                 Enjoy lightning-fast order execution to ensure you never miss an
@@ -183,11 +167,7 @@ const MetaTrader5Pc = () => {
               <div className="mt-4">
                 <a
                   className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded text-white text-decoration-none"
-<<<<<<< HEAD
                   style={{ backgroundColor: "#ff8c00" }}
-=======
-                  style={{ backgroundColor: "#0b1660" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   href="https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/mt5setup.exe?utm_source=www.metatrader5.com&utm_campaign=download"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -226,11 +206,7 @@ const MetaTrader5Pc = () => {
 
         <Typography variant="h3" fontWeight="bold" fontSize="35px">
           Experience the Future of Trading –{" "}
-<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}>MetaTrader 5</span> Reinvented.
-=======
-          <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span> Reinvented.
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         </Typography>
         <Typography sx={{ marginTop: 3 }}>
           Give Your Trades Speed, Intelligence, and Control
@@ -254,29 +230,17 @@ const MetaTrader5Pc = () => {
             <TableHead>
               <TableRow>
                 <StyledTableCell
-<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
-=======
-                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Feature
                 </StyledTableCell>
                 <StyledTableCell
-<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
-=======
-                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   MetaTrader 5
                 </StyledTableCell>
                 <StyledTableCell
-<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
-=======
-                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Other Platforms
                 </StyledTableCell>
@@ -334,11 +298,7 @@ const MetaTrader5Pc = () => {
           >
             <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
               Start Trading today with{" "}
-<<<<<<< HEAD
               <span style={{ color: "#ff8c00" }}>HC Finvest</span>
-=======
-              <span style={{ color: "#0f5e9b" }}>HC Finvest</span>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             </Typography>
             <Typography variant="body1">
               Ready to assist you in every step of your trading experience, 24/5
@@ -370,11 +330,7 @@ const MetaTrader5Pc = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     height="35px"
-<<<<<<< HEAD
                     style={{ fill: "#ff8c00" }}
-=======
-                    style={{ fill: "#0f5e9b" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   >
                     <path
                       _ngcontent-ng-c673006511=""
@@ -395,11 +351,7 @@ const MetaTrader5Pc = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     height="35px"
-<<<<<<< HEAD
                     style={{ fill: "#ff8c00" }}
-=======
-                    style={{ fill: "#0f5e9b" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   >
                     <path
                       _ngcontent-ng-c673006511=""
@@ -411,11 +363,7 @@ const MetaTrader5Pc = () => {
               <Grid item size={2} sx={{ border: "0px solid red" }}>
                 <a
                   _ngcontent-ng-c673006511=""
-<<<<<<< HEAD
                   // href="mailto:support@hcfinvest.com"
-=======
-                  // href="mailto:support@heddgecapitals.com"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   class="text-white text-decoration-none"
                 >
                   <svg
@@ -423,11 +371,7 @@ const MetaTrader5Pc = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     height="35px"
-<<<<<<< HEAD
                     style={{ fill: "#ff8c00" }}
-=======
-                    style={{ fill: "#0f5e9b" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   >
                     <path
                       _ngcontent-ng-c673006511=""

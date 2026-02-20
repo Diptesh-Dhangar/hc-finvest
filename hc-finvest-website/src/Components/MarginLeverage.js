@@ -21,11 +21,7 @@ import ScrollToTopButton from "./Utilities/ScrollToTopButton";
 import { Helmet } from "react-helmet-async";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-<<<<<<< HEAD
     backgroundColor: "#ff8c00",
-=======
-    backgroundColor: theme.palette.common.black,
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -233,11 +229,7 @@ const MarginLeverage = () => {
             variant="h2"
             align="left"
             sx={{
-<<<<<<< HEAD
               color: "#ff8c00",
-=======
-              color: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
@@ -260,11 +252,7 @@ const MarginLeverage = () => {
             goals."
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
-<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
-=======
-            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Margin Trading :-
             </span>{" "}
             "Margin trading allows you to trade larger positions with a smaller
@@ -272,11 +260,7 @@ const MarginLeverage = () => {
             amplify your trading power and potentially increase your profits."
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
-<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
-=======
-            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Leverage Options :-
             </span>{" "}
             "Leverage is a powerful tool that enables you to control larger
@@ -289,11 +273,7 @@ const MarginLeverage = () => {
             variant="h2"
             align="left"
             sx={{
-<<<<<<< HEAD
               color: "#ff8c00",
-=======
-              color: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
@@ -326,11 +306,7 @@ const MarginLeverage = () => {
               align="left"
               sx={{
                 fontSize: "2rem",
-<<<<<<< HEAD
                 color: "#ff8c00",
-=======
-                color: "#101828",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 lineHeight: "1",
                 fontWeight: "600",
               }}
@@ -363,24 +339,14 @@ const MarginLeverage = () => {
       variant="contained"
       onClick={() => setActive(btn.id)}
       sx={{
-<<<<<<< HEAD
         backgroundColor: active === btn.id ? "#ff8c00" : "white",
         color: active === btn.id ? "white" : "#ff8c00",
         border: "1px solid #ff8c00",
-=======
-        backgroundColor: active === btn.id ? "black" : "white",
-        color: active === btn.id ? "white" : "black",
-        border: "1px solid black",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         textTransform: "none",
         fontWeight: "bold",
         minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
         "&:hover": {
-<<<<<<< HEAD
           backgroundColor: active === btn.id ? "#ff8c00" : "#fff5e6",
-=======
-          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         },
       }}
     >

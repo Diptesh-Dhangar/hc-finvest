@@ -132,11 +132,7 @@ const ForexBrokerArticle = () => {
       </p>
 
       <a
-<<<<<<< HEAD
         href="https://trade.hcfinvest.com/user/signup"
-=======
-        href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         className="btn btn-lg mt-3 text-bold"
         style={{
           fontSize: "1rem",

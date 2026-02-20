@@ -132,11 +132,7 @@ const Promotion = () => {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 1,
-<<<<<<< HEAD
                     backgroundColor: "#ff8c00ff", // same bright orange
-=======
-                    backgroundColor: "#007bff", // same bright blue
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     color: "#ffffff", // white text
                     px: 2.5,
                     py: 0.7,
@@ -153,11 +149,7 @@ const Promotion = () => {
                 <Typography
                   variant="h4"
                   sx={{
-<<<<<<< HEAD
                     color: "#ff8c00",
-=======
-                    color: "rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) ",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     fontWeight: "bold",
                   }}
                 >
@@ -193,11 +185,7 @@ const Promotion = () => {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 1,
-<<<<<<< HEAD
                     backgroundColor: "#ff8c00ff", // same orange color
-=======
-                    backgroundColor: "#007bff", // same blue color
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     color: "#ffffff", // white text and icon
                     px: 2.5,
                     py: 0.7,
@@ -217,11 +205,7 @@ const Promotion = () => {
                 <Typography
                   variant="h4"
                   sx={{
-<<<<<<< HEAD
                     color: "#ff8c00",
-=======
-                    color: "rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) ",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     fontWeight: "bold",
                   }}
                 >
@@ -266,11 +250,7 @@ const Promotion = () => {
             <span className="custom-badge badge-primary mb-2" style={{backgroundColor:'#2a9df4' , color:'white' ,fontSize:'2rem', padding:'5px' , borderRadius:'10px'}}>
               <i className="fas fa-gift me-1"></i> 50% Bonus
             </span>
-<<<<<<< HEAD
             <Typography variant="h4" className="fw-bold" style={{color: "#ff8c00"}}>Get 50% Cash Deposit Bonus</Typography>
-=======
-            <Typography variant="h4" className="fw-bold text-dark">Get 50% Cash Deposit Bonus</Typography>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             <Typography className="text-muted">
               Maximize your trading power with a 50% deposit bonus up to $2000. Boost your account instantly.
             </Typography>
@@ -294,11 +274,7 @@ const Promotion = () => {
             <span className="custom-badge badge-primary mb-2"  style={{backgroundColor:'#2a9df4' , color:'white' ,fontSize:'2rem', padding:'5px' , borderRadius:'10px'}}>
               <i className="fas fa-user-friends me-1"></i> Refer a Friend
             </span>
-<<<<<<< HEAD
             <Typography variant="h4" className="fw-bold" style={{color: "#ff8c00"}}>Earn Rewards by Referring</Typography>
-=======
-            <Typography variant="h4" className="fw-bold text-dark">Earn Rewards by Referring</Typography>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             <Typography className="text-muted">
               Invite your friends to join and trade. Get rewarded with cash, bonuses, or rebates every time they deposit.
             </Typography>

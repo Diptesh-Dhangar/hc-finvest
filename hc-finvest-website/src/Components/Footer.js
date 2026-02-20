@@ -7,19 +7,12 @@ const Footer = () => {
   return (
     <Box
       sx={{
-<<<<<<< HEAD
         backgroundColor: "#ffffff",
-=======
-        backgroundColor: "#eef0f4",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         color: "#000",
         py: { xs: 4, md: 6 },
         px: { xs: 3, sm: 6, md: 10 },
         mt: "50px",
-<<<<<<< HEAD
         borderTop: "4px solid #ff8c00",
-=======
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       }}
     >
       <ScrollToTopButton />
@@ -35,11 +28,7 @@ const Footer = () => {
           md={2}
           textAlign={{ xs: "left", sm: "left" }}
         >
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: '#ff8c00' }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             ACCOUNTS
           </Typography>
           {[
@@ -54,15 +43,9 @@ const Footer = () => {
                 href={path}
                 underline="none"
                 sx={{
-<<<<<<< HEAD
                   color: "#333",
                   fontSize: "15px",
                   "&:hover": { textDecoration: "underline", color: "#ff8c00" },
-=======
-                  color: "#001489",
-                  fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   textAlign: "left",
                 }}
               >
@@ -82,11 +65,7 @@ const Footer = () => {
           md={2}
           textAlign="left"
         >
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: '#ff8c00' }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             MARKETS
           </Typography>
           {[
@@ -102,15 +81,9 @@ const Footer = () => {
                 href={path}
                 underline="none"
                 sx={{
-<<<<<<< HEAD
                   color: "#333",
                   fontSize: "15px",
                   "&:hover": { textDecoration: "underline", color: "#ff8c00" },
-=======
-                  color: "#001489",
-                  fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   textAlign: "left",
                 }}
               >
@@ -130,11 +103,7 @@ const Footer = () => {
           md={2}
           textAlign="left"
         >
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: '#ff8c00' }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             TRADING
           </Typography>
           {[
@@ -147,15 +116,9 @@ const Footer = () => {
                 href={path}
                 underline="none"
                 sx={{
-<<<<<<< HEAD
                   color: "#333",
                   fontSize: "15px",
                   "&:hover": { textDecoration: "underline", color: "#ff8c00" },
-=======
-                  color: "#001489",
-                  fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   textAlign: "left",
                 }}
               >
@@ -175,11 +138,7 @@ const Footer = () => {
           md={2}
           textAlign="left"
         >
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: '#ff8c00' }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             PLATFORMS
           </Typography>
           {[
@@ -194,15 +153,9 @@ const Footer = () => {
                 href={path}
                 underline="none"
                 sx={{
-<<<<<<< HEAD
                   color: "#333",
                   fontSize: "15px",
                   "&:hover": { textDecoration: "underline", color: "#ff8c00" },
-=======
-                  color: "#001489",
-                  fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   textAlign: "left",
                 }}
               >
@@ -222,11 +175,7 @@ const Footer = () => {
           md={4}
           textAlign="left"
         >
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: '#ff8c00' }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             COMPANY
           </Typography>
           {[
@@ -239,15 +188,9 @@ const Footer = () => {
                 href={path}
                 underline="none"
                 sx={{
-<<<<<<< HEAD
                   color: "#333",
                   fontSize: "15px",
                   "&:hover": { textDecoration: "underline", color: "#ff8c00" },
-=======
-                  color: "#001489",
-                  fontSize: "15px",
-                  "&:hover": { textDecoration: "underline" },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   textAlign: "left",
                 }}
               >
@@ -256,7 +199,6 @@ const Footer = () => {
             </Typography>
           ))}
 
-<<<<<<< HEAD
           <Typography variant="subtitle1" sx={{ fontWeight: 700, mt: 3, color: '#ff8c00' }}>
             Connect
           </Typography>
@@ -283,34 +225,6 @@ const Footer = () => {
               p: 1,
               "&:hover": { backgroundColor: "#e67300" }
             }}>
-=======
-          <Typography variant="subtitle1" sx={{ fontWeight: 700, mt: 3 }}>
-            Connect
-          </Typography>
-          <Box sx={{ display: "flex", mt: 1 }}>
-            <IconButton   
-              component="a"
-              href="https://www.facebook.com/share/17UMXSoj6d/"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: "#1877F2", p: 1 }}>
-              <Facebook />
-            </IconButton>
-            <IconButton
-              component="a"
-              href="https://x.com/hcfinvest"
-              target="_blank"
-              rel="noopener noreferrer"
-               sx={{ color: "#000", p: 1 }}>
-              <XIcon />
-            </IconButton>
-            <IconButton
-               component="a"
-              href="https://www.instagram.com/hcfinvest/"
-              target="_blank"
-              rel="noopener noreferrer"
-               sx={{ color: "#E4405F", p: 1 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               <Instagram />
             </IconButton>
           </Box>
@@ -322,11 +236,7 @@ const Footer = () => {
         sx={{
           mt: 6,
           pt: 4,
-<<<<<<< HEAD
           borderTop: "2px solid #ff8c00",
-=======
-          borderTop: "1px solid #ddd",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           color: "#333",
           fontSize: "14px",
         }}
@@ -339,11 +249,7 @@ const Footer = () => {
             >
               <li>
                 <Link
-<<<<<<< HEAD
                   sx={{ color: "#ff8c00" }}
-=======
-                  sx={{ color: "#001489" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   underline="none"
                   href="/privacyPolicies"
                 >
@@ -353,11 +259,7 @@ const Footer = () => {
 
               <li>
                 <Link
-<<<<<<< HEAD
                   sx={{ color: "#ff8c00" }}
-=======
-                  sx={{ color: "#001489" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   underline="none"
                   href="/termsConditions"
                 >
@@ -367,11 +269,7 @@ const Footer = () => {
 
               <li>
                 <Link
-<<<<<<< HEAD
                   sx={{ color: "#ff8c00" }}
-=======
-                  sx={{ color: "#001489" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   underline="none"
                   href="/amlPolicies"
                 >
@@ -395,7 +293,6 @@ const Footer = () => {
             gap={2}
             border="0px solid red"
           >
-<<<<<<< HEAD
             <img
               src="Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
               style={{ width: "150px", height: "40px" }}
@@ -406,32 +303,6 @@ const Footer = () => {
               style={{ width: "150px", height: "40px" }}
               alt="Google Play"
             />
-=======
-              <a
-                href="https://apps.apple.com/in/app/vertexfx-trader-pro/id6742178081"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/Images/FooterImages/png-clipart-app-store-google-play-apple-apple-text-logoo.png"
-                  style={{ width: "150px", height: "40px" }}
-                  alt="App Store"
-                />
-              </a>
-
-                <a
-                  href="https://www.hybridsolutions.com/downloads/Mobile/VertexFXTraderPro.apk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="Images/FooterImages/png-clipart-app-store-google-playy-apple-apple-text-lo.png"
-                    style={{ width: "150px", height: "40px" }}
-                    alt="Google Play"
-                  />
-              </a>
-
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           </Grid>
         </Grid>
 

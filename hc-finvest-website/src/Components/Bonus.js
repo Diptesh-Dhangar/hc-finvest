@@ -110,11 +110,7 @@ const BonusPage = () => {
             sx={{
               display: "inline-flex",
               alignItems: "center",
-<<<<<<< HEAD
               bgcolor: "#ff8c00",
-=======
-              bgcolor: "#007bff",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               px: 2,
               py: 1,
               borderRadius: "30px",
@@ -133,11 +129,7 @@ const BonusPage = () => {
 
           <Typography sx={{ mt: 2 }}>
             Maximize your trading power with a{" "}
-<<<<<<< HEAD
             <span style={{ color: "#ff8c00" }}>
-=======
-            <span style={{ color: "#0f5e9b" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               50% deposit bonus up to $2000
             </span>
             . Boost your account instantly.
@@ -203,11 +195,7 @@ const BonusPage = () => {
             variant="h4"
             sx={{
               fontWeight: 800,
-<<<<<<< HEAD
               color: "#ff8c00",
-=======
-              color: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontFamily: "Poppins, sans-serif",
             }}
           >
@@ -238,11 +226,7 @@ const BonusPage = () => {
               }}
             >
               <LaptopMacIcon
-<<<<<<< HEAD
                 sx={{ fontSize: "2.7rem", color: "#ff8c00", mb: 1 }}
-=======
-                sx={{ fontSize: "2.7rem", color: "#0f5e9b", mb: 1 }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               />
               <Typography variant="h6" fontWeight={600} mb={1}>
                 Advanced Multi-Device Platforms
@@ -274,11 +258,7 @@ const BonusPage = () => {
                 },
               }}
             >
-<<<<<<< HEAD
               <SpeedIcon sx={{ fontSize: "2.7rem", color: "#ff8c00", mb: 1 }} />
-=======
-              <SpeedIcon sx={{ fontSize: "2.7rem", color: "#0f5e9b", mb: 1 }} />
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               <Typography variant="h6" fontWeight={600} mb={1}>
                 Lightning-Fast Order Execution
               </Typography>
@@ -309,11 +289,7 @@ const BonusPage = () => {
               }}
             >
               <PsychologyIcon
-<<<<<<< HEAD
                 sx={{ fontSize: "2.7rem", color: "#ff8c00", mb: 1 }}
-=======
-                sx={{ fontSize: "2.7rem", color: "#0f5e9b", mb: 1 }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               />
               <Typography variant="h6" fontWeight={600} mb={1}>
                 Smart Trading & Market Insights

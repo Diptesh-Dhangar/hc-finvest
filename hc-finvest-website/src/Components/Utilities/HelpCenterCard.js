@@ -73,20 +73,12 @@ const HelpCenterCard = ({ title, sen1, sen2, sen3 }) => {
         sx={{
           fontSize: "1.2em",
           fontWeight: "700",
-<<<<<<< HEAD
           color: "#ff8c0028",
-=======
-          color: "#101828",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           textAlign: "right",
           mt: "auto",
         }}
       >
-<<<<<<< HEAD
         <Button variant="contained" sx={{ backgroundColor: "#ff8c00" }}>
-=======
-        <Button variant="contained" sx={{ backgroundColor: "#11155c" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           <Link
             to={route}
             style={{ color: "#fff", fontWeight: "600", textDecoration: "none" }}

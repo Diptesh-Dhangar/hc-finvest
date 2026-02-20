@@ -44,31 +44,19 @@
 }
 
 .btn-purple {
-<<<<<<< HEAD
   background-color: #ff8c00;
-=======
-  background-color: #0f5e9b;
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   color: white;
   font-weight: 600;
   border-radius: 6px;
 }
 
 .btn-purple:hover {
-<<<<<<< HEAD
   background-color: #e67300;
-=======
-  background-color: #187cc1;
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 }
 
 .step-label {
   font-size: 1.5rem;
-<<<<<<< HEAD
   color: #ff8c00;
-=======
-  color: #0f5e9b;
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   font-weight: 700;
 }
 

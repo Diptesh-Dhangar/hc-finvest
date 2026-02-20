@@ -23,13 +23,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import RegPopupBox from "./Utilities/RegPopupBox";
 import ScrollToTopButton from "./Utilities/ScrollToTopButton";
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import ReviewSection from "./Utilities/ReviewSection";
-=======
-import Snowfall from "react-snowfall";
-import { Helmet } from "react-helmet-async";
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
 const MainContent = () => {
   const features = [
@@ -65,17 +60,12 @@ const MainContent = () => {
       {showPopup && <RegPopupBox onClose={handleClosePopup} />}
 
       <Container
-<<<<<<< HEAD
         sx={{ backgroundColor: "transparent" }}
-=======
-        sx={{ backgroundColor: "#fff" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         maxWidth={false}
         disableGutters
       >
         <ScrollToTopButton />
         <section class="showcase">
-<<<<<<< HEAD
           <div class="carousel-item active">
             <video
               src="/video/Hero_video.mp4"
@@ -100,256 +90,12 @@ const MainContent = () => {
                 <div class="mouse"></div>
               </div>
             </div>
-=======
-          <div
-            id="homeBannerCarousel"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-            data-bs-interval="3000"
-          >
-            <div class="carousel-indicators text-center">
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="3"
-                aria-label="Slide 4"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="4"
-                aria-label="Slide 5"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="5"
-                aria-label="Slide 6"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#homeBannerCarousel"
-                data-bs-slide-to="6"
-                aria-label="Slide 7"
-              ></button>
-            </div>
-
-            <div class="carousel-inner">
-              {/* <!-- Slide 1 --> */}
-              <div class="carousel-item active">
-                <img
-                  src="/Images/SliderImages/jpeg-optimizer_New main banner.jpg"
-                  class="d-block w-100"
-                  alt="Slide 1"
-                  loading="lazy"
-                />
-                {/* <!-- <img src="/images/NewhedgecapitalsimageHome banner Slider.jpg" class="d-block w-100" alt="Slide 1" loading="lazy" /> --> */}
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h1 class="hedd">
-                    Diversify Your Portfolio with HC Finvest A Trusted
-                    Multi-Asset Forex Broker
-                  </h1>
-                  <p class="para">
-                    {" "}
-                    Forex - Indices - Metals - Stock - Commodities -
-                    Cryptocurrency - ETFs
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 2 --> */}
-              <div class="carousel-item">
-                <img
-                  src="/Images/SliderImages/NewhedgecapitalsimageCommodities.jpg"
-                  class="d-block w-100"
-                  alt="Slide 2"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    Empower Your Investments with HC Finvest – Your Gateway to
-                    Global Financial Markets
-                  </h2>
-                  <p class="para">
-                    Investments - Global Markets - HC Finvest - Financial
-                    Gateway
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 3 --> */}
-              <div class="carousel-item">
-                <img
-                  src="/Images/SliderImages/NewhedgecapitalsimageCyrpto.jpg"
-                  class="d-block w-100"
-                  alt="Slide 3"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    Trade Smarter with HC Finvest – Forex, Crypto, Stocks & More
-                    in One Platform
-                  </h2>
-                  <p class="para">
-                    {" "}
-                    Trade Forex - Crypto Trading - Stock Market - All-in-one
-                    Platform
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 4 --> */}
-              <div class="carousel-item">
-                <img
-                  src="/Images/SliderImages/NewhedgecapitalsimageIndices.jpg"
-                  class="d-block w-100"
-                  alt="Slide 4"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    {" "}
-                    Maximize Your Trading Potential with HC Finvest – Secure,
-                    Smart, and Reliable
-                  </h2>
-                  <p class="para">
-                    {" "}
-                    Trading Potential - Secure Trading - Reliable Broker - HC
-                    Finvest
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 5 --> */}
-              <div class="carousel-item">
-                <img
-                  src="Images\SliderImages\NewhedgecapitalsimageMetals.jpg"
-                  class="d-block w-100"
-                  alt="Slide 5"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    Join Thousands of Successful Traders at HC Finvest – Trusted
-                    by Experts Worldwide
-                  </h2>
-                  <p class="para">
-                    Successful Traders - Expert Trust - Forex Broker -HC Finvest
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 6 --> */}
-              <div class="carousel-item">
-                <img
-                  src="/Images/SliderImages/NewhedgecapitalsStocks slider.jpg"
-                  class="d-block w-100"
-                  alt="Slide 6"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    {" "}
-                    Experience Next-Gen Trading with HC Finvest – Innovation
-                    Meets Opportunity
-                  </h2>
-                  <p class="para">
-                    {" "}
-                    Next-Gen Trading - Innovative Platform - Trading Opportunity
-                    - HC Finvest
-                  </p>
-                </div>
-              </div>
-
-              {/* <!-- Slide 7 --> */}
-              <div class="carousel-item">
-                <img
-                  src="Images/SliderImages/NewhedgecapitalsimageETF.jpg"
-                  class="d-block w-100"
-                  alt="Slide 7"
-                  loading="lazy"
-                />
-                <div class="overlay d-flex flex-column justify-content-center align-items-center text-white">
-                  <h2 class="hedd">
-                    {" "}
-                    Unlock Global Market Opportunities with HC Finvest – Your
-                    Partner in Multi-Asset Trading
-                  </h2>
-                  <p class="para">
-                    {" "}
-                    Global Markets - trading Opportunities - Multi-Asset Broker
-                    - HC Finvest
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Controls --> */}
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#homeBannerCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#homeBannerCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-            </button>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           </div>
         </section>
 
         {/* Image Slider End */}
 
-<<<<<<< HEAD
         {/* Image Slider End */}
-=======
-        <div className="features-section">
-          <div className="features-container">
-            {features.map((f, index) => (
-              <div className="feature-item" key={index}>
-                <div className="icon">{f.icon}</div>
-                <div className="text">
-                  <Typography>{f.title}</Typography>
-                  <Typography>{f.subtitle}</Typography>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         {/* Image Slider End */}
 
 
@@ -468,22 +214,14 @@ const MainContent = () => {
 
         {/*  */}
 
-<<<<<<< HEAD
         <Grid sx={{ backgroundColor: "transparent" }}>
-=======
-        <Grid sx={{ backgroundColor: "#f8f9fa " }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           <Typography
             variant="h2"
             fontWeight="bold"
             fontSize="39px"
             sx={{ paddingTop: 3 }}
           >
-<<<<<<< HEAD
             <span style={{ color: "#ff8c00" }}>HC Finvest</span> Trading
-=======
-            <span style={{ color: "#0f5e9b" }}>HC Finvest</span> Trading
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             Platforms,
           </Typography>
           <Typography sx={{ marginTop: 3 }}>
@@ -505,11 +243,7 @@ const MainContent = () => {
           <Grid marginTop={2} size={12}>
             <Typography variant="h2" fontWeight="bold" fontSize="39px">
               Your Forex Journey,
-<<<<<<< HEAD
               <span style={{ color: "#ff8c00" }}> Redefined</span>
-=======
-              <span style={{ color: "#0f5e9b" }}> Redefined</span>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             </Typography>
             <Typography sx={{ marginTop: 3 }}>
               HC Finvest, a trusted broker that offers competitive trading
@@ -593,11 +327,7 @@ const MainContent = () => {
               variant="h2"
               sx={{ fontSize: "39px", fontWeight: "bold" }}
             >
-<<<<<<< HEAD
               <span style={{ color: "#ff8c00" }}>Latest New</span> & Update
-=======
-              <span style={{ color: "#0f5e9b" }}>Latest New</span> & Update
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             </Typography>
           </Grid>
 
@@ -701,15 +431,11 @@ const MainContent = () => {
                   <Button
                     variant="contained"
                     href="https://www.reuters.com/"
-<<<<<<< HEAD
                     sx={{ 
                       borderRadius: 2,
                       backgroundColor: '#ff8c00',
                       '&:hover': { backgroundColor: '#e67300' }
                     }}
-=======
-                    sx={{ borderRadius: 2 }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   >
                     Read More
                   </Button>
@@ -813,15 +539,11 @@ const MainContent = () => {
                   <Button
                     variant="contained"
                     href="forexBrokerArticle"
-<<<<<<< HEAD
                     sx={{ 
                       borderRadius: 2,
                       backgroundColor: '#ff8c00',
                       '&:hover': { backgroundColor: '#e67300' }
                     }}
-=======
-                    sx={{ borderRadius: 2 }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                   >
                     Read More
                   </Button>
@@ -833,11 +555,8 @@ const MainContent = () => {
 
         {/*  */}
 
-<<<<<<< HEAD
         <ReviewSection/>
 
-=======
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         {/*  */}
         <Grid
           container
@@ -888,11 +607,7 @@ const MainContent = () => {
               }}
             >
               Start Trading today with{" "}
-<<<<<<< HEAD
               <span style={{ color: "#ff8c00" }}>HC Finvest</span>
-=======
-              <span style={{ color: "#0f5e9b" }}>HC Finvest</span>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             </Typography>
 
             <Typography
@@ -923,11 +638,7 @@ const MainContent = () => {
                     viewBox="0 0 512 512"
                     height="35px"
                     style={{
-<<<<<<< HEAD
                       fill: "#ff8c00",
-=======
-                      fill: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       width: "35px",
                     }}
                   >
@@ -949,11 +660,7 @@ const MainContent = () => {
                     viewBox="0 0 512 512"
                     height="35px"
                     style={{
-<<<<<<< HEAD
                       fill: "#ff8c00",
-=======
-                      fill: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       width: "35px",
                     }}
                   >
@@ -973,11 +680,7 @@ const MainContent = () => {
                     viewBox="0 0 512 512"
                     height="35px"
                     style={{
-<<<<<<< HEAD
                       fill: "#ff8c00",
-=======
-                      fill: "#0f5e9b",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       width: "35px",
                     }}
                   >
@@ -995,8 +698,4 @@ const MainContent = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export default MainContent;
-=======
-export default MainContent;
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f

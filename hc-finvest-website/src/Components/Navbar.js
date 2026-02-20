@@ -59,17 +59,10 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "ABOUT US", component: <AboutUsBox /> },
-<<<<<<< HEAD
     { name: "TRADING", component: <TradingBox /> },
     { name: "PLATFORM", component: <PlatformBox /> },
     { name: "RESEARCH & TOOLS", component: <ResearchAndToolBox /> },
     { name: "SUPPORT", component: <SupportBox /> },
-=======
-    { name: "TRADING",  component: <TradingBox /> },
-    { name: "PLATFORM",  component: <PlatformBox /> },
-    { name: "RESEARCH & TOOLS",  component: <ResearchAndToolBox /> },
-    { name: "SUPPORT",  component: <SupportBox /> },
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   ];
 
   return (
@@ -88,21 +81,12 @@ const Navbar = () => {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* LOGO */}
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-<<<<<<< HEAD
             <img
               src="/hcfinvest_orange_logo.png"
               height="80px"
               alt="HCF Invest Logo"
               style={{ maxWidth: "280px", border: "0px solid red" }}
             />
-=======
-              <img
-                src="Images/MainContentImages/Hc Finvest Logo for website 3.svg"
-                height="50px"
-                alt="Logo"
-                style={{ maxWidth: "150px", border:'0px solid red' }}
-              />
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           </Link>
 
           {/* DESKTOP NAV */}
@@ -142,7 +126,6 @@ const Navbar = () => {
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
             <Button
               variant="outlined"
-<<<<<<< HEAD
               sx={{
                 color: "#ff8c00",
                 borderColor: "#ff8c00",
@@ -155,16 +138,11 @@ const Navbar = () => {
               href="https://trade.hcfinvest.com/user/login"
               target="_blank"
               rel="noopener noreferrer"
-=======
-              sx={{ color: "blue", borderColor: "blue" }}
-              href="https://trade.hcfinvest.com/login"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Login
             </Button>
             <Button
               variant="contained"
-<<<<<<< HEAD
               sx={{
                 backgroundColor: "#ff8c00 !important",
                 "&:hover": {
@@ -175,16 +153,11 @@ const Navbar = () => {
               href="https://trade.hcfinvest.com/user/signup"
               target="_blank"
               rel="noopener noreferrer"
-=======
-              sx={{ backgroundColor: "#11155c" }}
-              href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Register
             </Button>
             <Button
               variant="contained"
-<<<<<<< HEAD
               sx={{
                 backgroundColor: "gray",
                 "&:hover": {
@@ -195,10 +168,6 @@ const Navbar = () => {
               href="https://trade.hcfinvest.com/user/signup"
               target="_blank"
               rel="noopener noreferrer"
-=======
-              sx={{ backgroundColor: "gray" }}
-              href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Demo Account
             </Button>
@@ -230,11 +199,7 @@ const Navbar = () => {
               borderBottom: "1px solid #ddd",
             }}
           >
-<<<<<<< HEAD
             <Typography variant="h6" sx={{ color: "#ff8c00" }}>
-=======
-            <Typography variant="h6" sx={{ color: "#11155c" }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               HC Finvest
             </Typography>
             <IconButton onClick={toggleDrawer(false)}>
@@ -269,11 +234,7 @@ const Navbar = () => {
                       px: 3,
                       py: 1,
                       background: "#f5f5f5",
-<<<<<<< HEAD
                       borderLeft: "3px solid #ff8c00",
-=======
-                      borderLeft: "3px solid #11155c",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     }}
                   >
                     {item.component}
@@ -287,7 +248,6 @@ const Navbar = () => {
               <Button
                 variant="outlined"
                 fullWidth
-<<<<<<< HEAD
                 sx={{
                   color: "#ff8c00",
                   borderColor: "#ff8c00",
@@ -301,17 +261,12 @@ const Navbar = () => {
                 href="https://trade.hcfinvest.com/user/login"
               target="_blank"
               rel="noopener noreferrer"
-=======
-                sx={{ color: "blue", borderColor: "blue", mb: 1 }}
-                href="https://trade.hcfinvest.com/login"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 Login
               </Button>
               <Button
                 variant="contained"
                 fullWidth
-<<<<<<< HEAD
                 sx={{
                   backgroundColor: "#ff8c00 !important",
                   mb: 1,
@@ -322,10 +277,6 @@ const Navbar = () => {
                 href="https://trade.hcfinvest.com/user/signup"
                 target="_blank"
                 rel="noopener noreferrer"
-=======
-                sx={{ backgroundColor: "#11155c", mb: 1 }}
-                href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 Register
               </Button>
@@ -333,13 +284,9 @@ const Navbar = () => {
                 variant="contained"
                 fullWidth
                 sx={{ backgroundColor: "gray" }}
-<<<<<<< HEAD
                 href="https://trade.hcfinvest.com/user/signup"
                 target="_blank"
                 rel="noopener noreferrer"
-=======
-                href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 Demo Account
               </Button>

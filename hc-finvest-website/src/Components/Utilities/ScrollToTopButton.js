@@ -36,21 +36,12 @@ const ScrollToTopButton = () => {
           position: "fixed",
           bottom: 30,
           right: 30,
-<<<<<<< HEAD
           backgroundColor: "#ff8c00",
           color: "#fff",
           "&:hover": {
             backgroundColor: "#e67300",
           },
           boxShadow: "0 4px 10px rgba(255, 140, 0, 0.4)",
-=======
-          backgroundColor: "#11155c",
-          color: "#fff",
-          "&:hover": {
-            backgroundColor: "#0f5e9b",
-          },
-          boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         }}
         aria-label="scroll back to top"
       >

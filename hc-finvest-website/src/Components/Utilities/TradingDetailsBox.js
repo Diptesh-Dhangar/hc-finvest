@@ -9,11 +9,7 @@ const TradingDetailsBox = () => {
           {/* --- Heading Section --- */}
           <h2 className="mb-3 text-white" style={{ fontSize: "2rem" }}>
             Begin Your Trading Experience with{" "}
-<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: 700 }}>
-=======
-            <span style={{ color: "#0f5e9b", fontWeight: 700 }}>
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               HC Finvest
             </span>
           </h2>
@@ -212,15 +208,9 @@ const TradingDetailsBox = () => {
 
           {/* --- Footer Buttons --- */}
           <div className="big-buttons mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-<<<<<<< HEAD
             <button className="btn" style={{ backgroundColor: "#ff8c00", color: "white", border: "none" }}>
               <a
                 href="https://trade.hcfinvest.com/user/signup"
-=======
-            <button className="btn btn-success">
-              <a
-                href="https://trade.hcfinvest.com/register"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -232,11 +222,7 @@ const TradingDetailsBox = () => {
             </button>
             <button className="btn btn-outline-light">
               <a
-<<<<<<< HEAD
                 href="https://trade.hcfinvest.com/user/login"
-=======
-                href="https://trade.hcfinvest.com/login"
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 style={{
                   textDecoration: "none",
                   color: "inherit",

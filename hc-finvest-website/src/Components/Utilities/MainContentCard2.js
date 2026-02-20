@@ -1,74 +1,45 @@
-<<<<<<< HEAD
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import OilBarrelIcon from '@mui/icons-material/OilBarrel';
 import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
-=======
-// import { useNavigate } from "react-router-dom";
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
 const cardData = [
   {
     title: "Forex",
     text: "50+ Currency Pairs",
-<<<<<<< HEAD
     icon: <CurrencyExchangeIcon sx={{ fontSize: 50 }} />,
-=======
-    img: "Images/MainContentImages/forexx.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/forexMarket",
   },
   {
     title: "Indices",
     text: "15+ Indices",
-<<<<<<< HEAD
     icon: <ShowChartIcon sx={{ fontSize: 50 }} />,
-=======
-    img: "Images/MainContentImages/indicesss.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/indicesMarket",
   },
   {
     title: "Metals",
-<<<<<<< HEAD
     text: "Strategic Metals Investments",
     icon: <img src="https://img.icons8.com/ios/100/ff8c00/gold-bars.png" alt="Gold Bars" style={{ width: 50, height: 50, objectFit: 'contain' }} />,
-=======
-    text: "Stategic Metals Investments",
-    img: "Images/MainContentImages/metalsoil.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/metalsMarket",
   },
   {
     title: "Stock",
     text: "70+ Stocks",
-<<<<<<< HEAD
     icon: <TrendingUpIcon sx={{ fontSize: 50 }} />,
-=======
-    img: "Images/MainContentImages/capital_10438373.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/stocksMarket",
   },
   {
     title: "Commodities",
     text: "Precious Metals and Energies",
-<<<<<<< HEAD
     icon: <OilBarrelIcon sx={{ fontSize: 50 }} />,
-=======
-    img: "Images/MainContentImages/comoditiess.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/commoditiesMarket",
   },
   {
     title: "Cryptocurrency",
     text: "No Commissions, Tight Spreads",
-<<<<<<< HEAD
     icon: <CurrencyBitcoinIcon sx={{ fontSize: 50 }} />,
-=======
-    img: "Images/MainContentImages/currency-exchange_5751196.png",
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     link: "/cryptocurrencyMarket",
   },
 ];
@@ -77,7 +48,6 @@ const MainContentCard2 = () => {
 
   return (
     <div className="container py-5">
-<<<<<<< HEAD
       <div className="text-center mb-4">
         <a
           href="https://trade.hcfinvest.com/user/signup"
@@ -102,14 +72,11 @@ const MainContentCard2 = () => {
           Get Started
         </a>
       </div>
-=======
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       <div className="row g-4">
         {cardData.map((card, index) => (
           <div
             key={index}
             className="col-12 col-md-6 col-lg-4 d-flex align-items-stretch"
-<<<<<<< HEAD
           >
             <div 
               className="card text-center p-4 w-100" 
@@ -160,24 +127,6 @@ const MainContentCard2 = () => {
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = '#ff8c00';
                   }}
-=======
-            style={{ borderRadius: "10px" }}
-          >
-            <div className="card text-center p-4 shadow-sm w-100">
-              <img
-                src={card.img}
-                alt={card.title}
-                className="mx-auto d-block mb-3"
-                style={{ height: "80px", objectFit: "contain" }}
-              />
-              <div className="card-body d-flex flex-column">
-                <h5 className="card-title text-dark" style={{fontWeight:'bold'}}>{card.title}</h5>
-                <p className="card-text mb-4">{card.text}</p>
-                <a
-                  href={card.link}
-                  className="btn mt-auto mx-auto px-4 py-2 rounded-pill"
-                  style={{ backgroundColor: "#0b1660", color: "white" }}
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Read More
                 </a>

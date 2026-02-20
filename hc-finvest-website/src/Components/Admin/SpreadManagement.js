@@ -99,11 +99,7 @@ const fetchPairs = async (market, account) => {
 
       <Container maxWidth="md" sx={{ backgroundColor: "#fff", py: 4 }}>
       <Box sx={{ p: 4, background: "#fff", borderRadius: 2, boxShadow: 3 }}>
-<<<<<<< HEAD
         <Typography variant="h4" fontWeight={700} mb={3} color="#ff8c00">
-=======
-        <Typography variant="h4" fontWeight={700} mb={3} color="#0f5e9b">
->>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           Update Spread
         </Typography>
 
