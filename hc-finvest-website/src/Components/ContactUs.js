@@ -60,6 +60,7 @@ const ContactUs = () => {
           alignItems: "center",
           justifyContent: "center",
           color: "white",
+<<<<<<< HEAD
           backgroundImage: `url('Images/ContactUsImages/Newhedgecapitalsimage_contact us (2).jpg')`, // 
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -74,6 +75,12 @@ const ContactUs = () => {
             background: "linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 100%)",
             zIndex: 1,
           }
+=======
+          backgroundImage: `url('Images/ContactUsImages/Newhedgecapitalsimage_contact us (2).jpg')`, // 👈 replace with your image path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          marginBottom: "30px",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         }}
       >
         <h1
@@ -109,13 +116,18 @@ const ContactUs = () => {
       </Box>
       {/* Banner Box End */}
 
+<<<<<<< HEAD
  <section className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
+=======
+ <section className="py-5 sectiontext">
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       <div className="container">
 
         {/* Contact Info Row */}
         <div className="row">
           {/* Address */}
           <div className="col-md-4 mb-4">
+<<<<<<< HEAD
   <div className="contact-info p-4 rounded h-100 text-center" style={{ backgroundColor: "#ffffff", border: "1px solid #f0f0f0", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.06)" }}>
     {/* Image on top */}
     <div className="contact-info-icon mb-3">
@@ -131,27 +143,54 @@ const ContactUs = () => {
           fill="currentColor"
         />
       </svg>
+=======
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/location.png"
+        alt="Location"
+        style={{ width: "50px", height: "50px" }}
+      />
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     </div>
 
     {/* Text below image */}
     <div className="contact-info-text">
       <Typography
         variant="h5"
+<<<<<<< HEAD
         sx={{ fontWeight: "600", mb: 1, color: "#ff8c00" }}
       >
         Address
       </Typography>
       <Typography sx={{ mb: 1, color: "#555" }}>
+=======
+        sx={{ fontWeight: "600", mb: 1 }}
+      >
+        Address
+      </Typography>
+      <Typography sx={{ mb: 1 }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         Office 2027NP 182-184 High Street North, Area 1/1, East Ham London United Kingdom E6 2JA
       </Typography>
 
       <Typography
+<<<<<<< HEAD
         variant="h6"
         sx={{ fontWeight: "600", mt: 2, mb: 1, color: "#ff8c00" }}
       >
         (Registered Address)
       </Typography>
       <Typography sx={{ color: "#555" }}>
+=======
+        variant="h5"
+        sx={{ fontWeight: "600", mt: 2, mb: 1 }}
+      >
+        (Registered Address)
+      </Typography>
+      <Typography>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, St. Vincent And The Grenadines P.O. Box 1510
       </Typography>
     </div>
@@ -160,6 +199,7 @@ const ContactUs = () => {
 
           {/* Office Time */}
           <div className="col-md-4 mb-4">
+<<<<<<< HEAD
   <div className="contact-info p-4 rounded h-100 text-center" style={{ backgroundColor: "#ffffff", border: "1px solid #f0f0f0", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.06)" }}>
     {/* Image on top */}
     <div className="contact-info-icon mb-3">
@@ -175,18 +215,37 @@ const ContactUs = () => {
           fill="currentColor"
         />
       </svg>
+=======
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/time-management.png"
+        alt="Office Time"
+        style={{ width: "50px", height: "50px" }}
+      />
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     </div>
 
     {/* Text below image */}
     <div className="contact-info-text">
       <Typography
         variant="h5"
+<<<<<<< HEAD
         sx={{ fontWeight: "600", mb: 1, color: "#ff8c00" }}
       >
         Office Time
       </Typography>
       <Typography sx={{ mb: 1, color: "#555" }}>Mon 10:00 am – Sat 18:00 pm (GMT+1)</Typography>
       <Typography sx={{ mb: 1, color: "#555" }}>Sunday Close</Typography>
+=======
+        sx={{ fontWeight: "600", mb: 1 }}
+      >
+        Office Time
+      </Typography>
+      <Typography sx={{ mb: 1 }}>Mon 10:00 am – Sat 18:00 pm (GMT+1)</Typography>
+      <Typography sx={{ mb: 1 }}>Sunday Close</Typography>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
     </div>
   </div>
@@ -194,6 +253,7 @@ const ContactUs = () => {
 
           {/* Email */}
   <div className="col-md-4 mb-4">
+<<<<<<< HEAD
   <div className="contact-info p-4 rounded h-100 text-center" style={{ backgroundColor: "#ffffff", border: "1px solid #f0f0f0", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.06)" }}>
     {/* Image on top */}
     <div className="contact-info-icon mb-3">
@@ -209,12 +269,23 @@ const ContactUs = () => {
           fill="currentColor"
         />
       </svg>
+=======
+  <div className="contact-info p-3 rounded shadow-sm h-100 text-center">
+    {/* Image on top */}
+    <div className="contact-info-icon mb-3">
+      <img
+        src="/Images/ContactUsImages/mail.png"
+        alt="Location"
+        style={{ width: "50px", height: "50px" }}
+      />
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     </div>
 
     {/* Text below image */}
     <div className="contact-info-text">
       <Typography
         variant="h5"
+<<<<<<< HEAD
         sx={{ fontWeight: "600", mb: 1, color: "#ff8c00" }}
       >
         Email
@@ -225,6 +296,19 @@ const ContactUs = () => {
     </div>
   </div>
           </div>
+=======
+        sx={{ fontWeight: "600", mb: 1 }}
+      >
+        Email
+      </Typography>
+      <Typography sx={{ mb: 1 }}>
+         <span>support&#64;heddgecapitals.com</span>
+      </Typography>
+    </div>
+  </div>
+</div>
+        </div>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
         {/* Maps Row */}
         <div className="row mt-4">
@@ -258,7 +342,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         </div>
+=======
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       </div>
     </section>
 
@@ -278,11 +365,19 @@ const ContactUs = () => {
           // onSubmit={handleSubmit}
           sx={{
             width: "70%",
+<<<<<<< HEAD
             padding: "30px",
             border: "1px solid #f0f0f0",
             borderRadius: "12px",
             boxShadow: "0 2px 12px rgba(0, 0, 0, 0.06)",
             backgroundColor: "#ffffff",
+=======
+            padding: "20px",
+            border: "0px solid red",
+            borderRadius: "12px",
+            boxShadow: "0 4px 16px #0000001a",
+            backgroundColor: "#fff",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             margin: "3rem auto",
           }}
         >
@@ -294,7 +389,11 @@ const ContactUs = () => {
               marginBottom: "25px",
               marginTop: "20px",
               fontSize: "1.8rem",
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             }}
           >
             Get in touch with us
@@ -364,6 +463,7 @@ const ContactUs = () => {
           <Button
             type="submit"
             variant="contained"
+<<<<<<< HEAD
             sx={{ 
               width: "250px", 
               mt: "20px", 
@@ -380,6 +480,9 @@ const ContactUs = () => {
                 transform: "translateY(-2px)"
               } 
             }}
+=======
+            sx={{ width: "250px", mt: "20px", mb: "30px" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             onClick={handleSubmit}
           >
             Submit

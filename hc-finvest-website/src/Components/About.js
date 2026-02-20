@@ -128,12 +128,20 @@ const About = () => {
               <Typography
               variant="h3"
                 className="mb-1 fw-bold"
+<<<<<<< HEAD
                 style={{ fontSize: "2rem", color: "#ff8c00" }}
+=======
+                style={{ fontSize: "2rem", color: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 About HC Finvest :-
               </Typography>
 
+<<<<<<< HEAD
               <Typography className="fs-4" style={{ color: "#ff8c00" }}>
+=======
+              <Typography className="fs-4" style={{ color: "#0f5e9b" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 Your Partner in Strategic Investment and Financial Growth
               </Typography>
 
@@ -172,7 +180,11 @@ const About = () => {
 
             {/* Text */}
             <div className="col-lg-8 text-muted" style={{ fontSize: "16px", lineHeight: "32px" }}>
+<<<<<<< HEAD
               <Typography variant="h3" className="fw-semibold mb-4" style={{ color: "#ff8c00" , fontSize:'2rem' }}>
+=======
+              <Typography variant="h3" className="fw-semibold mb-4" style={{ color: "#0f5e9b" , fontSize:'2rem' }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 Trustworthy, Transparent, and Fair Trading with{" "}
                 <span className="fw-bold">HC Finvest</span>.
               </Typography>

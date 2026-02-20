@@ -121,7 +121,11 @@ const IntroducingBroker = () => {
                 fontSize: "clamp(1.6rem, 3vw, 2rem)",
                 lineHeight: 1,
                 fontWeight: 600,
+<<<<<<< HEAD
                 color: "#ff8c00",
+=======
+                color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               }}
             >
               Introducing Broker
@@ -168,7 +172,11 @@ const IntroducingBroker = () => {
                 fontSize: "clamp(1.6rem, 3vw, 2rem)",
                 lineHeight: 1,
                 fontWeight: 600,
+<<<<<<< HEAD
                 color: "#ff8c00",
+=======
+                color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               }}
             >
               What is a Multi-Tier Network?
@@ -206,7 +214,11 @@ const IntroducingBroker = () => {
             fontSize: "clamp(1.6rem, 3vw, 2rem)",
             lineHeight: 1,
             fontWeight: 600,
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           How to Become an Introducing Broker (IB)?
@@ -245,7 +257,11 @@ const IntroducingBroker = () => {
           style={{
             fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
             fontWeight: 600,
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           Partner With Us – Earn By Referring Traders
@@ -290,7 +306,11 @@ const IntroducingBroker = () => {
                   >
                     <i
                       className={`bi ${card.icon}`}
+<<<<<<< HEAD
                       style={{ fontSize: "2.5rem", color: "#ff8c00" }}
+=======
+                      style={{ fontSize: "2.5rem", color: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                     ></i>
 
                     <Typography

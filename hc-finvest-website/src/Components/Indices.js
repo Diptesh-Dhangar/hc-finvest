@@ -55,7 +55,11 @@ const comparisonData = [
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
+<<<<<<< HEAD
     backgroundColor: "#ff8c00",
+=======
+    backgroundColor: theme.palette.common.black,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -193,7 +197,10 @@ const Indices = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           Trade Indices With Precision
@@ -209,7 +216,10 @@ const Indices = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           And Confidence
@@ -225,7 +235,10 @@ const Indices = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           Diversify Your Portfolio With Expertly Managed Indices
@@ -238,7 +251,11 @@ const Indices = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
@@ -295,7 +312,11 @@ const Indices = () => {
               align="left"
               sx={{
                 fontSize: "2rem",
+<<<<<<< HEAD
                 color: "#ff8c00",
+=======
+                color: "#101828",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 lineHeight: "1",
                 fontWeight: "600",
               }}
@@ -328,14 +349,24 @@ const Indices = () => {
       variant="contained"
       onClick={() => setActive(btn.id)}
       sx={{
+<<<<<<< HEAD
         backgroundColor: active === btn.id ? "#ff8c00" : "white",
         color: active === btn.id ? "white" : "#ff8c00",
         border: "1px solid #ff8c00",
+=======
+        backgroundColor: active === btn.id ? "black" : "white",
+        color: active === btn.id ? "white" : "black",
+        border: "1px solid black",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         textTransform: "none",
         fontWeight: "bold",
         minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
         "&:hover": {
+<<<<<<< HEAD
           backgroundColor: active === btn.id ? "#ff8c00" : "#fff5e6",
+=======
+          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         },
       }}
     >
@@ -405,7 +436,11 @@ const Indices = () => {
 
       <Grid>
         <div className="container" style={{ padding: "50px" , textAlign:'center' }}>
+<<<<<<< HEAD
           <Typography  variant="h4" className="benefits-title" style={{ color: "#ff8c00" , fontWeight:'600' }}>
+=======
+          <Typography  variant="h4" className="benefits-title" style={{ color: "#0f5e9b" , fontWeight:'600' }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             Benefits of Forex Trading
           </Typography>
           <div
@@ -445,24 +480,40 @@ const Indices = () => {
           variant="h2"
           sx={{ fontSize: "40px", padding: "30px", fontWeight: "700" }}
         >
+<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}>Global Indices</span> – Trading
+=======
+          <span style={{ color: "#0f5e9b" }}>Global Indices</span> – Trading
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           Hours Overview
         </Typography>
         <Table sx={{ width: "80%", margin: "0 auto" }}>
           <TableHead>
             <TableRow>
               <StyledTableCell
+<<<<<<< HEAD
                 sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 Index
               </StyledTableCell>
               <StyledTableCell
+<<<<<<< HEAD
                 sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 GMT+1 Trading Hours
               </StyledTableCell>
               {/* <StyledTableCell
+<<<<<<< HEAD
                 sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               >
                 Other Platforms
               </StyledTableCell> */}

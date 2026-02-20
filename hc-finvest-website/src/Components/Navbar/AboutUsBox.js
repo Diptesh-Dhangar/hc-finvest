@@ -39,7 +39,11 @@ const AboutUsBox = () => {
             underline="none"
             style={{
               textDecoration: "none", // remove underline
+<<<<<<< HEAD
               color: "black", // white text for dark theme
+=======
+              color: "black", // inherit black color
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               cursor: "pointer",
             }}
             href={item.href}

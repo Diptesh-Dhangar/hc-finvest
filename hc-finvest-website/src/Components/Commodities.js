@@ -22,7 +22,11 @@ import { Helmet } from "react-helmet-async";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
+<<<<<<< HEAD
     backgroundColor: "#ff8c00",
+=======
+    backgroundColor: theme.palette.common.black,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -171,7 +175,11 @@ const Commodities = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "20px",
@@ -198,7 +206,11 @@ const Commodities = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               //   fontWeight: "700",
               paddingTop: "20px",
@@ -209,21 +221,33 @@ const Commodities = () => {
           </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Diversification :-
             </span>{" "}
             Adding commodities to a portfolio can help diversify investments and
             reduce risk.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Inflation Hedge :-
             </span>{" "}
             Commodities often retain their value during inflationary periods,
             making them a hedge against inflation.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               High Volatility :-
             </span>{" "}
             Commodities can experience significant price movements, providing
@@ -248,7 +272,11 @@ const Commodities = () => {
               align="left"
               sx={{
                 fontSize: "2rem",
+<<<<<<< HEAD
                 color: "#ff8c00",
+=======
+                color: "#101828",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 lineHeight: "1",
                 fontWeight: "600",
               }}
@@ -282,14 +310,24 @@ const Commodities = () => {
       variant="contained"
       onClick={() => setActive(btn.id)}
       sx={{
+<<<<<<< HEAD
         backgroundColor: active === btn.id ? "#ff8c00" : "white",
         color: active === btn.id ? "white" : "#ff8c00",
         border: "1px solid #ff8c00",
+=======
+        backgroundColor: active === btn.id ? "black" : "white",
+        color: active === btn.id ? "white" : "black",
+        border: "1px solid black",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         textTransform: "none",
         fontWeight: "bold",
         minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
         "&:hover": {
+<<<<<<< HEAD
           backgroundColor: active === btn.id ? "#ff8c00" : "#fff5e6",
+=======
+          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         },
       }}
     >
@@ -361,7 +399,11 @@ const Commodities = () => {
             variant="h2"
             //   align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
@@ -395,25 +437,41 @@ const Commodities = () => {
           </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Supply and Demand :
             </span>{" "}
             Prices are largely determined by shifts in supply and demand.
           </Typography>
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Technological Advances :
             </span>{" "}
             New technology impacts how commodities are sourced and processed.
           </Typography>
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Geopolitical Tensions :
             </span>{" "}
             Political instability can lead to fluctuations in commodity prices.
           </Typography>
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Weather Conditions & Natural Disasters :
             </span>{" "}
             Severe weather and disasters can disrupt supply chains.
@@ -436,21 +494,33 @@ const Commodities = () => {
           </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Diversification :
             </span>{" "}
             Commodities offer a valuable tool for portfolio diversification.
           </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Low Margin & Hedging :
             </span>{" "}
             HC Finvest offers low margin requirements and hedging strategies for
             price exposure management.
           </Typography>
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Award-winning Broker :
             </span>{" "}
             Trade with confidence through HC Finvest, an awarded multi-asset
@@ -476,7 +546,11 @@ const Commodities = () => {
         
         {/* Text Section */}
         <div className="col-lg-6 mb-4 mb-lg-0">
+<<<<<<< HEAD
           <Typography variant="h4" className="fw-bold" style={{ fontWeight:'600', color: "#ff8c00" }}>
+=======
+          <Typography variant="h4" className="fw-bold" style={{ fontWeight:'600' }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             Getting Started with Commodity Trading
           </Typography>
 

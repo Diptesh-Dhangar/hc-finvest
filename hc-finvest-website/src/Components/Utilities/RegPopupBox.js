@@ -142,7 +142,11 @@ const RegPopupBox = ({ onClose }) => {
             />
             <Typography
               variant={isMobile ? "h6" : "h5"}
+<<<<<<< HEAD
               sx={{ fontWeight: 700, color: "#ff8c00" }}
+=======
+              sx={{ fontWeight: 700 }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Welcome to HC Finvest
             </Typography>
@@ -155,6 +159,7 @@ const RegPopupBox = ({ onClose }) => {
             value={formData.fullName}
             onChange={handleChange}
             size="small"
+<<<<<<< HEAD
             sx={{ 
               mb: 2,
               "& .MuiOutlinedInput-root": {
@@ -163,6 +168,9 @@ const RegPopupBox = ({ onClose }) => {
                 },
               },
             }}
+=======
+            sx={{ mb: 2 }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             error={Boolean(errors.fullName)}
             helperText={errors.fullName}
           />
@@ -174,6 +182,7 @@ const RegPopupBox = ({ onClose }) => {
               value={formData.countryCode}
               onChange={handleChange}
               label="Country Code"
+<<<<<<< HEAD
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
@@ -181,6 +190,8 @@ const RegPopupBox = ({ onClose }) => {
                   },
                 },
               }}
+=======
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               {countries.map((c) => (
                 <MenuItem key={c.code} value={c.dial}>
@@ -202,6 +213,7 @@ const RegPopupBox = ({ onClose }) => {
             value={formData.phoneNumber}
             onChange={handleChange}
             size="small"
+<<<<<<< HEAD
             sx={{ 
               mb: 2,
               "& .MuiOutlinedInput-root": {
@@ -210,6 +222,9 @@ const RegPopupBox = ({ onClose }) => {
                 },
               },
             }}
+=======
+            sx={{ mb: 2 }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             error={Boolean(errors.phoneNumber)}
             helperText={errors.phoneNumber}
           />
@@ -221,6 +236,7 @@ const RegPopupBox = ({ onClose }) => {
             value={formData.email}
             onChange={handleChange}
             size="small"
+<<<<<<< HEAD
             sx={{ 
               mb: 3,
               "& .MuiOutlinedInput-root": {
@@ -229,6 +245,9 @@ const RegPopupBox = ({ onClose }) => {
                 },
               },
             }}
+=======
+            sx={{ mb: 3 }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             error={Boolean(errors.email)}
             helperText={errors.email}
           />
@@ -238,13 +257,21 @@ const RegPopupBox = ({ onClose }) => {
             fullWidth
             onClick={handleSubmit}
             sx={{
+<<<<<<< HEAD
               backgroundColor: "#ff8c00",
+=======
+              backgroundColor: "#0b2447",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               textTransform: "none",
               fontWeight: 600,
               borderRadius: "8px",
               py: 1.2,
               fontSize: { xs: "0.9rem", sm: "1rem" },
+<<<<<<< HEAD
               "&:hover": { backgroundColor: "#e67300" },
+=======
+              "&:hover": { backgroundColor: "#132a5c" },
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             }}
           >
             Submit

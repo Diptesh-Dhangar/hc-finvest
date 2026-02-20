@@ -52,7 +52,11 @@ const RegulationAndLicence = () => {
       <div className="container">
         
         {/* Heading */}
+<<<<<<< HEAD
         <div className="text-center mb-5 py-4" style={{ backgroundColor: "#ff8c00" }}>
+=======
+        <div className="text-center mb-5 py-4" style={{ backgroundColor: "#0b1660" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           <Typography variant="h3" className="text-white fw-bold mb-0">Group Licenses</Typography>
         </div>
 

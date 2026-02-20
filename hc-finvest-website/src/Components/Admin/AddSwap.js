@@ -61,7 +61,11 @@ const AddSwap = () => {
         <Box sx={{ p: 4, borderRadius: 2, boxShadow: 3 }}>
         <Typography
           variant="h2"
+<<<<<<< HEAD
           sx={{ fontSize: "2rem", fontWeight: "700", mb: 3, color: "#ff8c00" }}
+=======
+          sx={{ fontSize: "2rem", fontWeight: "700", mb: 3, color: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         >
           ADD SWAP
         </Typography>

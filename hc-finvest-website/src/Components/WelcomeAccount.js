@@ -119,7 +119,11 @@ const WelcomeAccount = () => {
             fontWeight: 600,
             mb: 2,
             fontSize: "1.6rem",
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           }}
         >
           Start Trading with Welcome Account
@@ -219,7 +223,11 @@ const WelcomeAccount = () => {
         <Box textAlign="center">
           <Button
             variant="contained"
+<<<<<<< HEAD
             sx={{ width: "250px", mt: "20px", mb: "10px", backgroundColor: "#ff8c00" }}
+=======
+            sx={{ width: "250px", mt: "20px", mb: "10px" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           >
             Submit
           </Button>

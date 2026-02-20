@@ -22,7 +22,11 @@ import { Helmet } from "react-helmet-async";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
+<<<<<<< HEAD
     backgroundColor: "#ff8c00",
+=======
+    backgroundColor: theme.palette.common.black,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -162,7 +166,11 @@ const Cryptocurrency = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "50px",
@@ -192,7 +200,11 @@ const Cryptocurrency = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "30px",
@@ -202,31 +214,51 @@ const Cryptocurrency = () => {
           </Typography>
 
           <Typography sx={{ marginTop: "20px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Bitcoin (BTC) :-
             </span>{" "}
             The first and most widely recognized cryptocurrency.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Ethereum (ETH) :-
             </span>{" "}
             Known for its smart contract functionality.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Ripple (XRP) :-
             </span>{" "}
             Designed for real-time cross-border payments.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Litecoin (LTC):-
             </span>{" "}
             Often considered the silver to Bitcoin's gold.
           </Typography>
           <Typography sx={{ marginTop: "10px", textAlign: "left" }}>
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Cardano (ADA) :-
             </span>{" "}
             Focuses on scalability and sustainability.
@@ -250,7 +282,11 @@ const Cryptocurrency = () => {
               align="left"
               sx={{
                 fontSize: "2rem",
+<<<<<<< HEAD
                 color: "#ff8c00",
+=======
+                color: "#101828",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 lineHeight: "1",
                 fontWeight: "600",
               }}
@@ -282,14 +318,24 @@ const Cryptocurrency = () => {
       variant="contained"
       onClick={() => setActive(btn.id)}
       sx={{
+<<<<<<< HEAD
         backgroundColor: active === btn.id ? "#ff8c00" : "white",
         color: active === btn.id ? "white" : "#ff8c00",
         border: "1px solid #ff8c00",
+=======
+        backgroundColor: active === btn.id ? "black" : "white",
+        color: active === btn.id ? "white" : "black",
+        border: "1px solid black",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         textTransform: "none",
         fontWeight: "bold",
         minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
         "&:hover": {
+<<<<<<< HEAD
           backgroundColor: active === btn.id ? "#ff8c00" : "#fff5e6",
+=======
+          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         },
       }}
     >
@@ -361,7 +407,11 @@ const Cryptocurrency = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               color: "#ff8c00",
+=======
+              color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               fontWeight: "700",
               paddingTop: "20px",
@@ -389,7 +439,11 @@ const Cryptocurrency = () => {
               textAlign: "left",
             }}
           >
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00", fontWeight: "600" }}>
+=======
+            <span style={{ color: "#0f5e9b", fontWeight: "600" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Launched in 2009, Bitcoin
             </span>{" "}
             was the first decentralized digital cryptocurrency. Its
@@ -401,7 +455,11 @@ const Cryptocurrency = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               //   color: "#ff8c00",
+=======
+              //   color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               //   fontWeight: "700",
               paddingTop: "30px",
@@ -428,7 +486,11 @@ const Cryptocurrency = () => {
             variant="h2"
             align="left"
             sx={{
+<<<<<<< HEAD
               //   color: "#ff8c00",
+=======
+              //   color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               fontSize: "35px",
               //   fontWeight: "700",
               paddingTop: "30px",
@@ -447,27 +509,45 @@ const Cryptocurrency = () => {
             Other than Bitcoin, important cryptocurrencies include:
           </Typography>
           <Typography
+<<<<<<< HEAD
             sx={{ color: "#ff8c00", marginTop: "20px", textAlign: "left" }}
           >
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+          >
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Ethereum (ETH) –
             </span>{" "}
             The second-largest digital currency by market capitalization after
             Bitcoin.
           </Typography>
           <Typography
+<<<<<<< HEAD
             sx={{ color: "#ff8c00", marginTop: "20px", textAlign: "left" }}
           >
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+          >
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Ripple (XRP) –
             </span>{" "}
             One of the most attractive digital currencies among traditional
             financial institutions, revolutionizing cross-border payments.
           </Typography>
           <Typography
+<<<<<<< HEAD
             sx={{ color: "#ff8c00", marginTop: "20px", textAlign: "left" }}
           >
             <span style={{ color: "#ff8c00", fontWeight: "bold" }}>
+=======
+            sx={{ color: "#0f5e9b", marginTop: "20px", textAlign: "left" }}
+          >
+            <span style={{ color: "#0f5e9b", fontWeight: "bold" }}>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
               Litecoin (LTC) –
             </span>{" "}
             Often referred to as "silver to Bitcoin's gold."

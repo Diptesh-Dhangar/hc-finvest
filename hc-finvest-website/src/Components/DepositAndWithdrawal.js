@@ -64,7 +64,11 @@ const DepositAndWithdrawal = () => {
         <Typography
           sx={{
             fontSize: "40px",
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             textAlign: "left",
             fontWeight: "bold",
             marginLeft: "80px",

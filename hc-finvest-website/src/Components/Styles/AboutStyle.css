@@ -26,7 +26,11 @@
 
 .feature-item .icon {
   font-size: 32px;
+<<<<<<< HEAD
   color: #ff8c00; /* orange */
+=======
+  color: #007bff; /* blue */
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   margin-bottom: 10px;
 }
 
@@ -51,10 +55,17 @@
 }
 
 .info-box {
+<<<<<<< HEAD
   background: #ff8c00e6;
   padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 0px 15px #ff8c004a;
+=======
+  background: #000000bf;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0px 15px #ffffff1a;
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   height: 100%;
   transition: "background-color .3s ease, transform .3s ease";
   opacity: 97%;
@@ -64,7 +75,11 @@
 }
 
 .info-box.blue-box {
+<<<<<<< HEAD
   background: #ff8c00e6; /* orange background for emphasis */
+=======
+  background: #082f59e6; /* light blue background for emphasis */
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 }
 
 .info-title {
@@ -75,7 +90,11 @@
 .divider {
   width: 50px;
   height: 4px;
+<<<<<<< HEAD
   background: #ff8c00;
+=======
+  background: #0f5e9b;
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 2px;

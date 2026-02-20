@@ -11,37 +11,61 @@ import { Helmet } from "react-helmet-async";
 
   const items = [
     {
+<<<<<<< HEAD
       icon: <SecurityIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <SecurityIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Market Leading Insurance",
       description:
         "The Company has made further efforts to safeguard its liabilities against Clients and other third parties with a Civil Liability insurance program for a limit of €5,000,000, which includes market leading coverage against errors, omissions, negligence, fraud and various other risks that may lead to financial loss.",
     },
     {
+<<<<<<< HEAD
       icon: <PublicIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <PublicIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Industry leader; leading financial safety",
       description:
         "The HC Finvest brand has become a global leader in online trading, specializing in forex, derivatives on US and UK stocks, commodities, spot metals, and indices. Client fund security has been a part of our philosophy alongside unmatched trading conditions and customer support.",
     },
     {
+<<<<<<< HEAD
       icon: <AccountBalanceIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <AccountBalanceIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Accounts with major banks",
       description:
         "HC Finvest made the decision to only use major global banks. The strength and international standing of the HC Finvest brand enables the company to provide liquidity through major banks.",
     },
     {
+<<<<<<< HEAD
       icon: <LockIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <LockIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Segregation of funds",
       description:
         "Clients’ funds are received into bank accounts separate from those used by the company. These funds are off the balance sheet and cannot be used to pay back creditors in the unlikely event of the company’s default.",
     },
     {
+<<<<<<< HEAD
       icon: <ShowChartIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <ShowChartIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Negative balance protection",
       description:
         "Volatility often occurs in the market. HC Finvest policy of negative balance protection means that even under highly volatile conditions, no client is responsible for paying back a negative balance.",
     },
     {
+<<<<<<< HEAD
       icon: <UmbrellaIcon sx={{ fontSize: 40, color: "#ff8c00" }} />,
+=======
+      icon: <UmbrellaIcon sx={{ fontSize: 40, color: "#0066ff" }} />,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       title: "Risk management",
       description:
         "The Company continually identifies, assesses, and monitors each type of risk associated with its operations. This ensures effective policies, procedures, and arrangements to meet financial and capital requirements at any time.",
@@ -125,7 +149,11 @@ const SecurityOfFunds = () => {
                     <Box>
                       <Typography
                         variant="subtitle1"
+<<<<<<< HEAD
                         sx={{ fontWeight: "bold", color: "#ff8c00" }}
+=======
+                        sx={{ fontWeight: "bold", color: "#0047ab" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       >
                         {item.title}
                       </Typography>

@@ -57,11 +57,25 @@ import AddSwap from "./Components/Admin/AddSwap";
 import AdminLogin from "./Components/Admin/AdminLogin";
 import ProtectedAdminRoute from "./Components/Admin/ProtectedAdminRoute";
 import BonusPage from "./Components/Bonus";
+<<<<<<< HEAD
+=======
+import Snowfall from "react-snowfall";
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 
 function App() {
 
   return (
     <div className="App">      
+<<<<<<< HEAD
+=======
+        {/* Snow Fall Start */}
+      {/* <Snowfall 
+        snowflakeCount={100} 
+        style={{ position: "fixed", width: "100vw", height: "100vh", pointerEvents: "none", zIndex: 9999 }}
+      /> */}
+      {/* Snow Fall End */}
+
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
       <Navbar />
       <Routes>
         {/* <Navbar /> */}

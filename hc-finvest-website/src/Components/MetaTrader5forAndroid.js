@@ -150,7 +150,11 @@ const MetaTrader5forAndroid = () => {
                 <Typography sx={{mb:1}}>               
                   <span
                   className="text-bold"
+<<<<<<< HEAD
                   style={{ color: "#ff8c00" , fontWeight:'600' }}
+=======
+                  style={{ color: "#0f5e9b" , fontWeight:'600' }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Real-Time Market Access :-
                 </span>{" "}
@@ -161,7 +165,11 @@ const MetaTrader5forAndroid = () => {
                 <Typography sx={{mb:1}}>
                   <span
                   className="text-bold"
+<<<<<<< HEAD
                   style={{ color: "#ff8c00" , fontWeight:'600'}}
+=======
+                  style={{ color: "#0f5e9b" , fontWeight:'600'}}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Advanced Charting Tools :-
                 </span>{" "}
@@ -172,7 +180,11 @@ const MetaTrader5forAndroid = () => {
                 <Typography sx={{mb:1}}>
                   <span
                   className="text-bold"
+<<<<<<< HEAD
                   style={{ color: "#ff8c00",  fontWeight:'600' }}
+=======
+                  style={{ color: "#0f5e9b",  fontWeight:'600' }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Seamless Execution :-
                 </span>{" "}
@@ -183,7 +195,11 @@ const MetaTrader5forAndroid = () => {
                 <Typography sx={{mb:1}}>
                   <span
                   className="text-bold"
+<<<<<<< HEAD
                   style={{ color: "#ff8c00",  fontWeight:'600' }}
+=======
+                  style={{ color: "#0f5e9b",  fontWeight:'600' }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Custom Alerts :-
                 </span>{" "}
@@ -194,7 +210,11 @@ const MetaTrader5forAndroid = () => {
                 <Typography sx={{mb:1}}>
                   <span
                   className="text-bold"
+<<<<<<< HEAD
                   style={{ color: "#ff8c00" , fontWeight:'600'}}
+=======
+                  style={{ color: "#0f5e9b" , fontWeight:'600'}}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Secure Transactions :-
                 </span>{" "}
@@ -215,7 +235,11 @@ const MetaTrader5forAndroid = () => {
                     >
                       <button
                         className="btn w-100 text-white"
+<<<<<<< HEAD
                         style={{ backgroundColor: "#ff8c00" }}
+=======
+                        style={{ backgroundColor: "#0b1660" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       >
                         <i className="bi bi-download me-2"></i> iOS
                       </button>
@@ -230,7 +254,11 @@ const MetaTrader5forAndroid = () => {
                     >
                       <button
                         className="btn w-100 text-white"
+<<<<<<< HEAD
                         style={{ backgroundColor: "#ff8c00" }}
+=======
+                        style={{ backgroundColor: "#0b1660" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       >
                         <i className="bi bi-download me-2"></i> Play Store
                       </button>
@@ -245,7 +273,11 @@ const MetaTrader5forAndroid = () => {
                     >
                       <button
                         className="btn w-100 text-white"
+<<<<<<< HEAD
                         style={{ backgroundColor: "#ff8c00" }}
+=======
+                        style={{ backgroundColor: "#0b1660" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                       >
                         <i className="bi bi-download me-2"></i> Samsung Store
                       </button>
@@ -276,7 +308,11 @@ const MetaTrader5forAndroid = () => {
   }}
 >
   Experience the Future of Trading –{" "}
+<<<<<<< HEAD
   <span style={{ color: "#ff8c00" }}>MetaTrader 5</span> Reinvented.
+=======
+  <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span> Reinvented.
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
 </Typography>
         <Typography sx={{ marginTop: 3 }}>
           Give Your Trades Speed, Intelligence, and Control
@@ -300,17 +336,29 @@ const MetaTrader5forAndroid = () => {
             <TableHead>
               <TableRow>
                 <StyledTableCell
+<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Feature
                 </StyledTableCell>
                 <StyledTableCell
+<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   MetaTrader 5
                 </StyledTableCell>
                 <StyledTableCell
+<<<<<<< HEAD
                   sx={{ color: "white", backgroundColor: "#ff8c00" }}
+=======
+                  sx={{ color: "white", backgroundColor: "#0d1b4c" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   Other Platforms
                 </StyledTableCell>
@@ -345,7 +393,11 @@ const MetaTrader5forAndroid = () => {
             paddingTop: "1rem",
           }}
         >
+<<<<<<< HEAD
           Download the <span style={{ color: "#ff8c00" }}>MetaTrader 5</span>
+=======
+          Download the <span style={{ color: "#0f5e9b" }}>MetaTrader 5</span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         </Typography>
 <div className="w-100 py-5 bg-light">
       <div className="container text-black text-center">
@@ -453,7 +505,11 @@ const MetaTrader5forAndroid = () => {
         >
           <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>
             Start Trading today with{" "}
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00" }}>HC Finvest</span>
+=======
+            <span style={{ color: "#0f5e9b" }}>HC Finvest</span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           </Typography>
           <Typography variant="body1">
             Ready to assist you in every step of your trading experience, 24/5
@@ -485,7 +541,11 @@ const MetaTrader5forAndroid = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   height="35px"
+<<<<<<< HEAD
                   style={{ fill: "#ff8c00" }}
+=======
+                  style={{ fill: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   <path
                     _ngcontent-ng-c673006511=""
@@ -506,7 +566,11 @@ const MetaTrader5forAndroid = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   height="35px"
+<<<<<<< HEAD
                   style={{ fill: "#ff8c00" }}
+=======
+                  style={{ fill: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   <path
                     _ngcontent-ng-c673006511=""
@@ -518,7 +582,11 @@ const MetaTrader5forAndroid = () => {
             <Grid item size={2} sx={{ border: "0px solid red" }}>
               <a
                 _ngcontent-ng-c673006511=""
+<<<<<<< HEAD
                 // href="mailto:support@hcfinvest.com"
+=======
+                // href="mailto:support@heddgecapitals.com"
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 class="text-white text-decoration-none"
               >
                 <svg
@@ -526,7 +594,11 @@ const MetaTrader5forAndroid = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   height="35px"
+<<<<<<< HEAD
                   style={{ fill: "#ff8c00" }}
+=======
+                  style={{ fill: "#0f5e9b" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 >
                   <path
                     _ngcontent-ng-c673006511=""

@@ -96,7 +96,11 @@ const styles = {
     flexDirection: "column",
   },
   header: {
+<<<<<<< HEAD
     backgroundColor: "#ff8c00", // orange color
+=======
+    backgroundColor: "#1a38c8", // dark blue from image
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: "white",
     fontWeight: "600",
     textAlign: "center",

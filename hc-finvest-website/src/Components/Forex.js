@@ -33,7 +33,11 @@ import { Helmet } from "react-helmet-async";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
+<<<<<<< HEAD
     backgroundColor: "#ff8c00",
+=======
+    backgroundColor: theme.palette.common.black,
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -275,7 +279,11 @@ const Forex = () => {
           variant="h2"
           align="left"
           sx={{
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             fontSize: "35px",
             fontWeight: "700",
             paddingTop: "50px",
@@ -310,7 +318,11 @@ const Forex = () => {
           variant="h2"
           align="left"
           sx={{
+<<<<<<< HEAD
             color: "#ff8c00",
+=======
+            color: "#0f5e9b",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             fontSize: "35px",
             fontWeight: "700",
             marginBottom: "10px",
@@ -321,17 +333,29 @@ const Forex = () => {
         </Typography>
 
         <Typography align="left">
+<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}>Accessibility :- </span>
+=======
+          <span style={{ color: "#0f5e9b" }}>Accessibility :- </span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           The forex market is accessible to retail traders, with many online
           platforms available.
         </Typography>
         <Typography align="left">
+<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}>Flexibility :- </span>
+=======
+          <span style={{ color: "#0f5e9b" }}>Flexibility :- </span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           The 24-hour nature of the market allows for trading at convenient
           times.
         </Typography>
         <Typography align="left">
+<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}>Diverse Opportunities :- </span>
+=======
+          <span style={{ color: "#0f5e9b" }}>Diverse Opportunities :- </span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           With many currency pairs available, there are numerous opportunities
           to trade based on global economic events.
         </Typography>
@@ -393,14 +417,24 @@ const Forex = () => {
       variant="contained"
       onClick={() => setActive(btn.id)}
       sx={{
+<<<<<<< HEAD
         backgroundColor: active === btn.id ? "#ff8c00" : "white",
         color: active === btn.id ? "white" : "#ff8c00",
         border: "1px solid #ff8c00",
+=======
+        backgroundColor: active === btn.id ? "black" : "white",
+        color: active === btn.id ? "white" : "black",
+        border: "1px solid black",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         textTransform: "none",
         fontWeight: "bold",
         minWidth: { xs: "100%", sm: "auto" }, // full width on xs screens, auto on sm+
         "&:hover": {
+<<<<<<< HEAD
           backgroundColor: active === btn.id ? "#ff8c00" : "#fff5e6",
+=======
+          backgroundColor: active === btn.id ? "black" : "#f0f0f0",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
         },
       }}
     >
@@ -629,7 +663,11 @@ const Forex = () => {
           <Typography
           variant="h4"
             className="benefits-title"
+<<<<<<< HEAD
             style={{ color: "#ff8c00", textAlign: "center" , fontWeight:'600' }}
+=======
+            style={{ color: "#0f5e9b", textAlign: "center" , fontWeight:'600' }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           >
             Benefits of Forex Trading
           </Typography>

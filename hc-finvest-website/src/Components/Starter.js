@@ -89,7 +89,11 @@ const Starter = () => {
               className="account-box p-3 mb-3"
               style={{
                 borderRadius: "10px",
+<<<<<<< HEAD
                 backgroundColor: "#ff8c00",
+=======
+                backgroundColor: "#0b1660",
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
                 boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                 color:'#fff'
               }}
@@ -123,7 +127,11 @@ const Starter = () => {
         <div className="col-12 col-lg-7">
           <Typography variant="h4" sx={{fontWeight:'600'}} className="mb-4">
             Why choose our{" "}
+<<<<<<< HEAD
             <span style={{ color: "#ff8c00" }}>Starter Account</span>
+=======
+            <span style={{ color: "#0f5e9b" }}>Starter Account</span>
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           </Typography>
 
           <Typography style={{ lineHeight: 1.6 }}>
@@ -138,15 +146,26 @@ const Starter = () => {
 
           <div className="d-flex flex-column flex-sm-row justify-content-lg-end gap-2 mt-3">
             <a
+<<<<<<< HEAD
               href="https://trade.hcfinvest.com/user/signup"
               className="btn mb-2 mb-sm-0" style={{ backgroundColor: "#ff8c00", color: "white", border: "none" }}
+=======
+              href="https://trade.hcfinvest.com/register"
+              className="btn btn-outline-primary mb-2 mb-sm-0"
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Create Live Account
             </a>
             <a
+<<<<<<< HEAD
               href="https://trade.hcfinvest.com/user/signup"
               className="btn"
               style={{ backgroundColor: "#ff8c00", color: "white" }}
+=======
+              href="https://trade.hcfinvest.com/register"
+              className="btn"
+              style={{ backgroundColor: "#0b1660", color: "white" }}
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
             >
               Create Demo Account
             </a>
@@ -174,7 +193,11 @@ const Starter = () => {
           }}
         >
           Access some of the most{" "}
+<<<<<<< HEAD
           <span style={{ color: "#ff8c00" }}> POPULAR INSTRUMENTS </span> of the
+=======
+          <span style={{ color: "#0f5e9b" }}> POPULAR INSTRUMENTS </span> of the
+>>>>>>> 83ffa8a6368381adb9245aa3bc90b4ef13661e4f
           Market
         </Typography>
         <MainContentCard2 />
